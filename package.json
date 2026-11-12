@@ -61,7 +61,7 @@
   "devDependencies": {
     "@types/express": "4.17.21",
     "@types/katex": "0.16.8",
-    "@types/node": "22.18.8",
+    "@types/node": "26.6.6",
     "@types/react": "19.1.16",
     "@types/react-dom": "19.1.9",
     "happy-dom": "20.0.0",
