@@ -52,9 +52,9 @@
     "remark-gfm": "4.0.1",
     "remark-math": "6.0.0",
     "remotion": "4.0.541",
-    "tailwindcss": "4.1.14",
-    "tsx": "4.20.6",
-    "vite": "6.3.6",
+    "tailwindcss": "4.3.5",
+    "tsx": "4.23.15",
+    "vite": "8.3.7",
     "zod": "4.1.12",
     "zustand": "5.0.8"
   },
@@ -65,9 +65,9 @@
     "@types/react": "19.1.16",
     "@types/react-dom": "19.1.9",
     "happy-dom": "20.0.0",
-    "prettier": "3.3.3",
-    "typescript": "5.9.3",
-    "vitest": "3.2.4"
+    "prettier": "3.9.10",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0"
   },
   "repository": {
     "type": "git",
