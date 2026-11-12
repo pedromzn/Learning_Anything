@@ -1,0 +1,144 @@
+{
+  "introduction": "Ao final desta aula você consegue dizer o som aproximado de cada uma das 33 letras do alfabeto russo e ler, letra por letra, palavras curtas. A tabela de sons segue de perto a lição de alfabeto do livro aberto de russo da Wikibooks (Russian/Alphabet) e a chave de pronúncia da Wikipedia (Help:IPA/Russian); os sons em português são aproximações minhas, e para o som exato vale ouvir os áudios dessas fontes, que são gratuitas.",
+  "sections": [
+    {
+      "title": "As letras amigas",
+      "markdown": "O alfabeto russo, o **cirílico**, tem 33 letras: 10 representam vogais, 20 consoantes, mais o **Й** (uma semivogal) e dois sinais sem som próprio (**Ь** e **Ъ**). Parece muito, mas as letras se dividem em três grupos, e o primeiro é de graça.\n\nAs **letras amigas** parecem as nossas e soam como elas:\n\n- **А а** soa como o «a» de *casa*.\n- **К к** soa como «k» (o «c» de *casa*).\n- **М м** soa como «m».\n- **О о** soa como «o» de *bola*, quando está na sílaba mais forte (a sílaba fraca muda, e isso fica para a aula 4).\n- **Т т** soa como «t».\n\nCom elas já se leem palavras inteiras: «мама» (mama, “MÁ-ma”), que quer dizer *mamãe*; «там» (tam, “TAM”), *lá*; «кот» (kot, “KOT”), *gato*. Na letra de mão, algumas formas mudam, e a tabela da Wikipedia (Russian alphabet) mostra as duas.",
+      "question": {
+        "type": "short_answer",
+        "id": "a2-ler-tam",
+        "skill": "m1-sons-das-letras",
+        "bloom": "apply",
+        "difficulty": 1,
+        "prompt": "Como se lê a palavra «там» (lá)? Escreva com letras latinas, do jeito que soa.",
+        "hints": ["São três letras: Т, А, М.", "As três são letras amigas."],
+        "accepted": ["tam", "там"],
+        "solution": "Т = t, А = a, М = m: «tam»."
+      }
+    },
+    {
+      "title": "As falsas amigas",
+      "markdown": "O segundo grupo é o que mais engana: letras que **parecem latinas, mas têm outro som**.\n\n- **В в** parece um B, mas soa como «v».\n- **Е е** parece um E, mas soa como «ie» (como em *iê-iê-iê*), quando está na sílaba forte.\n- **Н н** parece um H, mas soa como «n».\n- **Р р** parece um P, mas soa como «r», com a ponta da língua vibrando de leve, como o «r» de *caro*.\n- **С с** parece um C, mas soa como «s».\n- **У у** parece um Y, mas soa como «u».\n- **Х х** parece um X, mas soa como um «h» áspero, raspando de leve a garganta (parecido com o «rr» carioca de *carro*).\n\nExemplos: «вот» (vot, “VOT”), *aqui está*; «нос» (nos, “NOS”), *nariz*; «рот» (rot, “ROT”), *boca*; «хор» (khor, “HOR”), *coro*. Se você ler «рот» como se fosse latino, sai «pot», que não é nada. A regra dos primeiros dias é desconfiar de toda letra que parece conhecida.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "a2-ler-rot",
+        "skill": "m1-sons-das-letras",
+        "bloom": "apply",
+        "difficulty": 1,
+        "prompt": "Como se lê a palavra «рот» (boca)?",
+        "hints": [
+          "Nenhuma das três letras tem o som que parece ter, exceto uma.",
+          "A primeira letra, Р, está no grupo das falsas amigas."
+        ],
+        "choices": [
+          {
+            "text": "«rot»",
+            "explanation": "Certo: Р = r, О = o, Т = t."
+          },
+          {
+            "text": "«pot»",
+            "explanation": "É a armadilha: Р parece um P, mas soa como r. O som de p é de П."
+          },
+          {
+            "text": "«rom»",
+            "explanation": "A última letra é Т, que soa t. A letra М (m) é outra."
+          }
+        ],
+        "correct": 0,
+        "solution": "Р = r (vibrado), О = o, Т = t: «rot»."
+      }
+    },
+    {
+      "title": "As letras novas: consoantes",
+      "markdown": "O terceiro grupo são letras que não existem no nosso alfabeto. Cada uma tem um som só, o que ajuda.\n\n- **Б б** soa como «b» de *bola*.\n- **Г г** soa como «g» de *gato* (sempre duro, nunca como o «j»).\n- **Д д** soa como «d» de *dado*.\n- **Ж ж** soa como o «j» de *jogo*, um pouco mais grosso.\n- **З з** soa como «z» de *zero* (parece um número 3).\n- **Л л** soa como «l», com a língua firme nos dentes de cima; não vira «u» como o «l» de *Brasil*.\n- **П п** soa como «p» de *pato*.\n- **Ф ф** soa como «f» de *faca*.\n- **Ц ц** soa como «ts», como no final de *pizza* dita à italiana.\n- **Ч ч** soa como o «tch» de *tchau*.\n- **Ш ш** soa como o «ch» de *chá*, um pouco mais grosso.\n- **Щ щ** soa como um «ch» suave e comprido, como um «chi» prolongado.\n- **Й й** é um «i» curto, como o do fim de *pai* («paj»).\n\nExemplos: «бар» (bar, “BAR”), *bar*; «дом» (dom, “DOM”), *casa*; «чай» (chay, “TCHAI”), *chá*. O **Й** costuma aparecer no fim das palavras, grudado numa vogal.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "a2-letra-tch",
+        "skill": "m1-sons-das-letras",
+        "bloom": "remember",
+        "difficulty": 1,
+        "prompt": "Qual letra russa tem o som «tch» de «tchau»?",
+        "hints": [
+          "O som tem duas partes: um «t» logo seguido de um «ch».",
+          "Uma das letras das opções soa como «ts», não como «tch»."
+        ],
+        "choices": [
+          {
+            "text": "Ш",
+            "explanation": "Ш soa como o «ch» de chá, sem o «t» na frente."
+          },
+          {
+            "text": "Ч",
+            "explanation": "Isso: Ч soa «tch», como em чай, que se lê «tchai»."
+          },
+          {
+            "text": "Ц",
+            "explanation": "Ц soa «ts», como no final de pizza, e não «tch»."
+          }
+        ],
+        "correct": 1,
+        "solution": "Ч é o «tch» de tchau. Ш é o «ch» de chá e Ц é o «ts»."
+      }
+    },
+    {
+      "title": "As vogais: duras e suaves",
+      "markdown": "As 10 vogais vêm em **cinco pares**: uma vogal «dura» e uma «suave» com quase o mesmo som de base.\n\n- **А а** (a) e **Я я** (ia, «ya»)\n- **Э э** («é» de *café*) e **Е е** («ie»)\n- **Ы ы** (um «i» com a língua recuada, que o português não tem) e **И и** («i»)\n- **О о** («o») e **Ё ё** («io»)\n- **У у** («u») e **Ю ю** («iu»)\n\nA vogal suave diz duas coisas: que há um «i» curto na frente e que a consoante antes dela fica **suave** (a língua sobe em direção ao céu da boca, como no «ni» de *aninhar*). Exemplos: «мы» (my, “MY”, com o Ы), *nós*; «ты» (ty, “TY”), *tu*; «я» (ya, “IA”), *eu*; «и» (i, “I”), a conjunção *e*.\n\nO **Ё** é quase sempre escrito sem os pontinhos no dia a dia (como **Е**), e o texto de aprendizes costuma mantê-los porque ele marca a sílaba tônica (a Wikipedia explica isso na entrada Russian alphabet).",
+      "question": {
+        "type": "multiple_choice",
+        "id": "a2-par-u",
+        "skill": "m1-reconhecer-letras",
+        "bloom": "remember",
+        "difficulty": 2,
+        "prompt": "Qual é a vogal suave que forma par com a vogal dura У («u»)?",
+        "hints": ["Os cinco pares são: А/Я, Э/Е, Ы/И, О/Ё e У/Ю.", "A vogal suave de У soa como «iu»."],
+        "choices": [
+          {
+            "text": "Я",
+            "explanation": "Я é o par de А: soa «ia»."
+          },
+          {
+            "text": "Ю",
+            "explanation": "Certo: У/Ю é um par. Ю soa «iu»."
+          },
+          {
+            "text": "Ё",
+            "explanation": "Ё é o par de О: soa «io»."
+          }
+        ],
+        "correct": 1,
+        "solution": "У (u) forma par com Ю (iu)."
+      }
+    },
+    {
+      "title": "Й e os sinais sem som",
+      "markdown": "Duas letras sem som de vogal ou consoante completo merecem um aviso.\n\n- **Ь**, o **sinal suave**, não se pronuncia. Ele só indica que a consoante antes dele fica suave. Em «день» (dien’, “DIÉN”), *dia*, o apóstrofo da transliteração marca isso.\n- **Ъ**, o **sinal duro**, é raro: separa um prefixo da vogal seguinte, como em «объект» (ob’yekt, “ab-IEKT”), *objeto*.\n\nNa aula 4 voltamos a eles, junto com o acento e as vogais fracas. Por enquanto, basta saber que são letras **mudas** que mudam a leitura da vizinha. A lição de alfabeto da Wikibooks traz esses pontos com áudio.",
+      "question": {
+        "type": "true_false",
+        "id": "a2-sinal-suave",
+        "skill": "m1-reconhecer-letras",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Verdadeiro ou falso: o sinal suave (Ь) é uma vogal e tem som próprio.",
+        "hints": ["Releia o primeiro item da lista acima."],
+        "correct": false,
+        "solution": "Falso. O Ь não é pronunciado; ele indica que a consoante anterior fica suave."
+      }
+    }
+  ],
+  "workedExample": {
+    "prompt": "Leia em voz alta a palavra «студент», passo a passo, e diga o que ela significa.",
+    "steps": [
+      "Separe as letras: с, т, у, д, е, н, т.",
+      "Dê o som de cada uma: с = «s», т = «t», у = «u», д = «d», е = «ie», н = «n», т = «t».",
+      "Junte: «s-t-u-d-ie-n-t», que sai algo como «studient».",
+      "Marque o acento: a sílaba forte é «ент» (студе́нт), então a leitura fica «stu-DIÉNT». O acento aparece marcado só em dicionários e materiais de estudo; a aula 4 explica isso.",
+      "Compare com o português: «студент» é *estudante*."
+    ]
+  },
+  "summary": [
+    "O cirílico tem 33 letras em três grupos: amigas, falsas amigas e novas.",
+    "Falsas amigas (В, Е, Н, Р, С, У, Х) parecem latinas, mas têm outro som: v, ie, n, r, s, u, h áspero.",
+    "As 10 vogais formam cinco pares duro/suave: А/Я, Э/Е, Ы/И, О/Ё, У/Ю.",
+    "O Ь não tem som e suaviza a consoante anterior; o Ъ é raro."
+  ]
+}

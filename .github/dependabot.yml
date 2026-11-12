@@ -1,0 +1,27 @@
+# Weekly dependency updates, grouped so they arrive as a few pull requests instead of dozens.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: [dependencies]
+    groups:
+      remotion:
+        patterns: ['remotion', '@remotion/*']
+      react:
+        patterns: ['react', 'react-dom', '@types/react', '@types/react-dom', 'react-router-dom']
+      build-and-test:
+        patterns: ['vite', '@vitejs/*', 'vitest', 'typescript', 'prettier', 'tailwindcss', '@tailwindcss/*', 'tsx']
+      minor-and-patch:
+        update-types: [minor, patch]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    labels: [dependencies]
+    groups:
+      actions:
+        patterns: ['*']

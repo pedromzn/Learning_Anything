@@ -1,0 +1,237 @@
+{
+  "guidance": "Resolva em ordem: os primeiros itens retomam as ideias da aula, os do meio pedem conta, e o último é para o seu próprio negócio. Use as dicas só depois de tentar.",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "id": "e3-01",
+      "skill": "m1-cliente-ideal",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Qual das descrições abaixo é de um cliente ideal, e não de um público-alvo amplo?",
+      "hints": [
+        "Procure a descrição que fala de uma situação concreta, e não só de idade e cidade.",
+        "Público amplo cabe em quase qualquer negócio."
+      ],
+      "solution": "A descrição de pessoas com uma situação e uma necessidade concretas (donos de escritório pequeno que pedem café da manhã para a equipe) é de cliente ideal. As outras só descrevem um grupo grande.",
+      "choices": [
+        {
+          "text": "Homens e mulheres de 18 a 60 anos que moram na cidade.",
+          "explanation": "É um público amplo: só tem idade e cidade, e serve para qualquer negócio."
+        },
+        {
+          "text": "Pessoas que gostam de comer bem.",
+          "explanation": "É vago demais; descreve gosto, e não uma situação ou necessidade concreta."
+        },
+        {
+          "text": "Donos de escritório pequeno a até 1 km que querem café da manhã pronto e pontual para a equipe às segundas.",
+          "explanation": "Correto: há quem é, onde está, o que quer e quando, o que dá para encontrar e atender."
+        },
+        {
+          "text": "Todas as famílias do bairro.",
+          "explanation": "Também é um grupo amplo, e a mensagem para 'todas' fica genérica."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "type": "true_false",
+      "id": "e3-02",
+      "skill": "m1-cliente-ideal",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: o cliente ideal é o que mais conversa e é mais simpático com você.",
+      "hints": ["Releia os quatro critérios de escolha.", "Simpatia não aparece entre eles."],
+      "solution": "Falso. O cliente ideal é o que reúne valor e frequência, preço justo, facilidade de atender e indicação. Simpatia ajuda, mas não paga as contas.",
+      "correct": false
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e3-03",
+      "skill": "m1-cliente-ideal",
+      "bloom": "analyze",
+      "difficulty": 2,
+      "prompt": "Um pet shop tem três grupos: A compra ração todo mês e paga o preço da tabela; B só compra quando há promoção e pede desconto extra; C compra pouco, mas dá muito trabalho de entrega. Qual critério o grupo B deixa de cumprir?",
+      "hints": ["Pense no que B faz com o preço.", "O critério fala em aceitar o preço sem brigar."],
+      "solution": "O grupo B só compra com desconto, então não cumpre o critério do preço justo. O grupo A cumpre valor e frequência e preço justo.",
+      "choices": [
+        {
+          "text": "Facilidade de atender.",
+          "explanation": "Esse é o problema do grupo C, que dá trabalho de entrega."
+        },
+        {
+          "text": "Preço justo.",
+          "explanation": "Correto: quem só compra com promoção e pede desconto extra não aceita o preço da tabela."
+        },
+        {
+          "text": "Valor e frequência.",
+          "explanation": "Não há dado sobre isso para B; o problema descrito é o preço."
+        },
+        {
+          "text": "Indicação.",
+          "explanation": "O enunciado não diz nada sobre indicação de B."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "type": "numeric",
+      "id": "e3-04",
+      "skill": "m1-cliente-ideal",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Uma manicure cobra 45 reais por atendimento, tem 60% de margem e uma cliente vem 24 vezes por ano. Quantos reais de margem essa cliente deixa por ano?",
+      "hints": ["Calcule a margem de um atendimento: 45 vezes 0,60.", "Multiplique pelas 24 visitas."],
+      "solution": "Margem por atendimento: 45 vezes 0,60 dá 27 reais. Em 24 visitas: 27 vezes 24 dá 648 reais por ano.",
+      "answer": 648,
+      "tolerance": 0,
+      "unit": "R$"
+    },
+    {
+      "type": "numeric",
+      "id": "e3-05",
+      "skill": "m1-cliente-ideal",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "prompt": "Numa loja de roupas, a cliente A compra uma vez por ano um casaco de 300 reais com 40% de margem. A cliente B compra 6 vezes por ano peças de 80 reais, também com 40% de margem. Quantos reais por ano a mais de margem a cliente B deixa em relação à A?",
+      "hints": [
+        "Calcule a margem anual de cada cliente separadamente.",
+        "Subtraia a margem anual de A da margem anual de B."
+      ],
+      "solution": "A: 300 vezes 0,40 dá 120 reais. B: 80 vezes 0,40 dá 32 reais por compra, e 32 vezes 6 dá 192 reais. A diferença é 192 menos 120, ou seja, 72 reais a mais para a cliente B.",
+      "answer": 72,
+      "tolerance": 0,
+      "unit": "R$"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e3-06",
+      "skill": "m1-ficha-cliente",
+      "bloom": "analyze",
+      "difficulty": 2,
+      "prompt": "A ficha de uma loja de cosméticos traz no campo Dor: 'gosta de produtos de qualidade'. O que há de errado?",
+      "hints": [
+        "Pergunte se esse campo descreve um problema concreto.",
+        "Todo cliente de todo negócio poderia dizer isso."
+      ],
+      "solution": "'Gosta de qualidade' vale para qualquer cliente e não é um problema concreto observável. A dor precisa ser específica, por exemplo 'já comprou base que não combinou com o tom da pele e perdeu dinheiro'.",
+      "choices": [
+        {
+          "text": "Está tudo certo: qualidade é a maior dor.",
+          "explanation": "Qualidade é desejo genérico de todo cliente, e não ajuda a escolher mensagem."
+        },
+        {
+          "text": "É um gosto genérico, e não um problema concreto que se tenha observado em clientes.",
+          "explanation": "Correto: a ficha precisa de fatos, como algo que clientes já disseram ou fizeram."
+        },
+        {
+          "text": "Deveria estar no campo Onde ele está.",
+          "explanation": "Não: o conteúdo é que está vago, e não o campo em que foi escrito."
+        },
+        {
+          "text": "Deveria ser trocado pelo preço do produto.",
+          "explanation": "Preço não é dor do cliente, e o problema aqui é a falta de concretude."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "type": "ordering",
+      "id": "e3-07",
+      "skill": "m1-ficha-cliente",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Ponha em ordem os passos para descobrir as objeções do seu cliente ideal sem pesquisa paga.",
+      "hints": ["Comece pelo que já está registrado.", "Conversar vem depois de saber o que perguntar."],
+      "solution": "Primeiro reúna as perguntas que já aparecem nas conversas, depois agrupe as repetidas, converse com alguns clientes para entender os porquês e, por fim, escreva as objeções na ficha.",
+      "steps": [
+        "Releia as conversas de WhatsApp e as avaliações recebidas",
+        "Anote as perguntas e dúvidas que se repetem",
+        "Converse com três clientes sobre o que quase os fez desistir",
+        "Escreva as objeções na ficha, com as palavras dos clientes"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e3-08",
+      "skill": "m1-ficha-cliente",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Uma confeiteira quer saber qual canal usar para divulgar bolos de aniversário. A ficha mostra que as mães do bairro pedem indicação em grupos de WhatsApp de escola. O que a ficha sugere?",
+      "hints": ["Leia o campo 'onde ele está e o que acompanha'.", "Você divulga onde o cliente já pede recomendação."],
+      "solution": "A ficha mostra que o cliente pede recomendação em grupos de escola, então vale ter clientes satisfeitos citando o negócio nesses grupos e facilitar o compartilhamento do contato.",
+      "choices": [
+        {
+          "text": "Gastar o orçamento em anúncio para todas as mulheres da cidade.",
+          "explanation": "Ignora o dado da ficha e volta ao público amplo."
+        },
+        {
+          "text": "Concentrar-se em conseguir indicações e ser lembrada nos grupos de escola, onde as mães já pedem recomendação.",
+          "explanation": "Correto: usa o campo 'onde ele está e como decide' para escolher o canal."
+        },
+        {
+          "text": "Esperar clientes aparecerem sem divulgar nada.",
+          "explanation": "Não tira proveito da informação sobre como o cliente decide."
+        },
+        {
+          "text": "Fazer só promoção de preço, porque mãe procura o mais barato.",
+          "explanation": "A ficha não diz que o preço é o critério, e sim a indicação."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "type": "true_false",
+      "id": "e3-09",
+      "skill": "m1-cliente-ideal",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: depois de escolher o cliente ideal, o negócio deve parar de atender os outros grupos.",
+      "hints": [
+        "Pense em quem pode comprar e em quem você escolhe como alvo da comunicação.",
+        "A escolha é sobre foco, e não sobre recusa."
+      ],
+      "solution": "Falso. Os outros grupos continuam sendo atendidos. A escolha só define a quem você dirige a comunicação e o investimento primeiro.",
+      "correct": false
+    },
+    {
+      "type": "short_answer",
+      "id": "e3-10",
+      "skill": "m1-ficha-cliente",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Como se chama o documento de uma página que descreve o cliente ideal em campos como situação, dor, desejo e objeções? (Responda com duas ou três palavras.)",
+      "hints": [
+        "O nome combina 'cliente ideal' com o formato do documento.",
+        "Também é chamada, por algumas empresas, de persona."
+      ],
+      "solution": "É a ficha do cliente ideal, também chamada de persona em materiais como o da RD Station.",
+      "accepted": [
+        "ficha do cliente ideal",
+        "ficha do cliente",
+        "ficha de cliente ideal",
+        "persona",
+        "ficha da persona"
+      ]
+    },
+    {
+      "type": "open",
+      "id": "e3-11",
+      "skill": "m1-ficha-cliente",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Preencha a ficha do cliente ideal do SEU negócio com os oito campos (quem é, situação, dor, desejo, objeções, onde ele está, como decide, o que o faz voltar). Use fatos dos seus dez melhores clientes.",
+      "hints": [
+        "Comece pela lista dos dez melhores clientes e pelo que eles têm em comum.",
+        "Para cada campo, escreva algo que um cliente já disse ou fez.",
+        "Releia: um concorrente conseguiria preencher igual? Se sim, está genérico demais."
+      ],
+      "solution": "Uma boa ficha traz os oito campos com fatos de clientes reais, é específica a ponto de sugerir o canal e a mensagem, e escolhe um segmento, e não 'todo mundo'.",
+      "rubric": [
+        "Os oito campos estão preenchidos.",
+        "A ficha descreve um segmento específico, e não um público amplo.",
+        "Pelo menos metade dos campos cita algo que clientes reais disseram ou fizeram.",
+        "A ficha permite decidir o que dizer e onde divulgar."
+      ]
+    }
+  ]
+}

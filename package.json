@@ -1,0 +1,80 @@
+{
+  "name": "learning-anything",
+  "version": "1.0.0",
+  "description": "Custom courses on any subject, built by YOUR AI (Claude Code, Codex, Cursor) and studied in a local app with video, text, exercises and XP. Everything runs on your machine.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "tsx server/main.ts",
+    "setup": "tsx scripts/prepare.ts",
+    "start": "npm run build && NODE_ENV=production tsx server/main.ts",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "verify": "npm run typecheck && npm test && npm run course:validate -- --all",
+    "course:status": "tsx scripts/course.ts status",
+    "course:validate": "tsx scripts/course.ts validate",
+    "course:video": "tsx scripts/course.ts video",
+    "course:schemas": "tsx scripts/course.ts schemas",
+    "course:export": "tsx scripts/share.ts export",
+    "course:import": "tsx scripts/share.ts import",
+    "community:check": "tsx scripts/community.ts check",
+    "community:index": "tsx scripts/community.ts index",
+    "voice:install": "tsx scripts/voice.ts install",
+    "voice:test": "tsx scripts/voice.ts test",
+    "focus:install": "tsx scripts/focus.ts",
+    "feynman:install": "tsx scripts/feynman.ts install",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "5.2.8",
+    "@fontsource-variable/geist-mono": "5.3.0",
+    "@fontsource-variable/instrument-sans": "5.3.0",
+    "@fontsource-variable/unbounded": "5.3.0",
+    "@mediapipe/tasks-vision": "1.1.1",
+    "@phosphor-icons/react": "2.1.10",
+    "@remotion/bundler": "4.0.541",
+    "@remotion/renderer": "4.0.541",
+    "@tailwindcss/vite": "4.1.14",
+    "@vitejs/plugin-react": "4.7.0",
+    "express": "4.21.2",
+    "hls.js": "1.6.13",
+    "katex": "0.16.25",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-markdown": "9.1.0",
+    "react-router-dom": "7.9.4",
+    "rehype-katex": "7.0.1",
+    "remark-gfm": "4.0.1",
+    "remark-math": "6.0.0",
+    "remotion": "4.0.541",
+    "tailwindcss": "4.1.14",
+    "tsx": "4.20.6",
+    "vite": "6.3.6",
+    "zod": "4.1.12",
+    "zustand": "5.0.8"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.21",
+    "@types/katex": "0.16.8",
+    "@types/node": "22.18.8",
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
+    "happy-dom": "20.0.0",
+    "prettier": "3.3.3",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedromzn/Learning_Anything.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pedromzn/Learning_Anything/issues"
+  },
+  "homepage": "https://github.com/pedromzn/Learning_Anything#readme"
+}

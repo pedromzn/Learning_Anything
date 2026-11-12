@@ -1,0 +1,14 @@
+{
+  "topic": "Física quântica",
+  "scope": "Física quântica conceitual do zero, por curiosidade: luz e fótons, dualidade onda-partícula, átomo e níveis de energia, incerteza, superposição, medição, spin e emaranhamento, usando só a matemática do ensino médio",
+  "goal": "Ficar melhor em física, aprendendo por curiosidade",
+  "level": "basic",
+  "priorKnowledge": "",
+  "hoursPerWeek": 4,
+  "deadlineWeeks": 8,
+  "format": "balanced",
+  "context": "",
+  "hasComputer": true,
+  "readsEnglish": true,
+  "language": "pt-BR"
+}

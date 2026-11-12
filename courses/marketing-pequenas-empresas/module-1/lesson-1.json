@@ -1,0 +1,201 @@
+{
+  "title": "Por que o marketing começa pelo cliente",
+  "scenes": [
+    {
+      "type": "title",
+      "title": "Por que o marketing começa pelo cliente",
+      "subtitle": "Módulo 1: cliente ideal e posicionamento",
+      "narration": "Quem tem uma padaria, um salão, uma loja ou presta serviço já ouviu que precisa de mais divulgação. Mas divulgar o quê, e para quem? Neste vídeo você vai ver por que o marketing de uma pequena empresa começa antes da postagem e antes do anúncio. Ele começa quando você escolhe quem quer atender primeiro."
+    },
+    {
+      "type": "bullets",
+      "title": "O erro de vender para todo mundo",
+      "bullets": [
+        "Todo mundo é o mesmo que ninguém",
+        "A mensagem genérica serve para qualquer concorrente",
+        "Com pouco orçamento, não dá para estar em todo lugar"
+      ],
+      "narration": "O erro mais comum é dizer que o cliente é todo mundo. Parece seguro, porque ninguém fica de fora. Só que, quando você fala com todo mundo, ninguém sente que a mensagem é para ele. Uma padaria que escreve que tem pães para toda a família diz o mesmo que a padaria da outra esquina. E existe um problema de dinheiro: com pouco orçamento, você não consegue estar em todo lugar ao mesmo tempo. Quem tenta aparece pouco para todos."
+    },
+    {
+      "type": "diagram",
+      "title": "Dois caminhos",
+      "nodes": [
+        {
+          "id": "todos",
+          "label": "Todo mundo"
+        },
+        {
+          "id": "generica",
+          "label": "Mensagem genérica"
+        },
+        {
+          "id": "ninguem",
+          "label": "Quase ninguém se sente chamado"
+        },
+        {
+          "id": "ideal",
+          "label": "Cliente ideal"
+        },
+        {
+          "id": "direta",
+          "label": "Mensagem direta"
+        },
+        {
+          "id": "compra",
+          "label": "Contato e compra"
+        }
+      ],
+      "links": [
+        {
+          "from": "todos",
+          "to": "generica",
+          "label": ""
+        },
+        {
+          "from": "generica",
+          "to": "ninguem",
+          "label": ""
+        },
+        {
+          "from": "ideal",
+          "to": "direta",
+          "label": ""
+        },
+        {
+          "from": "direta",
+          "to": "compra",
+          "label": ""
+        }
+      ],
+      "narration": "Veja os dois caminhos. No primeiro, você fala com todo mundo, a mensagem fica genérica e quase ninguém se sente chamado. No segundo, você escolhe um cliente ideal, a mensagem fica direta, e quem se reconhece nela entra em contato e compra. Escolher um cliente não é recusar os outros. Quem for diferente ainda pode comprar. A escolha só decide para quem você escreve, para onde você olha e onde gasta o seu tempo."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "multiple_choice",
+        "id": "v1-todo-mundo",
+        "skill": "m1-cliente-ideal",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Uma dona de salão diz que atende todas as mulheres da cidade. Para quem tem pouco orçamento, qual é o principal problema dessa escolha?",
+        "hints": [
+          "Pense no que acontece com a mensagem quando ela precisa servir para qualquer pessoa.",
+          "Pense também em quanto dinheiro e tempo existem para falar com todas ao mesmo tempo."
+        ],
+        "solution": "Com pouco dinheiro e pouco tempo, tentar falar com todas dilui a mensagem e o orçamento: o resultado é uma comunicação genérica, e quase ninguém se sente chamada.",
+        "choices": [
+          {
+            "text": "Ela perde as clientes que não são mulheres.",
+            "explanation": "Esse não é o ponto. Escolher um cliente ideal não impede ninguém de comprar; decide para quem você escreve primeiro."
+          },
+          {
+            "text": "Atender muita gente é sempre ruim, o ideal é ter poucos clientes.",
+            "explanation": "Não é isso. O objetivo é foco na comunicação, e não ter poucos clientes."
+          },
+          {
+            "text": "Falar com todas dilui a mensagem e o orçamento, e ninguém se sente chamada.",
+            "explanation": "Correto: sem foco, a mensagem serve para qualquer salão, e o dinheiro se espalha."
+          },
+          {
+            "text": "Nenhum problema: quanto mais ampla a escolha, mais vendas.",
+            "explanation": "Ao contrário: a mensagem genérica não destaca o negócio e com orçamento curto você aparece pouco para todos."
+          }
+        ],
+        "correct": 2
+      },
+      "narration": "Hora de pensar. Uma dona de salão diz que atende todas as mulheres da cidade. Para quem tem pouco orçamento, qual é o principal problema dessa escolha?"
+    },
+    {
+      "type": "bullets",
+      "title": "Como reconhecer o cliente ideal",
+      "bullets": [
+        "Compra com frequência ou em bom valor",
+        "Aceita o preço justo",
+        "É fácil de atender bem",
+        "Elogia, avalia e indica"
+      ],
+      "narration": "Então como escolher? Olhe para os clientes que você já tem e procure quatro sinais. Primeiro, ele compra com frequência ou em bom valor. Segundo, ele aceita o preço justo, sem brigar por desconto. Terceiro, é fácil de atender: você entrega bem e sem sofrimento. E quarto, ele traz outros, porque elogia, avalia e indica. O cliente ideal reúne esses sinais e é alguém que você consegue encontrar com o seu orçamento. Não é o mais simpático, nem o que mais fala."
+    },
+    {
+      "type": "bullets",
+      "title": "Três perguntas para testar a escolha",
+      "bullets": [
+        "Eu sei onde esse cliente está?",
+        "Falo com ele de um jeito que os outros não falam?",
+        "Ele compra o bastante para valer a pena?"
+      ],
+      "narration": "Antes de decidir, teste a escolha com três perguntas. Primeira: eu sei onde esse cliente está? Se não sabe, você vai gastar para encontrá-lo. Segunda: consigo falar com ele de um jeito que os concorrentes não falam? E terceira: esse cliente compra o bastante para o negócio valer a pena? Se a resposta foi sim para as três, você está no caminho. Se foi não para alguma, escolha outro grupo, ou junte dois grupos parecidos. E lembre que a escolha não é para sempre: você revisa quando tiver novos dados de venda."
+    },
+    {
+      "type": "diagram",
+      "title": "Uma padaria de bairro",
+      "nodes": [
+        {
+          "id": "padaria",
+          "label": "Padaria de bairro"
+        },
+        {
+          "id": "moradores",
+          "label": "Moradores do prédio ao lado"
+        },
+        {
+          "id": "escritorios",
+          "label": "Escritórios no café da manhã"
+        },
+        {
+          "id": "festas",
+          "label": "Encomendas para festas"
+        }
+      ],
+      "links": [
+        {
+          "from": "padaria",
+          "to": "moradores",
+          "label": "todo dia"
+        },
+        {
+          "from": "padaria",
+          "to": "escritorios",
+          "label": "toda semana"
+        },
+        {
+          "from": "padaria",
+          "to": "festas",
+          "label": "poucas vezes"
+        }
+      ],
+      "narration": "Um exemplo. Uma padaria de bairro vende para três grupos. Os moradores do prédio ao lado compram pão e café toda manhã. Os escritórios da região pedem café da manhã para a equipe toda semana. E algumas pessoas encomendam salgados para festas, poucas vezes por ano. Os três são clientes, mas o dono precisa escolher um para começar. A escolha depende da conta: quanto cada grupo gasta por mês, e quanto custa alcançá-lo. Repare que isso é faturamento. O lucro depende da margem de cada produto, assunto do próximo módulo."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "numeric",
+        "id": "v1-conta-padaria",
+        "skill": "m1-cliente-ideal",
+        "bloom": "apply",
+        "difficulty": 1,
+        "prompt": "Na padaria, um morador do prédio ao lado gasta 12 reais por visita e vem 20 vezes por mês, o que dá 240 reais por mês. Um cliente de festas faz 4 encomendas por ano de 600 reais cada. Quantos reais por mês o morador gasta A MAIS que o cliente de festas, em média?",
+        "hints": [
+          "Primeiro leve a encomenda de festas para o valor de um mês.",
+          "Um ano tem 12 meses: divida o total anual por 12 e subtraia do valor do morador."
+        ],
+        "solution": "Festas: 4 vezes 600 dá 2.400 reais por ano. Dividido por 12, são 200 reais por mês. O morador gasta 240 reais por mês, ou seja, 40 reais a mais.",
+        "answer": 40,
+        "tolerance": 0,
+        "unit": "R$"
+      },
+      "narration": "Faça a conta. Um morador do prédio gasta doze reais por visita e vem vinte vezes por mês, o que dá duzentos e quarenta reais. Um cliente de festas faz quatro encomendas por ano, de seiscentos reais cada. Quantos reais por mês o morador gasta a mais que o cliente de festas, em média?"
+    },
+    {
+      "type": "bullets",
+      "title": "Sua tarefa desta semana",
+      "bullets": [
+        "Liste os 10 clientes que mais compraram no último ano",
+        "Anote o que eles têm em comum",
+        "Escolha um grupo para ser o primeiro cliente ideal"
+      ],
+      "narration": "Para fechar, a tarefa desta semana. Liste os dez clientes que mais compraram de você no último ano. Escreva o que eles têm em comum: quem são, onde moram ou trabalham, o que compram e como chegaram até você. Depois escolha um grupo para ser o seu primeiro cliente ideal. No curso de marketing do MIT, a escolha do segmento e o posicionamento vêm antes de preço e promoção. Primeiro você decide quem atender, depois monta o resto. Na próxima aula, em texto, você transforma essa escolha numa ficha completa."
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "introduction": "Ao final desta aula você consegue escolher um segmento de clientes com critérios claros e preencher a ficha do cliente ideal com fatos de clientes reais, e não com palpite. Você vai acompanhar o exemplo de uma padaria de bairro e depois fazer o mesmo com o seu negócio.",
+  "sections": [
+    {
+      "title": "Público-alvo não é cliente ideal",
+      "markdown": "**Público-alvo** é o grupo grande de pessoas que poderia comprar de você, por exemplo \"mulheres de 25 a 45 anos da cidade\". **Cliente ideal** é um recorte desse grupo que você escolhe atender primeiro e melhor, por exemplo \"mulheres que trabalham fora, têm cabelo cacheado e querem um corte sem passar três horas no salão\".\n\nEssa separação é uma etapa de verdade do marketing. No curso de marketing do MIT (15.810, na Sloan School), a sequência de sessões é: analisar o mercado e os clientes, depois fazer **segmentação, escolha do público e posicionamento**, e só então decidir produto, preço, promoção e distribuição. O artigo sobre persona da RD Station faz a mesma distinção: o público-alvo descreve um grupo amplo, e a persona é um cliente ideal fictício, construído com dados reais de comportamento.\n\nPara a pequena empresa há uma razão extra: você tem pouco dinheiro e poucas horas. Uma mensagem para todo mundo parece segura, mas fica genérica, e o orçamento se espalha. Com um cliente definido, a mensagem fica específica, você sabe onde aparecer e o cliente se reconhece nela.\n\nEscolher não é recusar. Quem não se encaixa continua sendo bem-vindo; só não é para ele que você desenha a comunicação.",
+      "question": {
+        "type": "true_false",
+        "id": "t2-recusar",
+        "skill": "m1-cliente-ideal",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Verdadeiro ou falso: escolher um cliente ideal significa recusar a venda para quem não se encaixa nele.",
+        "hints": [
+          "Releia o que a seção diz sobre o que a escolha decide.",
+          "Pense em quem decide o que você escreve e onde você aparece, e não em quem pode comprar."
+        ],
+        "solution": "Falso. A escolha do cliente ideal define para quem você escreve e onde investe seu tempo e dinheiro primeiro. Quem for diferente e quiser comprar continua sendo atendido.",
+        "correct": false
+      }
+    },
+    {
+      "title": "Quatro critérios para escolher o segmento",
+      "markdown": "Para escolher entre dois ou três grupos de clientes, compare-os por quatro critérios. Use os dados que você já tem: notas de venda, caderno de pedidos, conversas de WhatsApp.\n\n1. **Valor e frequência.** Quanto o cliente gasta e quantas vezes volta?\n2. **Preço justo.** Ele aceita o seu preço ou só compra com desconto?\n3. **Facilidade de atender.** Você entrega bem sem sofrer, sem exceções que consomem seu dia?\n4. **Indicação.** Ele elogia, avalia e traz outras pessoas?\n\nUm quinto filtro vale para quem tem pouco orçamento: **dá para alcançá-lo?** Um bom grupo que você não encontra com o dinheiro e o tempo que tem não serve agora.\n\nUma conta simples ajuda a comparar o **valor do cliente ao longo do tempo**, ideia que o MIT trata junto com a análise do cliente:\n\n$$\\text{margem por ano} = \\text{gasto por visita} \\times \\text{margem} \\times \\text{visitas por ano}$$\n\nExemplo: uma cliente de salão gasta 90 reais, a margem é 40% e ela vem 8 vezes por ano. São $90 \\times 0{,}40 = 36$ reais por visita e $36 \\times 8 = 288$ reais por ano. Compare esse número entre os grupos antes de decidir.",
+      "question": {
+        "type": "numeric",
+        "id": "t2-valor-cliente",
+        "skill": "m1-cliente-ideal",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "Uma cliente gasta 60 reais por visita no seu negócio, a margem dessa venda é de 50% e ela vem 6 vezes por ano. Quantos reais de margem ela deixa por ano?",
+        "hints": [
+          "Primeiro calcule a margem de uma visita: o gasto vezes a porcentagem de margem.",
+          "Depois multiplique pelo número de visitas no ano."
+        ],
+        "solution": "Margem por visita: 60 vezes 0,50 dá 30 reais. Em 6 visitas, 30 vezes 6 dá 180 reais por ano.",
+        "answer": 180,
+        "tolerance": 0,
+        "unit": "R$"
+      }
+    },
+    {
+      "title": "A ficha do cliente ideal",
+      "markdown": "A ficha é uma página que descreve o cliente ideal como uma pessoa concreta. Ela vira a referência para escolher conteúdo, tom de voz, canais e até como atender no WhatsApp. São oito campos:\n\n- **Quem é:** idade aproximada, ocupação, onde mora ou trabalha.\n- **Situação:** o que está acontecendo na vida dele que o leva a procurar o que você vende.\n- **Dor:** o problema concreto que ele quer resolver.\n- **Desejo:** o resultado que ele quer alcançar.\n- **Objeções:** o que o faz hesitar (preço, prazo, medo de errar, falta de confiança).\n- **Onde ele está e o que acompanha:** grupos, redes, lugares, pessoas de quem pede recomendação.\n- **Como decide:** pesquisa no Google, pergunta a amigos, compara três opções?\n- **O que o faz voltar:** pontualidade, atendimento, preço, resultado.\n\nUma regra para não errar: cada campo deve ser um **fato observável** ou uma frase que o cliente já disse. \"Gosta de qualidade\" não ajuda, porque todo mundo gosta. \"Reclama que a encomenda atrasou em eventos anteriores\" ajuda. A RD Station sugere levantar esses dados por perguntas feitas a clientes e pela base que você já tem.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t2-campo-onde",
+        "skill": "m1-ficha-cliente",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "Você quer decidir se vale mais a pena divulgar num grupo de moradores do bairro, no Instagram ou com um cartaz na portaria dos prédios. Qual campo da ficha do cliente ideal responde a essa decisão?",
+        "hints": [
+          "Pense em qual campo diz onde a pessoa está e o que ela acompanha no dia a dia.",
+          "Os campos de dor e de objeção ajudam mais a decidir o que dizer do que onde dizer."
+        ],
+        "solution": "O campo 'onde ele está e o que acompanha' mostra os lugares e canais onde a pessoa realmente está, e é o que orienta a escolha do canal.",
+        "choices": [
+          {
+            "text": "Objeções",
+            "explanation": "As objeções dizem o que responder para quem está em dúvida; não dizem onde divulgar."
+          },
+          {
+            "text": "Dor ou desejo",
+            "explanation": "A dor orienta o que você diz na mensagem, e não o canal onde ela aparece."
+          },
+          {
+            "text": "Onde ele está e o que acompanha",
+            "explanation": "Correto: é o campo que mostra os canais onde o cliente já circula."
+          },
+          {
+            "text": "O que o faz voltar",
+            "explanation": "Isso orienta o pós-venda e a recompra, e não a escolha do canal de divulgação."
+          }
+        ],
+        "correct": 2
+      }
+    },
+    {
+      "title": "Como preencher sem pesquisa cara",
+      "markdown": "Você não precisa de pesquisa de mercado paga. Já tem quase tudo dentro do negócio.\n\n1. **Liste os dez melhores clientes do último ano**, pelos quatro critérios: valor, preço justo, facilidade e indicação.\n2. **Procure o que eles têm em comum:** quem são, onde moram ou trabalham, o que compram, como chegaram até você.\n3. **Converse com três deles** por cinco minutos: o que estava acontecendo quando procuraram você, por que escolheram você e o que quase os fez desistir. Um áudio no WhatsApp serve.\n4. **Leia as conversas e as avaliações** que já recebeu: as perguntas repetidas mostram as objeções, e os elogios mostram o que faz voltar.\n5. **Escreva a ficha e confira nas próximas vendas.** Se os clientes que chegam não se parecem com ela, ajuste.\n\nA ficha é viva. Revise a cada trimestre, ou quando algo mudar no seu movimento.",
+      "question": {
+        "type": "ordering",
+        "id": "t2-passos-ficha",
+        "skill": "m1-ficha-cliente",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "Ponha em ordem os passos para preencher a ficha do cliente ideal sem gastar com pesquisa.",
+        "hints": [
+          "Comece pelos fatos que você já tem em casa.",
+          "A ficha escrita só vale depois de conferida com o que acontece nas vendas seguintes."
+        ],
+        "solution": "Primeiro a lista dos melhores clientes, depois o que têm em comum, depois a conversa com alguns deles para entender os porquês e, por fim, escrever a ficha e conferi-la nas vendas seguintes.",
+        "steps": [
+          "Liste os dez melhores clientes do último ano",
+          "Procure o que eles têm em comum",
+          "Converse com três deles sobre por que escolheram você",
+          "Escreva a ficha e confira com as próximas vendas"
+        ]
+      }
+    }
+  ],
+  "workedExample": {
+    "prompt": "Márcia tem a padaria Pão de Bairro. Entre os seus dez melhores clientes do último ano, seis são moradores de prédios a até 300 metros que passam toda manhã (gasto médio de 240 reais por mês), dois são donos de escritórios pequenos da região que pedem café da manhã para a equipe toda segunda-feira (pedido médio de 180 reais por semana) e dois são mães que encomendaram salgados para aniversário (600 reais por encomenda, uma ou duas vezes por ano). Os números são ilustrativos. Escolha o primeiro cliente ideal e preencha a ficha.",
+    "steps": [
+      "Compare os três grupos pelos critérios. Moradores: compram todo dia, valor médio por mês de 240 reais, fáceis de atender, alcançáveis por cartaz na portaria. Escritórios: pedido semanal de 180 reais, que dá cerca de 720 reais por mês (180 vezes 4 semanas) por cliente. Festas: valor alto por pedido, mas uma ou duas vezes por ano.",
+      "Decida. Em faturamento, o escritório vale cerca de três vezes o morador (720 contra 240 reais por mês) e volta toda semana, ao contrário da festa. Fica fácil de atender (entrega perto, pedido recorrente) e tende a indicar para escritórios vizinhos. Márcia escolhe como primeiro cliente ideal: **pequenos escritórios da região que servem café da manhã à equipe**. Falta conferir a margem de cada produto, assunto do próximo módulo.",
+      "Preencha a ficha. Quem é: dono ou gestor de escritório com 5 a 15 pessoas a até 1 km. Situação: segunda-feira tem reunião e ele quer um café da manhã que agrade a equipe sem perder tempo. Dor: perder a manhã comprando, ou o pedido chegar atrasado. Desejo: pedido pronto e pontual, fácil de repetir. Objeções: preço por pessoa e medo de atraso.",
+      "Complete os outros campos. Onde está: WhatsApp, grupos de comerciantes e condomínios comerciais do bairro, Google Maps. Como decide: indicação de outro escritório e facilidade de pedir. O que o faz voltar: pontualidade e pedido repetido em um minuto pelo WhatsApp.",
+      "Confira com fatos. Márcia liga para os dois escritórios que já compram e pergunta por que escolheram a padaria e o que quase os fez desistir. As respostas ajustam a ficha, e a ficha vira a base das postagens, do perfil e do atendimento nos próximos módulos."
+    ]
+  },
+  "summary": [
+    "Público-alvo é o grupo amplo; cliente ideal é o recorte que você escolhe atender primeiro.",
+    "Compare os segmentos por valor e frequência, preço justo, facilidade de atender, indicação e alcance.",
+    "O valor ao longo do tempo é gasto por visita vezes margem vezes visitas por ano.",
+    "A ficha tem oito campos e cada um deve ser um fato ou uma frase de cliente real.",
+    "Preencha a ficha com os seus dez melhores clientes, três conversas e as avaliações, e revise de tempos em tempos."
+  ]
+}

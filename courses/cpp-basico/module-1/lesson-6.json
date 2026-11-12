@@ -1,0 +1,214 @@
+{
+  "guidance": "Pratique tipos, inicialização e entrada e saída. Em quase todos os itens, a pergunta é \"o que este código faz?\": tente prever antes de olhar as dicas e, se puder, confira no compilador com -Wall -Wextra. Os últimos itens misturam o que você viu sobre erros de compilação.",
+  "items": [
+    {
+      "type": "numeric",
+      "id": "e6-div-mod",
+      "skill": "m1-fundamental-types",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "Quanto vale `29 / 4` em C++, com os dois números inteiros?",
+      "hints": ["Inteiro dividido por inteiro dá inteiro.", "Quantas vezes o 4 cabe inteiro no 29?"],
+      "answer": 7,
+      "tolerance": 0,
+      "unit": "",
+      "solution": "29 / 4 = 7, com a parte fracionária (0,25) descartada. O resto, 29 % 4, é 1."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e6-mixed-div",
+      "skill": "m1-fundamental-types",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "O que imprime `std::cout << 9.0 / 2;`?",
+      "hints": ["Um dos lados tem ponto decimal."],
+      "choices": [
+        { "text": "4", "explanation": "Seria o resultado de 9 / 2, com os dois inteiros. Aqui o 9.0 é double." },
+        { "text": "4.5", "explanation": "Certo: basta um lado ser double para a conta ser feita com casas decimais." },
+        { "text": "1", "explanation": "1 é o resto de 9 por 2, que se calcula com %, não com /." }
+      ],
+      "correct": 1,
+      "solution": "Imprime 4.5. O literal 9.0 é double, então a divisão é feita em ponto flutuante."
+    },
+    {
+      "type": "true_false",
+      "id": "e6-zero-start",
+      "skill": "m1-initialization",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: em C++, uma variável local declarada como `int x;` começa valendo zero.",
+      "hints": ["Pense no que o vídeo mostrou com a variável `total`."],
+      "correct": false,
+      "solution": "Falso. Ela fica com o que já estava naquele pedaço de memória, e ler esse valor é comportamento indefinido. Escreva `int x{};` para começar em zero."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e6-auto-type",
+      "skill": "m1-initialization",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Qual é o tipo de `x` em `auto x{2.0};`?",
+      "hints": ["O tipo vem do valor inicial.", "Que tipo tem o literal 2.0?"],
+      "choices": [
+        { "text": "int", "explanation": "Seria int se o valor fosse 2, sem ponto decimal." },
+        { "text": "float", "explanation": "Um literal com ponto e sem sufixo é double; float precisaria do sufixo f (2.0f)." },
+        { "text": "auto não tem tipo: x aceita qualquer valor", "explanation": "É a confusão com linguagens dinâmicas. auto deduz um tipo fixo na compilação." },
+        { "text": "double", "explanation": "Certo: o literal 2.0 é double, e auto deduz esse tipo." }
+      ],
+      "correct": 3,
+      "solution": "double. O literal 2.0 é do tipo double, e auto apenas copia esse tipo para x. O tipo fica fixo: x continua double pelo resto do programa."
+    },
+    {
+      "type": "short_answer",
+      "id": "e6-brace-zero",
+      "skill": "m1-initialization",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "Reescreva a declaração `int pontos;` para que `pontos` comece valendo zero, usando a forma com chaves recomendada no curso.",
+      "hints": ["As chaves podem ficar vazias."],
+      "accepted": ["int pontos{};", "int pontos{}", "int pontos{0};", "int pontos{0}", "int pontos{ };", "int pontos{ 0 };"],
+      "solution": "`int pontos{};` (ou `int pontos{0};`). Chaves vazias dão o valor zero."
+    },
+    {
+      "type": "numeric",
+      "id": "e6-unsigned-wrap",
+      "skill": "m1-fundamental-types",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Numa máquina em que `unsigned int` tem 32 bits, o que imprime o código abaixo?\n\n```cpp\nunsigned int estoque{2};\nestoque = estoque - 3;\nstd::cout << estoque << '\\n';\n```",
+      "hints": ["Tipos sem sinal não ficam negativos: eles dão a volta.", "2 − 3 = −1. Qual é o maior valor de 32 bits sem sinal?"],
+      "answer": 4294967295,
+      "tolerance": 0,
+      "unit": "",
+      "solution": "2 − 3 seria −1, mas um unsigned não guarda negativos: ele dá a volta e cai no maior valor possível, 2³² − 1 = 4.294.967.295. É por isso que o learncpp recomenda int para quantidades que podem ser subtraídas."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e6-narrow-error",
+      "skill": "m1-initialization",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Um colega escreveu `int parcelas{preco / 100.0};`, em que `preco` é `double`, e o compilador recusou. Por quê?",
+      "hints": ["Qual é o tipo do resultado de preco / 100.0?", "O que as chaves recusam?"],
+      "choices": [
+        {
+          "text": "Não se pode fazer conta dentro das chaves",
+          "explanation": "Pode, sim: qualquer expressão serve como valor inicial."
+        },
+        {
+          "text": "O resultado é double, e guardá-lo num int com chaves seria estreitamento",
+          "explanation": "Certo: as chaves recusam conversões que perdem informação, como cortar as casas decimais."
+        },
+        {
+          "text": "Dividir por 100.0 é divisão inteira",
+          "explanation": "Com 100.0 (double) a divisão é em ponto flutuante; o problema é guardar esse double num int."
+        }
+      ],
+      "correct": 1,
+      "solution": "A expressão preco / 100.0 é double. Com chaves, converter double para int é estreitamento, e o compilador recusa. Se cortar as casas decimais for o desejado, diga isso explicitamente: `int parcelas{static_cast<int>(preco / 100.0)};`."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e6-average-fix",
+      "skill": "m1-fundamental-types",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "`total` e `n` são `int`, com `total` valendo 10 e `n` valendo 4. Qual linha guarda 2.5 em `media`?",
+      "hints": ["A conversão precisa acontecer antes da divisão, não depois."],
+      "choices": [
+        {
+          "text": "double media = total / n;",
+          "explanation": "A divisão inteira acontece primeiro (10 / 4 = 2), e só depois o 2 vira 2.0."
+        },
+        {
+          "text": "double media = static_cast<double>(total / n);",
+          "explanation": "A conversão vem tarde demais: total / n já deu 2 antes do static_cast."
+        },
+        {
+          "text": "double media{static_cast<double>(total) / n};",
+          "explanation": "Certo: total vira 10.0 antes da divisão, e 10.0 / 4 = 2.5."
+        },
+        {
+          "text": "int media{total / n};",
+          "explanation": "Um int nunca guarda 2.5; aqui media vale 2."
+        }
+      ],
+      "correct": 2,
+      "solution": "`double media{static_cast<double>(total) / n};`. Converter um dos operandos antes da divisão faz a conta toda em double: 10.0 / 4 = 2.5."
+    },
+    {
+      "type": "numeric",
+      "id": "e6-cin-sum",
+      "skill": "m1-io-basics",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "O programa abaixo recebe a entrada `5 2` e Enter. O que ele imprime?\n\n```cpp\n#include <iostream>\n\nint main()\n{\n    int a{};\n    int b{};\n    std::cin >> a >> b;\n    std::cout << (a + b) / b << '\\n';\n}\n```",
+      "hints": ["Primeiro descubra a e b; depois faça a conta respeitando os parênteses.", "Os dois lados da divisão são int."],
+      "answer": 3,
+      "tolerance": 0,
+      "unit": "",
+      "solution": "a = 5 e b = 2. (5 + 2) / 2 = 7 / 2, e como os dois são int, o resultado é 3."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e6-bool-print",
+      "skill": "m1-io-basics",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "O que imprime `int idade{20}; std::cout << (idade >= 18) << '\\n';`?",
+      "hints": ["A comparação produz um bool.", "Como o std::cout mostra um bool, sem configuração extra?"],
+      "choices": [
+        { "text": "1", "explanation": "Certo: sem std::boolalpha, o std::cout mostra true como 1." },
+        { "text": "true", "explanation": "Só sairia a palavra se antes você tivesse enviado std::boolalpha para o std::cout." },
+        { "text": "20", "explanation": "A expressão impressa é a comparação, não a variável idade." }
+      ],
+      "correct": 0,
+      "solution": "Imprime 1. A comparação vale true, e o std::cout mostra bool como 1 ou 0, a não ser que você use std::boolalpha."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e6-const-change",
+      "skill": "m1-read-errors",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "O código tem `const double taxa{0.15};` e, mais abaixo, `taxa = 0.2;`. O que acontece?",
+      "hints": ["Quem confere as regras de const olhando só este arquivo?"],
+      "choices": [
+        {
+          "text": "Compila, e taxa passa a valer 0.2",
+          "explanation": "const existe justamente para impedir isso."
+        },
+        {
+          "text": "Compila, mas o programa trava ao executar a atribuição",
+          "explanation": "O problema é pego antes de o programa existir."
+        },
+        {
+          "text": "Erro de ligação",
+          "explanation": "O linker trata de definições de símbolos; regras de const são conferidas pelo compilador."
+        },
+        {
+          "text": "Erro de compilação: não se pode atribuir a uma variável const",
+          "explanation": "Certo: o compilador recusa e aponta a linha da atribuição."
+        }
+      ],
+      "correct": 3,
+      "solution": "Erro de compilação. Uma variável const só recebe valor na inicialização; qualquer atribuição depois é recusada pelo compilador, com arquivo e linha."
+    },
+    {
+      "type": "open",
+      "id": "e6-explain-ub",
+      "skill": "m1-initialization",
+      "bloom": "understand",
+      "difficulty": 3,
+      "prompt": "Um programa com `int total;` (sem valor) funcionou nos seus testes, mas deu resultado errado no servidor. Explique a um colega por que isso pode acontecer e como evitar.",
+      "hints": ["Use o termo do curso para \"a linguagem não promete nada\".", "Cite a correção e a ferramenta que ajuda a pegar o problema cedo."],
+      "rubric": [
+        "Diz que ler uma variável local sem valor é comportamento indefinido.",
+        "Explica que o valor depende do que já estava na memória, que pode mudar de máquina ou de execução.",
+        "Propõe inicializar sempre, por exemplo int total{};.",
+        "Menciona ligar os avisos do compilador (-Wall -Wextra) para detectar o problema."
+      ],
+      "solution": "Ler uma variável local sem valor é comportamento indefinido: ela fica com o que estava antes naquele pedaço de memória. Na sua máquina, por acaso, esse valor podia ser 0; no servidor, com outro compilador, outras opções ou outro estado de memória, era outra coisa. A correção é inicializar sempre (int total{};) e compilar com -Wall -Wextra, que costumam avisar sobre o uso de variáveis sem valor."
+    }
+  ]
+}

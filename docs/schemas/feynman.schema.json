@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "request": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "opening": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 400
+    },
+    "keyPoints": {
+      "minItems": 3,
+      "maxItems": 7,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]{2,40}$"
+          },
+          "idea": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          },
+          "cues": {
+            "minItems": 2,
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 60
+            }
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        },
+        "required": ["id", "idea", "cues", "question"],
+        "additionalProperties": false
+      }
+    },
+    "commonMistakes": {
+      "minItems": 1,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          },
+          "correction": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 400
+          }
+        },
+        "required": ["error", "correction"],
+        "additionalProperties": false
+      }
+    },
+    "questions": {
+      "minItems": 2,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      }
+    },
+    "skills": {
+      "minItems": 1,
+      "maxItems": 8,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 60
+      }
+    }
+  },
+  "required": ["topic", "request", "opening", "keyPoints", "commonMistakes", "questions", "skills"],
+  "additionalProperties": false
+}

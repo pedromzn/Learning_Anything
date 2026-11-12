@@ -1,0 +1,223 @@
+{
+  "guidance": "Treine o reconhecimento das letras e a leitura de palavras curtas, letra por letra. Os primeiros itens têm mais apoio; os últimos pedem que você leia sozinho. Use as dicas se travar: elas empurram, mas não entregam a resposta. Se preferir, tenha a tabela da aula 2 aberta ao lado.",
+  "items": [
+    {
+      "type": "numeric",
+      "id": "ex3-letras-total",
+      "skill": "m1-reconhecer-letras",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Quantas letras tem o alfabeto cirílico russo, contando as vogais, as consoantes, o Й e os dois sinais?",
+      "hints": ["A aula 2 diz o total logo no começo.", "É um número entre 30 e 35."],
+      "answer": 33,
+      "tolerance": 0,
+      "unit": "",
+      "solution": "O alfabeto russo tem 33 letras: 10 de vogais, 20 de consoantes, o Й e os sinais Ь e Ъ."
+    },
+    {
+      "type": "numeric",
+      "id": "ex3-vogais-total",
+      "skill": "m1-reconhecer-letras",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Quantas das 33 letras representam vogais?",
+      "hints": ["As vogais vêm em pares duro/suave.", "Há cinco pares."],
+      "answer": 10,
+      "tolerance": 0,
+      "unit": "",
+      "solution": "São 10 vogais, em cinco pares: А/Я, Э/Е, Ы/И, О/Ё, У/Ю."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex3-falsa-amiga",
+      "skill": "m1-reconhecer-letras",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Qual destas letras parece uma letra latina, mas tem som diferente?",
+      "hints": ["As letras К, М, О e Т são amigas: soam como as nossas.", "Uma das opções parece um H."],
+      "choices": [
+        {
+          "text": "К",
+          "explanation": "К soa «k», como o c de casa. É uma letra amiga."
+        },
+        {
+          "text": "М",
+          "explanation": "М soa «m». É uma letra amiga."
+        },
+        {
+          "text": "О",
+          "explanation": "О soa «o». É uma letra amiga."
+        },
+        {
+          "text": "Н",
+          "explanation": "Certo: Н parece um H, mas soa «n». É uma falsa amiga."
+        }
+      ],
+      "correct": 3,
+      "solution": "Н é a falsa amiga: parece um H, mas soa «n»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex3-leitura-nos",
+      "skill": "m1-sons-das-letras",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "Como se lê a palavra «нос» (nariz)?",
+      "hints": ["Cuidado com as falsas amigas: Н e С.", "Н soa «n» e С soa «s»."],
+      "choices": [
+        {
+          "text": "«nos»",
+          "explanation": "Certo: Н = n, О = o, С = s."
+        },
+        {
+          "text": "«hoc»",
+          "explanation": "Aqui as duas letras foram lidas como latinas: Н como h e С como c. Em russo soam n e s."
+        },
+        {
+          "text": "«nok»",
+          "explanation": "С soa «s», e não «k». O som de k é da letra К."
+        }
+      ],
+      "correct": 0,
+      "solution": "Н = n, О = o, С = s: «nos»."
+    },
+    {
+      "type": "true_false",
+      "id": "ex3-j-sonoro",
+      "skill": "m1-sons-das-letras",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: a letra Ж soa como o «j» de «jogo» (um pouco mais grosso).",
+      "hints": ["Pense em «жизнь» ou «журнал»: o início soa como em «janela»."],
+      "correct": true,
+      "solution": "Verdadeiro. Ж soa como o «j» de jogo, um pouco mais grosso."
+    },
+    {
+      "type": "true_false",
+      "id": "ex3-h-aspero",
+      "skill": "m1-sons-das-letras",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Verdadeiro ou falso: a letra Х soa como o «x» de «xícara».",
+      "hints": ["O som «ch» de xícara é de outra letra.", "Х é um «h» áspero, raspando a garganta."],
+      "correct": false,
+      "solution": "Falso. Х soa como um «h» áspero. O «ch» de xícara e de chá é o da letra Ш."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex3-letra-e",
+      "skill": "m1-sons-das-letras",
+      "bloom": "remember",
+      "difficulty": 2,
+      "prompt": "Qual letra russa soa como o «é» de «café»?",
+      "hints": ["Há duas letras parecidas com um E.", "Uma delas soa «ie»; a outra é a letra dura do par."],
+      "choices": [
+        {
+          "text": "Е",
+          "explanation": "Е soa «ie», e não «é». É o par suave de Э."
+        },
+        {
+          "text": "И",
+          "explanation": "И soa «i»."
+        },
+        {
+          "text": "Э",
+          "explanation": "Certo: Э (um E invertido) soa «é». Seu par suave é Е."
+        }
+      ],
+      "correct": 2,
+      "solution": "Э soa «é». Seu par suave Е soa «ie»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex3-par-o",
+      "skill": "m1-reconhecer-letras",
+      "bloom": "remember",
+      "difficulty": 2,
+      "prompt": "Qual é a vogal suave que forma par com О?",
+      "hints": ["Os pares: А/Я, Э/Е, Ы/И, О/Ё, У/Ю.", "Ela soa «io»."],
+      "choices": [
+        {
+          "text": "Я",
+          "explanation": "Я soa «ia», é o par de А."
+        },
+        {
+          "text": "Ю",
+          "explanation": "Ю soa «iu», é o par de У."
+        },
+        {
+          "text": "Ё",
+          "explanation": "Certo: О/Ё é um par. Ё soa «io»."
+        }
+      ],
+      "correct": 2,
+      "solution": "О forma par com Ё."
+    },
+    {
+      "type": "short_answer",
+      "id": "ex3-ler-dom",
+      "skill": "m1-ler-palavras",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Leia a palavra «дом» (casa) e escreva, em letras latinas, como ela soa.",
+      "hints": ["Д soa como o «d» de dado.", "A última letra é М, que soa «m»."],
+      "accepted": ["dom", "дом"],
+      "solution": "Д = d, О = o, М = m: «dom»."
+    },
+    {
+      "type": "short_answer",
+      "id": "ex3-ler-chai",
+      "skill": "m1-ler-palavras",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Escreva, em letras latinas, como soa a palavra «чай» (chá). Vale «tchai», «chai» ou «chay».",
+      "hints": ["Ч soa «tch» de tchau.", "Й é um «i» curto no fim."],
+      "accepted": ["tchai", "chai", "chay", "tchay", "чай"],
+      "solution": "Ч = tch, А = a, Й = i curto: «tchai»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex3-bar",
+      "skill": "m1-ler-palavras",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Qual destas palavras russas se lê «bar» (a palavra bar)?",
+      "hints": [
+        "Б, В e П são letras diferentes: b, v e p.",
+        "Nenhuma delas tem o som que parece ter à primeira vista."
+      ],
+      "choices": [
+        {
+          "text": "бар",
+          "explanation": "Certo: Б = b, А = a, Р = r vibrado."
+        },
+        {
+          "text": "вар",
+          "explanation": "В soa «v», então se lê «var»."
+        },
+        {
+          "text": "пар",
+          "explanation": "П soa «p», então se lê «par»."
+        }
+      ],
+      "correct": 0,
+      "solution": "Б soa «b»: бар = «bar»."
+    },
+    {
+      "type": "ordering",
+      "id": "ex3-passos",
+      "skill": "m1-ler-palavras",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Coloque em ordem os passos para ler uma palavra russa nova.",
+      "hints": ["Comece olhando a palavra inteira, depois as partes.", "O último passo ajuda a conferir se leu certo."],
+      "steps": [
+        "Separe a palavra em letras",
+        "Dê a cada letra o seu som",
+        "Junte os sons, na ordem",
+        "Compare com palavras que você já conhece"
+      ],
+      "solution": "Primeiro separe as letras, depois dê o som de cada uma, junte os sons e, por fim, compare com o português para conferir."
+    }
+  ]
+}

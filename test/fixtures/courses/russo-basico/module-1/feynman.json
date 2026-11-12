@@ -1,0 +1,77 @@
+{
+  "topic": "Como ler uma palavra em russo, do alfabeto à pronúncia",
+  "request": "Explique para um amigo que nunca viu o alfabeto russo como ele está organizado e como ler uma palavra nova: os grupos de letras, as armadilhas e as regras que mudam o som. Dê exemplos de palavras.",
+  "opening": "Oi, eu sou a Ana. Eu olho para o russo e só vejo símbolos estranhos. Por onde eu começo para ler uma palavra?",
+  "keyPoints": [
+    {
+      "id": "tres-grupos",
+      "idea": "As 33 letras do cirílico se dividem em três grupos: as amigas, que parecem e soam como as nossas; as falsas amigas, que parecem latinas mas têm outro som; e as novas.",
+      "cues": ["tres grupos", "amigas", "falsas amigas", "letras novas", "33 letras", "trinta e tres"],
+      "question": "Dá para organizar essas 33 letras de algum jeito que facilite? Como?"
+    },
+    {
+      "id": "falsas-amigas",
+      "idea": "As falsas amigas enganam: o В soa v, o Н soa n, o Р soa r, o С soa s, o У soa u e o Х soa como um h áspero.",
+      "cues": [
+        "parece um b",
+        "parece um h",
+        "parece um p",
+        "soa como v",
+        "soa como n",
+        "soa como r",
+        "h aspero",
+        "engana"
+      ],
+      "question": "Qual é a armadilha das letras que parecem com as nossas? Me dá um exemplo."
+    },
+    {
+      "id": "acento-livre",
+      "idea": "O acento russo é livre, pode cair em qualquer sílaba e não vem marcado no texto comum; por isso cada palavra se aprende junto com a sílaba forte.",
+      "cues": ["acento", "silaba forte", "silaba tonica", "nao vem marcado", "acento livre", "qualquer silaba"],
+      "question": "Como eu sei qual sílaba é a mais forte numa palavra russa?"
+    },
+    {
+      "id": "reducao-vogais",
+      "idea": "Fora da sílaba forte as vogais enfraquecem: o О soa como um a fraco e o Е como um i fraco, como em вода, que soa va-DÁ.",
+      "cues": ["reducao", "vogal fraca", "vogais fracas", "atona", "o vira a", "e vira i", "voda", "moloko"],
+      "question": "Uma vogal sempre soa igual em russo, esteja onde estiver?"
+    },
+    {
+      "id": "sonoridade-e-sinais",
+      "idea": "No fim da palavra a consoante sonora perde a voz (друг soa druk), e o sinal suave Ь não tem som: só suaviza a consoante antes dele.",
+      "cues": ["sinal suave", "perde a voz", "surda", "sonora", "fim da palavra", "druk", "suaviza", "sem som"],
+      "question": "Por que a palavra друг, amigo, termina com som de k se a última letra é um г?"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "error": "O Н russo soa como o h do português.",
+      "correction": "O Н é uma falsa amiga: parece um H, mas soa como n."
+    },
+    {
+      "error": "O sinal suave Ь é uma vogal e se pronuncia.",
+      "correction": "O Ь não tem som próprio; ele só deixa suave a consoante que vem antes."
+    },
+    {
+      "error": "Em russo o acento vem sempre escrito nas palavras, como em português.",
+      "correction": "No texto comum o acento não vem marcado; ele aparece só em dicionários e materiais de estudo."
+    },
+    {
+      "error": "O О sempre soa como o nosso o.",
+      "correction": "O О só soa o na sílaba forte; fora dela soa como um a fraco."
+    }
+  ],
+  "questions": [
+    "Lê para mim, passo a passo, a palavra банк. Como você chegou ao som?",
+    "Por que a palavra вода soa va-DÁ e não vó-da?",
+    "Qual é a diferença entre мат e мать?",
+    "Se você encontrar uma palavra nova, qual é o seu roteiro para ler?"
+  ],
+  "skills": [
+    "m1-reconhecer-letras",
+    "m1-sons-das-letras",
+    "m1-acento-e-reducao",
+    "m1-sinais-e-sonoridade",
+    "m1-ler-palavras"
+  ]
+}

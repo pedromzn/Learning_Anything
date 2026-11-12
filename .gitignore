@@ -1,0 +1,21 @@
+node_modules/
+dist/
+data/
+requests/
+.env
+*.log
+.DS_Store
+# rendered videos are large: `npm run course:video` rebuilds each one
+courses/**/*.video/
+courses/**/*.video.json
+render/output/
+
+# the internal migration plan (mentions the source project)
+docs/PLAN.md
+__pycache__/
+
+# a bundle exported to the project root by `npm run course:export` (send it from the app or put it in community/courses/)
+/*.course.json
+# local Claude Code state
+.claude/scheduled_tasks.lock
+.claude/settings.local.json

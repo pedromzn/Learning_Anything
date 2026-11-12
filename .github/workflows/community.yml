@@ -1,0 +1,70 @@
+# A pull request that adds or updates a community course (community/courses/<slug>.course.json). It checks that the
+# PR touches ONLY bundle files and validates each one with the same rules as `npm run course:import`. The token is
+# read-only: a bundle is untrusted data and nothing here writes to the repository.
+name: Community course
+
+on:
+  pull_request:
+    paths:
+      - 'community/courses/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: community-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Validate the course bundle
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+
+      - name: Only bundle files changed
+        id: files
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          changed=$(git diff --name-only --diff-filter=ACMRT "$BASE"...HEAD)
+          others=$(echo "$changed" | grep -v -E '^community/courses/[a-z0-9][a-z0-9-]{1,60}\.course\.json$' | grep -v '^$' || true)
+          if [ -n "$others" ]; then
+            {
+              echo "### A community course PR changes only \`community/courses/<slug>.course.json\`"
+              echo ""
+              echo "These files are outside that rule:"
+              echo '```'
+              echo "$others"
+              echo '```'
+              echo "Send code changes in a separate pull request."
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::This PR changes files outside community/courses/*.course.json"
+            exit 1
+          fi
+          bundles=$(echo "$changed" | grep -E '\.course\.json$' | tr '\n' ' ' || true)
+          echo "bundles=$bundles" >> "$GITHUB_OUTPUT"
+
+      - name: Validate
+        if: steps.files.outputs.bundles != ''
+        env:
+          BUNDLES: ${{ steps.files.outputs.bundles }}
+        run: |
+          set -o pipefail
+          # shellcheck disable=SC2086
+          npm run -s community:check -- $BUNDLES | tee report.txt
+          {
+            echo "### Community course check"
+            echo '```'
+            cat report.txt
+            echo '```'
+            echo "A maintainer still reviews the sources, the licenses and the quality before merging."
+          } >> "$GITHUB_STEP_SUMMARY"

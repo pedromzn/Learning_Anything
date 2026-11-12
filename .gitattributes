@@ -1,0 +1,12 @@
+# Text files always use LF (Windows contributors included), so Prettier and the hashes agree everywhere.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.webp binary
+*.onnx binary
+*.bin binary
+
+# Community course bundles are data: left out of the language stats (their diffs stay visible for the review).
+community/courses/*.course.json linguist-detectable=false
+test/fixtures/** linguist-vendored=true

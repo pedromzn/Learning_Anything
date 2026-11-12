@@ -1,0 +1,3 @@
+# The voice engine (Kokoro), installed by `npm run voice:install` in an isolated environment at data/voice/.venv
+kokoro-onnx==0.6.1
+soundfile==0.14.0

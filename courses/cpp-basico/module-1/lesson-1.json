@@ -1,0 +1,205 @@
+{
+  "title": "De arquivo .cpp a executável",
+  "scenes": [
+    {
+      "type": "title",
+      "title": "De arquivo .cpp a executável",
+      "subtitle": "C++ moderno para quem já programa, módulo 1",
+      "narration": "Olá! Se você já programa em outra linguagem, a lógica de cê mais mais não vai assustar: tem if, tem laço, tem função. O que costuma pegar de surpresa é o caminho entre o código que você escreve e o programa que roda. Em cê mais mais, esse caminho tem etapas, e cada uma tem os seus próprios erros. Quem entende essas etapas lê uma mensagem de erro e já sabe onde procurar. É isso que você vai ver agora. A explicação segue a lição zero ponto cinco do site learncpp e a primeira aula do curso seis zero nove seis do MIT, ambos gratuitos."
+    },
+    {
+      "type": "bullets",
+      "title": "Três jeitos de rodar código",
+      "bullets": [
+        "Python: um interpretador lê o código enquanto roda",
+        "Java e C#: compilam para bytecode, que uma máquina virtual executa",
+        "C++: compila para código de máquina do seu processador"
+      ],
+      "narration": "Compare com o que você talvez já conheça. Em Python, um interpretador lê o seu código e executa enquanto lê. Em Java e em cê sharp, o compilador gera um código intermediário, o bytecode, e uma máquina virtual executa esse código. Em cê mais mais não há máquina virtual no meio. O compilador traduz o seu código direto para instruções do processador, e o resultado é um arquivo executável que roda sozinho. Isso explica a fama de velocidade da linguagem. Mas também explica uma consequência: o executável vale para um sistema e um tipo de processador. Um programa compilado no Mac não roda no Windows; você compila de novo em cada plataforma."
+    },
+    {
+      "type": "diagram",
+      "title": "O caminho do código ao executável",
+      "nodes": [
+        {
+          "id": "src",
+          "label": "main.cpp e util.cpp"
+        },
+        {
+          "id": "pre",
+          "label": "Pré-processador"
+        },
+        {
+          "id": "comp",
+          "label": "Compilador"
+        },
+        {
+          "id": "obj",
+          "label": "main.o e util.o"
+        },
+        {
+          "id": "link",
+          "label": "Linker"
+        },
+        {
+          "id": "lib",
+          "label": "Biblioteca padrão"
+        },
+        {
+          "id": "exe",
+          "label": "Executável"
+        }
+      ],
+      "links": [
+        {
+          "from": "src",
+          "to": "pre",
+          "label": "cada arquivo"
+        },
+        {
+          "from": "pre",
+          "to": "comp",
+          "label": "texto expandido"
+        },
+        {
+          "from": "comp",
+          "to": "obj",
+          "label": "código de máquina"
+        },
+        {
+          "from": "obj",
+          "to": "link",
+          "label": ""
+        },
+        {
+          "from": "lib",
+          "to": "link",
+          "label": ""
+        },
+        {
+          "from": "link",
+          "to": "exe",
+          "label": ""
+        }
+      ],
+      "narration": "Este é o caminho completo. Ele tem três etapas. Primeiro, o pré-processador. Depois, o compilador. Por último, o linker, que em português às vezes se chama ligador. Repare num detalhe importante: as duas primeiras etapas trabalham com um arquivo ponto cpp de cada vez, isoladamente. O main ponto cpp é compilado sem que o compilador olhe para o util ponto cpp, e vice-versa. Cada um vira um arquivo objeto, com código de máquina, mas ainda incompleto. Só na última etapa o linker junta todos os objetos, mais a biblioteca padrão, num único executável. Vamos ver cada etapa."
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n\nint main()\n{\n    std::cout << \"Olá, C++!\\n\";\n    return 0;\n}",
+      "highlights": [
+        1,
+        3,
+        5
+      ],
+      "narration": "Este é o primeiro programa. A linha que começa com cerquilha, include iostream, não é cê mais mais propriamente dito: é uma ordem para o pré-processador. Ele simplesmente copia o conteúdo do arquivo de cabeçalho iostream para dentro do seu código, como um copiar e colar automático. É por causa dessa cópia que você pode usar o cout, da biblioteca padrão, para escrever na tela. Depois vem a função main. Todo programa cê mais mais começa por ela: o sistema operacional chama a main, e o valor que ela devolve, zero, quer dizer que tudo correu bem."
+    },
+    {
+      "type": "bullets",
+      "title": "O compilador confere cada arquivo",
+      "bullets": [
+        "Confere sintaxe: ponto e vírgula, chaves, parênteses",
+        "Confere tipos: não deixa somar texto com número sem conversão",
+        "Exige ver a declaração de um nome antes do uso",
+        "Gera um arquivo objeto por arquivo .cpp"
+      ],
+      "narration": "A segunda etapa é o compilador. Ele recebe o texto já expandido pelo pré-processador e confere tudo o que dá para conferir olhando só aquele arquivo. Esqueceu um ponto e vírgula? Erro de compilação. Usou um nome que nunca foi declarado? Erro de compilação. Tentou guardar um texto numa variável inteira? Erro de compilação também. Cê mais mais é uma linguagem de tipos estáticos, como Java: os tipos são conferidos antes de o programa rodar. Se tudo estiver certo, o compilador gera o arquivo objeto. Uma regra que surpreende quem vem de outras linguagens: o compilador lê o arquivo de cima para baixo e precisa ver pelo menos a declaração de uma função antes do ponto em que você a chama."
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "code": "// main.cpp\n#include <iostream>\n\nint dobro(int x);   // só a declaração\n\nint main()\n{\n    std::cout << dobro(21) << '\\n';\n}",
+      "highlights": [
+        4,
+        8
+      ],
+      "narration": "Agora o linker. Olhe este arquivo. Na linha quatro, ele declara uma função chamada dobro: diz o nome, o tipo do parâmetro e o tipo do retorno, mas não diz o que a função faz. Para o compilador, isso basta. Ele confere que dobro recebe um inteiro, confere que a chamada na linha oito passa um inteiro, e gera o objeto com uma anotação: aqui falta o endereço da função dobro. Quem resolve essa pendência é o linker. Ele procura a definição de dobro em todos os objetos e bibliotecas. Se a definição estiver no util ponto cpp e esse arquivo entrar na ligação, tudo certo. Se você esqueceu de escrever a definição, ou esqueceu de passar o util ponto cpp para o compilador, o linker não acha nada e reclama com um erro do tipo referência indefinida, ou símbolo indefinido. Repare: o código compilou, e mesmo assim não existe programa."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "multiple_choice",
+        "id": "v1-linker-error",
+        "skill": "m1-build-pipeline",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Você declarou int dobro(int x); e chamou dobro(21) no main, mas nunca escreveu o corpo da função em nenhum arquivo. Qual etapa reclama?",
+        "hints": [
+          "A chamada bate com a declaração: nome, parâmetro e retorno estão certos."
+        ],
+        "choices": [
+          {
+            "text": "O pré-processador",
+            "explanation": "O pré-processador só trata as linhas com cerquilha, como #include; ele não sabe nada de funções."
+          },
+          {
+            "text": "O compilador",
+            "explanation": "Para o compilador, a declaração basta: ele confere a chamada e deixa o endereço pendente."
+          },
+          {
+            "text": "O linker",
+            "explanation": "Certo: o linker procura a definição em todos os objetos e, como não acha, dá erro de referência indefinida."
+          }
+        ],
+        "correct": 2,
+        "solution": "É um erro de ligação. A declaração satisfaz o compilador, mas o linker precisa da definição e não a encontra em nenhum arquivo objeto nem biblioteca."
+      },
+      "narration": "Hora de testar. Pause o vídeo e responda: você declarou a função dobro, chamou no main, mas nunca escreveu o corpo dela. Qual etapa reclama?"
+    },
+    {
+      "type": "bullets",
+      "title": "Três tipos de erro, três lugares",
+      "bullets": [
+        "Erro de compilação: sintaxe, tipos, nome não declarado",
+        "Erro de ligação: definição ausente ou repetida",
+        "Erro de execução: o programa compila, mas faz a coisa errada ou trava"
+      ],
+      "narration": "Com isso, você já sabe classificar qualquer erro. Quando aparece um erro, pergunte primeiro: em que etapa ele surgiu? Erro de compilação aponta um arquivo e uma linha; o problema está ali, na sintaxe, nos tipos ou num nome que o compilador ainda não viu. Erro de ligação fala de símbolos, e quase nunca aponta uma linha; o problema é uma definição que falta ou que aparece duas vezes, ou um arquivo que ficou de fora do comando. E erro de execução é o mais traiçoeiro: tudo compilou, mas o programa trava ou dá um resultado errado. Esses você caça com testes e com o depurador. Agora, como disparar essas etapas na prática?"
+    },
+    {
+      "type": "code",
+      "lang": "pseudocode",
+      "code": "g++ -std=c++20 -Wall -Wextra main.cpp util.cpp -o programa\n./programa",
+      "highlights": [
+        1
+      ],
+      "narration": "Um único comando faz as três etapas. Aqui o compilador é o gê mais mais; no Mac, o comando aponta para o clang, que aceita as mesmas opções. Passamos os dois arquivos ponto cpp, e a opção traço o diz o nome do executável. A opção traço std igual a cê mais mais vinte escolhe a versão da linguagem, o padrão de dois mil e vinte. Isso importa, porque recursos novos só funcionam se você pedir uma versão recente. As opções traço W all e traço W extra ligam avisos. Um aviso não impede a compilação, mas aponta código suspeito, como uma variável usada sem valor. Trate os avisos como erros que valem a pena corrigir. Por fim, ponto barra programa executa o resultado."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "multiple_choice",
+        "id": "v1-warning-flags",
+        "skill": "m1-compile-run",
+        "bloom": "remember",
+        "difficulty": 1,
+        "prompt": "No comando g++ -std=c++20 -Wall -Wextra main.cpp -o programa, o que fazem as opções -Wall e -Wextra?",
+        "hints": [
+          "O W vem de warning, aviso em inglês."
+        ],
+        "choices": [
+          {
+            "text": "Ligam avisos sobre código suspeito",
+            "explanation": "Certo: elas pedem ao compilador que avise sobre código que compila, mas provavelmente está errado."
+          },
+          {
+            "text": "Escolhem a versão da linguagem",
+            "explanation": "Quem escolhe a versão é -std=c++20."
+          },
+          {
+            "text": "Dão o nome do executável",
+            "explanation": "Quem dá o nome do executável é -o programa."
+          },
+          {
+            "text": "Fazem o programa rodar mais rápido",
+            "explanation": "Otimização é outra família de opções (como -O2); os avisos não mudam a velocidade."
+          }
+        ],
+        "correct": 0,
+        "solution": "-Wall e -Wextra ligam avisos. Eles não impedem a compilação, mas apontam código suspeito que vale a pena corrigir."
+      },
+      "narration": "Última pergunta. Pause e responda: no comando que você acabou de ver, o que fazem as opções traço W all e traço W extra?"
+    }
+  ]
+}

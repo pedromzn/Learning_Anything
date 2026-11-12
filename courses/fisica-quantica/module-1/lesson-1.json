@@ -1,0 +1,176 @@
+{
+  "title": "A luz era onda... até não ser mais",
+  "scenes": [
+    {
+      "type": "title",
+      "title": "A luz era onda... até não ser mais",
+      "subtitle": "Física quântica do zero, módulo 1",
+      "narration": "No fim do século dezenove, muitos físicos achavam que a física estava quase pronta. Sabiam explicar o movimento dos planetas, o calor, a eletricidade e a luz. Mas alguns fatos teimosos sobre a luz não se encaixavam. Tentar explicá-los fez nascer a física quântica. Vamos começar pelo que já se sabia: a luz se comporta como uma onda."
+    },
+    {
+      "type": "bullets",
+      "title": "A luz como onda",
+      "bullets": [
+        "Comprimento de onda: a distância entre duas cristas",
+        "Frequência: quantas cristas passam por segundo",
+        "Cor: depende do comprimento de onda",
+        "Visível: de cerca de 400 nm (violeta) a 700 nm (vermelho)"
+      ],
+      "narration": "Pense numa onda no mar. A distância entre duas cristas é o comprimento de onda. Quantas cristas passam por um ponto a cada segundo é a frequência, medida em hertz. Com a luz é igual, só que as cristas ficam muito próximas: menos de um milésimo de milímetro. O comprimento de onda decide a cor que vemos. A luz visível vai de cerca de quatrocentos nanômetros, no violeta, até cerca de setecentos nanômetros, no vermelho. Um nanômetro é um bilionésimo de metro."
+    },
+    {
+      "type": "equation",
+      "lines": [
+        "c = \\lambda \\, f",
+        "c \\approx 3 \\times 10^{8}\\ \\text{m/s}",
+        "\\lambda \\text{ maior} \\Rightarrow f \\text{ menor}"
+      ],
+      "captions": "Velocidade da luz = comprimento de onda × frequência",
+      "narration": "Comprimento de onda e frequência estão presos um ao outro. A velocidade da luz, que chamamos de cê, é o comprimento de onda vezes a frequência. No vácuo, cê vale cerca de trezentos mil quilômetros por segundo, sempre, para qualquer cor. Então, se o comprimento de onda é maior, a frequência tem de ser menor, para o produto dar o mesmo valor. A luz vermelha tem comprimento de onda maior que a violeta. Logo, a vermelha tem frequência menor, e a violeta, frequência maior."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "multiple_choice",
+        "id": "v1-freq-cor",
+        "skill": "m1-luz-como-onda",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "A luz vermelha tem comprimento de onda maior que a luz violeta. Qual das duas tem frequência maior?",
+        "hints": ["Lembre que o comprimento de onda vezes a frequência dá sempre a velocidade da luz."],
+        "choices": [
+          {
+            "text": "A vermelha",
+            "explanation": "Esse é o erro de achar que 'maior' vai junto com 'maior'. Se o comprimento de onda cresce, a frequência diminui."
+          },
+          {
+            "text": "A violeta",
+            "explanation": "Isso: com comprimento de onda menor, ela precisa de frequência maior para manter a mesma velocidade."
+          },
+          {
+            "text": "As duas têm a mesma frequência",
+            "explanation": "O que é igual para as duas é a velocidade no vácuo, não a frequência."
+          }
+        ],
+        "correct": 1,
+        "solution": "Como c = λf e c é o mesmo para todas as cores, quem tem λ menor (a violeta) tem f maior."
+      },
+      "narration": "Pause o vídeo e responda: a luz vermelha tem comprimento de onda maior que a violeta. Qual das duas tem frequência maior?"
+    },
+    {
+      "type": "diagram",
+      "title": "A prova de que a luz é onda",
+      "nodes": [
+        {
+          "id": "fonte",
+          "label": "Luz de uma cor só"
+        },
+        {
+          "id": "fendas",
+          "label": "Duas fendas estreitas"
+        },
+        {
+          "id": "tela",
+          "label": "Tela"
+        },
+        {
+          "id": "faixas",
+          "label": "Faixas claras e escuras"
+        }
+      ],
+      "links": [
+        {
+          "from": "fonte",
+          "to": "fendas",
+          "label": ""
+        },
+        {
+          "from": "fendas",
+          "to": "tela",
+          "label": "as ondas se somam"
+        },
+        {
+          "from": "tela",
+          "to": "faixas",
+          "label": "interferência"
+        }
+      ],
+      "narration": "Por que se acreditava que a luz era onda? Por causa de experimentos como o de Thomas Young, no começo do século dezenove. Ele fez a luz passar por duas fendas estreitas. Na tela apareciam faixas claras e escuras, alternadas. Isso é interferência: onde as cristas das duas ondas chegam juntas, a luz se reforça; onde uma crista encontra um vale, elas se cancelam e fica escuro. Partículas comuns, como bolinhas, não fazem isso. Ondas fazem."
+    },
+    {
+      "type": "bullets",
+      "title": "Três fatos que não se encaixavam",
+      "bullets": [
+        "A cor da luz de objetos quentes (corpo negro)",
+        "Luz arrancando elétrons de metais (efeito fotoelétrico)",
+        "Gases que emitem só algumas cores (espectro de linhas)"
+      ],
+      "narration": "Mesmo assim, três fatos não fechavam. O primeiro: a luz emitida por objetos quentes, como o filamento de uma lâmpada ou o ferro em brasa. O segundo: a luz que arranca elétrons de um metal, o chamado efeito fotoelétrico. O terceiro: gases aquecidos, como o hidrogênio, que só emitem algumas cores bem definidas. Neste módulo vamos tratar dos dois primeiros. Os átomos ficam para o módulo três."
+    },
+    {
+      "type": "bullets",
+      "title": "O problema do corpo negro",
+      "bullets": [
+        "Objeto quente brilha: vermelho, depois amarelo, depois branco",
+        "A teoria clássica previa energia sem limite no ultravioleta",
+        "Planck, 1900: a energia só vem em pacotes"
+      ],
+      "narration": "Aqueça um pedaço de ferro. Primeiro ele fica vermelho escuro, depois laranja, amarelo e, muito quente, quase branco. Os físicos chamam o objeto ideal que absorve e emite toda luz de corpo negro. Quando usaram a física da época para prever a luz de um corpo negro, a conta dava um absurdo: energia cada vez maior nas frequências altas, sem limite, no ultravioleta. Isso ficou conhecido como catástrofe do ultravioleta. Em mil e novecentos, o físico alemão Max Planck achou a saída: supôs que a energia só pode ser trocada em pacotes, que ele chamou de quanta. A palavra quântica vem daí."
+    },
+    {
+      "type": "equation",
+      "lines": ["E = h \\, f", "h = 6{,}626 \\times 10^{-34}\\ \\text{J}\\cdot\\text{s}"],
+      "captions": "A energia de um pacote de luz",
+      "narration": "O tamanho de cada pacote depende da frequência. A energia é igual a agá vezes a frequência. Agá é a constante de Planck, um número minúsculo: seis vírgula seis dois seis vezes dez elevado a menos trinta e quatro, em joules vezes segundo. Em mil novecentos e cinco, Albert Einstein levou a ideia mais longe: a própria luz é feita desses pacotes. Hoje chamamos cada pacote de fóton. Repare na consequência: frequência maior quer dizer fóton com mais energia."
+    },
+    {
+      "type": "equation",
+      "lines": [
+        "\\lambda = 500\\ \\text{nm} \\Rightarrow f = \\frac{3 \\times 10^{8}}{5 \\times 10^{-7}} = 6 \\times 10^{14}\\ \\text{Hz}",
+        "E = 6{,}626 \\times 10^{-34} \\times 6 \\times 10^{14} \\approx 4 \\times 10^{-19}\\ \\text{J}"
+      ],
+      "captions": "Um fóton de luz verde",
+      "narration": "Vamos ver o tamanho de um fóton de luz verde, com comprimento de onda de quinhentos nanômetros. Primeiro a frequência: três vezes dez à oitava dividido por cinco vezes dez à menos sete dá seis vezes dez à décima quarta hertz. Depois a energia: agá vezes essa frequência dá cerca de quatro vezes dez elevado a menos dezenove joules. É pouquíssimo. Por isso não percebemos que a luz chega em pacotes: uma lâmpada comum solta uma quantidade enorme de fótons por segundo. Um fóton azul ou violeta, de frequência maior, carrega mais energia que esse verde. Um fóton vermelho carrega menos."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "multiple_choice",
+        "id": "v1-energia-cor",
+        "skill": "m1-energia-do-foton",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Qual fóton carrega mais energia: um de luz vermelha ou um de luz azul?",
+        "hints": ["A energia do fóton é a constante de Planck vezes a frequência."],
+        "choices": [
+          {
+            "text": "O vermelho, porque tem comprimento de onda maior",
+            "explanation": "A energia cresce com a frequência, não com o comprimento de onda. Comprimento de onda maior quer dizer frequência menor."
+          },
+          {
+            "text": "Os dois carregam a mesma energia",
+            "explanation": "Seria assim se a energia não dependesse da cor, mas E = hf depende da frequência."
+          },
+          {
+            "text": "O azul, porque tem frequência maior",
+            "explanation": "Isso: E = hf, e a luz azul tem frequência maior que a vermelha."
+          }
+        ],
+        "correct": 2,
+        "solution": "E = hf. A luz azul tem frequência maior que a vermelha, então cada fóton azul tem mais energia."
+      },
+      "narration": "Hora de testar. Pause e responda: qual fóton carrega mais energia, um de luz vermelha ou um de luz azul?"
+    },
+    {
+      "type": "bullets",
+      "title": "Para guardar",
+      "bullets": [
+        "A luz faz interferência: se comporta como onda",
+        "A luz troca energia em pacotes: os fótons",
+        "Energia de um fóton: E = hf",
+        "Mais frequência, mais energia por fóton"
+      ],
+      "narration": "Recapitulando. A luz faz interferência, então se comporta como onda. Mas ela troca energia em pacotes, os fótons, cada um com energia agá vezes a frequência. Quanto maior a frequência, mais energia em cada fóton. Na próxima aula, de texto, você vê com calma o corpo negro e a ideia de Planck. Depois, na aula do efeito fotoelétrico, vai ver por que Einstein precisou dos fótons para explicar o que acontecia com os metais."
+    }
+  ]
+}

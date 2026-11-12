@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "type": "multiple_choice",
+      "id": "cp1-who-sees-all",
+      "skill": "m1-build-pipeline",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Um projeto tem cinco arquivos .cpp. Qual etapa é a única que trabalha com todos eles ao mesmo tempo?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "O pré-processador",
+          "explanation": "O pré-processador trata um arquivo de cada vez, expandindo os #include daquele arquivo."
+        },
+        {
+          "text": "O compilador",
+          "explanation": "O compilador traduz cada .cpp isoladamente, gerando um objeto por arquivo."
+        },
+        {
+          "text": "O linker",
+          "explanation": "Certo: o linker recebe todos os objetos e a biblioteca padrão e monta um único executável."
+        }
+      ],
+      "correct": 2,
+      "solution": "O linker. Pré-processador e compilador tratam cada .cpp separadamente; só a ligação junta os cinco objetos."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "cp1-multiple-def",
+      "skill": "m1-read-errors",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Ao compilar `main.cpp relatorio.cpp` juntos, aparece `multiple definition of 'calcular()'`, sem número de linha. O que isso indica?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "Erro de ligação: a função calcular foi definida em mais de um arquivo",
+          "explanation": "Certo: cada arquivo compilou, mas o linker encontrou duas definições do mesmo símbolo."
+        },
+        {
+          "text": "Erro de compilação: calcular foi chamada antes de ser declarada",
+          "explanation": "Nome não declarado gera erro de compilação com arquivo e linha, e outra mensagem."
+        },
+        {
+          "text": "Erro de execução: calcular é chamada duas vezes",
+          "explanation": "Chamar uma função várias vezes é normal; e a mensagem veio antes de o programa existir."
+        },
+        {
+          "text": "Um aviso que pode ser ignorado",
+          "explanation": "É um erro: o executável não é gerado."
+        }
+      ],
+      "correct": 0,
+      "solution": "É um erro de ligação: a definição completa de calcular aparece em dois arquivos objeto. Uma função comum só pode ser definida uma vez no programa."
+    },
+    {
+      "type": "short_answer",
+      "id": "cp1-std-flag",
+      "skill": "m1-compile-run",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Escreva a opção do g++ que escolhe a versão C++20 da linguagem.",
+      "hints": [],
+      "accepted": ["-std=c++20", "std=c++20", "--std=c++20"],
+      "solution": "-std=c++20. Sem ela, o compilador usa a versão padrão dele, que pode ser mais antiga."
+    },
+    {
+      "type": "numeric",
+      "id": "cp1-int-expr",
+      "skill": "m1-fundamental-types",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Com todos os valores do tipo `int`, quanto vale a expressão `23 / 4 * 4`? (A divisão e a multiplicação são feitas da esquerda para a direita.)",
+      "hints": [],
+      "answer": 20,
+      "tolerance": 0,
+      "unit": "",
+      "solution": "23 / 4 = 5 (divisão inteira, a parte fracionária é descartada). Depois, 5 * 4 = 20. Não volta a 23 porque a parte perdida não é recuperada."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "cp1-undefined-var",
+      "skill": "m1-initialization",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Dentro de uma função, qual destas declarações deixa a variável com valor indefinido?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "double saldo{};",
+          "explanation": "Chaves vazias inicializam com zero."
+        },
+        {
+          "text": "double saldo;",
+          "explanation": "Certo: sem nenhuma inicialização, o valor é indefinido, e lê-lo é comportamento indefinido."
+        },
+        {
+          "text": "double saldo{100.0};",
+          "explanation": "Inicializada com 100.0."
+        },
+        {
+          "text": "auto saldo{0.0};",
+          "explanation": "auto exige valor inicial; aqui saldo é um double valendo 0.0."
+        }
+      ],
+      "correct": 1,
+      "solution": "double saldo; não dá valor nenhum à variável. As outras três inicializam: com zero, com 100.0 e, via auto, com 0.0."
+    },
+    {
+      "type": "numeric",
+      "id": "cp1-cin-calc",
+      "skill": "m1-io-basics",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "O programa abaixo recebe a entrada `10` Enter `3` Enter. O que ele imprime?\n\n```cpp\n#include <iostream>\n\nint main()\n{\n    int a{};\n    int b{};\n    std::cin >> a >> b;\n    std::cout << a % b + a / b << '\\n';\n}\n```",
+      "hints": [],
+      "answer": 4,
+      "tolerance": 0,
+      "unit": "",
+      "solution": "a = 10 e b = 3. 10 % 3 = 1 (resto) e 10 / 3 = 3 (divisão inteira). 1 + 3 = 4."
+    },
+    {
+      "type": "true_false",
+      "id": "cp1-cast-div",
+      "skill": "m1-fundamental-types",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Verdadeiro ou falso: com `int votos{7};`, a expressão `static_cast<double>(votos) / 2` vale 3.5.",
+      "hints": [],
+      "correct": true,
+      "solution": "Verdadeiro. votos é convertido para 7.0 antes da divisão, então a conta é feita em double: 7.0 / 2 = 3.5."
+    }
+  ]
+}

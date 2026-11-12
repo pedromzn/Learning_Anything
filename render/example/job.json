@@ -1,0 +1,149 @@
+{
+  "script": {
+    "title": "Derivada: a inclinação da tangente",
+    "scenes": [
+      {
+        "type": "title",
+        "title": "A derivada como inclinação da tangente",
+        "subtitle": "Como medir a rapidez com que uma função muda",
+        "narration": "Nesta aula vamos entender a derivada como a inclinação da reta tangente a uma curva."
+      },
+      {
+        "type": "bullets",
+        "title": "O que vamos ver",
+        "bullets": [
+          "Taxa de variação média entre dois pontos",
+          "O limite quando a distância tende a zero",
+          "A reta tangente e sua inclinação",
+          "Um exemplo com x ao quadrado"
+        ],
+        "narration": "Primeiro a taxa média, depois o limite, e por fim a tangente."
+      },
+      {
+        "type": "equation",
+        "lines": ["f'(a) = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}"],
+        "captions": "A definição da derivada no ponto a",
+        "narration": "A derivada de f no ponto a é o limite da taxa média quando h tende a zero."
+      },
+      {
+        "type": "code",
+        "lang": "cpp",
+        "code": "double derivada(double (*f)(double), double a) {\n    double h = 1e-6;\n    return (f(a + h) - f(a)) / h;\n}",
+        "highlights": [2, 3],
+        "narration": "No computador, aproximamos o limite com um h bem pequeno."
+      },
+      {
+        "type": "diagram",
+        "title": "Da secante à tangente",
+        "nodes": [
+          {
+            "id": "secante",
+            "label": "Reta secante"
+          },
+          {
+            "id": "h-diminui",
+            "label": "h diminui"
+          },
+          {
+            "id": "limite",
+            "label": "Limite"
+          },
+          {
+            "id": "tangente",
+            "label": "Reta tangente"
+          }
+        ],
+        "links": [
+          {
+            "from": "secante",
+            "to": "h-diminui",
+            "label": ""
+          },
+          {
+            "from": "h-diminui",
+            "to": "limite",
+            "label": "h → 0"
+          },
+          {
+            "from": "limite",
+            "to": "tangente",
+            "label": ""
+          }
+        ],
+        "narration": "Ao diminuir h, a secante vira a tangente."
+      },
+      {
+        "type": "chart",
+        "title": "A parábola f(x) = x²",
+        "func": "x^2",
+        "xMin": -2,
+        "xMax": 2,
+        "label": "f(x) = x²",
+        "narration": "Veja a curva de x ao quadrado, cuja inclinação cresce com x."
+      },
+      {
+        "type": "question",
+        "item": {
+          "id": "derivada-x2",
+          "type": "multiple_choice",
+          "skill": "derivada",
+          "bloom": "apply",
+          "difficulty": 1,
+          "prompt": "Qual é a derivada de f(x) = x² no ponto x = 3?",
+          "hints": [],
+          "solution": "f'(x) = 2x, logo f'(3) = 6.",
+          "choices": [
+            {
+              "text": "3",
+              "explanation": "Não."
+            },
+            {
+              "text": "6",
+              "explanation": "Sim."
+            },
+            {
+              "text": "9",
+              "explanation": "Não."
+            },
+            {
+              "text": "12",
+              "explanation": "Não."
+            }
+          ],
+          "correct": 1
+        },
+        "narration": "Pause o vídeo e responda."
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "durationMs": 5000,
+      "audio": "cena1.mp3"
+    },
+    {
+      "durationMs": 5000,
+      "audio": "cena2.mp3"
+    },
+    {
+      "durationMs": 6000,
+      "audio": "cena3.mp3"
+    },
+    {
+      "durationMs": 6000,
+      "audio": "cena4.mp3"
+    },
+    {
+      "durationMs": 6000,
+      "audio": "cena5.mp3"
+    },
+    {
+      "durationMs": 6000,
+      "audio": "cena6.mp3"
+    },
+    {
+      "durationMs": 6000,
+      "audio": "cena7.mp3"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "guidance": "Os primeiros itens fixam as ideias, os do meio pedem análise de casos, e o último é para o seu negócio. Tente antes de abrir as dicas.",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "id": "e5-01",
+      "skill": "m1-concorrencia",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Para uma lavanderia de bairro, qual é a alternativa do tipo 'não comprar'?",
+      "hints": [
+        "O 'não comprar' é o que o cliente faz sem contratar ninguém.",
+        "Procure a alternativa em que o cliente mesmo resolve."
+      ],
+      "solution": "Lavar a roupa em casa é a alternativa de não comprar o serviço: o cliente resolve o problema sozinho.",
+      "choices": [
+        {
+          "text": "Outra lavanderia da mesma rua.",
+          "explanation": "É concorrente direta."
+        },
+        {
+          "text": "Lavar a roupa em casa.",
+          "explanation": "Correto: o cliente resolve sem comprar de ninguém."
+        },
+        {
+          "text": "Um aplicativo que busca roupas em casa.",
+          "explanation": "É concorrente indireto, que vende o serviço de outro jeito."
+        },
+        {
+          "text": "O fabricante de sabão em pó.",
+          "explanation": "Não é alternativa de compra do serviço para o cliente."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "type": "true_false",
+      "id": "e5-02",
+      "skill": "m1-posicionamento",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: 'atendimento de qualidade' é um bom diferencial para um pequeno negócio.",
+      "hints": ["Pense em quantos concorrentes diriam a mesma frase.", "Um diferencial precisa ser comprovável."],
+      "solution": "Falso. Todos dizem isso e o cliente não consegue verificar. É obrigação do negócio, e não diferencial.",
+      "correct": false
+    },
+    {
+      "type": "short_answer",
+      "id": "e5-03",
+      "skill": "m1-concorrencia",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Como se chama o concorrente que vende o mesmo produto ou serviço para o mesmo público, como outra padaria na mesma rua? (Uma palavra ou duas.)",
+      "hints": ["A palavra que falta é um adjetivo que combina com 'concorrente'.", "O outro tipo é o indireto."],
+      "solution": "É o concorrente direto.",
+      "accepted": ["direto", "concorrente direto", "o concorrente direto"]
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e5-04",
+      "skill": "m1-posicionamento",
+      "bloom": "analyze",
+      "difficulty": 2,
+      "prompt": "Uma oficina mecânica de bairro quer um diferencial. Qual das opções passa melhor nos três testes (importa, é comprovável, é difícil de copiar)?",
+      "hints": [
+        "Descarte as frases que qualquer oficina diria.",
+        "O cliente precisa conseguir verificar antes de comprar."
+      ],
+      "solution": "Mostrar o orçamento por escrito com foto da peça trocada e garantia de 90 dias por escrito importa ao cliente, que teme ser enganado, é comprovável e poucos fazem. As outras são frases que qualquer oficina diria.",
+      "choices": [
+        {
+          "text": "Somos a oficina mais confiável da região.",
+          "explanation": "Frase vazia: não dá para verificar."
+        },
+        {
+          "text": "Trabalhamos com muito carinho e dedicação.",
+          "explanation": "Subjetivo e dito por todos."
+        },
+        {
+          "text": "Orçamento por escrito, foto da peça trocada e garantia de 90 dias por escrito.",
+          "explanation": "Correto: ataca o medo de ser enganado e dá para comprovar."
+        },
+        {
+          "text": "Preço baixo.",
+          "explanation": "Fácil de copiar, e atrai o cliente que só compara preço."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "type": "numeric",
+      "id": "e5-05",
+      "skill": "m1-posicionamento",
+      "bloom": "analyze",
+      "difficulty": 2,
+      "prompt": "Três concorrentes cobram 60, 80 e 70 reais pelo mesmo serviço. Você quer se posicionar como especialista e cobrar 15% acima da média dos três. Quantos reais você cobraria? (Use vírgula ou ponto para decimais.)",
+      "hints": [
+        "Calcule a média dos três preços: some e divida por 3.",
+        "Depois aumente a média em 15%: multiplique por 1,15."
+      ],
+      "solution": "A média é (60 mais 80 mais 70) dividido por 3, ou seja, 210 dividido por 3, que dá 70 reais. 15% acima: 70 vezes 1,15 dá 80,50 reais.",
+      "answer": 80.5,
+      "tolerance": 0,
+      "unit": "R$"
+    },
+    {
+      "type": "ordering",
+      "id": "e5-06",
+      "skill": "m1-posicionamento",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Ponha em ordem os passos para chegar a um posicionamento.",
+      "hints": [
+        "Antes de comparar diferenças, você precisa saber quem é o cliente.",
+        "A aplicação nos canais vem depois de ter a frase."
+      ],
+      "solution": "Cliente primeiro, depois as alternativas que ele considera, depois o diferencial que passa nos testes, depois a frase com a prova e por fim a aplicação nos pontos de contato.",
+      "steps": [
+        "Defina o cliente ideal",
+        "Liste as alternativas que ele considera",
+        "Escolha uma diferença que passe nos três testes",
+        "Escreva a frase com a prova",
+        "Aplique no Google, no Instagram e no WhatsApp"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e5-07",
+      "skill": "m1-posicionamento",
+      "bloom": "analyze",
+      "difficulty": 3,
+      "prompt": "Uma loja de moda plus size tem na descrição do Google 'moda para todas as mulheres'. A frase de posicionamento diz 'moda confortável e com caimento certo para mulheres de tamanho 46 ao 60'. Qual ajuste deixa o perfil coerente?",
+      "hints": ["O perfil precisa confirmar a frase de posicionamento.", "'Todas as mulheres' contradiz o recorte."],
+      "solution": "A descrição deve repetir o recorte e o diferencial: moda para tamanhos 46 ao 60, conforto e caimento. 'Todas as mulheres' contradiz o posicionamento.",
+      "choices": [
+        {
+          "text": "Manter 'moda para todas as mulheres', porque abrange mais gente.",
+          "explanation": "Contradiz o posicionamento e volta ao público amplo."
+        },
+        {
+          "text": "Trocar para 'moda confortável e com caimento certo para tamanhos 46 ao 60', com fotos de clientes reais.",
+          "explanation": "Correto: o perfil confirma a frase."
+        },
+        {
+          "text": "Apagar a descrição, para não errar.",
+          "explanation": "Perde a chance de ser encontrada por quem procura exatamente isso."
+        },
+        {
+          "text": "Escrever só o nome da loja e o endereço.",
+          "explanation": "Informa o básico, mas não comunica o posicionamento."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "type": "true_false",
+      "id": "e5-08",
+      "skill": "m1-posicionamento",
+      "bloom": "analyze",
+      "difficulty": 2,
+      "prompt": "Verdadeiro ou falso: se a sua frase de posicionamento funcionaria igual para o concorrente trocando só o nome, ela ainda não posiciona o negócio.",
+      "hints": ["Um posicionamento diferencia.", "Teste a frase trocando o nome."],
+      "solution": "Verdadeiro. Uma frase que serve para qualquer concorrente não aponta o que é diferente em você.",
+      "correct": true
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e5-09",
+      "skill": "m1-posicionamento",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Qual das frases é a mais forte como posicionamento de uma lavanderia de bairro?",
+      "hints": ["Procure a que tem cliente, diferencial e prova.", "Desconfie das que só prometem."],
+      "solution": "A frase com cliente específico, entrega em 24 horas e a prova da garantia por escrito é a mais forte. As outras são promessas genéricas.",
+      "choices": [
+        {
+          "text": "Somos a melhor lavanderia da cidade.",
+          "explanation": "Sem cliente específico e sem prova."
+        },
+        {
+          "text": "Para quem trabalha fora e não tem tempo, a lavanderia entrega as roupas em 24 horas e refaz sem custo qualquer peça em que a mancha não saia, o que fica por escrito no comprovante.",
+          "explanation": "Correto: cliente, necessidade, diferencial e prova verificável."
+        },
+        {
+          "text": "Lavamos roupas com carinho e qualidade.",
+          "explanation": "Frase que qualquer lavanderia diria."
+        },
+        {
+          "text": "A lavanderia mais barata do bairro.",
+          "explanation": "Posiciona só por preço, fácil de copiar e de perder."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "type": "short_answer",
+      "id": "e5-10",
+      "skill": "m1-posicionamento",
+      "bloom": "remember",
+      "difficulty": 2,
+      "prompt": "Complete: um bom diferencial precisa ser importante para o cliente, ser _____ e os outros não oferecerem ou não conseguirem copiar fácil. (Uma palavra.)",
+      "hints": [
+        "Pense no que permite ao cliente conferir.",
+        "A palavra termina em -vel e vem depois de 'verdadeiro e'."
+      ],
+      "solution": "Comprovável: o cliente precisa conseguir verificar com foto, número ou depoimento.",
+      "accepted": ["comprovável", "comprovavel", "verificável", "verificavel"]
+    },
+    {
+      "type": "open",
+      "id": "e5-11",
+      "skill": "m1-posicionamento",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Escreva a frase de posicionamento do SEU negócio: Para [cliente ideal], que [necessidade], o [negócio] é [categoria] que [diferencial], porque [prova]. Depois diga em uma linha qual das alternativas do cliente (direta, indireta ou não comprar) mais ameaça você.",
+      "hints": [
+        "Comece pela ficha do cliente que você montou.",
+        "Passe o diferencial pelos três testes antes de escrever.",
+        "Troque o nome do seu negócio pelo de um concorrente: a frase ainda serve? Se sim, melhore."
+      ],
+      "solution": "Uma boa resposta tem cliente específico, diferencial comprovável e prova verificável, e identifica com honestidade a principal alternativa do cliente.",
+      "rubric": [
+        "A frase tem os cinco elementos: cliente, necessidade, categoria, diferencial e prova.",
+        "O diferencial passa nos três testes e não é 'qualidade' ou 'bom atendimento'.",
+        "A frase não funcionaria igual para um concorrente.",
+        "Indica uma alternativa do cliente como principal ameaça e a classifica corretamente."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Share a course
+    url: https://github.com/pedromzn/Learning_Anything/tree/main/community#readme
+    about: Courses are shared from the app (Course → Share in the community) as a pull request, not as an issue.
+  - name: Security problem
+    url: https://github.com/pedromzn/Learning_Anything/security/advisories/new
+    about: Report vulnerabilities privately.

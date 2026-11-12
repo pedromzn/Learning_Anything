@@ -1,0 +1,835 @@
+{
+  "title": "C++ moderno para quem já programa",
+  "summary": "Um curso de oito semanas para quem já programa em outra linguagem e quer usar C++ no trabalho. Passa rápido pela lógica que você já conhece e gasta o tempo no que é novo: como o código vira executável, tipos e comportamento indefinido, valor, referência e ponteiro, classes, tempo de vida e RAII, a biblioteca padrão e a organização de um projeto. Segue a ordem do curso 6.096 do MIT e do CS106L de Stanford, com explicações apoiadas no learncpp.com e no Microsoft Learn em português.",
+  "results": [
+    "Ao final você consegue compilar, ligar e executar um programa C++ pelo terminal e dizer em que etapa um erro aconteceu.",
+    "Ao final você consegue escolher tipos, inicializar variáveis com segurança e evitar comportamento indefinido comum.",
+    "Ao final você consegue decidir entre passar um parâmetro por valor, por referência ou por referência constante.",
+    "Ao final você consegue escrever classes com construtores e membros privados que protegem uma regra.",
+    "Ao final você consegue gerenciar memória sem new e delete, usando RAII e ponteiros inteligentes.",
+    "Ao final você consegue resolver problemas comuns com std::vector, std::unordered_map, algoritmos e lambdas.",
+    "Ao final você consegue organizar um projeto em vários arquivos e compilá-lo com CMake."
+  ],
+  "prerequisites": [
+    "Saber programar em alguma outra linguagem (variáveis, if, laços, funções).",
+    "Um computador com um compilador C++ (g++, clang++ ou Visual Studio) ou acesso a um compilador online.",
+    "Saber abrir um terminal e rodar um comando."
+  ],
+  "modules": [
+    {
+      "title": "Do código ao executável: compilar, tipos e inicialização",
+      "goal": "Entender como um arquivo .cpp vira um programa, compilar com avisos ligados e declarar variáveis com o tipo certo, sempre inicializadas.",
+      "skills": [
+        {
+          "id": "m1-build-pipeline",
+          "name": "Explicar pré-processamento, compilação e ligação",
+          "bloom": "understand"
+        },
+        {
+          "id": "m1-compile-run",
+          "name": "Compilar e executar um programa escolhendo padrão e avisos",
+          "bloom": "apply"
+        },
+        {
+          "id": "m1-read-errors",
+          "name": "Distinguir erro de compilação, de ligação e de execução",
+          "bloom": "understand"
+        },
+        {
+          "id": "m1-fundamental-types",
+          "name": "Escolher tipos fundamentais e conhecer seus limites",
+          "bloom": "understand"
+        },
+        {
+          "id": "m1-initialization",
+          "name": "Inicializar variáveis com chaves e evitar valores indefinidos",
+          "bloom": "apply"
+        },
+        {
+          "id": "m1-io-basics",
+          "name": "Ler e escrever no terminal com std::cin e std::cout",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "De arquivo .cpp a executável",
+          "goal": "Ver as três etapas que transformam código em programa e onde cada erro aparece.",
+          "skills": [
+            "m1-build-pipeline",
+            "m1-compile-run"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Compilar, ligar e executar o primeiro programa",
+          "goal": "Compilar pelo terminal com -std=c++20 -Wall -Wextra, ler a estrutura de main e de iostream e classificar erros.",
+          "skills": [
+            "m1-build-pipeline",
+            "m1-compile-run",
+            "m1-read-errors",
+            "m1-io-basics"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: compilação, ligação e erros",
+          "goal": "Praticar o caminho do código ao executável e o diagnóstico dos erros.",
+          "skills": [
+            "m1-build-pipeline",
+            "m1-compile-run",
+            "m1-read-errors",
+            "m1-io-basics"
+          ]
+        },
+        {
+          "type": "video",
+          "title": "Tipos têm tamanho: o que muda vindo de outra linguagem",
+          "goal": "Entender que cada tipo ocupa bytes, tem limites e que variável local sem valor é um bug grave.",
+          "skills": [
+            "m1-fundamental-types",
+            "m1-initialization"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Tipos fundamentais, inicialização e auto",
+          "goal": "Conhecer int, double, char, bool, a divisão inteira, a inicialização com chaves e o auto.",
+          "skills": [
+            "m1-fundamental-types",
+            "m1-initialization",
+            "m1-io-basics"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: tipos, inicialização e entrada e saída",
+          "goal": "Prever resultados de expressões, achar bugs de inicialização e ler dados do usuário.",
+          "skills": [
+            "m1-fundamental-types",
+            "m1-initialization",
+            "m1-io-basics",
+            "m1-read-errors"
+          ]
+        }
+      ],
+      "project": {
+        "title": "Conversor de unidades sem avisos",
+        "prompt": "Escreva um programa conversor.cpp que pergunta ao usuário uma temperatura em graus Celsius e uma distância em quilômetros, lê os dois valores com std::cin e imprime a temperatura em Fahrenheit (F = C × 9 / 5 + 32) e a distância em milhas (1 milha = 1,609344 km). Compile com g++ (ou clang++) usando -std=c++20 -Wall -Wextra e corrija o código até não sobrar nenhum aviso. Depois, de propósito, provoque um erro de compilação e um erro de ligação e anote a mensagem de cada um.",
+        "rubric": [
+          "Compila sem nenhum aviso com -std=c++20 -Wall -Wextra.",
+          "Todas as variáveis são inicializadas na declaração, com chaves.",
+          "As contas usam double e não sofrem divisão inteira (9 / 5 não vira 1).",
+          "Imprime os resultados com uma mensagem clara.",
+          "Mostra uma mensagem de erro de compilação e uma de ligação, explicando em qual etapa cada uma aconteceu."
+        ]
+      }
+    },
+    {
+      "title": "Funções, fluxo de controle e vários arquivos",
+      "goal": "Escrever funções, revisar rapidamente a sintaxe de if e laços e dividir um programa em cabeçalhos e arquivos .cpp.",
+      "skills": [
+        {
+          "id": "m2-control-flow",
+          "name": "Usar if, switch, while e for com a sintaxe de C++",
+          "bloom": "apply"
+        },
+        {
+          "id": "m2-functions",
+          "name": "Declarar e definir funções com parâmetros e retorno",
+          "bloom": "apply"
+        },
+        {
+          "id": "m2-declaration-definition",
+          "name": "Distinguir declaração de definição",
+          "bloom": "understand"
+        },
+        {
+          "id": "m2-headers",
+          "name": "Organizar código em .h e .cpp com header guards",
+          "bloom": "apply"
+        },
+        {
+          "id": "m2-namespaces",
+          "name": "Usar namespaces e o operador de escopo",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "C++ para quem já programa: o que é igual e o que muda",
+          "goal": "Revisar a sintaxe de controle de fluxo e funções pelo que difere das outras linguagens.",
+          "skills": [
+            "m2-control-flow",
+            "m2-functions"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Funções: declaração, definição e chamada",
+          "goal": "Entender por que o compilador precisa ver a declaração antes do uso.",
+          "skills": [
+            "m2-functions",
+            "m2-declaration-definition"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: fluxo de controle e funções",
+          "goal": "Escrever e ler funções e laços.",
+          "skills": [
+            "m2-control-flow",
+            "m2-functions",
+            "m2-declaration-definition"
+          ]
+        },
+        {
+          "type": "video",
+          "title": "Um programa, vários arquivos",
+          "goal": "Ver como cabeçalhos e arquivos .cpp se juntam na ligação.",
+          "skills": [
+            "m2-headers",
+            "m2-declaration-definition"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Cabeçalhos, header guards e namespaces",
+          "goal": "Escrever um .h correto e evitar colisões de nomes.",
+          "skills": [
+            "m2-headers",
+            "m2-namespaces"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: organização em arquivos",
+          "goal": "Diagnosticar erros de múltiplas definições e de símbolos ausentes.",
+          "skills": [
+            "m2-headers",
+            "m2-namespaces",
+            "m2-declaration-definition"
+          ]
+        }
+      ],
+      "project": {
+        "title": "Biblioteca de matemática em dois arquivos",
+        "prompt": "Crie mathutil.h e mathutil.cpp com três funções (por exemplo, máximo de dois números, fatorial e verificação de número primo) dentro de um namespace próprio. Use-as em main.cpp. Compile cada .cpp separadamente com -c e ligue os objetos num executável.",
+        "rubric": [
+          "O cabeçalho tem apenas declarações e um header guard ou #pragma once.",
+          "As definições ficam no .cpp.",
+          "As funções estão num namespace próprio.",
+          "Compila e liga sem avisos, em dois passos."
+        ]
+      }
+    },
+    {
+      "title": "Valores, referências, ponteiros e const",
+      "goal": "Saber quando um dado é copiado, quando é compartilhado por referência e o que um ponteiro guarda.",
+      "skills": [
+        {
+          "id": "m3-pass-by-value-ref",
+          "name": "Escolher entre passagem por valor, referência e referência constante",
+          "bloom": "understand"
+        },
+        {
+          "id": "m3-references",
+          "name": "Usar referências como apelidos de objetos",
+          "bloom": "apply"
+        },
+        {
+          "id": "m3-pointers",
+          "name": "Ler e escrever código com ponteiros, endereço e nullptr",
+          "bloom": "apply"
+        },
+        {
+          "id": "m3-const",
+          "name": "Aplicar const a variáveis, referências e ponteiros",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Cópia, apelido ou endereço?",
+          "goal": "Ver na memória a diferença entre valor, referência e ponteiro.",
+          "skills": [
+            "m3-pass-by-value-ref",
+            "m3-references",
+            "m3-pointers"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Referências e passagem de parâmetros",
+          "goal": "Escolher a forma de passar parâmetros e evitar cópias desnecessárias.",
+          "skills": [
+            "m3-pass-by-value-ref",
+            "m3-references",
+            "m3-const"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: referências e parâmetros",
+          "goal": "Prever o efeito de funções que recebem por valor ou por referência.",
+          "skills": [
+            "m3-pass-by-value-ref",
+            "m3-references",
+            "m3-const"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Ponteiros, endereços e nullptr",
+          "goal": "Ler e escrever código com ponteiros e entender a referência pendente.",
+          "skills": [
+            "m3-pointers",
+            "m3-const"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: ponteiros e const",
+          "goal": "Rastrear valores por ponteiros e achar usos inválidos.",
+          "skills": [
+            "m3-pointers",
+            "m3-const",
+            "m3-references"
+          ]
+        }
+      ],
+      "project": {
+        "title": "Funções que trocam e somam",
+        "prompt": "Escreva uma função que troca dois inteiros por referência, outra que faz o mesmo com ponteiros e uma terceira que recebe uma std::string por referência constante e devolve quantas vogais ela tem. Mostre no main que as trocas funcionam e explique, em comentários, por que a string não é copiada.",
+        "rubric": [
+          "A troca por referência funciona.",
+          "A troca por ponteiro verifica nullptr antes de usar.",
+          "A string é recebida por referência constante.",
+          "Os comentários explicam a diferença entre as três formas."
+        ]
+      }
+    },
+    {
+      "title": "Strings, vetores e o for de intervalo",
+      "goal": "Trabalhar com coleções usando std::string e std::vector em vez de arrays e strings do estilo C.",
+      "skills": [
+        {
+          "id": "m4-string",
+          "name": "Manipular texto com std::string",
+          "bloom": "apply"
+        },
+        {
+          "id": "m4-vector",
+          "name": "Criar, preencher e acessar um std::vector",
+          "bloom": "apply"
+        },
+        {
+          "id": "m4-range-for",
+          "name": "Percorrer coleções com o for de intervalo",
+          "bloom": "apply"
+        },
+        {
+          "id": "m4-c-arrays",
+          "name": "Reconhecer arrays do estilo C e seus riscos",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Coleções em C++: do array cru ao std::vector",
+          "goal": "Entender por que o C++ moderno prefere std::vector e std::string.",
+          "skills": [
+            "m4-vector",
+            "m4-c-arrays"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "std::string e std::vector na prática",
+          "goal": "Usar as operações mais comuns e o for de intervalo.",
+          "skills": [
+            "m4-string",
+            "m4-vector",
+            "m4-range-for"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: texto e coleções",
+          "goal": "Manipular strings e vetores e prever resultados.",
+          "skills": [
+            "m4-string",
+            "m4-vector",
+            "m4-range-for"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Acesso seguro, índices e arrays do estilo C",
+          "goal": "Entender acesso fora dos limites, at() e size_t.",
+          "skills": [
+            "m4-vector",
+            "m4-c-arrays",
+            "m4-range-for"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: índices e erros comuns",
+          "goal": "Achar acessos fora dos limites e escolher a forma de percorrer.",
+          "skills": [
+            "m4-vector",
+            "m4-c-arrays",
+            "m4-range-for",
+            "m4-string"
+          ]
+        }
+      ],
+      "project": {
+        "title": "Estatísticas de notas",
+        "prompt": "Leia do usuário uma quantidade qualquer de notas até ele digitar um valor negativo, guarde-as num std::vector<double> e mostre a média, a maior e a menor nota. Depois leia o nome de cada aluno numa std::string e imprima um relatório.",
+        "rubric": [
+          "Usa std::vector e não arrays do estilo C.",
+          "Percorre o vetor com for de intervalo.",
+          "Trata o caso de nenhuma nota digitada.",
+          "Recebe o vetor em funções por referência constante."
+        ]
+      }
+    },
+    {
+      "title": "Classes e encapsulamento",
+      "goal": "Modelar dados e comportamento com classes, protegendo as invariantes com membros privados e construtores.",
+      "skills": [
+        {
+          "id": "m5-struct-class",
+          "name": "Definir struct e class e saber a diferença",
+          "bloom": "understand"
+        },
+        {
+          "id": "m5-constructors",
+          "name": "Escrever construtores com lista de inicialização",
+          "bloom": "apply"
+        },
+        {
+          "id": "m5-encapsulation",
+          "name": "Proteger invariantes com membros privados",
+          "bloom": "understand"
+        },
+        {
+          "id": "m5-const-members",
+          "name": "Marcar funções-membro const",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Por que agrupar dados e comportamento",
+          "goal": "Ver como a classe protege uma regra (invariante) do resto do programa.",
+          "skills": [
+            "m5-struct-class",
+            "m5-encapsulation"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "struct, class e construtores",
+          "goal": "Escrever uma classe com construtor e lista de inicialização.",
+          "skills": [
+            "m5-struct-class",
+            "m5-constructors"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: construindo classes",
+          "goal": "Ler e completar classes simples.",
+          "skills": [
+            "m5-struct-class",
+            "m5-constructors",
+            "m5-encapsulation"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Encapsulamento e funções-membro const",
+          "goal": "Decidir o que é público e o que é privado; usar const.",
+          "skills": [
+            "m5-encapsulation",
+            "m5-const-members"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: encapsulamento e const",
+          "goal": "Achar quebras de invariante e erros de const.",
+          "skills": [
+            "m5-encapsulation",
+            "m5-const-members",
+            "m5-constructors"
+          ]
+        }
+      ],
+      "project": {
+        "title": "Conta bancária",
+        "prompt": "Escreva uma classe ContaBancaria com titular e saldo privados, construtor, métodos depositar e sacar (que recusa saque maior que o saldo) e um método const que devolve o saldo. Teste no main todos os casos, inclusive os recusados.",
+        "rubric": [
+          "O saldo é privado e só muda pelos métodos.",
+          "O construtor usa lista de inicialização.",
+          "Saque inválido é recusado sem mudar o saldo.",
+          "O método de consulta é const."
+        ]
+      }
+    },
+    {
+      "title": "Memória, tempo de vida e RAII",
+      "goal": "Entender pilha e heap, quando um objeto nasce e morre e como deixar a memória com um dono.",
+      "skills": [
+        {
+          "id": "m6-stack-heap",
+          "name": "Distinguir objetos na pilha e no heap",
+          "bloom": "understand"
+        },
+        {
+          "id": "m6-lifetime",
+          "name": "Prever quando construtores e destrutores rodam",
+          "bloom": "understand"
+        },
+        {
+          "id": "m6-raii",
+          "name": "Explicar e aplicar RAII",
+          "bloom": "apply"
+        },
+        {
+          "id": "m6-smart-pointers",
+          "name": "Usar std::unique_ptr e std::shared_ptr",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Quem é o dono desta memória?",
+          "goal": "Ver pilha, heap e o problema do new sem delete.",
+          "skills": [
+            "m6-stack-heap",
+            "m6-lifetime"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Tempo de vida, destrutores e RAII",
+          "goal": "Entender o destrutor e usar RAII para qualquer recurso.",
+          "skills": [
+            "m6-lifetime",
+            "m6-raii"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: tempo de vida",
+          "goal": "Prever a ordem de construção e destruição.",
+          "skills": [
+            "m6-lifetime",
+            "m6-stack-heap",
+            "m6-raii"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Ponteiros inteligentes",
+          "goal": "Usar make_unique, make_shared e saber qual escolher.",
+          "skills": [
+            "m6-smart-pointers",
+            "m6-raii"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: posse de memória",
+          "goal": "Trocar new e delete por ponteiros inteligentes e achar vazamentos.",
+          "skills": [
+            "m6-smart-pointers",
+            "m6-raii",
+            "m6-stack-heap"
+          ]
+        }
+      ],
+      "project": {
+        "title": "Registro de arquivo com RAII",
+        "prompt": "Escreva uma classe que abre um arquivo de log no construtor e o fecha no destrutor (use std::ofstream por dentro) e guarde vários objetos de uma classe Tarefa em um std::vector<std::unique_ptr<Tarefa>>. Mostre, com mensagens impressas nos destrutores, quando cada objeto é destruído.",
+        "rubric": [
+          "Nenhum new ou delete aparece no código.",
+          "O arquivo é fechado mesmo se a função retornar cedo.",
+          "As mensagens dos destrutores mostram a ordem correta.",
+          "Explica em comentário quem é o dono de cada recurso."
+        ]
+      }
+    },
+    {
+      "title": "Biblioteca padrão: mapas, algoritmos, lambdas e templates",
+      "goal": "Resolver problemas comuns com containers associativos, algoritmos prontos e funções genéricas.",
+      "skills": [
+        {
+          "id": "m7-maps",
+          "name": "Usar std::map e std::unordered_map",
+          "bloom": "apply"
+        },
+        {
+          "id": "m7-algorithms",
+          "name": "Aplicar std::sort, std::find_if e std::count_if",
+          "bloom": "apply"
+        },
+        {
+          "id": "m7-lambdas",
+          "name": "Escrever expressões lambda simples",
+          "bloom": "apply"
+        },
+        {
+          "id": "m7-templates",
+          "name": "Entender e escrever templates de função simples",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Não reinvente o laço: algoritmos da biblioteca padrão",
+          "goal": "Ver iteradores, algoritmos e lambdas trabalhando juntos.",
+          "skills": [
+            "m7-algorithms",
+            "m7-lambdas"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Mapas: map e unordered_map",
+          "goal": "Contar e agrupar dados com containers associativos.",
+          "skills": [
+            "m7-maps"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: mapas",
+          "goal": "Contar palavras e consultar chaves.",
+          "skills": [
+            "m7-maps",
+            "m7-algorithms"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Algoritmos, lambdas e templates de função",
+          "goal": "Ordenar e filtrar com lambdas; escrever uma função genérica.",
+          "skills": [
+            "m7-algorithms",
+            "m7-lambdas",
+            "m7-templates"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: algoritmos e lambdas",
+          "goal": "Escolher o algoritmo certo e escrever a lambda.",
+          "skills": [
+            "m7-algorithms",
+            "m7-lambdas",
+            "m7-templates"
+          ]
+        }
+      ],
+      "project": {
+        "title": "Contador de palavras",
+        "prompt": "Leia um arquivo de texto, conte quantas vezes cada palavra aparece com std::unordered_map, passe os pares para um std::vector, ordene com std::sort e uma lambda e mostre as dez palavras mais frequentes.",
+        "rubric": [
+          "Usa unordered_map para contar.",
+          "Ordena com std::sort e uma lambda.",
+          "Não escreve laço manual de ordenação.",
+          "Trata arquivo inexistente com uma mensagem clara."
+        ]
+      }
+    },
+    {
+      "title": "Erros, exceções e um projeto de verdade",
+      "goal": "Tratar erros, compilar um projeto de vários arquivos com CMake e usar ferramentas que acham bugs cedo.",
+      "skills": [
+        {
+          "id": "m8-exceptions",
+          "name": "Lançar e capturar exceções",
+          "bloom": "apply"
+        },
+        {
+          "id": "m8-error-strategy",
+          "name": "Escolher entre exceção, valor de retorno e assert",
+          "bloom": "understand"
+        },
+        {
+          "id": "m8-cmake",
+          "name": "Montar um build simples com CMake",
+          "bloom": "apply"
+        },
+        {
+          "id": "m8-tooling",
+          "name": "Usar avisos, sanitizers e depurador para achar bugs",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Quando algo dá errado",
+          "goal": "Ver as formas de sinalizar erro em C++ e quando usar cada uma.",
+          "skills": [
+            "m8-exceptions",
+            "m8-error-strategy"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Exceções: throw, try e catch",
+          "goal": "Lançar e capturar exceções da biblioteca padrão e próprias.",
+          "skills": [
+            "m8-exceptions",
+            "m8-error-strategy"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: tratamento de erros",
+          "goal": "Prever o fluxo de exceções e escolher a estratégia.",
+          "skills": [
+            "m8-exceptions",
+            "m8-error-strategy"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "CMake, sanitizers e depurador",
+          "goal": "Montar o build de um projeto e achar bugs de memória com ferramentas.",
+          "skills": [
+            "m8-cmake",
+            "m8-tooling"
+          ]
+        },
+        {
+          "type": "exercises",
+          "title": "Prática: build e ferramentas",
+          "goal": "Ler um CMakeLists.txt e interpretar saídas das ferramentas.",
+          "skills": [
+            "m8-cmake",
+            "m8-tooling",
+            "m8-error-strategy"
+          ]
+        }
+      ],
+      "project": {
+        "title": "Gerenciador de tarefas",
+        "prompt": "Junte o que aprendeu num gerenciador de tarefas de linha de comando: classes em arquivos .h e .cpp separados, tarefas guardadas num std::vector, busca com algoritmos, tratamento de entrada inválida com exceções e build com CMake. Rode uma vez com AddressSanitizer ligado.",
+        "rubric": [
+          "Compila com CMake sem avisos.",
+          "Código dividido em pelo menos três arquivos.",
+          "Entrada inválida não derruba o programa.",
+          "Roda com AddressSanitizer sem nenhum erro relatado.",
+          "Não usa new nem delete."
+        ]
+      }
+    }
+  ],
+  "bibliography": [
+    {
+      "title": "Bem-vindo de volta ao C++ – C++ moderno",
+      "author": "Microsoft",
+      "institution": "Microsoft Learn",
+      "type": "documentation",
+      "url": "https://learn.microsoft.com/pt-br/cpp/cpp/welcome-back-to-cpp-modern-cpp",
+      "license": "unknown",
+      "reason": "Em português: resume o que é C++ moderno (RAII, ponteiros inteligentes, std::string, std::vector) e o que evitar do estilo C."
+    },
+    {
+      "title": "Learn C++ — tutorial completo (capítulo 0: introdução e compilação)",
+      "author": "Alex (autor do site)",
+      "institution": "learncpp.com",
+      "type": "site",
+      "url": "https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/",
+      "license": "proprietary",
+      "reason": "O tutorial gratuito mais completo e atualizado; explica com cuidado o modelo de compilação, os avisos e o comportamento indefinido, que são o centro do módulo 1. Em inglês."
+    },
+    {
+      "title": "6.096 Introduction to C++ — Lecture Notes",
+      "author": "Jesse Dunietz, Geza Kovacs, John Marrero",
+      "institution": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/pages/lecture-notes/",
+      "license": "cc-by-nc-sa",
+      "reason": "Curso curto do MIT em 10 aulas (introdução, fluxo, funções, arrays, ponteiros, classes, OO, memória): dá a espinha dorsal da ordem dos módulos."
+    },
+    {
+      "title": "CS106L: Standard C++ Programming",
+      "author": "Equipe do CS106L",
+      "institution": "Stanford University",
+      "type": "course",
+      "url": "https://web.stanford.edu/class/cs106l/",
+      "license": "unknown",
+      "reason": "Curso para quem já programa: vai direto a tipos, inicialização, referências, streams, containers, iteradores, classes e templates. Bom modelo para o ritmo deste curso."
+    },
+    {
+      "title": "Programar em C++ (Wikilivros)",
+      "author": "Colaboradores do Wikilivros",
+      "institution": "Wikilivros",
+      "type": "book",
+      "url": "https://pt.wikibooks.org/wiki/Programar_em_C%2B%2B",
+      "license": "cc-by-sa",
+      "reason": "Livro aberto em português, de objetos básicos à STL; leitura complementar para quem prefere português."
+    },
+    {
+      "title": "Passo a passo: compilando um programa C++ nativo na linha de comando",
+      "author": "Microsoft",
+      "institution": "Microsoft Learn",
+      "type": "documentation",
+      "url": "https://learn.microsoft.com/pt-br/cpp/build/walkthrough-compiling-a-native-cpp-program-on-the-command-line",
+      "license": "unknown",
+      "reason": "Em português: compilar e executar o primeiro programa pelo terminal (com o compilador da Microsoft, no Windows)."
+    },
+    {
+      "title": "Tempo de vida do objeto e gerenciamento de recursos (RAII)",
+      "author": "Microsoft",
+      "institution": "Microsoft Learn",
+      "type": "documentation",
+      "url": "https://learn.microsoft.com/pt-br/cpp/cpp/object-lifetime-and-resource-management-modern-cpp",
+      "license": "unknown",
+      "reason": "Em português: a ideia de RAII, central no módulo de memória."
+    },
+    {
+      "title": "Ponteiros inteligentes (C++ moderno)",
+      "author": "Microsoft",
+      "institution": "Microsoft Learn",
+      "type": "documentation",
+      "url": "https://learn.microsoft.com/pt-br/cpp/cpp/smart-pointers-modern-cpp",
+      "license": "unknown",
+      "reason": "Em português: unique_ptr, shared_ptr e weak_ptr com exemplos."
+    },
+    {
+      "title": "C++ Core Guidelines",
+      "author": "Bjarne Stroustrup e Herb Sutter (editores)",
+      "institution": "Standard C++ Foundation (isocpp)",
+      "type": "documentation",
+      "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+      "license": "unknown",
+      "reason": "As regras de bom uso do C++ moderno (inicializar sempre, RAII, passar por referência constante) que embasam as recomendações do curso."
+    },
+    {
+      "title": "Fundamental types (cppreference)",
+      "author": "Colaboradores do cppreference.com",
+      "institution": "cppreference.com",
+      "type": "documentation",
+      "url": "https://en.cppreference.com/w/cpp/language/types",
+      "license": "unknown",
+      "reason": "A referência técnica de consulta: tamanhos mínimos garantidos pelo padrão para cada tipo."
+    }
+  ]
+}

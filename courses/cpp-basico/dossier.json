@@ -1,0 +1,226 @@
+{
+  "summary": "As boas fontes ensinam C++ em uma ordem parecida. O MIT 6.096 (curso de janeiro de 2011) vai de introdução e fluxo de controle a funções, arrays e strings, ponteiros, classes, orientação a objetos e gerenciamento de memória. O learncpp.com começa antes: como o código vira executável (pré-processador, compilador, linker), como configurar avisos e o padrão da linguagem, e só depois tipos, funções, arquivos múltiplos, referências e ponteiros, classes, std::vector e memória dinâmica. O CS106L de Stanford, voltado a quem já programa, pula o básico de lógica e vai direto a tipos, inicialização e referências, streams, containers, iteradores, classes e templates. O Microsoft Learn (em português) resume o 'C++ moderno': preferir std::string, std::vector, ponteiros inteligentes e RAII ao estilo C. Para quem já programa em outra linguagem, o que é novo de verdade é: o modelo de compilação e ligação, tipos com tamanho e comportamento indefinido, valor versus referência versus ponteiro, tempo de vida dos objetos e RAII. O curso deve passar rápido pela lógica (if, laços) e gastar tempo nesses pontos.",
+  "bullets": [
+    {
+      "title": "Do código-fonte ao executável",
+      "description": "Pré-processador (#include copia texto), compilador (cada .cpp vira um arquivo-objeto) e linker (junta objetos e bibliotecas). Saber em que etapa cada erro aparece. learncpp 0.5 e MIT 6.096 aula 1.",
+      "prerequisites": []
+    },
+    {
+      "title": "Configurar o compilador: avisos e padrão da linguagem",
+      "description": "Escolher o padrão (-std=c++20) e ligar avisos (-Wall -Wextra), tratando avisos como erros que valem a pena corrigir. learncpp 0.11 e 0.12.",
+      "prerequisites": ["Do código-fonte ao executável"]
+    },
+    {
+      "title": "Tipos fundamentais, inicialização e comportamento indefinido",
+      "description": "int, double, char, bool e seus tamanhos mínimos; inicialização com chaves que impede estreitamento; variável local sem valor e o comportamento indefinido; auto. learncpp capítulos 1 e 4; CS106L aula 2.",
+      "prerequisites": ["Do código-fonte ao executável"]
+    },
+    {
+      "title": "Entrada e saída com iostream",
+      "description": "std::cout, std::cin, o operador << e >>, '\\n' versus std::endl. learncpp 1.5; MIT 6.096 aula 1.",
+      "prerequisites": ["Tipos fundamentais, inicialização e comportamento indefinido"]
+    },
+    {
+      "title": "Fluxo de controle e funções",
+      "description": "if, switch, while, for; funções, parâmetros e retorno; declaração antes do uso. Para quem já programa, é revisão rápida da sintaxe. MIT 6.096 aulas 2 e 3; learncpp capítulos 2 e 8.",
+      "prerequisites": ["Tipos fundamentais, inicialização e comportamento indefinido"]
+    },
+    {
+      "title": "Vários arquivos, cabeçalhos e namespaces",
+      "description": "Declaração versus definição, arquivos .h com header guards ou #pragma once, namespaces e o operador ::. learncpp 2.7 a 2.12.",
+      "prerequisites": ["Fluxo de controle e funções"]
+    },
+    {
+      "title": "Referências, ponteiros e const",
+      "description": "Passagem por valor, por referência e por referência constante; ponteiros, endereço, desreferência e nullptr. MIT 6.096 aula 5; learncpp capítulo 12; CS106L aula 3.",
+      "prerequisites": ["Fluxo de controle e funções"]
+    },
+    {
+      "title": "std::string, std::vector e o for de intervalo",
+      "description": "Os containers que substituem arrays e strings do estilo C; tamanho, acesso, inserção e percorrer com for de intervalo. learncpp capítulo 16; CS106L aula 5.",
+      "prerequisites": ["Referências, ponteiros e const"]
+    },
+    {
+      "title": "Classes e encapsulamento",
+      "description": "struct e class, membros públicos e privados, construtores, lista de inicialização, funções-membro const. MIT 6.096 aulas 6 e 7; CS106L aulas 7 e 8.",
+      "prerequisites": ["Referências, ponteiros e const"]
+    },
+    {
+      "title": "Tempo de vida, memória e RAII",
+      "description": "Pilha e heap, escopo e destrutor, por que evitar new e delete soltos, std::unique_ptr e std::shared_ptr. MIT 6.096 aula 8; Microsoft Learn 'Tempo de vida do objeto e gerenciamento de recursos (RAII)'.",
+      "prerequisites": ["Classes e encapsulamento"]
+    },
+    {
+      "title": "Biblioteca padrão: containers associativos, algoritmos e lambdas",
+      "description": "std::map, std::unordered_map, iteradores, std::sort, std::find_if e expressões lambda. CS106L aulas 5, 6 e seguintes; Microsoft Learn 'Algoritmos'.",
+      "prerequisites": ["std::string, std::vector e o for de intervalo"]
+    },
+    {
+      "title": "Templates de função",
+      "description": "Escrever uma função que serve para vários tipos e entender como o compilador gera cada versão. learncpp 11.6 a 11.7; CS106L aula 9.",
+      "prerequisites": ["Fluxo de controle e funções"]
+    },
+    {
+      "title": "Erros, exceções e organização de um projeto",
+      "description": "Tratamento de erros com exceções e valores de retorno; compilar um projeto de vários arquivos; testar e depurar. learncpp capítulos 3 e 9.",
+      "prerequisites": ["Vários arquivos, cabeçalhos e namespaces", "Tempo de vida, memória e RAII"]
+    }
+  ],
+  "commonMistakes": [
+    "Ler uma variável local que nunca recebeu valor, achando que ela começa em zero como em Java ou C#.",
+    "Confundir erro de compilação com erro de ligação: declarar uma função e esquecer de defini-la ou de compilar o arquivo onde ela está.",
+    "Esperar que 7 / 2 dê 3.5: divisão entre inteiros descarta a parte fracionária.",
+    "Misturar int com unsigned e ver 0 menos 1 virar um número enorme.",
+    "Passar objetos grandes (std::string, std::vector) por valor sem querer, copiando tudo a cada chamada.",
+    "Devolver referência ou ponteiro para uma variável local que deixa de existir quando a função termina.",
+    "Usar new sem delete (vazamento) ou delete duas vezes, em vez de deixar a memória com um dono (RAII, ponteiros inteligentes).",
+    "Compilar sem avisos ligados e ignorar os avisos que aparecem.",
+    "Escrever using namespace std; em arquivo de cabeçalho, espalhando nomes para todo arquivo que o inclui."
+  ],
+  "possibleProjects": [
+    "Conversor de unidades de linha de comando: lê valores com std::cin, converte e imprime, compilando sem nenhum aviso com -Wall -Wextra.",
+    "Biblioteca de funções em dois arquivos (.h e .cpp) usada por um main.cpp, compilada e ligada à mão.",
+    "Agenda de contatos com struct, std::vector e funções que recebem os dados por referência constante.",
+    "Classe de conta bancária com invariantes protegidas por encapsulamento e construtores.",
+    "Leitor de arquivo de texto que conta palavras com std::unordered_map e mostra as mais frequentes com std::sort.",
+    "Pequeno gerenciador de tarefas em vários arquivos, com tratamento de erros e build com CMake."
+  ],
+  "references": [
+    {
+      "title": "Learn C++ — tutorial completo (capítulo 0: introdução e compilação)",
+      "author": "Alex (autor do site)",
+      "institution": "learncpp.com",
+      "type": "site",
+      "url": "https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/",
+      "license": "proprietary",
+      "reason": "O tutorial gratuito mais completo e atualizado; explica com cuidado o modelo de compilação, os avisos e o comportamento indefinido, que são o centro do módulo 1. Em inglês."
+    },
+    {
+      "title": "Learn C++ — 4.1 Introduction to fundamental data types",
+      "author": "Alex (autor do site)",
+      "institution": "learncpp.com",
+      "type": "site",
+      "url": "https://www.learncpp.com/cpp-tutorial/introduction-to-fundamental-data-types/",
+      "license": "proprietary",
+      "reason": "Tipos fundamentais, tamanhos e limites, com a visão de memória por trás deles."
+    },
+    {
+      "title": "Learn C++ — 1.6 Uninitialized variables and undefined behavior",
+      "author": "Alex (autor do site)",
+      "institution": "learncpp.com",
+      "type": "site",
+      "url": "https://www.learncpp.com/cpp-tutorial/uninitialized-variables-and-undefined-behavior/",
+      "license": "proprietary",
+      "reason": "A melhor explicação curta de por que uma variável sem valor é um bug grave em C++."
+    },
+    {
+      "title": "Learn C++ — 12.3 Lvalue references",
+      "author": "Alex (autor do site)",
+      "institution": "learncpp.com",
+      "type": "site",
+      "url": "https://www.learncpp.com/cpp-tutorial/lvalue-references/",
+      "license": "proprietary",
+      "reason": "Início da sequência sobre referências e ponteiros (módulo 3)."
+    },
+    {
+      "title": "6.096 Introduction to C++ — Lecture Notes",
+      "author": "Jesse Dunietz, Geza Kovacs, John Marrero",
+      "institution": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/pages/lecture-notes/",
+      "license": "cc-by-nc-sa",
+      "reason": "Curso curto do MIT em 10 aulas (introdução, fluxo, funções, arrays, ponteiros, classes, OO, memória): dá a espinha dorsal da ordem dos módulos."
+    },
+    {
+      "title": "CS106L: Standard C++ Programming",
+      "author": "Equipe do CS106L",
+      "institution": "Stanford University",
+      "type": "course",
+      "url": "https://web.stanford.edu/class/cs106l/",
+      "license": "unknown",
+      "reason": "Curso para quem já programa: vai direto a tipos, inicialização, referências, streams, containers, iteradores, classes e templates. Bom modelo para o ritmo deste curso."
+    },
+    {
+      "title": "Bem-vindo de volta ao C++ – C++ moderno",
+      "author": "Microsoft",
+      "institution": "Microsoft Learn",
+      "type": "documentation",
+      "url": "https://learn.microsoft.com/pt-br/cpp/cpp/welcome-back-to-cpp-modern-cpp",
+      "license": "unknown",
+      "reason": "Em português: resume o que é C++ moderno (RAII, ponteiros inteligentes, std::string, std::vector) e o que evitar do estilo C."
+    },
+    {
+      "title": "Passo a passo: compilando um programa C++ nativo na linha de comando",
+      "author": "Microsoft",
+      "institution": "Microsoft Learn",
+      "type": "documentation",
+      "url": "https://learn.microsoft.com/pt-br/cpp/build/walkthrough-compiling-a-native-cpp-program-on-the-command-line",
+      "license": "unknown",
+      "reason": "Em português: compilar e executar o primeiro programa pelo terminal (com o compilador da Microsoft, no Windows)."
+    },
+    {
+      "title": "Tipos internos (C++)",
+      "author": "Microsoft",
+      "institution": "Microsoft Learn",
+      "type": "documentation",
+      "url": "https://learn.microsoft.com/pt-br/cpp/cpp/fundamental-types-cpp",
+      "license": "unknown",
+      "reason": "Em português: a lista dos tipos fundamentais e seus tamanhos no compilador da Microsoft."
+    },
+    {
+      "title": "Tempo de vida do objeto e gerenciamento de recursos (RAII)",
+      "author": "Microsoft",
+      "institution": "Microsoft Learn",
+      "type": "documentation",
+      "url": "https://learn.microsoft.com/pt-br/cpp/cpp/object-lifetime-and-resource-management-modern-cpp",
+      "license": "unknown",
+      "reason": "Em português: a ideia de RAII, central no módulo de memória."
+    },
+    {
+      "title": "Ponteiros inteligentes (C++ moderno)",
+      "author": "Microsoft",
+      "institution": "Microsoft Learn",
+      "type": "documentation",
+      "url": "https://learn.microsoft.com/pt-br/cpp/cpp/smart-pointers-modern-cpp",
+      "license": "unknown",
+      "reason": "Em português: unique_ptr, shared_ptr e weak_ptr com exemplos."
+    },
+    {
+      "title": "Programar em C++ (Wikilivros)",
+      "author": "Colaboradores do Wikilivros",
+      "institution": "Wikilivros",
+      "type": "book",
+      "url": "https://pt.wikibooks.org/wiki/Programar_em_C%2B%2B",
+      "license": "cc-by-sa",
+      "reason": "Livro aberto em português, de objetos básicos à STL; leitura complementar para quem prefere português."
+    },
+    {
+      "title": "Fundamental types (cppreference)",
+      "author": "Colaboradores do cppreference.com",
+      "institution": "cppreference.com",
+      "type": "documentation",
+      "url": "https://en.cppreference.com/w/cpp/language/types",
+      "license": "unknown",
+      "reason": "A referência técnica de consulta: tamanhos mínimos garantidos pelo padrão para cada tipo."
+    },
+    {
+      "title": "C++ Core Guidelines",
+      "author": "Bjarne Stroustrup e Herb Sutter (editores)",
+      "institution": "Standard C++ Foundation (isocpp)",
+      "type": "documentation",
+      "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+      "license": "unknown",
+      "reason": "As regras de bom uso do C++ moderno (inicializar sempre, RAII, passar por referência constante) que embasam as recomendações do curso."
+    },
+    {
+      "title": "Warning Options (GCC)",
+      "author": "Free Software Foundation",
+      "institution": "GNU Project",
+      "type": "documentation",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html",
+      "license": "unknown",
+      "reason": "O que cada opção de aviso (-Wall, -Wextra, -Werror) liga."
+    }
+  ]
+}

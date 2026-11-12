@@ -1,0 +1,16 @@
+# How the generated release notes are grouped (by the pull request labels).
+changelog:
+  exclude:
+    labels: [skip-changelog]
+    authors: [dependabot]
+  categories:
+    - title: New features
+      labels: [feature]
+    - title: Fixes
+      labels: [bug]
+    - title: Community courses
+      labels: [course]
+    - title: Docs and AI instructions
+      labels: [docs]
+    - title: Other changes
+      labels: ['*']

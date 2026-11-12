@@ -1,0 +1,59 @@
+name: Bug report
+description: Something in the app, the videos, the voice or the AI instructions does not work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please do not paste personal data (names, e-mails, your progress database).
+        Security problems go to a private report instead: see SECURITY.md.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      placeholder: |
+        1. npm run dev
+        2. Open a course…
+        3. …
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - App (lessons, exercises, XP)
+        - Video (render, voice, subtitles)
+        - Feynman lesson / Ask the teacher (Ana, Whisper, Ollama)
+        - Focus mode
+        - Community (install, share)
+        - AI instructions (AGENTS.md, skills)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: System
+      placeholder: macOS 15 / Ubuntu 24.04 / Windows 11
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node version (node -v)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: The terminal output. For video, also `npm run voice:test` and `ffmpeg -version`.
+      render: shell

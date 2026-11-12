@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "bullets": {
+      "minItems": 4,
+      "maxItems": 40,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 600
+          },
+          "prerequisites": {
+            "default": [],
+            "maxItems": 6,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            }
+          }
+        },
+        "required": ["title", "description"],
+        "additionalProperties": false
+      }
+    },
+    "commonMistakes": {
+      "default": [],
+      "maxItems": 12,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      }
+    },
+    "possibleProjects": {
+      "default": [],
+      "maxItems": 10,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 400
+      }
+    },
+    "references": {
+      "minItems": 3,
+      "maxItems": 30,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          },
+          "author": {
+            "default": "",
+            "type": "string",
+            "maxLength": 200
+          },
+          "institution": {
+            "default": "",
+            "type": "string",
+            "maxLength": 200
+          },
+          "type": {
+            "type": "string",
+            "enum": ["course", "book", "article", "documentation", "site", "video"]
+          },
+          "url": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 800,
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "license": {
+            "default": "unknown",
+            "type": "string",
+            "enum": ["cc0", "cc-by", "cc-by-sa", "public-domain", "cc-by-nc", "cc-by-nc-sa", "proprietary", "unknown"]
+          },
+          "reason": {
+            "default": "",
+            "type": "string",
+            "maxLength": 400
+          }
+        },
+        "required": ["title", "type"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["summary", "bullets", "references"],
+  "additionalProperties": false
+}

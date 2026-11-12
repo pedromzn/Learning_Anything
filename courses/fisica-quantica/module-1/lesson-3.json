@@ -1,0 +1,228 @@
+{
+  "guidance": "Treine passar de comprimento de onda para frequência e de frequência para energia do fóton. Os primeiros itens têm mais apoio; os últimos misturam as ideias. Tenha uma calculadora por perto e use as dicas se travar: elas empurram, mas não entregam a resposta.",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "id": "ex-o-que-e-frequencia",
+      "skill": "m1-luz-como-onda",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "O que mede a frequência de uma onda de luz?",
+      "hints": ["A unidade é o hertz, que quer dizer 'por segundo'."],
+      "choices": [
+        {
+          "text": "Quantas cristas passam por um ponto a cada segundo",
+          "explanation": "Isso: frequência é contagem por segundo, em hertz."
+        },
+        {
+          "text": "A distância entre duas cristas",
+          "explanation": "Essa é a definição de comprimento de onda, não de frequência."
+        },
+        {
+          "text": "A velocidade com que a onda avança",
+          "explanation": "A velocidade é c; ela é o produto do comprimento de onda pela frequência."
+        },
+        {
+          "text": "A altura da crista (o brilho da luz)",
+          "explanation": "A altura da onda tem a ver com a intensidade, não com a frequência."
+        }
+      ],
+      "correct": 0,
+      "solution": "Frequência é o número de cristas (ciclos) que passam por um ponto a cada segundo, medido em hertz (Hz)."
+    },
+    {
+      "type": "true_false",
+      "id": "ex-vf-velocidade",
+      "skill": "m1-luz-como-onda",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: no vácuo, a luz vermelha e a luz azul viajam com a mesma velocidade.",
+      "hints": ["Na fórmula $c = \\lambda f$, o que muda de uma cor para outra?"],
+      "correct": true,
+      "solution": "Verdadeiro. No vácuo, toda luz viaja a $c \\approx 3 \\times 10^8$ m/s. O que muda entre as cores é o comprimento de onda e, com ele, a frequência."
+    },
+    {
+      "type": "numeric",
+      "id": "ex-freq-750",
+      "skill": "m1-luz-como-onda",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "A luz de 750 nm fica no limite entre o vermelho e o infravermelho. Qual é a frequência dela, em unidades de $10^{14}$ Hz? (Use $c = 3 \\times 10^8$ m/s.)",
+      "hints": [
+        "Converta 750 nm para metros: $7{,}5 \\times 10^{-7}$ m.",
+        "Divida $3 \\times 10^8$ por $7{,}5 \\times 10^{-7}$; 3 dividido por 7,5 dá 0,4."
+      ],
+      "answer": 4,
+      "tolerance": 0.05,
+      "unit": "× 10¹⁴ Hz",
+      "solution": "$f = (3 \\times 10^8)/(7{,}5 \\times 10^{-7}) = 0{,}4 \\times 10^{15} = 4 \\times 10^{14}$ Hz."
+    },
+    {
+      "type": "ordering",
+      "id": "ex-ordem-energia",
+      "skill": "m1-energia-do-foton",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Ponha os fótons em ordem de energia, do que tem MENOS para o que tem MAIS energia.",
+      "hints": ["Energia cresce com a frequência; frequência cresce quando o comprimento de onda diminui."],
+      "steps": [
+        "Infravermelho (de um controle remoto)",
+        "Luz vermelha",
+        "Luz verde",
+        "Luz violeta",
+        "Ultravioleta (do Sol)"
+      ],
+      "solution": "Do maior comprimento de onda para o menor: infravermelho, vermelho, verde, violeta, ultravioleta. Como $E = hc/\\lambda$, essa é também a ordem de energia crescente."
+    },
+    {
+      "type": "numeric",
+      "id": "ex-ev-310",
+      "skill": "m1-energia-do-foton",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "Use o atalho $E \\approx 1240/\\lambda$ (E em eV, $\\lambda$ em nm) para achar a energia de um fóton ultravioleta de 310 nm.",
+      "hints": ["Divida 1240 pelo comprimento de onda em nanômetros; a conta dá um número inteiro."],
+      "answer": 4,
+      "tolerance": 0.05,
+      "unit": "eV",
+      "solution": "$E \\approx 1240/310 = 4{,}0$ eV. É mais que o dobro da energia de um fóton vermelho (cerca de 1,8 eV)."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex-intensidade-cor",
+      "skill": "m1-energia-do-foton",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Uma lanterna vermelha muito forte e uma lanterna azul fraca estão acesas. Em qual das duas CADA fóton carrega mais energia?",
+      "hints": [
+        "Separe duas coisas: quantos fótons saem por segundo e quanta energia tem cada um.",
+        "A energia de um fóton depende só da frequência."
+      ],
+      "choices": [
+        {
+          "text": "Na vermelha, porque ela é mais forte",
+          "explanation": "Esse é o erro mais comum: confundir intensidade (quantidade de fótons) com a energia de cada fóton."
+        },
+        {
+          "text": "Nas duas é igual, porque luz é luz",
+          "explanation": "A energia por fóton muda com a cor: E = hf."
+        },
+        {
+          "text": "Não dá para saber sem medir a potência",
+          "explanation": "A potência diz a energia total por segundo. Para um fóton só, basta a frequência."
+        },
+        {
+          "text": "Na azul, porque a frequência dela é maior",
+          "explanation": "Isso: cada fóton azul tem mais energia; a vermelha forte só tem muito mais fótons."
+        }
+      ],
+      "correct": 3,
+      "solution": "A energia de cada fóton é $E = hf$ e só depende da frequência. A luz azul tem frequência maior, então cada fóton azul tem mais energia. A lanterna vermelha forte emite mais fótons por segundo, mas cada um com menos energia."
+    },
+    {
+      "type": "numeric",
+      "id": "ex-energia-joule",
+      "skill": "m1-energia-do-foton",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Um fóton tem frequência $5 \\times 10^{14}$ Hz. Qual é a energia dele, em unidades de $10^{-19}$ J? (Use $h = 6{,}626 \\times 10^{-34}$ J·s.)",
+      "hints": [
+        "Multiplique os números (6,626 × 5) e some os expoentes (−34 + 14).",
+        "O resultado sai em $10^{-20}$; passe para $10^{-19}$ andando uma casa com a vírgula."
+      ],
+      "answer": 3.31,
+      "tolerance": 0.02,
+      "unit": "× 10⁻¹⁹ J",
+      "solution": "$E = hf = 6{,}626 \\times 10^{-34} \\times 5 \\times 10^{14} = 33{,}13 \\times 10^{-20} = 3{,}31 \\times 10^{-19}$ J."
+    },
+    {
+      "type": "short_answer",
+      "id": "ex-nome-h",
+      "skill": "m1-energia-do-foton",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Na fórmula $E = hf$, como se chama a constante $h$?",
+      "hints": ["Leva o nome do físico que, em 1900, supôs a energia em pacotes."],
+      "accepted": ["constante de Planck", "Planck", "constante de Plank", "a constante de Planck"],
+      "solution": "É a constante de Planck, $h = 6{,}626 \\times 10^{-34}$ J·s, em homenagem a Max Planck."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex-foton-radio",
+      "skill": "m1-energia-do-foton",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Uma rádio FM transmite em 100 MHz ($1 \\times 10^8$ Hz). A luz verde tem frequência de cerca de $6 \\times 10^{14}$ Hz. Comparado a um fóton de luz verde, um fóton da rádio tem energia:",
+      "hints": ["Como $E = hf$, a razão entre as energias é a razão entre as frequências."],
+      "choices": [
+        {
+          "text": "maior, porque as ondas de rádio são enormes",
+          "explanation": "Comprimento de onda grande quer dizer frequência baixa e, portanto, energia baixa por fóton."
+        },
+        {
+          "text": "cerca de 6 vezes menor",
+          "explanation": "Cuidado com as potências de dez: a razão é $6 \\times 10^{14} / 10^8$, não 6/1."
+        },
+        {
+          "text": "cerca de 6 milhões de vezes menor",
+          "explanation": "Isso: $6 \\times 10^{14} / 10^8 = 6 \\times 10^6$."
+        },
+        {
+          "text": "igual, porque rádio também é onda eletromagnética",
+          "explanation": "Ser onda eletromagnética não basta: a energia por fóton depende da frequência."
+        }
+      ],
+      "correct": 2,
+      "solution": "A razão das energias é a razão das frequências: $(6 \\times 10^{14})/(1 \\times 10^8) = 6 \\times 10^6$. Um fóton de rádio FM tem cerca de 6 milhões de vezes menos energia que um fóton verde."
+    },
+    {
+      "type": "true_false",
+      "id": "ex-vf-vermelho-forte",
+      "skill": "m1-energia-do-foton",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Verdadeiro ou falso: os fótons de uma luz vermelha muito forte têm, cada um, mais energia que os fótons de uma luz vermelha fraca da mesma cor.",
+      "hints": ["Mesma cor quer dizer mesma frequência."],
+      "correct": false,
+      "solution": "Falso. Mesma cor, mesma frequência, mesma energia por fóton ($E = hf$). A luz forte só tem mais fótons por segundo."
+    },
+    {
+      "type": "numeric",
+      "id": "ex-lambda-de-energia",
+      "skill": "m1-energia-do-foton",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Um fóton tem energia de 2,5 eV. Qual é o comprimento de onda dele, em nanômetros? (Use o atalho $E \\approx 1240/\\lambda$, com E em eV e $\\lambda$ em nm.)",
+      "hints": ["Isole o comprimento de onda no atalho: se $E = 1240/\\lambda$, então $\\lambda = 1240/E$."],
+      "answer": 496,
+      "tolerance": 5,
+      "unit": "nm",
+      "solution": "$\\lambda \\approx 1240/2{,}5 = 496$ nm, uma luz verde-azulada."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex-estrela-quente",
+      "skill": "m1-luz-como-onda",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "A luz do Sol tem pico perto de 500 nm. Outra estrela tem pico perto de 300 nm, no ultravioleta. O que se pode dizer dessa estrela?",
+      "hints": ["Lembre a sequência de cores do ferro que esquenta."],
+      "choices": [
+        {
+          "text": "Ela é mais fria que o Sol",
+          "explanation": "Pico em comprimento de onda maior é que indicaria corpo mais frio."
+        },
+        {
+          "text": "Ela é mais quente que o Sol",
+          "explanation": "Isso: mais quente, o pico vai para comprimentos de onda menores."
+        },
+        {
+          "text": "Ela tem a mesma temperatura, só está mais longe",
+          "explanation": "A distância muda o brilho que chega, não a posição do pico."
+        }
+      ],
+      "correct": 1,
+      "solution": "Num corpo negro, quanto mais quente, menor o comprimento de onda do pico. Pico em 300 nm, menor que os 500 nm do Sol, indica uma estrela mais quente."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "topic": "C++",
+  "scope": "C++ moderno do zero para quem já programa em outra linguagem: compilação, tipos, funções, referências e ponteiros, memória e RAII, classes, a biblioteca padrão (containers, algoritmos) e organização de um projeto",
+  "goal": "Ser um desenvolvedor melhor no trabalho",
+  "level": "basic",
+  "priorKnowledge": "Já programa em outras linguagens",
+  "hoursPerWeek": 6,
+  "deadlineWeeks": 8,
+  "format": "balanced",
+  "context": "Já sei programar em outras linguagens",
+  "hasComputer": true,
+  "readsEnglish": false,
+  "language": "pt-BR"
+}

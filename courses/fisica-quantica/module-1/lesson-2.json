@@ -1,0 +1,107 @@
+{
+  "introduction": "Ao final desta aula você consegue passar do comprimento de onda para a frequência de uma luz, explicar o que Planck propôs para resolver o problema do corpo negro e calcular a energia de um fóton em joules e em elétron-volts. A sequência segue a seção 6.1 (Blackbody Radiation) do livro aberto University Physics Volume 3, da OpenStax, que você pode ler de graça em inglês.",
+  "sections": [
+    {
+      "title": "Comprimento de onda e frequência",
+      "markdown": "Toda onda tem duas medidas que andam juntas:\n\n- o **comprimento de onda** $\\lambda$ (lambda): a distância entre duas cristas, em metros;\n- a **frequência** $f$: quantas cristas passam por um ponto a cada segundo, em hertz (Hz).\n\nPara a luz no vácuo, as duas se ligam pela velocidade da luz $c \\approx 3 \\times 10^8$ m/s:\n\n$$c = \\lambda f \\quad\\Longrightarrow\\quad f = \\frac{c}{\\lambda}$$\n\nComo $c$ é o mesmo para todas as cores, **comprimento de onda maior significa frequência menor**.\n\nA luz visível vai de cerca de 400 nm (violeta) a 700 nm (vermelho). Um nanômetro é $10^{-9}$ m. Abaixo de 400 nm fica o ultravioleta; acima de 700 nm, o infravermelho.\n\n**Exemplo rápido.** Luz vermelha de 700 nm = $7 \\times 10^{-7}$ m:\n\n$$f = \\frac{3 \\times 10^8}{7 \\times 10^{-7}} \\approx 4{,}3 \\times 10^{14}\\ \\text{Hz}$$\n\nSão quase 430 trilhões de cristas por segundo.",
+      "question": {
+        "type": "numeric",
+        "id": "t2-freq-600",
+        "skill": "m1-luz-como-onda",
+        "bloom": "apply",
+        "difficulty": 1,
+        "prompt": "Uma luz laranja tem comprimento de onda de 600 nm. Qual é a frequência dela, em unidades de $10^{14}$ Hz? (Use $c = 3 \\times 10^8$ m/s.)",
+        "hints": [
+          "Converta 600 nm para metros: $6 \\times 10^{-7}$ m.",
+          "Divida $3 \\times 10^8$ por $6 \\times 10^{-7}$: primeiro os números (3/6), depois as potências de dez."
+        ],
+        "answer": 5,
+        "tolerance": 0.05,
+        "unit": "× 10¹⁴ Hz",
+        "solution": "$f = c/\\lambda = (3 \\times 10^8)/(6 \\times 10^{-7}) = 0{,}5 \\times 10^{15} = 5 \\times 10^{14}$ Hz. A resposta é 5."
+      }
+    },
+    {
+      "title": "A cor de um objeto quente",
+      "markdown": "Todo objeto emite luz por estar quente. Na temperatura do nosso corpo, essa luz é infravermelha e não a vemos (as câmeras térmicas veem). Aqueça um pedaço de ferro e ele passa a brilhar: primeiro **vermelho escuro**, depois **laranja**, **amarelo** e, muito quente, quase **branco**.\n\nOs físicos estudam um objeto ideal chamado **corpo negro**: ele absorve toda a luz que chega e emite luz só por causa da temperatura. Na prática, ele é bem imitado por uma caixa fechada com um furinho: a luz que sai pelo furo depende só da temperatura das paredes.\n\nA luz do corpo negro mistura muitas cores, mas tem um **pico**, a cor emitida com mais intensidade. E a regra observada é simples:\n\n> quanto **mais quente** o corpo, **menor** o comprimento de onda do pico (mais para o azul).\n\nÉ por isso que estrelas mais quentes parecem azuladas e as mais frias, avermelhadas.",
+      "question": {
+        "type": "true_false",
+        "id": "t2-vf-pico",
+        "skill": "m1-luz-como-onda",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Verdadeiro ou falso: quando um corpo negro esquenta, o pico da luz que ele emite vai para comprimentos de onda maiores (mais para o vermelho).",
+        "hints": ["Pense na sequência de cores do ferro aquecido: vermelho, laranja, amarelo, branco."],
+        "correct": false,
+        "solution": "Falso. Mais quente, o pico vai para comprimentos de onda **menores**: do vermelho para o amarelo e o azul. O ferro começa vermelho e fica mais claro e branco ao esquentar."
+      }
+    },
+    {
+      "title": "A catástrofe do ultravioleta e o quantum de Planck",
+      "markdown": "No fim do século 19, os físicos tentaram prever a luz do corpo negro com a física da época. Para comprimentos de onda longos, a conta funcionava. Para comprimentos de onda curtos, dava um absurdo: a intensidade crescia **sem limite** rumo ao ultravioleta. Somando tudo, o corpo emitiria energia infinita. Esse fracasso ficou conhecido como **catástrofe do ultravioleta**.\n\nEm 1900, Max Planck encontrou uma fórmula que batia com as medidas. Para chegar a ela, fez uma suposição estranha: a energia das partes que vibram nas paredes **não pode ter qualquer valor**. Ela só vem em múltiplos inteiros de um pacote mínimo:\n\n$$E = n\\,h f, \\qquad n = 0, 1, 2, 3, \\dots$$\n\nO número $h$ é hoje chamado **constante de Planck**:\n\n$$h = 6{,}626 \\times 10^{-34}\\ \\text{J}\\cdot\\text{s}$$\n\nCada pacote se chama **quantum** (plural: **quanta**). Por que isso resolve a catástrofe? Nas frequências altas o pacote $hf$ fica grande demais para a energia térmica disponível nas paredes, então quase não é emitido, e a intensidade cai em vez de subir sem fim.\n\nPlanck via isso como um truque de conta. Quem levou a sério foi Einstein, como você vai ver na aula do efeito fotoelétrico.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t2-planck",
+        "skill": "m1-energia-do-foton",
+        "bloom": "understand",
+        "difficulty": 2,
+        "prompt": "O que Planck supôs para obter a fórmula certa da luz do corpo negro?",
+        "hints": ["A palavra 'quântica' vem da ideia dele."],
+        "choices": [
+          {
+            "text": "Que a luz viaja mais devagar em frequências altas",
+            "explanation": "A velocidade da luz no vácuo é a mesma para todas as frequências. A hipótese de Planck é sobre energia."
+          },
+          {
+            "text": "Que a energia só pode ser trocada em pacotes de tamanho $hf$",
+            "explanation": "Isso: a energia vem em múltiplos inteiros de $hf$, o quantum."
+          },
+          {
+            "text": "Que o corpo negro não emite ultravioleta porque é preto",
+            "explanation": "O nome 'negro' quer dizer que ele absorve toda luz; ele emite, sim, em todas as frequências."
+          },
+          {
+            "text": "Que a energia pode ter qualquer valor, por menor que seja",
+            "explanation": "Essa era justamente a ideia clássica, a que levava à catástrofe."
+          }
+        ],
+        "correct": 1,
+        "solution": "Planck supôs que a energia só é trocada em múltiplos inteiros de $hf$. Esse pacote mínimo é o quantum."
+      }
+    },
+    {
+      "title": "A energia de um fóton, em joules e em elétron-volts",
+      "markdown": "Em 1905, Einstein propôs que **a própria luz** é feita desses pacotes, hoje chamados **fótons**. Cada fóton de frequência $f$ carrega a energia\n\n$$E = h f = \\frac{h c}{\\lambda}$$\n\nEm joules, os números ficam minúsculos. Por isso, em física atômica se usa outra unidade, o **elétron-volt** (eV):\n\n$$1\\ \\text{eV} = 1{,}602 \\times 10^{-19}\\ \\text{J}$$\n\nE há um atalho útil. Calculando $hc$ em eV vezes nanômetro, dá cerca de 1240. Então:\n\n$$E\\ (\\text{em eV}) \\approx \\frac{1240}{\\lambda\\ (\\text{em nm})}$$\n\nAlguns valores:\n\n| Luz | $\\lambda$ | $E$ por fóton |\n|---|---|---|\n| vermelha | 700 nm | cerca de 1,8 eV |\n| verde | 500 nm | cerca de 2,5 eV |\n| violeta | 400 nm | cerca de 3,1 eV |\n\nNote: **mais frequência (menor $\\lambda$), mais energia por fóton**.",
+      "question": {
+        "type": "numeric",
+        "id": "t2-ev-620",
+        "skill": "m1-energia-do-foton",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "Use o atalho $E \\approx 1240/\\lambda$ para achar a energia, em eV, de um fóton de luz de 620 nm.",
+        "hints": ["Basta dividir 1240 pelo comprimento de onda em nanômetros."],
+        "answer": 2,
+        "tolerance": 0.05,
+        "unit": "eV",
+        "solution": "$E \\approx 1240/620 = 2{,}0$ eV."
+      }
+    }
+  ],
+  "workedExample": {
+    "prompt": "Calcule a energia de um fóton de luz violeta de 400 nm, em joules e em elétron-volts, sem usar o atalho. Use $h = 6{,}626 \\times 10^{-34}$ J·s, $c = 3 \\times 10^8$ m/s e $1\\ \\text{eV} = 1{,}602 \\times 10^{-19}$ J.",
+    "steps": [
+      "Converta o comprimento de onda para metros: $400\\ \\text{nm} = 4 \\times 10^{-7}$ m.",
+      "Ache a frequência: $f = c/\\lambda = (3 \\times 10^8)/(4 \\times 10^{-7}) = 7{,}5 \\times 10^{14}$ Hz.",
+      "Multiplique pela constante de Planck: $E = hf = 6{,}626 \\times 10^{-34} \\times 7{,}5 \\times 10^{14} \\approx 4{,}97 \\times 10^{-19}$ J.",
+      "Passe para elétron-volts dividindo por $1{,}602 \\times 10^{-19}$: $E \\approx 3{,}1$ eV.",
+      "Confira com o atalho: $1240/400 = 3{,}1$ eV. Os dois caminhos dão o mesmo resultado."
+    ]
+  },
+  "summary": [
+    "Para a luz, $c = \\lambda f$: comprimento de onda maior, frequência menor.",
+    "Um corpo mais quente emite com pico em comprimento de onda menor (mais azul).",
+    "A física clássica previa energia infinita no ultravioleta: a catástrofe do ultravioleta.",
+    "Planck (1900) supôs energia em pacotes $E = nhf$; Einstein (1905) disse que a luz é feita de fótons.",
+    "Energia de um fóton: $E = hf$, ou $E \\approx 1240/\\lambda$ em eV com $\\lambda$ em nm."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "topic": "Como um programa C++ vira executável e por que tipos e inicialização exigem cuidado",
+  "request": "Explique para um colega que só programou em Python o caminho de um arquivo .cpp até o programa rodando, em que etapa cada tipo de erro aparece, e por que em C++ é preciso pensar no tamanho dos tipos e inicializar toda variável. Use um exemplo concreto, como uma média que dá o resultado errado ou uma função que foi declarada e nunca definida.",
+  "opening": "Oi, eu sou a Ana. Eu programo em Python, e lá eu só rodo o arquivo e pronto. Me disseram que em cê mais mais tem compilador, linker e não sei mais o quê. O que acontece desde o arquivo até o programa rodar?",
+  "keyPoints": [
+    {
+      "id": "tres-etapas",
+      "idea": "O código passa por três etapas: o pré-processador expande os include, o compilador transforma cada arquivo .cpp num arquivo objeto e o linker junta os objetos e a biblioteca padrão num executável.",
+      "cues": ["pre-processador", "compilador", "linker", "ligador", "arquivo objeto", "tres etapas", "junta os arquivos", "include copia"],
+      "question": "E entre o arquivo que eu escrevo e o executável, quais são os passos? Quem faz o quê?"
+    },
+    {
+      "id": "erro-por-etapa",
+      "idea": "Erro de compilação aponta arquivo e linha (sintaxe, tipos, nome não declarado); erro de ligação fala de símbolo indefinido ou repetido; erro de execução acontece com o programa já gerado.",
+      "cues": ["erro de compilacao", "erro de ligacao", "undefined reference", "simbolo indefinido", "erro de execucao", "definicao repetida", "aponta a linha"],
+      "question": "Se eu declarar uma função, chamar ela e esquecer de escrever o corpo, quem reclama? E se eu esquecer um ponto e vírgula?"
+    },
+    {
+      "id": "avisos-e-padrao",
+      "idea": "Compila-se escolhendo a versão da linguagem (-std=c++20) e ligando os avisos (-Wall -Wextra); aviso não impede o executável, mas costuma apontar um bug e deve ser corrigido.",
+      "cues": ["avisos", "warning", "wall", "wextra", "padrao vinte", "avisos ligados", "versao da linguagem", "corrigir os avisos"],
+      "question": "Que opções você usaria no comando para compilar? E se aparecer um aviso, posso ignorar?"
+    },
+    {
+      "id": "tipos-tem-tamanho",
+      "idea": "Cada tipo ocupa um tamanho fixo e tem limites: o int quase sempre tem 32 bits, inteiro dividido por inteiro descarta as casas decimais e um unsigned dá a volta abaixo de zero.",
+      "cues": ["tamanho fixo", "32 bits", "bytes", "divisao inteira", "descarta as casas decimais", "sete dividido por dois", "da a volta", "unsigned"],
+      "question": "No Python eu divido sete por dois e dá três e meio. Em cê mais mais também? Por quê?"
+    },
+    {
+      "id": "inicializar-sempre",
+      "idea": "Ler uma variável local que nunca recebeu valor é comportamento indefinido; por isso toda variável deve nascer inicializada, de preferência com chaves, que ainda recusam conversões que perdem informação.",
+      "cues": ["comportamento indefinido", "sem valor inicial", "lixo de memoria", "inicializar sempre", "chaves", "estreitamento", "perde informacao"],
+      "question": "Se eu criar uma variável inteira e não der valor nenhum, ela começa em quanto?"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "error": "Dizer que uma variável int local sem valor começa em zero.",
+      "correction": "Ela fica com o que estava na memória, e lê-la é comportamento indefinido; só int x{} garante o zero."
+    },
+    {
+      "error": "Dizer que o include importa uma biblioteca já compilada, como o import do Python.",
+      "correction": "O include é uma cópia de texto feita pelo pré-processador; ele traz declarações, e a ligação com a biblioteca é outra etapa."
+    },
+    {
+      "error": "Achar que um erro de undefined reference é um erro de compilação.",
+      "correction": "Cada arquivo compilou; é o linker que não encontrou a definição em nenhum objeto, então é um erro de ligação."
+    },
+    {
+      "error": "Dizer que guardar o resultado num double resolve a divisão inteira, como em double m = soma / 3.",
+      "correction": "A divisão entre inteiros acontece antes; é preciso converter um dos operandos, por exemplo com static_cast de double em soma."
+    },
+    {
+      "error": "Dizer que aviso do compilador é só sugestão e pode ser ignorado.",
+      "correction": "O executável é gerado, mas avisos como variável sem valor costumam ser bugs reais; o curso recomenda corrigir todos."
+    }
+  ],
+  "questions": [
+    "Por que o compilador aceita uma função só declarada, sem o corpo?",
+    "Me dá um exemplo de erro que só aparece quando o programa já está rodando.",
+    "Por que um programa compilado no Mac não roda direto no Windows?",
+    "Que diferença faz escrever int x igual a três vírgula sete ou com chaves?",
+    "Como você calcularia a média de três notas inteiras sem perder as casas decimais?"
+  ],
+  "skills": ["m1-build-pipeline", "m1-compile-run", "m1-read-errors", "m1-fundamental-types", "m1-initialization"]
+}

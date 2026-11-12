@@ -1,0 +1,139 @@
+{
+  "summary": "O russo escreve-se em cirílico, um alfabeto de 33 letras com leitura quase sempre previsível. Os materiais abertos consultados concordam na ordem: primeiro o alfabeto e os sons (com atenção ao acento, à redução das vogais átonas e à sonoridade das consoantes), depois a leitura de palavras internacionais, saudações e apresentação, números e preços, e só então o essencial dos casos e dos verbos no presente. O aluno brasileiro tem a vantagem de já estar acostumado com consoantes suaves (palatalizadas) e com muitas palavras de origem comum, e a desvantagem de ler letras parecidas com as latinas (В, Н, Р, С, У, Х) com o som errado.",
+  "bullets": [
+    {
+      "title": "Alfabeto cirílico e sons das letras",
+      "description": "As 33 letras: letras que soam como no português, falsas amigas (В, Н, Р, С, У, Х) e letras novas (Б, Г, Д, Ж, З, И, Л, П, Ф, Ц, Ч, Ш, Щ, Ы, Ю, Я), com tabela de sons e áudio.",
+      "prerequisites": []
+    },
+    {
+      "title": "Acento, redução das vogais e sonoridade",
+      "description": "O acento russo é livre e não vem marcado; vogais átonas se reduzem (о vira a, е vira i); consoantes sonoras ficam surdas no fim da palavra e antes de surdas.",
+      "prerequisites": ["Alfabeto cirílico e sons das letras"]
+    },
+    {
+      "title": "Sinais, vogais duras e suaves e palatalização",
+      "description": "O sinal suave (ь) suaviza a consoante anterior; o sinal duro (ъ) é raro; os pares а/я, э/е, ы/и, о/ё, у/ю marcam consoante dura ou suave.",
+      "prerequisites": ["Alfabeto cirílico e sons das letras"]
+    },
+    {
+      "title": "Leitura e escrita de palavras e placas",
+      "description": "Ler palavras internacionais (метро, такси, ресторан), a letra de mão e as placas do dia a dia.",
+      "prerequisites": ["Acento, redução das vogais e sonoridade"]
+    },
+    {
+      "title": "Saudações, tratamento formal e apresentação",
+      "description": "Привет e здравствуйте, ты e вы, nome, origem e profissão; o verbo ser não aparece no presente.",
+      "prerequisites": ["Leitura e escrita de palavras e placas"]
+    },
+    {
+      "title": "Números, preços e horas",
+      "description": "Contar até 100; a forma de рубль muda com o número (1, 2 a 4, 5 ou mais); perguntar preço com сколько стоит.",
+      "prerequisites": ["Saudações, tratamento formal e apresentação"]
+    },
+    {
+      "title": "Casos básicos: nominativo, acusativo e preposicional",
+      "description": "O substantivo muda de final conforme a função na frase; no nível básico, só o essencial: sujeito, objeto direto e o lugar com в e на.",
+      "prerequisites": ["Números, preços e horas"]
+    },
+    {
+      "title": "Verbos no presente",
+      "description": "As duas conjugações regulares (читать, говорить), verbos de uso diário (хотеть, любить) e a negação com не.",
+      "prerequisites": ["Casos básicos: nominativo, acusativo e preposicional"]
+    },
+    {
+      "title": "Situações do dia a dia",
+      "description": "Pedir no café com можно e пожалуйста, perguntar o caminho e o transporte, comprar e pagar, com diálogos curtos.",
+      "prerequisites": ["Verbos no presente"]
+    }
+  ],
+  "commonMistakes": [
+    "Ler В, Н, Р, С, У e Х com o som da letra latina parecida (V soa v, mas Н soa n, Р soa r, С soa s, У soa u, Х soa como um h áspero).",
+    "Pronunciar todas as vogais como se estivessem sempre acentuadas, sem reduzir о para a nem е para i fora da sílaba tônica.",
+    "Pronunciar a consoante final sonora (друг como drug), quando ela se torna surda (druk).",
+    "Ignorar o sinal suave (ь) e ler a consoante dura.",
+    "Procurar o verbo ser no presente (Я студент, sem verbo), ou o artigo (não existe em russo).",
+    "Esquecer que o acento não vem marcado e decorar a palavra sem a sílaba tônica.",
+    "Usar ты com desconhecidos em vez de вы."
+  ],
+  "possibleProjects": [
+    "Gravar-se lendo uma lista de palavras e conferir com a pronúncia de referência.",
+    "Montar e ler em voz alta um diálogo de apresentação entre duas pessoas.",
+    "Ler placas e cardápios de uma cidade russa em fotos e anotar o que se entende.",
+    "Simular um pedido no café e uma compra com preço."
+  ],
+  "references": [
+    {
+      "title": "Russian/Alphabet (Wikibooks, livro aberto de russo)",
+      "author": "Colaboradores da Wikibooks",
+      "institution": "Wikibooks (Wikimedia)",
+      "type": "book",
+      "url": "https://en.wikibooks.org/wiki/Russian/Alphabet",
+      "license": "cc-by-sa",
+      "reason": "A lição de alfabeto mais direta e gratuita: tabela com som de cada letra, regras de sonoridade, sinais, palatalização e redução das vogais, com áudio. É a base do módulo 1."
+    },
+    {
+      "title": "Russian (Wikibooks, livro aberto de russo)",
+      "author": "Colaboradores da Wikibooks",
+      "institution": "Wikibooks (Wikimedia)",
+      "type": "book",
+      "url": "https://en.wikibooks.org/wiki/Russian",
+      "license": "cc-by-sa",
+      "reason": "Curso aberto completo, com texto principal, suplemento de gramática, apêndice e vocabulário; serve para seguir estudando depois de cada módulo."
+    },
+    {
+      "title": "Russian alphabet (Wikipedia)",
+      "author": "Colaboradores da Wikipedia",
+      "institution": "Wikipedia (Wikimedia)",
+      "type": "article",
+      "url": "https://en.wikipedia.org/wiki/Russian_alphabet",
+      "license": "cc-by-sa",
+      "reason": "Tabela das 33 letras com forma de imprensa e de mão, o papel do acento agudo e do Ё, e a história do alfabeto."
+    },
+    {
+      "title": "Appendix:Russian alphabet (Wiktionary)",
+      "author": "Colaboradores do Wiktionary",
+      "institution": "Wiktionary (Wikimedia)",
+      "type": "documentation",
+      "url": "https://en.wiktionary.org/wiki/Appendix:Russian_alphabet",
+      "license": "cc-by-sa",
+      "reason": "Referência com os nomes das letras, a pronúncia em IPA e a comparação entre os sistemas de transliteração para o alfabeto latino."
+    },
+    {
+      "title": "Help:IPA/Russian (Wikipedia)",
+      "author": "Colaboradores da Wikipedia",
+      "institution": "Wikipedia (Wikimedia)",
+      "type": "documentation",
+      "url": "https://en.wikipedia.org/wiki/Help:IPA/Russian",
+      "license": "cc-by-sa",
+      "reason": "Chave de pronúncia com consoantes duras e suaves, vogais tônicas e átonas e exemplos com áudio; ajuda a conferir a redução das vogais."
+    },
+    {
+      "title": "Телемосты (Telebridges) Russian Conversation Exchange Site, RES.21G-601",
+      "author": "Maria Khotimsky",
+      "institution": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/res-21g-601-telebridges-russian-conversation-exchange-site-fall-2021/",
+      "license": "cc-by-nc-sa",
+      "reason": "Material aberto do MIT com temas de conversa organizados por nível (padrão ACTFL); fonte para os módulos de conversa e para praticar com falantes."
+    },
+    {
+      "title": "Будем на связи: Open Textbook for Russian",
+      "author": "Universidade do Texas em Austin (COERLL e CREEES)",
+      "institution": "University of Texas at Austin",
+      "type": "book",
+      "url": "https://coerll.utexas.edu/coerll/project/%D0%B1%D1%83%D0%B4%D0%B5%D0%BC-%D0%BD%D0%B0-%D1%81%D0%B2%D1%8F%D0%B7%D0%B8-open-textbook-for-russian/",
+      "license": "unknown",
+      "reason": "Livro-texto aberto em dois volumes, de uma universidade que ensina russo de verdade; é o passo seguinte natural depois deste básico."
+    },
+    {
+      "title": "Между нами: free online Russian textbook",
+      "author": "Equipe do CEERES",
+      "institution": "University of Chicago, Center for East European and Russian/Eurasian Studies",
+      "type": "book",
+      "url": "https://mezhdunami.org/",
+      "license": "proprietary",
+      "reason": "Programa gratuito de primeiro ano, com lições, áudios, vocabulário e tabelas de casos e conjugações; boa fonte de diálogos para os módulos de situações do dia a dia."
+    }
+  ]
+}

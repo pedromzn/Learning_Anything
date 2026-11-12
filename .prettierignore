@@ -1,0 +1,4 @@
+# Community bundles are written by `course:export` (JSON.stringify), not by hand: their layout is part of the format.
+community/courses/*.course.json
+# Course files are written by the AI and checked by `course:validate`, not by the formatter.
+courses/

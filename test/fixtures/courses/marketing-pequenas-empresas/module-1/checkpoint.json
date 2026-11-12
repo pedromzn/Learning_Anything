@@ -1,0 +1,143 @@
+{
+  "items": [
+    {
+      "type": "multiple_choice",
+      "id": "c1-cliente-ideal",
+      "skill": "m1-cliente-ideal",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Qual frase descreve um cliente ideal, e não um público-alvo amplo?",
+      "hints": ["Procure a frase com situação e necessidade concretas."],
+      "solution": "Pessoas com uma situação e uma necessidade concretas, que dá para encontrar e atender, formam um cliente ideal.",
+      "choices": [
+        {
+          "text": "Todas as pessoas que moram perto da loja.",
+          "explanation": "Grupo amplo, só definido por localização."
+        },
+        {
+          "text": "Mulheres adultas de qualquer idade.",
+          "explanation": "Grupo amplo demais para orientar a mensagem."
+        },
+        {
+          "text": "Donos de pequenos escritórios próximos que precisam de café da manhã pronto e pontual para a equipe às segundas.",
+          "explanation": "Correto: tem quem é, onde está e o que precisa."
+        },
+        {
+          "text": "Quem gosta do nosso produto.",
+          "explanation": "Vago: descreve gosto, e não situação."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "type": "numeric",
+      "id": "c2-margem-anual",
+      "skill": "m1-cliente-ideal",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Uma cliente gasta 80 reais por visita, a margem é de 25% e ela vem 10 vezes por ano. Quantos reais de margem ela deixa por ano?",
+      "hints": ["Margem por visita é o gasto vezes a margem; depois multiplique pelas visitas."],
+      "solution": "80 vezes 0,25 dá 20 reais por visita. Em 10 visitas, são 200 reais por ano.",
+      "answer": 200,
+      "tolerance": 0,
+      "unit": "R$"
+    },
+    {
+      "type": "true_false",
+      "id": "c3-recusar",
+      "skill": "m1-cliente-ideal",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: escolher um cliente ideal obriga o negócio a recusar quem não se encaixa nele.",
+      "hints": ["Pense no que a escolha define."],
+      "solution": "Falso. A escolha define para quem você comunica e investe primeiro. Quem não se encaixa e quer comprar continua sendo atendido.",
+      "correct": false
+    },
+    {
+      "type": "multiple_choice",
+      "id": "c4-diferencial",
+      "skill": "m1-posicionamento",
+      "bloom": "analyze",
+      "difficulty": 2,
+      "prompt": "Qual destes é o diferencial mais forte para uma barbearia?",
+      "hints": ["Elimine o que qualquer barbearia diria."],
+      "solution": "Horário marcado com no máximo 5 minutos de espera, ou desconto no corte, importa a quem tem pouco tempo, é verificável e poucos fazem. As outras frases são genéricas.",
+      "choices": [
+        {
+          "text": "Atendimento de qualidade.",
+          "explanation": "Todos dizem e ninguém verifica."
+        },
+        {
+          "text": "Ambiente descontraído.",
+          "explanation": "Subjetivo e fácil de copiar."
+        },
+        {
+          "text": "Preço justo.",
+          "explanation": "Genérico e não distingue."
+        },
+        {
+          "text": "Horário marcado com no máximo 5 minutos de espera, ou o corte sai com desconto.",
+          "explanation": "Correto: específico, comprovável e valioso para quem tem pouco tempo."
+        }
+      ],
+      "correct": 3
+    },
+    {
+      "type": "ordering",
+      "id": "c5-ordem-posicionamento",
+      "skill": "m1-posicionamento",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Ponha em ordem os passos para chegar a um posicionamento.",
+      "hints": ["O cliente vem primeiro."],
+      "solution": "Cliente, alternativas, diferencial que passa nos testes, frase com prova, aplicação nos canais.",
+      "steps": [
+        "Defina o cliente ideal",
+        "Liste as alternativas que ele considera",
+        "Escolha um diferencial que passe nos três testes",
+        "Escreva a frase com a prova",
+        "Aplique nos pontos de contato"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "id": "c6-indireto",
+      "skill": "m1-concorrencia",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Para uma loja de bolos por encomenda, qual é um concorrente indireto?",
+      "hints": ["Indireto resolve a mesma necessidade de outro jeito."],
+      "solution": "O bolo pronto do mercado resolve a necessidade de outro jeito. Outra confeiteira é concorrente direta.",
+      "choices": [
+        {
+          "text": "Outra confeiteira da mesma rua.",
+          "explanation": "É concorrente direta."
+        },
+        {
+          "text": "O bolo pronto vendido no mercado.",
+          "explanation": "Correto: resolve a mesma necessidade com outro modelo."
+        },
+        {
+          "text": "A loja de embalagens.",
+          "explanation": "É fornecedora, e não alternativa para o cliente."
+        },
+        {
+          "text": "Quem não come doce.",
+          "explanation": "Não é concorrente."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "type": "true_false",
+      "id": "c7-coerencia",
+      "skill": "m1-posicionamento",
+      "bloom": "analyze",
+      "difficulty": 2,
+      "prompt": "Verdadeiro ou falso: um negócio que se diz especialista e faz liquidação de queima toda semana contradiz o próprio posicionamento.",
+      "hints": ["O preço também comunica."],
+      "solution": "Verdadeiro. O preço e as promoções são pontos de contato e transmitem a imagem do negócio.",
+      "correct": true
+    }
+  ]
+}

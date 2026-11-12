@@ -1,0 +1,165 @@
+{
+  "title": "O cirílico não é tão estranho: três grupos de letras",
+  "scenes": [
+    {
+      "type": "title",
+      "title": "O cirílico em três grupos",
+      "subtitle": "Russo do zero, módulo 1",
+      "narration": "Olá! Hoje você começa a ler russo. O alfabeto russo se chama cirílico e tem trinta e três letras. Parece muita coisa, mas você já conhece boa parte delas, e o restante se aprende um pouco a cada dia. A ideia deste vídeo é simples: dividir as letras em três grupos. As letras amigas, que soam como no português. As falsas amigas, que parecem letras que você conhece, mas têm outro som. E as letras novas, que você aprende uma de cada vez. No final, você vai conseguir ler as suas primeiras palavras em russo. Este roteiro segue de perto a lição de alfabeto do livro aberto de russo da Wikibooks, que você pode abrir de graça quando quiser."
+    },
+    {
+      "type": "bullets",
+      "title": "Grupo 1: as letras amigas",
+      "bullets": ["А а soa como «a»", "К к soa como «k»", "М м soa como «m»", "О о soa como «o»", "Т т soa como «t»"],
+      "narration": "Primeiro grupo, as letras amigas. А soa como o a de casa. К soa como o c de casa, ou seja, um k. М soa como m. О soa como o de bola, quando está na sílaba mais forte. E Т soa como t. Só com essas cinco letras você já lê palavras inteiras. Мама, com М, А, М, А, quer dizer mamãe. Там, com Т, А, М, quer dizer lá. E кот, com К, О, Т, quer dizer gato. Repare que a letra М em russo é igualzinha à nossa, só que a letra de mão do russo costuma ter formas um pouco diferentes da de imprensa."
+    },
+    {
+      "type": "bullets",
+      "title": "Grupo 2: as falsas amigas",
+      "bullets": [
+        "В в soa como «v»",
+        "Н н soa como «n»",
+        "Р р soa como «r» vibrado",
+        "С с soa como «s»",
+        "У у soa como «u»"
+      ],
+      "narration": "Agora cuidado, que este é o grupo das falsas amigas. São letras que parecem latinas, mas têm outro som. В parece um B, mas soa como v. Н parece um H, mas soa como n. Р parece um P, mas soa como r, com a ponta da língua vibrando de leve, como no r de caro. С parece um C, mas soa como s. E У parece um Y, mas soa como u. Se você ler essas letras como se fossem latinas, vai errar quase tudo. Por isso, a regra de ouro dos primeiros dias é: desconfie de toda letra que parece conhecida."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "multiple_choice",
+        "id": "v1-falsa-amiga-n",
+        "skill": "m1-sons-das-letras",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "A letra russa Н parece um H, mas qual é o som dela?",
+        "hints": ["Ela está no grupo das falsas amigas.", "Pense na palavra нос, que quer dizer nariz."],
+        "choices": [
+          {
+            "text": "Soa como «h»",
+            "explanation": "É a armadilha: Н parece um H latino, mas não soa como h. O som de h áspero é da letra Х."
+          },
+          {
+            "text": "Soa como «p»",
+            "explanation": "O som de p é de П. Н não tem relação com p."
+          },
+          {
+            "text": "Soa como «n»",
+            "explanation": "Isso: Н é a letra do som n, como em нос, que se lê «nos»."
+          }
+        ],
+        "correct": 2,
+        "solution": "Н soa como n. Por isso нос se lê «nos», e não «hoc»."
+      },
+      "narration": "Hora de testar. Pause o vídeo e responda: a letra russa Н parece um H, mas qual é o som dela?"
+    },
+    {
+      "type": "bullets",
+      "title": "Mais uma falsa amiga e as letras novas",
+      "bullets": [
+        "Х х: um «h» áspero",
+        "Б б, Д д, П п: «b», «d», «p»",
+        "Ж ж: o «j» de jogo",
+        "Ш ш: o «ch» de chá",
+        "Ч ч: o «tch» de tchau"
+      ],
+      "narration": "Falta ainda uma falsa amiga, a Х. Ela parece um X, mas soa como um h áspero, raspando de leve a garganta, parecido com o rr de um carioca falando carro. Depois vêm as letras novas. Б soa como b, Д soa como d, П soa como p. Ж soa como o j de jogo, só um pouco mais grossa. Ш soa como o ch de chá, também um pouco mais grossa. E Ч soa como o tch de tchau. Em geral, as letras novas são fáceis, porque cada uma tem um som só. Na aula de texto você verá a tabela completa, com todas elas."
+    },
+    {
+      "type": "diagram",
+      "title": "Como ler uma palavra nova",
+      "nodes": [
+        {
+          "id": "palavra",
+          "label": "Palavra nova"
+        },
+        {
+          "id": "letras",
+          "label": "Separe as letras"
+        },
+        {
+          "id": "sons",
+          "label": "Dê o som de cada uma"
+        },
+        {
+          "id": "juntar",
+          "label": "Junte os sons"
+        },
+        {
+          "id": "conferir",
+          "label": "Compare com o português"
+        }
+      ],
+      "links": [
+        {
+          "from": "palavra",
+          "to": "letras",
+          "label": ""
+        },
+        {
+          "from": "letras",
+          "to": "sons",
+          "label": ""
+        },
+        {
+          "from": "sons",
+          "to": "juntar",
+          "label": ""
+        },
+        {
+          "from": "juntar",
+          "to": "conferir",
+          "label": ""
+        }
+      ],
+      "narration": "Para ler qualquer palavra nova, siga este caminho. Olhe a palavra e separe as letras. Dê a cada uma o seu som. Junte os sons, na ordem. E, por fim, compare com palavras que você conhece, porque o russo tem muitas palavras parecidas com o português. Veja ресторан. Lendo letra por letra, aparece r, ie, s, t, o, r, a, n. Juntando tudo, sai algo como riestorán. Isso mesmo: restaurante. Na aula de texto vamos refinar essa pronúncia com o acento, mas só com esse caminho você já chega perto."
+    },
+    {
+      "type": "bullets",
+      "title": "Palavras que você já sabe",
+      "bullets": ["такси: táxi", "метро: metrô", "парк: parque", "банк: banco", "театр: teatro"],
+      "narration": "Treine com estas cinco palavras. Такси quer dizer táxi: т, а, к, с, и, taksi. Метро quer dizer metrô: miétro. Парк quer dizer parque: p, a, r, k. Банк quer dizer banco: b, a, n, k. E театр quer dizer teatro: t, ie, a, t, r, tieátr. Todas parecem o português porque vêm das mesmas raízes. Quando você reconhece a palavra pelo som, sabe que leu certo."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "multiple_choice",
+        "id": "v1-ler-banco",
+        "skill": "m1-ler-palavras",
+        "bloom": "apply",
+        "difficulty": 1,
+        "prompt": "Lendo letra por letra, como se lê a palavra «банк» (banco)?",
+        "hints": ["Separe em quatro letras: Б, А, Н, К.", "Lembre que Н soa como n."],
+        "choices": [
+          {
+            "text": "«bank»",
+            "explanation": "Certo: Б soa b, А soa a, Н soa n e К soa k. A palavra quer dizer banco."
+          },
+          {
+            "text": "«vahk»",
+            "explanation": "Aqui Б foi lida como v e Н como h. Б soa b (o v é da letra В), e Н soa n."
+          },
+          {
+            "text": "«bahk»",
+            "explanation": "Quase: Б e А estão certas, mas Н soa n, e não h. Falta o n de banco."
+          }
+        ],
+        "correct": 0,
+        "solution": "Б = b, А = a, Н = n, К = k: «bank». É a palavra banco."
+      },
+      "narration": "Mais uma pausa. Lendo letra por letra, como se lê a palavra banco, escrita б, а, н, к?"
+    },
+    {
+      "type": "bullets",
+      "title": "O que levar daqui",
+      "bullets": [
+        "Três grupos: amigas, falsas amigas e novas",
+        "Desconfie das letras que parecem conhecidas",
+        "Separe, dê o som, junte, compare",
+        "Próximo passo: a tabela completa"
+      ],
+      "narration": "Então, para guardar. As letras se dividem em três grupos: amigas, falsas amigas e novas. Desconfie sempre das letras que parecem conhecidas. E, para ler uma palavra, separe as letras, dê o som de cada uma, junte e compare com o português. Na próxima aula, em texto, você encontra a tabela com as trinta e três letras e o som de cada uma. Depois, treine nos exercícios. Até lá!"
+    }
+  ]
+}

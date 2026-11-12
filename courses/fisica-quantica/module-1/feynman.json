@@ -1,0 +1,88 @@
+{
+  "topic": "Por que a luz, que era onda, também é feita de fótons",
+  "request": "Explique para um amigo curioso, que nunca estudou física, por que os físicos achavam que a luz era uma onda, o que deixou de se encaixar e como a ideia do fóton resolveu. Use as suas palavras e, se puder, um exemplo do dia a dia.",
+  "opening": "Oi, eu sou a Ana. Sempre ouvi que a luz é uma onda, mas aí falam em fóton e eu me perco. Me explica do começo: por que todo mundo achava que a luz era onda?",
+  "keyPoints": [
+    {
+      "id": "luz-onda",
+      "idea": "A luz se comporta como onda porque faz interferência: na experiência das duas fendas de Young aparecem faixas claras e escuras.",
+      "cues": ["interferencia", "duas fendas", "fenda dupla", "young", "faixas claras", "faixas escuras", "franjas"],
+      "question": "Que experimento convenceu os físicos de que a luz era uma onda, e o que aparecia nele?"
+    },
+    {
+      "id": "frequencia-cor",
+      "idea": "A cor da luz depende da frequência e do comprimento de onda, ligados por c igual a lambda vezes f: comprimento de onda maior, frequência menor.",
+      "cues": ["frequencia", "comprimento de onda", "lambda", "velocidade da luz", "cor da luz", "hertz"],
+      "question": "O que muda entre a luz vermelha e a violeta, em termos de onda?"
+    },
+    {
+      "id": "fatos-que-nao-fechavam",
+      "idea": "A física da onda falhou em fatos como a luz do corpo negro, que previa energia infinita no ultravioleta (a catástrofe do ultravioleta), e o efeito fotoelétrico.",
+      "cues": [
+        "corpo negro",
+        "catastrofe do ultravioleta",
+        "ultravioleta",
+        "energia infinita",
+        "efeito fotoeletrico",
+        "ferro em brasa"
+      ],
+      "question": "Se a ideia de onda era tão boa, o que deu errado? Que fato ela não conseguia explicar?"
+    },
+    {
+      "id": "foton-energia",
+      "idea": "A luz troca energia em pacotes, os fótons, e cada fóton tem energia E igual a h vezes a frequência, com h a constante de Planck.",
+      "cues": [
+        "foton",
+        "fotons",
+        "pacote",
+        "pacotes",
+        "quantum",
+        "constante de planck",
+        "h vezes",
+        "planck",
+        "agá vezes"
+      ],
+      "question": "E de onde veio a ideia do fóton? Do que depende a energia de cada um?"
+    },
+    {
+      "id": "fotoeletrico-frequencia",
+      "idea": "No efeito fotoelétrico, cada fóton entrega sua energia a um elétron: a frequência decide se o elétron sai e com que energia; a intensidade só muda quantos elétrons saem.",
+      "cues": [
+        "eletron",
+        "eletrons",
+        "intensidade",
+        "frequencia de corte",
+        "funcao trabalho",
+        "um eletron",
+        "arrancar",
+        "moeda"
+      ],
+      "question": "Se eu iluminar um metal com uma luz vermelha muito forte e ele não soltar elétrons, por que isso acontece?"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "error": "Luz mais forte, mais intensa, tem fótons com mais energia.",
+      "correction": "A intensidade muda quantos fótons chegam por segundo; a energia de cada fóton depende só da frequência."
+    },
+    {
+      "error": "A luz deixou de ser onda: agora ela é só partícula.",
+      "correction": "A luz continua fazendo interferência como onda; ela também troca energia em pacotes. As duas descrições valem."
+    },
+    {
+      "error": "Comprimento de onda maior quer dizer frequência maior.",
+      "correction": "É o contrário: como c é igual a lambda vezes f, comprimento de onda maior significa frequência menor."
+    },
+    {
+      "error": "A luz vermelha tem mais energia que a azul porque é mais quente.",
+      "correction": "O fóton azul tem frequência maior, então carrega mais energia que o vermelho."
+    }
+  ],
+  "questions": [
+    "Me dá um exemplo do dia a dia em que a cor da luz mostra a temperatura de alguma coisa.",
+    "Por que um fóton de luz azul carrega mais energia que um de luz vermelha?",
+    "E se a luz fosse só onda, o que você esperaria ver no efeito fotoelétrico?",
+    "Por que dá para usar uma comparação com moedas para explicar a intensidade e a frequência?"
+  ],
+  "skills": ["m1-luz-como-onda", "m1-energia-do-foton", "m1-efeito-fotoeletrico"]
+}

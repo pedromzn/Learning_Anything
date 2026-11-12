@@ -1,0 +1,116 @@
+{
+  "introduction": "Ao final desta aula você consegue escolher o tipo fundamental certo para cada dado, prever o resultado de contas com inteiros e com `double`, e declarar variáveis sempre inicializadas, usando chaves e `auto`. O conteúdo segue as lições 1.4, 1.6 e o capítulo 4 do learncpp.com; a tabela completa de tamanhos garantidos está na página *Fundamental types* do cppreference, e em português no artigo *Tipos internos (C++)* do Microsoft Learn.",
+  "sections": [
+    {
+      "title": "Inteiros: tamanho, limites e o perigo do unsigned",
+      "markdown": "Um tipo inteiro ocupa um número fixo de bytes, e isso define a faixa de valores que ele guarda.\n\n| Tipo | Tamanho garantido pelo padrão | Tamanho típico hoje |\n| --- | --- | --- |\n| `short` | pelo menos 16 bits | 16 bits |\n| `int` | pelo menos 16 bits | 32 bits |\n| `long` | pelo menos 32 bits | 32 ou 64 bits, conforme o sistema |\n| `long long` | pelo menos 64 bits | 64 bits |\n\nCom 32 bits, um `int` vai de −2.147.483.648 a 2.147.483.647. O operador `sizeof` dá o tamanho em bytes na sua máquina: `sizeof(int)` costuma ser 4. Quando o tamanho exato importa (um protocolo, um arquivo binário), use os tipos de `<cstdint>`, como `std::int32_t` e `std::int64_t`.\n\nDois comportamentos para guardar:\n\n- **Estouro de inteiro com sinal** (passar do máximo de um `int`) é **comportamento indefinido**: a linguagem não promete resultado algum.\n- **Inteiros sem sinal** (`unsigned`) não estouram: dão a volta. `0u - 1` num `unsigned int` de 32 bits vale 4.294.967.295. Misturar `int` com `unsigned` numa conta converte tudo para `unsigned`, e um valor negativo vira um número enorme. O learncpp (lição 4.5) recomenda usar `int` para quantidades e contas, e deixar `unsigned` para quando você realmente manipula bits.",
+      "question": {
+        "type": "true_false",
+        "id": "t5-int-32",
+        "skill": "m1-fundamental-types",
+        "bloom": "remember",
+        "difficulty": 1,
+        "prompt": "Verdadeiro ou falso: o padrão C++ garante que um `int` tem exatamente 32 bits.",
+        "hints": ["Olhe a coluna do que o padrão garante, não a do que é típico."],
+        "correct": false,
+        "solution": "Falso. O padrão garante só um mínimo de 16 bits; 32 bits é o tamanho típico nos computadores atuais. Para um tamanho exato, use `std::int32_t`, de `<cstdint>`."
+      }
+    },
+    {
+      "title": "Ponto flutuante e a divisão inteira",
+      "markdown": "Para números com casas decimais, use `double` (quase sempre 64 bits, cerca de 15 a 16 dígitos significativos). O `float` existe, com metade do tamanho e bem menos precisão; sem um motivo concreto, prefira `double`.\n\nA regra que mais pega quem vem do Python 3: **inteiro dividido por inteiro dá inteiro**, com a parte fracionária descartada (o resultado é truncado em direção ao zero).\n\n```cpp\nstd::cout << 7 / 2;     // 3\nstd::cout << 7 % 2;     // 1  (o resto)\nstd::cout << -7 / 2;    // -3 (truncado em direção ao zero)\nstd::cout << 7.0 / 2;   // 3.5\n```\n\nBasta um dos lados ser `double` para a conta inteira virar `double`. Quando as duas variáveis são `int`, converta uma delas de forma explícita:\n\n```cpp\nint soma{23};\nint quantidade{3};\ndouble media{static_cast<double>(soma) / quantidade};\n```\n\n`static_cast<double>(soma)` é a conversão explícita do C++. Ela deixa claro, para quem lê, que a conversão é intencional.\n\nUm último cuidado: `double` guarda a maioria dos decimais de forma aproximada, em binário. Por isso `0.1 + 0.2 == 0.3` dá `false`. Para comparar valores calculados, compare a diferença com uma tolerância pequena.",
+      "question": {
+        "type": "numeric",
+        "id": "t5-int-div",
+        "skill": "m1-fundamental-types",
+        "bloom": "apply",
+        "difficulty": 1,
+        "prompt": "Com `int a{17};` e `int b{5};`, quanto vale `a / b + a % b`?",
+        "hints": ["Calcule a divisão inteira e o resto separadamente.", "17 = 5 × 3 + ?"],
+        "answer": 5,
+        "tolerance": 0,
+        "unit": "",
+        "solution": "17 / 5 = 3 (divisão inteira) e 17 % 5 = 2 (o resto, porque 5 × 3 = 15 e 17 − 15 = 2). Somando: 3 + 2 = 5."
+      }
+    },
+    {
+      "title": "char, bool e texto",
+      "markdown": "- `char` ocupa 1 byte e guarda **um** caractere, escrito entre **aspas simples**: `char letra{'A'};`. Por dentro é um número pequeno (o código do caractere).\n- Texto, com vários caracteres, vai entre **aspas duplas** e, em C++ moderno, numa `std::string` (de `<string>`): `std::string nome{\"Ana\"};`. `'A'` e `\"A\"` são coisas diferentes: o primeiro é um `char`; o segundo é um texto de um caractere.\n- `bool` guarda `true` ou `false`. Comparações (`idade >= 18`) produzem um `bool`. Um detalhe de impressão: `std::cout << true` mostra `1`, não `true`. Para ver as palavras, use `std::cout << std::boolalpha` antes.\n\nCaracteres acentuados como `ã` não cabem num único `char` no formato UTF-8 usado pela maioria dos sistemas: ocupam dois bytes. Dentro de uma `std::string` eles funcionam para guardar e imprimir; só não conte com `size()` igual ao número de letras.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t5-quotes",
+        "skill": "m1-fundamental-types",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Qual declaração está correta?",
+        "hints": ["Aspas simples e aspas duplas significam coisas diferentes em C++."],
+        "choices": [
+          {
+            "text": "char inicial{\"P\"};",
+            "explanation": "Aspas duplas criam um texto, não um caractere; um char recebe aspas simples."
+          },
+          {
+            "text": "std::string nome{'Pedro'};",
+            "explanation": "Aspas simples são para um único caractere; várias letras entre aspas simples não formam um texto."
+          },
+          {
+            "text": "char inicial{'P'};",
+            "explanation": "Certo: um caractere, entre aspas simples, num char."
+          }
+        ],
+        "correct": 2,
+        "solution": "`char inicial{'P'};` está certa. Em C++, aspas simples marcam um único caractere (`char`) e aspas duplas marcam texto (que vai numa `std::string`)."
+      }
+    },
+    {
+      "title": "Inicialização: sempre, e de preferência com chaves",
+      "markdown": "C++ tem várias formas de dar valor inicial a uma variável:\n\n```cpp\nint a;        // sem inicialização: valor indefinido\nint b = 5;    // inicialização por cópia\nint c{5};     // inicialização com chaves (lista)\nint d{};      // chaves vazias: vale 0\n```\n\nA regra do curso, que é também a das C++ Core Guidelines (\"sempre inicialize um objeto\"): **toda variável nasce com valor**, e a forma preferida é a das chaves. Dois motivos:\n\n1. **Ler uma variável local sem valor é comportamento indefinido** (learncpp, lição 1.6). O programa compila, pode funcionar no seu computador e falhar em outro.\n2. **As chaves recusam estreitamento**: `int x{3.7};` é erro de compilação, enquanto `int x = 3.7;` compila e guarda 3.\n\nPara valores que não devem mudar, acrescente `const`: `const double taxa{0.15};`. Tentar alterar `taxa` depois é erro de compilação.\n\nPor fim, `auto` deixa o compilador deduzir o tipo pelo valor inicial: `auto total{0};` é `int`; `auto preco{9.5};` é `double`. Com `auto` a variável **precisa** de valor inicial, então ele também protege contra o esquecimento. Use quando o tipo é óbvio pelo contexto; escreva o tipo quando ele ajuda quem lê.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t5-init-ok",
+        "skill": "m1-initialization",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "Você precisa de um contador de itens que começa em zero e vai aumentar ao longo do programa. Qual declaração segue as recomendações desta aula?",
+        "hints": ["O contador vai mudar de valor.", "Qual forma garante o zero sem depender de nada?"],
+        "choices": [
+          {
+            "text": "int itens{};",
+            "explanation": "Certo: chaves vazias garantem o zero, e a variável pode mudar depois."
+          },
+          {
+            "text": "int itens;",
+            "explanation": "Sem inicialização, o valor é indefinido; somar a ele é comportamento indefinido."
+          },
+          {
+            "text": "const int itens{0};",
+            "explanation": "Começa em zero, mas const impede que o contador aumente."
+          },
+          {
+            "text": "auto itens;",
+            "explanation": "auto precisa de um valor inicial para deduzir o tipo; isso nem compila."
+          }
+        ],
+        "correct": 0,
+        "solution": "`int itens{};` cria um `int` valendo 0 que pode mudar. Sem inicialização o valor é indefinido; `const` impediria o incremento; e `auto` sem valor não compila."
+      }
+    }
+  ],
+  "workedExample": {
+    "prompt": "Um programa guarda três notas inteiras, 7, 8 e 8, e imprime a média com `int soma{n1 + n2 + n3}; std::cout << soma / 3;`. A saída é `7`. Explique o erro e corrija para imprimir a média com casas decimais.",
+    "steps": [
+      "Calcule a soma: 7 + 8 + 8 = 23. Até aqui, tudo certo.",
+      "Olhe os tipos da divisão: `soma` é `int` e `3` é um literal `int`. Inteiro dividido por inteiro dá inteiro: 23 / 3 = 7, com a parte fracionária descartada.",
+      "Converta um dos lados para `double`: `double media{static_cast<double>(soma) / 3};`. Agora a conta é feita em ponto flutuante: 23.0 / 3 ≈ 7,6667.",
+      "Imprima `media`. Com a configuração padrão de `std::cout` (6 dígitos significativos), a saída é `7.66667`.",
+      "Repare que `double media = soma / 3;` não resolveria: a divisão inteira acontece antes, e o `double` receberia 7. E `double media{soma / 3};` nem compila: as chaves recusam converter um `int` que não é constante para `double`, outro estreitamento que elas pegam."
+    ]
+  },
+  "summary": [
+    "O `int` tem no mínimo 16 bits e quase sempre 32; use `<cstdint>` quando o tamanho exato importa.",
+    "Estouro de inteiro com sinal é comportamento indefinido; `unsigned` dá a volta, e 0 − 1 vira um número enorme.",
+    "Inteiro dividido por inteiro descarta a parte fracionária; use `static_cast<double>` quando quiser casas decimais.",
+    "`char` usa aspas simples; texto usa aspas duplas e `std::string`.",
+    "Inicialize toda variável, de preferência com chaves, que recusam estreitamento; `const` para o que não muda, `auto` quando o tipo é óbvio."
+  ]
+}

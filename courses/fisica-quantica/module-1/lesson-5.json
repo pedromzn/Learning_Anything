@@ -1,0 +1,221 @@
+{
+  "guidance": "Treine prever quando a luz arranca elétrons e com que energia. Use o atalho $E \\approx 1240/\\lambda$ (E em eV, $\\lambda$ em nm) e a equação de Einstein $K_{\\max} = hf - \\phi$. Os primeiros itens são de conceito; os últimos pedem conta e juntam tudo o que você viu no módulo.",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "id": "ex-funcao-trabalho",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "O que é a função trabalho $\\phi$ de um metal?",
+      "hints": ["Pense numa 'taxa de saída' que o elétron paga."],
+      "choices": [
+        {
+          "text": "A energia de cada fóton que chega ao metal",
+          "explanation": "A energia do fóton é $hf$ e depende da luz, não do metal."
+        },
+        {
+          "text": "A energia mínima para um elétron escapar do metal",
+          "explanation": "Isso: cada metal tem a sua, e o fóton precisa ter pelo menos essa energia."
+        },
+        {
+          "text": "A energia cinética com que o elétron sai",
+          "explanation": "Essa é $K_{\\max}$, o que sobra depois de pagar $\\phi$."
+        },
+        {
+          "text": "A intensidade de luz mínima para haver corrente",
+          "explanation": "Não existe intensidade mínima: o que existe é uma frequência mínima."
+        }
+      ],
+      "correct": 1,
+      "solution": "A função trabalho é a energia mínima que um elétron precisa receber para escapar do metal. Ela depende do metal."
+    },
+    {
+      "type": "true_false",
+      "id": "ex-vf-sem-demora",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: com luz acima da frequência de corte, os elétrons começam a sair praticamente na hora, mesmo que a luz seja muito fraca.",
+      "hints": ["Cada elétron recebe a energia de um fóton inteiro, de uma vez."],
+      "correct": true,
+      "solution": "Verdadeiro. Como cada fóton entrega todo o seu pacote de uma vez, o elétron não precisa 'juntar' energia. Luz fraca só quer dizer menos fótons, e portanto menos elétrons por segundo."
+    },
+    {
+      "type": "numeric",
+      "id": "ex-kmax-simples",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "Fótons de 2,6 eV atingem um metal com função trabalho de 2,0 eV. Qual é a energia cinética máxima dos elétrons, em eV?",
+      "hints": ["Use $K_{\\max} = hf - \\phi$, com $hf$ = energia do fóton."],
+      "answer": 0.6,
+      "tolerance": 0.02,
+      "unit": "eV",
+      "solution": "$K_{\\max} = 2{,}6 - 2{,}0 = 0{,}6$ eV."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex-qual-luz-arranca",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Um metal tem função trabalho de 3,0 eV. Qual destas luzes arranca elétrons dele?",
+      "hints": [
+        "Calcule a energia do fóton de cada opção com $E \\approx 1240/\\lambda$.",
+        "Compare cada energia com 3,0 eV."
+      ],
+      "choices": [
+        {
+          "text": "Infravermelho de 900 nm, muito forte",
+          "explanation": "Cerca de 1,4 eV por fóton: abaixo de 3,0 eV. A intensidade alta não ajuda."
+        },
+        {
+          "text": "Luz vermelha de 700 nm",
+          "explanation": "Cerca de 1,8 eV por fóton: abaixo de 3,0 eV."
+        },
+        {
+          "text": "Luz verde de 500 nm",
+          "explanation": "Cerca de 2,5 eV por fóton: ainda abaixo de 3,0 eV."
+        },
+        {
+          "text": "Ultravioleta de 300 nm",
+          "explanation": "Isso: cerca de 4,1 eV por fóton, acima de 3,0 eV."
+        }
+      ],
+      "correct": 3,
+      "solution": "Energias aproximadas: 900 nm → 1,4 eV; 700 nm → 1,8 eV; 500 nm → 2,5 eV; 300 nm → 4,1 eV. Só o ultravioleta passa de 3,0 eV."
+    },
+    {
+      "type": "numeric",
+      "id": "ex-lambda-corte",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Um metal tem função trabalho de 3,1 eV. Qual é o comprimento de onda de corte dele, em nanômetros?",
+      "hints": [
+        "No corte, a energia do fóton é exatamente igual à função trabalho.",
+        "Use $\\lambda_0 \\approx 1240/\\phi$."
+      ],
+      "answer": 400,
+      "tolerance": 3,
+      "unit": "nm",
+      "solution": "$\\lambda_0 \\approx 1240/3{,}1 = 400$ nm. Só luz com comprimento de onda menor que 400 nm (ultravioleta) arranca elétrons desse metal."
+    },
+    {
+      "type": "ordering",
+      "id": "ex-ordem-evento",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Ponha em ordem o que acontece, segundo Einstein, quando um fóton com energia suficiente atinge o metal.",
+      "hints": ["Comece pelo fóton e termine no medidor de corrente."],
+      "steps": [
+        "O fóton chega à placa de metal",
+        "O fóton entrega toda a sua energia a um único elétron",
+        "O elétron gasta a função trabalho para escapar do metal",
+        "A energia que sobra vira energia de movimento do elétron",
+        "O elétron chega à outra placa e faz parte da corrente"
+      ],
+      "solution": "Fóton chega → entrega a energia a um elétron → o elétron paga a função trabalho → o resto vira energia cinética → o elétron chega à outra placa e forma a corrente."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex-aumentar-freq",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Uma luz já arranca elétrons de um metal. Você troca a luz por outra de frequência maior, com o mesmo número de fótons por segundo. O que acontece com a energia cinética máxima dos elétrons?",
+      "hints": ["Na equação de Einstein, o que muda quando $f$ cresce?"],
+      "choices": [
+        {
+          "text": "Diminui, porque a luz fica mais 'fina'",
+          "explanation": "Frequência maior quer dizer fóton com mais energia, não menos."
+        },
+        {
+          "text": "Não muda, porque o número de fótons é o mesmo",
+          "explanation": "O número de fótons decide quantos elétrons saem, não a energia de cada um."
+        },
+        {
+          "text": "Aumenta, porque cada fóton traz mais energia",
+          "explanation": "Isso: $K_{\\max} = hf - \\phi$ cresce com $f$."
+        },
+        {
+          "text": "Só muda se a intensidade também aumentar",
+          "explanation": "A intensidade não aparece na fórmula de $K_{\\max}$."
+        }
+      ],
+      "correct": 2,
+      "solution": "Em $K_{\\max} = hf - \\phi$, a função trabalho é fixa e $hf$ cresce com a frequência. Logo $K_{\\max}$ aumenta."
+    },
+    {
+      "type": "true_false",
+      "id": "ex-vf-esperar",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Verdadeiro ou falso: se uma luz está abaixo da frequência de corte, basta deixá-la acesa por bastante tempo que os elétrons acabam juntando energia e saindo.",
+      "hints": ["Um elétron pode somar a energia de dois fótons fracos, na explicação de Einstein?"],
+      "correct": false,
+      "solution": "Falso. Na explicação de Einstein, cada elétron recebe um fóton por vez, e um fóton abaixo do corte não tem energia para soltá-lo. Esperar não muda a energia de cada fóton."
+    },
+    {
+      "type": "numeric",
+      "id": "ex-kmax-uv",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Uma luz ultravioleta de 248 nm atinge um metal com função trabalho de 4,5 eV. Qual é a energia cinética máxima dos elétrons, em eV?",
+      "hints": ["Primeiro ache a energia do fóton com o atalho de 1240.", "Depois desconte a função trabalho."],
+      "answer": 0.5,
+      "tolerance": 0.03,
+      "unit": "eV",
+      "solution": "Energia do fóton: $1240/248 = 5{,}0$ eV. Então $K_{\\max} = 5{,}0 - 4{,}5 = 0{,}5$ eV."
+    },
+    {
+      "type": "numeric",
+      "id": "ex-freq-400",
+      "skill": "m1-luz-como-onda",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Revisão da aula 2: qual é a frequência da luz violeta de 400 nm, em unidades de $10^{14}$ Hz? (Use $c = 3 \\times 10^8$ m/s.)",
+      "hints": ["400 nm = $4 \\times 10^{-7}$ m. Depois use $f = c/\\lambda$."],
+      "answer": 7.5,
+      "tolerance": 0.05,
+      "unit": "× 10¹⁴ Hz",
+      "solution": "$f = (3 \\times 10^8)/(4 \\times 10^{-7}) = 0{,}75 \\times 10^{15} = 7{,}5 \\times 10^{14}$ Hz."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex-por-que-foton",
+      "skill": "m1-energia-do-foton",
+      "bloom": "understand",
+      "difficulty": 3,
+      "prompt": "Qual observação do efeito fotoelétrico é a pista mais forte de que a luz chega em pacotes (fótons), e não como uma onda de energia espalhada?",
+      "hints": [
+        "Procure a observação em que a intensidade da luz, por maior que seja, não resolve.",
+        "Uma onda espalhada poderia entregar energia aos poucos; pacotes, não."
+      ],
+      "choices": [
+        {
+          "text": "Existe uma frequência de corte: abaixo dela nada sai, por mais forte que seja a luz",
+          "explanation": "Isso: se a energia viesse espalhada, luz forte o bastante sempre funcionaria. Só pacotes de tamanho $hf$ explicam o corte."
+        },
+        {
+          "text": "A luz forte produz uma corrente maior",
+          "explanation": "Isso também acontece numa visão de onda (mais energia, mais efeito). Não distingue as duas ideias."
+        },
+        {
+          "text": "Os elétrons saem do metal",
+          "explanation": "Que a luz carrega energia e pode soltar elétrons, as duas visões aceitam."
+        },
+        {
+          "text": "Metais diferentes têm funções trabalho diferentes",
+          "explanation": "Isso é uma propriedade do metal, e não diz nada sobre a natureza da luz."
+        }
+      ],
+      "correct": 0,
+      "solution": "A frequência de corte é a pista decisiva. Se a energia da luz chegasse espalhada e contínua, uma luz forte o bastante sempre arrancaria elétrons. O fato de nada sair abaixo de certa frequência, qualquer que seja a intensidade, mostra que a energia chega em pacotes de $hf$, e cada elétron recebe um pacote só."
+    }
+  ]
+}

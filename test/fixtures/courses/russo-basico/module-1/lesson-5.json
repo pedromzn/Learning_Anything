@@ -1,0 +1,307 @@
+{
+  "guidance": "Leia palavras de verdade aplicando tudo: acento, vogais fracas, consoantes sem voz e sinais. Alguns itens retomam a aula 2 (letras e sons), para você não esquecer. As dicas vão da mais leve à que quase entrega, mas nunca dão a resposta. Se quiser conferir, os áudios da Wikibooks (Russian/Alphabet) e da Wikipedia (Help:IPA/Russian) são gratuitos.",
+  "items": [
+    {
+      "type": "multiple_choice",
+      "id": "ex5-rot",
+      "skill": "m1-sons-das-letras",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "Revisão: como se lê «рот» (boca)?",
+      "hints": ["A primeira letra é uma falsa amiga.", "Р soa «r», e não «p»."],
+      "choices": [
+        {
+          "text": "«rot»",
+          "explanation": "Certo: Р = r, О = o, Т = t."
+        },
+        {
+          "text": "«pot»",
+          "explanation": "Р parece um P, mas soa r."
+        },
+        {
+          "text": "«rom»",
+          "explanation": "A última letra é Т, que soa t."
+        }
+      ],
+      "correct": 0,
+      "solution": "Р = r, О = o, Т = t: «rot»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex5-hor",
+      "skill": "m1-sons-das-letras",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "Revisão: como se lê «хор» (coro)?",
+      "hints": ["A primeira letra parece um X.", "Ela soa como um h áspero, raspando a garganta."],
+      "choices": [
+        {
+          "text": "«xor», com «ch»",
+          "explanation": "O «ch» de chá é o som de Ш, e não de Х."
+        },
+        {
+          "text": "«kor»",
+          "explanation": "O som de k é de К. Х é um h áspero."
+        },
+        {
+          "text": "«hor», com h áspero",
+          "explanation": "Certo: Х = h áspero, О = o, Р = r vibrado."
+        }
+      ],
+      "correct": 2,
+      "solution": "Х = h áspero, О = o, Р = r: «hor»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex5-marca-acento",
+      "skill": "m1-acento-e-reducao",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Onde a marca de acento (´) costuma aparecer escrita em russo?",
+      "hints": ["Pense em um jornal russo: ele traz acento em cada palavra?"],
+      "choices": [
+        {
+          "text": "Em todos os textos, como em português",
+          "explanation": "Não: o russo comum não marca o acento nas palavras."
+        },
+        {
+          "text": "Só em placas de rua",
+          "explanation": "Placas também não trazem acento escrito."
+        },
+        {
+          "text": "Em dicionários, livros infantis e materiais de estudo",
+          "explanation": "Certo: no texto comum o acento não é escrito."
+        }
+      ],
+      "correct": 2,
+      "solution": "A marca de acento aparece em dicionários, livros infantis e materiais de estudo."
+    },
+    {
+      "type": "true_false",
+      "id": "ex5-yo",
+      "skill": "m1-acento-e-reducao",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Verdadeiro ou falso: na imensa maioria das palavras, a letra Ё marca a sílaba forte.",
+      "hints": ["Pense no que a aula 4 diz sobre o Ё."],
+      "correct": true,
+      "solution": "Verdadeiro. O Ё marca a sílaba forte (com raras exceções em palavras compostas e emprestadas)."
+    },
+    {
+      "type": "short_answer",
+      "id": "ex5-druk",
+      "skill": "m1-sinais-e-sonoridade",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Escreva em letras latinas como soa a palavra «друг» (amigo), aplicando a regra da consoante final.",
+      "hints": ["A última letra é Г.", "No fim da palavra, a sonora Г fica surda."],
+      "accepted": ["druk", "друк"],
+      "solution": "Д = d, Р = r, У = u e Г final, que soa k: «druk»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex5-gorod",
+      "skill": "m1-acento-e-reducao",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Como se lê «город» (cidade), com o acento na primeira sílaba (го́род)?",
+      "hints": ["A segunda sílaba não tem acento: o que acontece com o О?", "A última letra é um Д no fim da palavra."],
+      "choices": [
+        {
+          "text": "«GÓ-rat»",
+          "explanation": "Certo: o segundo О, sem acento, soa «a», e o Д final soa «t»."
+        },
+        {
+          "text": "«GÓ-rod»",
+          "explanation": "Faltaram as duas regras: O átono soa «a» e Д final soa «t»."
+        },
+        {
+          "text": "«ga-RÓT»",
+          "explanation": "O acento está na primeira sílaba, e não na última."
+        }
+      ],
+      "correct": 0,
+      "solution": "O О átono vira «a» e o Д final vira «t»: «GÓ-rat»."
+    },
+    {
+      "type": "true_false",
+      "id": "ex5-vodka",
+      "skill": "m1-sinais-e-sonoridade",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Verdadeiro ou falso: em «водка», a letra Д soa como «t» porque vem antes da consoante surda К.",
+      "hints": ["Releia a regra das consoantes que perdem a voz antes de surdas."],
+      "correct": true,
+      "solution": "Verdadeiro. Д é sonora, К é surda, então Д soa «t»: «VÓT-ka»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex5-zavtra",
+      "skill": "m1-sinais-e-sonoridade",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Como se lê «завтра» (amanhã), com o acento na primeira sílaba (за́втра)?",
+      "hints": ["A letra В vem antes de Т, que é surda.", "O par surdo de В é Ф."],
+      "choices": [
+        {
+          "text": "«ZÁF-tra»",
+          "explanation": "Certo: В antes de Т perde a voz e soa «f»."
+        },
+        {
+          "text": "«ZÁV-tra»",
+          "explanation": "Faltou a regra: В soa «f» antes de uma surda."
+        },
+        {
+          "text": "«zaf-TRÁ»",
+          "explanation": "O acento está na primeira sílaba."
+        }
+      ],
+      "correct": 0,
+      "solution": "В antes de Т soa «f»: «ZÁF-tra»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex5-mat",
+      "skill": "m1-sinais-e-sonoridade",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "O que muda entre «мат» (mat) e «мать» (mat’, mãe)?",
+      "hints": ["A diferença está só no Ь.", "O Ь age sobre a consoante antes dele."],
+      "choices": [
+        {
+          "text": "Em «мать» há uma vogal «e» no fim",
+          "explanation": "O Ь nunca soa como vogal."
+        },
+        {
+          "text": "Em «мать», o Ь suaviza o Т, e o Ь não tem som próprio",
+          "explanation": "Certo: o Ь muda a qualidade do Т, que fica suave."
+        },
+        {
+          "text": "Em «мать» o Т se perde e não é pronunciado",
+          "explanation": "O Т continua sendo pronunciado, só que suave."
+        }
+      ],
+      "correct": 1,
+      "solution": "O Ь não é pronunciado e suaviza o Т: «мать» soa «mat’»."
+    },
+    {
+      "type": "ordering",
+      "id": "ex5-hleb",
+      "skill": "m1-ler-palavras",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Coloque em ordem os passos para ler «хлеб» (pão).",
+      "hints": [
+        "Primeiro as letras, depois os sons, depois os ajustes.",
+        "O ajuste da consoante final vem antes da leitura inteira."
+      ],
+      "steps": [
+        "Separe as letras: х, л, е, б",
+        "Dê os sons: h áspero, l, ie, b",
+        "Note que б está no fim da palavra e perde a voz, soando p",
+        "Leia junto: «HLIEP»"
+      ],
+      "solution": "Separe as letras, dê os sons, aplique a perda de voz do б final e leia tudo: «HLIEP»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex5-leite",
+      "skill": "m1-acento-e-reducao",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Como se lê «молоко» (leite), com o acento na última sílaba (молоко́)?",
+      "hints": ["Há dois О sem acento.", "Cada um deles soa «a» fraco."],
+      "choices": [
+        {
+          "text": "«MÓ-lo-ko»",
+          "explanation": "O acento está na última sílaba, e os О sem acento não soam «o»."
+        },
+        {
+          "text": "«ma-la-KÓ»",
+          "explanation": "Certo: os dois primeiros О não têm acento e soam «a»; o último, com acento, soa «o»."
+        },
+        {
+          "text": "«mo-lo-KÓ»",
+          "explanation": "Os dois primeiros О não têm acento e devem soar «a»."
+        }
+      ],
+      "correct": 1,
+      "solution": "Os dois primeiros О viram «a», e o acento fica na última sílaba: «ma-la-KÓ»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex5-shkola",
+      "skill": "m1-sons-das-letras",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Revisão: em «школа» (escola), qual é o som da primeira letra, Ш?",
+      "hints": ["Pense no «ch» de chá.", "Não é o «tch» de tchau."],
+      "choices": [
+        {
+          "text": "O «ch» de chá, um pouco mais grosso",
+          "explanation": "Certo: Ш soa como o «ch» de chá, mais grosso."
+        },
+        {
+          "text": "O «tch» de tchau",
+          "explanation": "Esse é o som de Ч. Ш não tem o «t» na frente."
+        },
+        {
+          "text": "O «s» de sapato",
+          "explanation": "O som de s é de С."
+        }
+      ],
+      "correct": 0,
+      "solution": "Ш soa como o «ch» de chá, um pouco mais grosso: «SHKÓ-la»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex5-spasibo",
+      "skill": "m1-ler-palavras",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Como se lê «спасибо» (obrigado), com o acento na segunda sílaba (спаси́бо)?",
+      "hints": ["O acento está em «си». O que acontece com as outras sílabas?", "O О final, sem acento, soa «a»."],
+      "choices": [
+        {
+          "text": "«spa-SI-ba»",
+          "explanation": "Certo: acento em «си» e o О final reduzido a «a»."
+        },
+        {
+          "text": "«SPÁ-si-bo»",
+          "explanation": "O acento está na segunda sílaba, e o О final soa «a»."
+        },
+        {
+          "text": "«spa-SI-bo»",
+          "explanation": "O acento está certo, mas o О final, sem acento, soa «a»."
+        }
+      ],
+      "correct": 0,
+      "solution": "Acento em «си» e О final como «a»: «spa-SI-ba»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex5-brazilia",
+      "skill": "m1-ler-palavras",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Como se lê «Бразилия» (Brasil), com o acento na terceira sílaba (Брази́лия)?",
+      "hints": ["Б, Р e З: b, r e z.", "A última sílaba é «ия» e soa algo como «iya»."],
+      "choices": [
+        {
+          "text": "«BRÁ-zi-li-ya»",
+          "explanation": "O acento está na terceira sílaba, e não na primeira."
+        },
+        {
+          "text": "«vra-ZI-li-ya»",
+          "explanation": "Б soa «b», e não «v». O som de v é da letra В."
+        },
+        {
+          "text": "«bra-ZI-li-ya»",
+          "explanation": "Certo: acento na terceira sílaba; ли com Л suave; ия soa «iya»."
+        }
+      ],
+      "correct": 2,
+      "solution": "Б = b, Р = r, acento em «зи»: «bra-ZI-li-ya»."
+    }
+  ]
+}

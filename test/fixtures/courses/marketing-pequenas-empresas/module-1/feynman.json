@@ -1,0 +1,102 @@
+{
+  "topic": "Cliente ideal e posicionamento de um pequeno negócio",
+  "request": "Explique para um amigo que acabou de abrir um pequeno negócio por que ele não deve tentar vender para todo mundo, como escolher e descrever o cliente ideal e como escrever o posicionamento. Use um exemplo de negócio real ou inventado.",
+  "opening": "Oi, eu sou a Ana. Abri uma lojinha e acho que meu cliente é todo mundo, quanto mais gente melhor. Isso está errado? Me explica.",
+  "keyPoints": [
+    {
+      "id": "nao-todo-mundo",
+      "idea": "Falar com todo mundo deixa a mensagem genérica e ninguém se sente chamado; com pouco orçamento, escolher um cliente ideal deixa a mensagem direta.",
+      "cues": [
+        "todo mundo",
+        "mensagem generica",
+        "generica",
+        "ninguem se sente",
+        "pouco orcamento",
+        "direta",
+        "se reconhece"
+      ],
+      "question": "Mas qual é o problema de tentar vender para todo mundo, se ninguém fica de fora?"
+    },
+    {
+      "id": "publico-vs-ideal",
+      "idea": "Público-alvo é o grupo amplo que poderia comprar; cliente ideal é o recorte desse grupo que você escolhe atender primeiro e melhor.",
+      "cues": ["publico alvo", "cliente ideal", "recorte", "grupo amplo", "atender primeiro", "segmento"],
+      "question": "Qual é a diferença entre público-alvo e cliente ideal?"
+    },
+    {
+      "id": "criterios",
+      "idea": "Para escolher o segmento, compare valor e frequência de compra, aceitação do preço justo, facilidade de atender e indicação, usando dados dos clientes que você já tem.",
+      "cues": [
+        "frequencia",
+        "valor",
+        "preco justo",
+        "facilidade",
+        "indicacao",
+        "indica",
+        "dez melhores clientes",
+        "criterios"
+      ],
+      "question": "Como eu escolho qual grupo de clientes vale mais a pena atender primeiro?"
+    },
+    {
+      "id": "ficha",
+      "idea": "A ficha do cliente ideal descreve uma pessoa concreta, com situação, dor, desejo, objeções e onde ela está, preenchida com fatos e frases de clientes reais.",
+      "cues": [
+        "ficha",
+        "dor",
+        "desejo",
+        "objecoes",
+        "objecao",
+        "situacao",
+        "onde ele esta",
+        "clientes reais",
+        "conversar"
+      ],
+      "question": "Depois de escolher, como eu descrevo esse cliente para não ficar só no palpite?"
+    },
+    {
+      "id": "concorrencia",
+      "idea": "Para o cliente, concorrência é tudo o que ele pode fazer no seu lugar: concorrente direto, indireto e a opção de não comprar.",
+      "cues": [
+        "concorrente direto",
+        "concorrente indireto",
+        "concorrencia",
+        "nao comprar",
+        "alternativa",
+        "alternativas"
+      ],
+      "question": "Quem são os meus concorrentes? Só as lojas iguais à minha?"
+    },
+    {
+      "id": "posicionamento",
+      "idea": "O posicionamento é uma frase com cliente, necessidade, categoria, diferencial e prova; o diferencial precisa importar ao cliente, ser comprovável e não ser oferecido pelos outros.",
+      "cues": ["posicionamento", "diferencial", "prova", "comprovavel", "para quem", "categoria", "frase"],
+      "question": "E como eu digo em uma frase por que o cliente deve escolher a mim e não os outros?"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "error": "Qualidade e bom atendimento são o meu diferencial.",
+      "correction": "Qualidade, bom atendimento e preço justo são obrigação; diferencial é o que o cliente valoriza e os outros não oferecem."
+    },
+    {
+      "error": "Escolher um cliente ideal significa recusar todos os outros clientes.",
+      "correction": "Os outros continuam podendo comprar; o cliente ideal é quem você atende primeiro e para quem fala na comunicação."
+    },
+    {
+      "error": "O cliente ideal se descobre com pesquisa de mercado cara.",
+      "correction": "Dá para preencher a ficha com os dez melhores clientes, algumas conversas e as avaliações que você já tem."
+    },
+    {
+      "error": "Minha concorrência são só as lojas que vendem o mesmo que eu.",
+      "correction": "Também conta o concorrente indireto e a opção de o cliente não comprar nada ou resolver sozinho."
+    }
+  ],
+  "questions": [
+    "Me dá um exemplo de diferencial que não passa nos três testes e explica por quê.",
+    "Para uma padaria de bairro, quem você escolheria como cliente ideal, e por quê?",
+    "Onde o posicionamento aparece no dia a dia do negócio, além da frase?",
+    "O que acontece se eu me posiciono como especialista e vivo fazendo liquidação?"
+  ],
+  "skills": ["m1-cliente-ideal", "m1-ficha-cliente", "m1-concorrencia", "m1-posicionamento"]
+}

@@ -1,0 +1,159 @@
+{
+  "summary": "Os melhores materiais abertos sobre marketing para pequeno negócio concordam numa ordem: primeiro escolher quem se quer atender e em que se é diferente (segmentação, público-alvo e posicionamento, como no curso 15.810 do MIT e no artigo de persona da RD Station), depois montar oferta e preço, depois ser encontrado (Perfil da Empresa no Google, Instagram), manter conversa e atendimento (WhatsApp Business), fazer o cliente voltar e indicar, só então anunciar com orçamento pequeno e, ao longo de tudo, medir poucos números simples. O Sebrae cobre o contexto brasileiro do MEI e da microempresa, a HubSpot Academy dá a visão de conteúdo e de funil, o Meta Blueprint ensina a anunciar no Instagram e no Facebook, e o Google explica como o ranking local funciona.",
+  "bullets": [
+    {
+      "title": "Segmentação, público-alvo e posicionamento",
+      "description": "Escolher que parte do mercado atender, descrever esse cliente e definir em que o negócio é diferente das alternativas. É o bloco de estratégia do curso de marketing do MIT.",
+      "prerequisites": []
+    },
+    {
+      "title": "Persona ou cliente ideal",
+      "description": "Descrever o cliente ideal como uma pessoa concreta, com base em dados reais de quem já compra, para orientar conteúdo, tom de voz e atendimento.",
+      "prerequisites": ["Segmentação, público-alvo e posicionamento"]
+    },
+    {
+      "title": "Análise da concorrência e do valor para o cliente",
+      "description": "Olhar as alternativas que o cliente tem hoje e o valor que ele ganha comprando de você, incluindo quanto um cliente vale ao longo do tempo.",
+      "prerequisites": ["Persona ou cliente ideal"]
+    },
+    {
+      "title": "Produto, preço, promoção e distribuição",
+      "description": "Os quatro Ps como lista de decisões da oferta: o que vender, por quanto, como divulgar e por onde entregar.",
+      "prerequisites": ["Segmentação, público-alvo e posicionamento"]
+    },
+    {
+      "title": "Presença local no Google",
+      "description": "Perfil da Empresa verificado, completo e atualizado, com fotos e respostas às avaliações. O ranking local depende de relevância, distância e proeminência.",
+      "prerequisites": ["Produto, preço, promoção e distribuição"]
+    },
+    {
+      "title": "Conteúdo e redes sociais para pequenos negócios",
+      "description": "Planejar conteúdo por objetivo, definir público, e manter uma rotina possível de publicação, com a lógica de marketing de conteúdo e de inbound.",
+      "prerequisites": ["Persona ou cliente ideal"]
+    },
+    {
+      "title": "WhatsApp Business e atendimento",
+      "description": "Perfil comercial, produtos e serviços, saudação e resposta quando o dono não está, e organização da conversa até a venda.",
+      "prerequisites": ["Presença local no Google"]
+    },
+    {
+      "title": "Anúncios em redes sociais com orçamento pequeno",
+      "description": "Segmentação de público, criação de anúncio, definição de orçamento e análise de desempenho de campanha.",
+      "prerequisites": ["Conteúdo e redes sociais para pequenos negócios", "Persona ou cliente ideal"]
+    },
+    {
+      "title": "Medição e rotina de marketing",
+      "description": "Poucos indicadores que o dono consegue acompanhar sozinho, e uma rotina semanal curta para decidir o que manter, mudar ou parar.",
+      "prerequisites": ["Anúncios em redes sociais com orçamento pequeno"]
+    }
+  ],
+  "commonMistakes": [
+    "Querer vender para todo mundo e por isso não falar com ninguém em particular.",
+    "Copiar o que o concorrente grande faz, sem ter o mesmo orçamento nem o mesmo cliente.",
+    "Começar por anúncio pago antes de ter oferta clara, perfil completo e atendimento organizado.",
+    "Publicar sem calendário nem objetivo e abandonar a rede social em poucas semanas.",
+    "Deixar o Perfil da Empresa no Google incompleto, desatualizado ou sem resposta às avaliações.",
+    "Não medir nada, ou medir só curtidas em vez de contatos, orçamentos e vendas.",
+    "Tratar o cliente que já comprou como encerrado, sem pós-venda, recompra ou pedido de indicação."
+  ],
+  "possibleProjects": [
+    "A ficha do cliente ideal do próprio negócio, com base em conversas e nos dez melhores clientes.",
+    "A frase de posicionamento e a revisão do perfil do Instagram e do Google com ela.",
+    "O calendário de conteúdo de 30 dias com as postagens mais simples de produzir pelo celular.",
+    "Um kit de mensagens do WhatsApp Business: saudação, ausência, orçamento e acompanhamento.",
+    "Um anúncio de teste com orçamento pequeno e definido, com meta e leitura do resultado.",
+    "Um painel de indicadores em planilha, preenchido toda semana, e a rotina semanal de marketing."
+  ],
+  "references": [
+    {
+      "title": "15.810 Marketing Management (Fall 2010)",
+      "author": "Natalie Mizik",
+      "institution": "MIT Sloan School of Management, MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010/",
+      "license": "cc-by-nc-sa",
+      "reason": "A espinha da formação: análise do cliente e da concorrência, segmentação e posicionamento, depois produto, preço, promoção e distribuição. Em inglês."
+    },
+    {
+      "title": "15.810 Marketing Management (Fall 2010): calendário das sessões",
+      "author": "Natalie Mizik",
+      "institution": "MIT Sloan School of Management, MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010/pages/calendar/",
+      "license": "cc-by-nc-sa",
+      "reason": "A lista das vinte sessões, que mostra a ordem em que o MIT ensina análise de mercado, estratégia e programa de marketing."
+    },
+    {
+      "title": "Marketing digital e redes sociais",
+      "author": "",
+      "institution": "Sebrae",
+      "type": "course",
+      "url": "https://loja.sebrae.com.br/marketing-digital-e-redes-sociais-1-372000114127",
+      "license": "unknown",
+      "reason": "Curso online de 7 horas para pequenos empreendedores, com segmentação de público, anúncios e definição de orçamento. A página indica custo zero e pede confirmar a inscrição pela central do Sebrae."
+    },
+    {
+      "title": "Como otimizar seu Perfil de Empresa no Google (vídeo)",
+      "author": "",
+      "institution": "Sebrae Paraná",
+      "type": "video",
+      "url": "https://sebraepr.com.br/?p=133776",
+      "license": "unknown",
+      "reason": "Vídeo de cerca de 5 minutos, em português e voltado a MEIs e microempresas, sobre categoria, descrição, fotos, avaliações e atualização do Perfil da Empresa."
+    },
+    {
+      "title": "Dicas para melhorar seu ranking local no Google",
+      "author": "",
+      "institution": "Google, Central de Ajuda do Perfil da Empresa",
+      "type": "documentation",
+      "url": "https://support.google.com/business/answer/7091",
+      "license": "unknown",
+      "reason": "A explicação oficial de que o ranking local se baseia em relevância, distância e proeminência, e do que o dono pode fazer: verificar, completar, responder avaliações, pôr fotos."
+    },
+    {
+      "title": "Digital Marketing Certification Course",
+      "author": "",
+      "institution": "HubSpot Academy",
+      "type": "course",
+      "url": "https://academy.hubspot.com/courses/digital-marketing",
+      "license": "unknown",
+      "reason": "Curso gratuito, em inglês, sobre estratégia de marketing digital centrada na pessoa, com SEO, redes sociais e e-mail. A página o declara gratuito."
+    },
+    {
+      "title": "Persona: o que é, como definir e por que criar uma para sua empresa",
+      "author": "Bruna Dourado",
+      "institution": "RD Station",
+      "type": "article",
+      "url": "https://www.rdstation.com/blog/marketing/inbound-marketing/persona-o-que-e/",
+      "license": "unknown",
+      "reason": "Em português, explica a diferença entre persona e público-alvo e traz perguntas para levantar dados do cliente ideal."
+    },
+    {
+      "title": "Marketing e Vendas: materiais gratuitos",
+      "author": "",
+      "institution": "RD Station",
+      "type": "site",
+      "url": "https://www.rdstation.com/blog/materiais/",
+      "license": "unknown",
+      "reason": "Biblioteca em português de eBooks, planilhas e templates, com uma trilha de marketing e vendas para pequenos empreendedores. Alguns materiais levam a páginas externas."
+    },
+    {
+      "title": "Meta Blueprint: treinamento online gratuito para publicidade",
+      "author": "",
+      "institution": "Meta",
+      "type": "course",
+      "url": "https://www.facebook.com/business/learn",
+      "license": "unknown",
+      "reason": "Cursos no seu ritmo, webinars e certificação para anunciar no Facebook, Instagram, Messenger e WhatsApp. A página diz que aprender não custa nada; o custo da certificação não consta nela."
+    },
+    {
+      "title": "WhatsApp Business: aplicativo",
+      "author": "",
+      "institution": "Meta, WhatsApp Business",
+      "type": "site",
+      "url": "https://whatsappbusiness.com/pt-br/products/business-app/",
+      "license": "unknown",
+      "reason": "Apresentação oficial do app para pequenos negócios: perfil comercial, exibição de produtos e serviços e atendimento quando o dono não está disponível."
+    }
+  ]
+}

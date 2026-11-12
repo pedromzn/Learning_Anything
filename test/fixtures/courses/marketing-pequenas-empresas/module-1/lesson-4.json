@@ -1,0 +1,145 @@
+{
+  "introduction": "Ao final desta aula você consegue mapear as alternativas que o seu cliente considera e escrever uma frase de posicionamento com diferencial e prova. O exemplo é um salão de beleza especializado em cabelo cacheado.",
+  "sections": [
+    {
+      "title": "A concorrência é tudo que o cliente pode fazer no seu lugar",
+      "markdown": "No curso de marketing do MIT (15.810), a análise da concorrência vem logo depois da análise da empresa e antes da análise do cliente. A ideia é olhar o mercado do ponto de vista de quem compra.\n\nPara o cliente, há três tipos de alternativa:\n\n- **Concorrente direto:** vende o mesmo para o mesmo público. Para um salão, outro salão do bairro.\n- **Concorrente indireto:** resolve a mesma necessidade de outro jeito. Para um salão de cabelo cacheado, o produto de alisamento caseiro ou o profissional que atende em domicílio.\n- **Não comprar:** deixar como está, adiar, fazer em casa. É o concorrente mais forte de muito pequeno negócio.\n\nMonte uma lista de **três a cinco alternativas reais**: peça aos clientes que contem o que fariam sem você, olhe como eles aparecem no Google Maps e no Instagram e anote preço, promessa e avaliações. O objetivo não é copiar, e sim achar o espaço que está vazio.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t4-indireto",
+        "skill": "m1-concorrencia",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Uma confeiteira vende bolos caseiros por encomenda. Qual é um concorrente INDIRETO dela?",
+        "hints": [
+          "Um concorrente indireto resolve a mesma necessidade de outro jeito.",
+          "Procure a alternativa que vende bolo, mas não é uma confeiteira como ela."
+        ],
+        "solution": "A padaria do mercado que vende bolo pronto resolve a mesma necessidade (bolo para a festa) de outra forma. Outra confeiteira do bairro seria concorrente direta.",
+        "choices": [
+          {
+            "text": "Outra confeiteira do mesmo bairro.",
+            "explanation": "Vende o mesmo produto para o mesmo público: é concorrente direta."
+          },
+          {
+            "text": "A padaria do mercado, que vende bolo pronto de última hora.",
+            "explanation": "Correto: resolve a mesma necessidade com outro modelo, mais rápido e sem encomenda."
+          },
+          {
+            "text": "O fornecedor de farinha.",
+            "explanation": "É fornecedor, e não alternativa para o cliente."
+          },
+          {
+            "text": "Uma pessoa que não gosta de doce.",
+            "explanation": "Não é concorrente: não compra bolo de ninguém."
+          }
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "title": "Uma diferença que vale: os três testes",
+      "markdown": "**Diferencial** é a parte da sua oferta que o cliente valoriza e que as alternativas não oferecem, ou não oferecem do mesmo jeito. Para saber se o seu serve, passe-o por três testes:\n\n1. **Importa para o cliente da ficha?** Se ele não liga, não é diferencial.\n2. **É verdadeiro e comprovável?** Você consegue mostrar com foto, número, depoimento, certificado?\n3. **Os outros não oferecem ou não conseguem copiar fácil?**\n\nOs falsos diferenciais mais comuns são **qualidade, bom atendimento, preço justo e ambiente agradável**. Todo mundo diz isso, e o cliente não consegue conferir. Eles são obrigação, não diferença.\n\nBons diferenciais costumam ser **específicos**: um público especial (cabelo cacheado, gestantes, pets de pequeno porte), um jeito de entregar (pedido pronto em 30 minutos), uma garantia (refaz sem custo em 7 dias), uma especialidade (só faz bolos sem lactose).",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t4-diferencial",
+        "skill": "m1-posicionamento",
+        "bloom": "analyze",
+        "difficulty": 2,
+        "prompt": "Qual destes é um diferencial que passa nos três testes (importa ao cliente, é verdadeiro e comprovável, os outros não oferecem)?",
+        "hints": [
+          "Descarte o que todo concorrente diria sobre si mesmo.",
+          "Procure o que dá para mostrar com foto, número ou prova."
+        ],
+        "solution": "O corte e o cuidado feitos por profissionais treinadas em cabelo cacheado, com antes e depois de clientes, importa a esse cliente, é comprovável e poucos salões mostram isso.",
+        "choices": [
+          {
+            "text": "Atendimento de qualidade.",
+            "explanation": "Todo concorrente diz isso, e não dá para comprovar."
+          },
+          {
+            "text": "Preço justo.",
+            "explanation": "Também é dito por todos e não distingue ninguém."
+          },
+          {
+            "text": "Profissionais treinadas especificamente em cabelo cacheado, com fotos de antes e depois de clientes autorizadas.",
+            "explanation": "Correto: importa ao cliente, é verdadeiro e dá para verificar."
+          },
+          {
+            "text": "Ambiente aconchegante.",
+            "explanation": "É subjetivo, difícil de provar e fácil de copiar."
+          }
+        ],
+        "correct": 2
+      }
+    },
+    {
+      "title": "A frase de posicionamento",
+      "markdown": "O **posicionamento** é o lugar que o seu negócio ocupa na cabeça do cliente em relação às alternativas. Uma forma prática de escrevê-lo é completar uma frase:\n\n> **Para** [cliente ideal], **que** [necessidade ou situação], o [negócio] é [categoria] **que** [diferencial], **porque** [prova].\n\nExemplo: *Para mulheres de cabelo cacheado que já saíram frustradas de outros salões, o Studio Cachos da Lu é o salão do bairro que corta e cuida de cacho com profissionais treinadas em cabelo cacheado, e mostra o resultado em fotos de antes e depois de clientes autorizadas.*\n\nTrês cuidados:\n\n- A frase é para **você**, para orientar decisões. Ela não precisa aparecer igual no Instagram.\n- A **prova** precisa existir de verdade. Sem ela, vira promessa.\n- Se a frase serve para o concorrente trocando o nome, ela ainda não posiciona ninguém.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t4-prova",
+        "skill": "m1-posicionamento",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "Na frase 'Para mulheres de cabelo cacheado, o Studio é o melhor salão da cidade', o que falta para ela virar um posicionamento forte?",
+        "hints": [
+          "Pergunte como o cliente confere que é 'o melhor'.",
+          "Um bom posicionamento traz algo que dá para verificar."
+        ],
+        "solution": "Falta a prova: 'o melhor' é uma afirmação sem verificação. Trocar por um diferencial comprovável (equipe treinada, fotos, depoimentos) deixa a frase crível.",
+        "choices": [
+          {
+            "text": "O endereço do salão.",
+            "explanation": "Endereço é informação útil, mas não é o que torna a frase um posicionamento."
+          },
+          {
+            "text": "Uma prova que o cliente consiga verificar.",
+            "explanation": "Correto: sem prova, 'melhor' é só promessa."
+          },
+          {
+            "text": "O nome da dona.",
+            "explanation": "Não resolve a falta de credibilidade da promessa."
+          },
+          {
+            "text": "O preço dos serviços.",
+            "explanation": "Preço é parte da oferta, mas não substitui a prova do diferencial."
+          }
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "title": "O posicionamento aparece em tudo",
+      "markdown": "O cliente não lê a sua frase; ele percebe o posicionamento em **todos os pontos de contato**:\n\n- No **Perfil da Empresa no Google** (descrição, categoria, fotos) e na **bio do Instagram**.\n- Na **saudação do WhatsApp** e no jeito de responder.\n- No **preço e nas promoções**: quem se posiciona como especialista e vive em liquidação passa mensagem contraditória.\n- Nas **fotos**, na embalagem e no atendimento presencial.\n\nIncoerência custa confiança. Por isso, depois de escrever a frase, passe por cada ponto de contato e pergunte: isso confirma o posicionamento ou o contradiz? Nos próximos módulos você aplica isso no Google, no Instagram e no WhatsApp.",
+      "question": {
+        "type": "true_false",
+        "id": "t4-coerencia",
+        "skill": "m1-posicionamento",
+        "bloom": "analyze",
+        "difficulty": 2,
+        "prompt": "Verdadeiro ou falso: um negócio que se posiciona como especialista, mas vive fazendo promoção de queima, enfraquece o próprio posicionamento.",
+        "hints": ["Pense no que o preço comunica.", "Cliente também lê sinais além do texto."],
+        "solution": "Verdadeiro. O posicionamento aparece no preço, nas promoções, nas fotos e no atendimento. Promoção constante de queima passa a mensagem de que o serviço vale pouco.",
+        "correct": true
+      }
+    }
+  ],
+  "workedExample": {
+    "prompt": "Luciana tem o Studio Cachos da Lu, um salão de bairro. A cliente da ficha dela são mulheres de 25 a 40 anos de cabelo cacheado, que já saíram de outros salões com o cabelo volumoso e sem forma. Ao redor há dois salões comuns, um de rede num shopping, e muitas clientes fazem alisamento em casa. Escreva a frase de posicionamento.",
+    "steps": [
+      "Liste as alternativas da cliente. Diretas: os dois salões comuns e o de rede. Indiretas: alisamento caseiro. Não comprar: ficar com o cabelo como está e usar rabo de cavalo.",
+      "Veja o que a cliente da ficha valoriza: sair com o cacho definido, sem medo de o profissional não saber cortar cacho. Nenhum dos salões comuns promete isso.",
+      "Teste os diferenciais candidatos. 'Atendimento de qualidade' falha no teste 2 e no 3: todos dizem. 'Equipe treinada em cabelo cacheado com antes e depois de clientes autorizadas' passa nos três: importa, é comprovável e poucos salões mostram.",
+      "Escreva a frase: Para mulheres de cabelo cacheado que já saíram frustradas de outros salões, o Studio Cachos da Lu é o salão do bairro que corta e cuida de cacho com profissionais treinadas em cabelo cacheado, e mostra o resultado em fotos de antes e depois de clientes autorizadas.",
+      "Espalhe pelos pontos de contato: a bio do Instagram diz 'salão de cacho em [bairro]', a descrição do Perfil no Google repete a especialidade, a saudação do WhatsApp pergunta 'como é o seu cacho?' e o portfólio mostra antes e depois. Promoções ficam em pacotes de tratamento, e não em liquidação de corte."
+    ]
+  },
+  "summary": [
+    "Para o cliente, concorrência é tudo o que ele pode fazer no seu lugar: direto, indireto e não comprar.",
+    "Um diferencial precisa passar em três testes: importa ao cliente, é comprovável e os outros não oferecem.",
+    "Qualidade, bom atendimento e preço justo são obrigação, e não diferencial.",
+    "A frase de posicionamento tem cliente, necessidade, categoria, diferencial e prova.",
+    "O posicionamento aparece em todo ponto de contato, inclusive no preço; incoerência custa confiança."
+  ]
+}

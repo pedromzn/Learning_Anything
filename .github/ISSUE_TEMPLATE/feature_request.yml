@@ -1,0 +1,23 @@
+name: Feature idea
+description: Something that would make learning with the app better.
+labels: [feature]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What is hard or missing today? A real situation helps more than a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: How you imagine it working.
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: The project's principles
+      options:
+        - label: It works offline, with no account and no AI API called by the app (see CONTRIBUTING.md).
+          required: true

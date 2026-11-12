@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "type": "multiple_choice",
+      "id": "cp-maior-lambda",
+      "skill": "m1-luz-como-onda",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "A luz B tem frequência de $6 \\times 10^{14}$ Hz e a luz A, de $4 \\times 10^{14}$ Hz. Qual tem o maior comprimento de onda?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "A luz B",
+          "explanation": "B tem frequência maior, então comprimento de onda menor."
+        },
+        {
+          "text": "A luz A",
+          "explanation": "Certo: com $c = \\lambda f$ fixo, frequência menor dá comprimento de onda maior."
+        },
+        {
+          "text": "As duas têm o mesmo",
+          "explanation": "Frequências diferentes no vácuo dão comprimentos de onda diferentes."
+        }
+      ],
+      "correct": 1,
+      "solution": "Como $c = \\lambda f$ é o mesmo para as duas, a de menor frequência (A) tem o maior comprimento de onda."
+    },
+    {
+      "type": "numeric",
+      "id": "cp-ev-800",
+      "skill": "m1-energia-do-foton",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Qual é a energia, em eV, de um fóton infravermelho de 800 nm? (Use $E \\approx 1240/\\lambda$, com $\\lambda$ em nm.)",
+      "hints": [],
+      "answer": 1.55,
+      "tolerance": 0.03,
+      "unit": "eV",
+      "solution": "$E \\approx 1240/800 = 1{,}55$ eV."
+    },
+    {
+      "type": "true_false",
+      "id": "cp-vf-dobrar-freq",
+      "skill": "m1-energia-do-foton",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: dobrar a frequência de uma luz dobra a energia de cada fóton dela.",
+      "hints": [],
+      "correct": true,
+      "solution": "Verdadeiro: $E = hf$ é proporcional à frequência."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "cp-verde-fraca",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Uma luz verde fraca arranca elétrons de um metal, mas uma luz vermelha muito forte não arranca nenhum. Qual é a explicação?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "A luz vermelha forte aquece o metal e prende os elétrons",
+          "explanation": "Aquecimento não é o que decide o efeito; o que decide é a energia de cada fóton."
+        },
+        {
+          "text": "A luz verde viaja mais rápido que a vermelha",
+          "explanation": "No vácuo, todas as cores viajam à mesma velocidade."
+        },
+        {
+          "text": "Cada fóton verde tem energia acima da função trabalho; cada fóton vermelho, abaixo",
+          "explanation": "Certo: cada elétron recebe um fóton, e só o fóton verde tem energia suficiente."
+        },
+        {
+          "text": "A luz vermelha forte tem fótons demais e eles se atrapalham",
+          "explanation": "Mais fótons só significariam mais elétrons, se cada fóton tivesse energia suficiente."
+        }
+      ],
+      "correct": 2,
+      "solution": "Cada elétron recebe a energia de um único fóton. O fóton verde tem $hf$ maior que a função trabalho do metal; o vermelho, menor. Mandar muitos fótons vermelhos não soma as energias num elétron."
+    },
+    {
+      "type": "numeric",
+      "id": "cp-kmax",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Uma luz ultravioleta de 310 nm atinge um metal com função trabalho de 2,8 eV. Qual é a energia cinética máxima dos elétrons, em eV?",
+      "hints": [],
+      "answer": 1.2,
+      "tolerance": 0.03,
+      "unit": "eV",
+      "solution": "Energia do fóton: $1240/310 = 4{,}0$ eV. $K_{\\max} = 4{,}0 - 2{,}8 = 1{,}2$ eV."
+    },
+    {
+      "type": "numeric",
+      "id": "cp-lambda-corte",
+      "skill": "m1-efeito-fotoeletrico",
+      "bloom": "apply",
+      "difficulty": 3,
+      "prompt": "Um metal tem função trabalho de 2,48 eV. Acima de qual comprimento de onda, em nm, a luz deixa de arrancar elétrons dele?",
+      "hints": [],
+      "answer": 500,
+      "tolerance": 3,
+      "unit": "nm",
+      "solution": "No corte, a energia do fóton é igual à função trabalho: $\\lambda_0 \\approx 1240/2{,}48 = 500$ nm. Comprimentos de onda maiores dão fótons com menos energia, e nada sai."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "cp-catastrofe",
+      "skill": "m1-energia-do-foton",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "O que foi a 'catástrofe do ultravioleta' e como Planck a resolveu?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "A luz ultravioleta do Sol queimava os instrumentos; Planck inventou um filtro",
+          "explanation": "A catástrofe foi um fracasso de teoria, não um problema de equipamento."
+        },
+        {
+          "text": "Ninguém conseguia medir o ultravioleta; Planck criou um detector",
+          "explanation": "O problema era a previsão teórica, que dava um resultado impossível."
+        },
+        {
+          "text": "A luz ultravioleta não fazia interferência; Planck provou que fazia",
+          "explanation": "A interferência da luz já era conhecida; o problema era a luz de corpos quentes."
+        },
+        {
+          "text": "A teoria clássica previa energia sem limite no ultravioleta; Planck supôs energia em pacotes $hf$",
+          "explanation": "Certo: com pacotes de tamanho $hf$, a emissão cai nas frequências altas, como nas medidas."
+        }
+      ],
+      "correct": 3,
+      "solution": "A física clássica previa que um corpo negro emitiria cada vez mais energia nas frequências altas, sem limite. Planck (1900) supôs que a energia só é trocada em pacotes $hf$, e a fórmula passou a bater com as medidas."
+    }
+  ]
+}

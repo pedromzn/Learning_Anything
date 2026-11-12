@@ -1,0 +1,229 @@
+{
+  "guidance": "Pratique o caminho do código ao executável e o diagnóstico de erros. Os primeiros itens têm mais apoio; os últimos pedem que você junte as ideias. Se tiver um compilador à mão, teste os casos de verdade: provocar um erro de propósito é a melhor forma de reconhecê-lo depois.",
+  "items": [
+    {
+      "type": "ordering",
+      "id": "e3-stages",
+      "skill": "m1-build-pipeline",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Coloque em ordem o que acontece desde o arquivo `main.cpp` até o programa rodando.",
+      "hints": ["As linhas com cerquilha (#) são tratadas antes de tudo.", "O executável só existe depois que todos os objetos foram juntados."],
+      "steps": [
+        "O pré-processador expande os #include",
+        "O compilador traduz o arquivo para um objeto (main.o)",
+        "O linker junta os objetos e a biblioteca padrão",
+        "O sistema operacional executa o programa chamando main"
+      ],
+      "solution": "Pré-processador, compilador, linker e, por fim, a execução. As duas primeiras etapas tratam um arquivo .cpp de cada vez; o linker é o único que vê o programa inteiro."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e3-include-does",
+      "skill": "m1-build-pipeline",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "O que a linha `#include <iostream>` faz?",
+      "hints": ["Ela é tratada pela primeira etapa, que só mexe com texto."],
+      "choices": [
+        {
+          "text": "Copia o conteúdo do cabeçalho iostream para dentro do arquivo, antes da compilação",
+          "explanation": "Certo: o pré-processador cola o texto do cabeçalho, que traz as declarações de std::cout e std::cin."
+        },
+        {
+          "text": "Importa um módulo já compilado, como o import do Python",
+          "explanation": "É a comparação mais comum de quem vem do Python, mas o #include é uma cópia de texto, feita antes de compilar."
+        },
+        {
+          "text": "Diz ao linker qual biblioteca juntar ao executável",
+          "explanation": "O #include age no pré-processador. A biblioteca padrão é ligada automaticamente pelo g++, sem relação direta com essa linha."
+        }
+      ],
+      "correct": 0,
+      "solution": "O #include é uma ordem ao pré-processador: copie aqui o texto do cabeçalho. Assim o compilador passa a conhecer as declarações de std::cout e std::cin."
+    },
+    {
+      "type": "true_false",
+      "id": "e3-warning-blocks",
+      "skill": "m1-compile-run",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: se o compilador mostrar um aviso (`warning`), o executável não é gerado.",
+      "hints": ["Compare aviso com erro."],
+      "correct": false,
+      "solution": "Falso. Com um aviso o executável é gerado normalmente; só um erro impede. Por isso é tão fácil ignorar avisos, e por isso vale corrigir todos (ou usar -Werror, que transforma avisos em erros)."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e3-not-declared",
+      "skill": "m1-read-errors",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "O compilador mostra: `main.cpp:7:18: error: 'contador' was not declared in this scope`. Em que etapa está o erro?",
+      "hints": ["A mensagem tem arquivo, linha e coluna."],
+      "choices": [
+        {
+          "text": "Na ligação",
+          "explanation": "Erros de ligação falam de símbolos indefinidos ou repetidos e quase nunca apontam linha do código."
+        },
+        {
+          "text": "Na compilação",
+          "explanation": "Certo: o compilador encontrou um nome que nunca foi declarado e apontou o lugar exato."
+        },
+        {
+          "text": "Na execução",
+          "explanation": "Um erro de execução só existe se o programa foi gerado, e aqui ele nem chegou a compilar."
+        }
+      ],
+      "correct": 1,
+      "solution": "É um erro de compilação: o nome `contador` foi usado na linha 7 sem ter sido declarado antes. A correção é declarar a variável (com valor inicial) antes de usá-la."
+    },
+    {
+      "type": "numeric",
+      "id": "e3-object-count",
+      "skill": "m1-build-pipeline",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Um projeto tem os arquivos `main.cpp`, `conta.cpp`, `relatorio.cpp` e o cabeçalho `conta.h`. Você compila cada `.cpp` com `g++ -c`. Quantos arquivos objeto (`.o`) são gerados?",
+      "hints": ["O cabeçalho não é compilado sozinho: ele é copiado para dentro dos .cpp que o incluem."],
+      "answer": 3,
+      "tolerance": 0,
+      "unit": "arquivos",
+      "solution": "Três: main.o, conta.o e relatorio.o. Cada .cpp é uma unidade de compilação e gera um objeto. O conta.h entra no texto dos .cpp que fazem #include \"conta.h\"."
+    },
+    {
+      "type": "short_answer",
+      "id": "e3-default-name",
+      "skill": "m1-compile-run",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Você roda `g++ -std=c++20 -Wall -Wextra ola.cpp`, sem a opção `-o`. Qual é o nome do executável gerado?",
+      "hints": ["É um nome histórico, o mesmo no Linux e no macOS."],
+      "accepted": ["a.out", "./a.out"],
+      "solution": "a.out. Para escolher o nome, use -o, como em -o ola."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e3-wrong-average",
+      "skill": "m1-read-errors",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Seu programa compila e liga sem nenhuma mensagem, mas a média que ele imprime está errada. Que tipo de erro é esse?",
+      "hints": ["O compilador e o linker não reclamaram de nada."],
+      "choices": [
+        {
+          "text": "Erro de compilação que o compilador deixou passar",
+          "explanation": "O compilador confere sintaxe e tipos, não se a conta faz o que você queria."
+        },
+        {
+          "text": "Erro de ligação silencioso",
+          "explanation": "Um problema de ligação impede o executável de existir; não gera resultado errado."
+        },
+        {
+          "text": "Erro de execução (de lógica)",
+          "explanation": "Certo: o programa é válido, mas faz a coisa errada. Testes e o depurador acham esse tipo."
+        },
+        {
+          "text": "Um aviso que foi ignorado",
+          "explanation": "Pode até ter havido um aviso útil, mas o enunciado diz que não houve nenhuma mensagem."
+        }
+      ],
+      "correct": 2,
+      "solution": "Erro de execução, ou de lógica. O compilador só garante que o código é C++ válido; se a fórmula está errada, ninguém além de você (e dos seus testes) vai perceber."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e3-right-command",
+      "skill": "m1-compile-run",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Qual comando compila `app.cpp` e `banco.cpp` em C++20, com avisos ligados, gerando o executável `app`?",
+      "hints": ["Confira três coisas: a versão, os avisos e o nome de saída.", "O nome que vem depois de -o é o do executável."],
+      "choices": [
+        {
+          "text": "g++ -std=c++20 app.cpp banco.cpp -o app",
+          "explanation": "Compila em C++20, mas sem -Wall -Wextra os avisos importantes ficam desligados."
+        },
+        {
+          "text": "g++ -std=c++20 -Wall -Wextra app.cpp -o app",
+          "explanation": "Falta banco.cpp: o que estiver definido nele vai dar erro de ligação."
+        },
+        {
+          "text": "g++ -Wall -Wextra -o app.cpp banco.cpp",
+          "explanation": "Aqui -o recebe app.cpp, ou seja, o executável sobrescreveria o seu código-fonte. E falta escolher a versão."
+        },
+        {
+          "text": "g++ -std=c++20 -Wall -Wextra app.cpp banco.cpp -o app",
+          "explanation": "Certo: versão, avisos, os dois arquivos e o nome de saída."
+        }
+      ],
+      "correct": 3,
+      "solution": "g++ -std=c++20 -Wall -Wextra app.cpp banco.cpp -o app. Todos os .cpp do programa entram no comando, e o -o vem seguido do nome do executável."
+    },
+    {
+      "type": "numeric",
+      "id": "e3-cin-two",
+      "skill": "m1-io-basics",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "O programa abaixo recebe a entrada `3` Enter `4` Enter. O que ele imprime?\n\n```cpp\n#include <iostream>\n\nint main()\n{\n    int a{};\n    int b{};\n    std::cin >> a >> b;\n    std::cout << a * b + a << '\\n';\n}\n```",
+      "hints": ["O Enter entre os números funciona como um espaço para o `>>`.", "Faça a multiplicação antes da soma."],
+      "answer": 15,
+      "tolerance": 0,
+      "unit": "",
+      "solution": "O `>>` pula a quebra de linha, então a = 3 e b = 4. A expressão é 3 * 4 + 3 = 12 + 3 = 15."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "e3-call-before",
+      "skill": "m1-read-errors",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Em um único arquivo, a função `main` chama `saudar()`, e a definição de `saudar` aparece **abaixo** de `main`, sem nenhuma declaração antes. O que acontece ao compilar?",
+      "hints": ["O compilador lê o arquivo de cima para baixo.", "Quando ele chega na chamada, o que ele já viu?"],
+      "choices": [
+        {
+          "text": "Erro de compilação: `saudar` ainda não foi declarada quando é chamada",
+          "explanation": "Certo: o compilador precisa ver ao menos a declaração antes do uso. Uma declaração no topo (void saudar();) resolve."
+        },
+        {
+          "text": "Funciona, porque a definição está no mesmo arquivo",
+          "explanation": "Em Python ou JavaScript a ordem às vezes não importa; em C++ o compilador exige a declaração antes da chamada."
+        },
+        {
+          "text": "Erro de ligação: o linker não acha `saudar`",
+          "explanation": "O linker acharia a definição sem problema; o código para antes, na compilação."
+        }
+      ],
+      "correct": 0,
+      "solution": "Erro de compilação. Ao chegar à chamada, o compilador ainda não viu `saudar`. Duas correções: mover a definição para cima de `main` ou colocar a declaração `void saudar();` no topo."
+    },
+    {
+      "type": "true_false",
+      "id": "e3-portable-exe",
+      "skill": "m1-build-pipeline",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Verdadeiro ou falso: um executável C++ gerado num Mac pode ser copiado e executado num PC com Windows, como um arquivo .jar do Java.",
+      "hints": ["Pense no que o compilador C++ gera e no que o compilador Java gera."],
+      "correct": false,
+      "solution": "Falso. O compilador C++ gera código de máquina para um sistema e um processador específicos, sem máquina virtual no meio. Para rodar no Windows, você compila o mesmo código-fonte de novo, lá. O .jar contém bytecode, que a máquina virtual Java executa em qualquer sistema."
+    },
+    {
+      "type": "open",
+      "id": "e3-explain-errors",
+      "skill": "m1-read-errors",
+      "bloom": "understand",
+      "difficulty": 3,
+      "prompt": "Um colega que só programou em Python recebeu um erro `undefined reference` e diz: \"mas o código compilou!\". Explique para ele, em poucas frases, por que um programa C++ pode compilar e mesmo assim não gerar executável.",
+      "hints": ["Fale das etapas separadas.", "O que a declaração promete e quem cobra a promessa?"],
+      "rubric": [
+        "Diz que compilação e ligação são etapas separadas.",
+        "Diz que o compilador trabalha com um arquivo de cada vez e aceita uma declaração sem a definição.",
+        "Diz que o linker é quem procura a definição em todos os objetos e reclama se não acha.",
+        "Dá uma causa concreta: definição esquecida ou arquivo .cpp fora do comando."
+      ],
+      "solution": "Em C++ compilar e ligar são etapas diferentes. O compilador olha um .cpp por vez; se a função foi declarada, ele confia na promessa e deixa o endereço pendente. O linker junta todos os objetos e cobra a promessa: procura a definição. Se ela não existe, ou está num .cpp que ficou fora do comando, o resultado é undefined reference, mesmo com cada arquivo tendo compilado sem erro."
+    }
+  ]
+}

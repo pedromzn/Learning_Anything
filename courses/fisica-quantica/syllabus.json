@@ -1,0 +1,655 @@
+{
+  "title": "Física quântica do zero",
+  "summary": "Um passeio guiado pelas ideias que mudaram a física no século 20, na ordem em que os experimentos as forçaram: a luz que chega em pacotes, a matéria que se comporta como onda, os átomos com níveis de energia, a probabilidade, a incerteza, a superposição, o spin e o emaranhamento. Tudo com a matemática do ensino médio e simulações gratuitas no lugar do laboratório. Oito módulos, um por semana, com cerca de quatro horas de estudo cada.",
+  "results": [
+    "Ao final você consegue explicar por que a física clássica não dava conta da luz e dos átomos, citando três experimentos.",
+    "Ao final você consegue calcular a energia de um fóton a partir da sua cor (frequência ou comprimento de onda).",
+    "Ao final você consegue explicar o efeito fotoelétrico e a dupla fenda com partículas usando a ideia de dualidade onda-partícula.",
+    "Ao final você consegue relacionar as linhas do espectro do hidrogênio com saltos entre níveis de energia.",
+    "Ao final você consegue explicar com suas palavras o que dizem a função de onda, o princípio da incerteza e a superposição, e o que eles não dizem.",
+    "Ao final você consegue descrever o experimento de Stern-Gerlach e o que é um par de partículas emaranhadas.",
+    "Ao final você consegue identificar e corrigir os mal-entendidos mais comuns sobre física quântica que aparecem na divulgação."
+  ],
+  "prerequisites": [
+    "Matemática do ensino médio: frações, potências de dez e notação científica.",
+    "Noção básica de energia e velocidade (física do ensino médio ajuda, mas o curso relembra o que precisa)."
+  ],
+  "modules": [
+    {
+      "title": "A luz em pacotes: o fóton",
+      "goal": "Entender por que a luz, que se comportava como onda, precisou ser vista também como feita de fótons, e calcular a energia de um fóton.",
+      "skills": [
+        {
+          "id": "m1-luz-como-onda",
+          "name": "Relacionar frequência, comprimento de onda e cor da luz",
+          "bloom": "understand"
+        },
+        {
+          "id": "m1-energia-do-foton",
+          "name": "Explicar e calcular a energia de um fóton com E = hf",
+          "bloom": "understand"
+        },
+        {
+          "id": "m1-efeito-fotoeletrico",
+          "name": "Explicar o efeito fotoelétrico com o modelo do fóton",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "A luz era onda... até não ser mais",
+          "goal": "Ver por que a luz parecia onda e quais fatos começaram a não se encaixar.",
+          "skills": ["m1-luz-como-onda", "m1-energia-do-foton"]
+        },
+        {
+          "type": "text",
+          "title": "Planck, o corpo negro e o quantum de energia",
+          "goal": "Saber o que é frequência e comprimento de onda e como Planck chegou a E = hf.",
+          "skills": ["m1-luz-como-onda", "m1-energia-do-foton"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: cor, frequência e energia",
+          "goal": "Praticar c = λf e E = hf com luzes do dia a dia.",
+          "skills": ["m1-luz-como-onda", "m1-energia-do-foton"]
+        },
+        {
+          "type": "text",
+          "title": "O efeito fotoelétrico",
+          "goal": "Entender as observações do efeito fotoelétrico e a explicação de Einstein.",
+          "skills": ["m1-efeito-fotoeletrico", "m1-energia-do-foton"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: efeito fotoelétrico",
+          "goal": "Prever quando a luz arranca elétrons e com que energia.",
+          "skills": ["m1-efeito-fotoeletrico", "m1-energia-do-foton", "m1-luz-como-onda"]
+        }
+      ],
+      "project": {
+        "title": "Caça ao comprimento de onda de corte",
+        "prompt": "Abra a simulação gratuita Photoelectric Effect, do PhET (phet.colorado.edu/en/simulations/photoelectric). Escolha dois metais. Para cada um, comece com luz vermelha e vá diminuindo o comprimento de onda até os elétrons começarem a sair: anote esse valor. Depois, com uma cor que já arranca elétrons, aumente e diminua a intensidade e anote o que muda (número de elétrons? velocidade deles?). Calcule a energia do fóton no comprimento de onda de corte de cada metal, em elétron-volts, e escreva um parágrafo explicando o que você viu com a ideia de fóton.",
+        "rubric": [
+          "Registra o comprimento de onda de corte dos dois metais.",
+          "Calcula a energia do fóton no corte, com a unidade certa.",
+          "Descreve que a intensidade muda a quantidade de elétrons, e não a energia de cada um.",
+          "Explica o resultado com a ideia de que cada fóton entrega sua energia a um elétron."
+        ]
+      }
+    },
+    {
+      "title": "Matéria que se comporta como onda",
+      "goal": "Entender a hipótese de de Broglie e a dupla fenda feita com partículas, uma a uma.",
+      "skills": [
+        {
+          "id": "m2-onda-de-materia",
+          "name": "Explicar e estimar o comprimento de onda de de Broglie (λ = h/p)",
+          "bloom": "understand"
+        },
+        {
+          "id": "m2-dupla-fenda",
+          "name": "Descrever a dupla fenda com partículas e o efeito de medir por qual fenda",
+          "bloom": "understand"
+        },
+        {
+          "id": "m2-dualidade",
+          "name": "Explicar a dualidade onda-partícula sem cair no 'é um ou outro'",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Elétrons que fazem interferência",
+          "goal": "Ver a dupla fenda com luz, com bolinhas e com elétrons, e o que muda.",
+          "skills": ["m2-dupla-fenda", "m2-dualidade"]
+        },
+        {
+          "type": "text",
+          "title": "De Broglie: toda partícula tem uma onda",
+          "goal": "Entender λ = h/p e por que só notamos a onda em coisas muito pequenas.",
+          "skills": ["m2-onda-de-materia"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: ondas de matéria",
+          "goal": "Comparar comprimentos de onda de elétrons, átomos e bolas.",
+          "skills": ["m2-onda-de-materia"]
+        },
+        {
+          "type": "text",
+          "title": "A dupla fenda, partícula por partícula",
+          "goal": "Entender o padrão que se forma ponto a ponto e o papel da medição.",
+          "skills": ["m2-dupla-fenda", "m2-dualidade"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: dupla fenda e dualidade",
+          "goal": "Prever o padrão na tela em situações diferentes.",
+          "skills": ["m2-dupla-fenda", "m2-dualidade", "m2-onda-de-materia"]
+        }
+      ],
+      "project": {
+        "title": "Dupla fenda no computador",
+        "prompt": "Na simulação Quantum Wave Interference, do PhET, monte a dupla fenda com elétrons e solte uma partícula de cada vez. Tire três capturas de tela: com poucas partículas, com muitas e com um detector numa das fendas. Escreva um parágrafo para cada captura dizendo o que aparece e por quê.",
+        "rubric": [
+          "Mostra que com poucas partículas os pontos parecem aleatórios.",
+          "Mostra que com muitas partículas surgem faixas de interferência.",
+          "Descreve que o detector numa fenda faz as faixas sumirem.",
+          "Usa a ideia de onda de matéria para explicar as faixas."
+        ]
+      }
+    },
+    {
+      "title": "O átomo e os níveis de energia",
+      "goal": "Entender por que cada elemento emite cores próprias e o que o modelo de Bohr acerta e erra.",
+      "skills": [
+        {
+          "id": "m3-espectros",
+          "name": "Distinguir espectro contínuo de espectro de linhas",
+          "bloom": "understand"
+        },
+        {
+          "id": "m3-niveis-de-bohr",
+          "name": "Usar os níveis de energia do hidrogênio para achar a energia do fóton emitido",
+          "bloom": "understand"
+        },
+        {
+          "id": "m3-limites-de-bohr",
+          "name": "Explicar o que o modelo de Bohr não consegue descrever",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "A impressão digital dos átomos",
+          "goal": "Ver os espectros de linhas e a ideia de níveis de energia.",
+          "skills": ["m3-espectros", "m3-niveis-de-bohr"]
+        },
+        {
+          "type": "text",
+          "title": "O modelo de Bohr do hidrogênio",
+          "goal": "Entender os níveis E = −13,6 eV/n² e os saltos entre eles.",
+          "skills": ["m3-niveis-de-bohr", "m3-espectros"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: saltos e cores",
+          "goal": "Calcular a energia e a cor de fótons emitidos pelo hidrogênio.",
+          "skills": ["m3-niveis-de-bohr", "m3-espectros"]
+        },
+        {
+          "type": "text",
+          "title": "Onde o modelo de Bohr falha",
+          "goal": "Ver como as ondas de matéria explicam os níveis e por que órbitas não existem de fato.",
+          "skills": ["m3-limites-de-bohr", "m3-niveis-de-bohr"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: átomos e espectros",
+          "goal": "Misturar espectros, níveis e limites do modelo.",
+          "skills": ["m3-espectros", "m3-niveis-de-bohr", "m3-limites-de-bohr"]
+        }
+      ],
+      "project": {
+        "title": "Espectroscópio de CD",
+        "prompt": "Use um CD ou DVD velho como rede de difração: olhe o reflexo de lâmpadas diferentes (incandescente, LED branco, fluorescente, a tela do celular) e desenhe o que vê. Nunca olhe para o Sol. Classifique cada espectro como contínuo ou com faixas separadas e explique a diferença com a ideia de níveis de energia.",
+        "rubric": [
+          "Registra o espectro de pelo menos três fontes de luz.",
+          "Classifica corretamente cada um como contínuo ou com faixas.",
+          "Relaciona as faixas separadas a saltos entre níveis de energia de átomos."
+        ]
+      }
+    },
+    {
+      "title": "Probabilidade e função de onda",
+      "goal": "Entender que a mecânica quântica prevê probabilidades e o que é a função de onda.",
+      "skills": [
+        {
+          "id": "m4-interpretacao-de-born",
+          "name": "Explicar que o quadrado da função de onda dá a probabilidade",
+          "bloom": "understand"
+        },
+        {
+          "id": "m4-previsao-estatistica",
+          "name": "Distinguir a previsão de uma medida isolada da previsão de muitas medidas",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Deus joga dados?",
+          "goal": "Ver por que a teoria prevê padrões, e não pontos.",
+          "skills": ["m4-previsao-estatistica", "m4-interpretacao-de-born"]
+        },
+        {
+          "type": "text",
+          "title": "A função de onda e a regra de Born",
+          "goal": "Ler um gráfico de probabilidade e saber o que ele promete.",
+          "skills": ["m4-interpretacao-de-born"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: lendo probabilidades",
+          "goal": "Interpretar gráficos de probabilidade e frequências de resultados.",
+          "skills": ["m4-interpretacao-de-born", "m4-previsao-estatistica"]
+        },
+        {
+          "type": "text",
+          "title": "Uma medida, muitas medidas",
+          "goal": "Separar o que é aleatório do que é previsível na teoria.",
+          "skills": ["m4-previsao-estatistica"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: previsões quânticas",
+          "goal": "Prever frequências de resultados em experimentos repetidos.",
+          "skills": ["m4-previsao-estatistica", "m4-interpretacao-de-born"]
+        }
+      ],
+      "project": {
+        "title": "Simulando medidas com dados",
+        "prompt": "Imagine uma partícula com 1/6 de chance de ser achada na região A e 5/6 na região B. Use um dado para simular 60 medições (1 = região A). Anote os resultados de 10 em 10 e compare a frequência observada com a prevista. Escreva o que é previsível e o que não é.",
+        "rubric": [
+          "Registra as 60 simulações em blocos de 10.",
+          "Compara a frequência observada com 1/6.",
+          "Explica que um resultado isolado não é previsível, mas a frequência em muitas medidas é."
+        ]
+      }
+    },
+    {
+      "title": "O princípio da incerteza",
+      "goal": "Entender o princípio da incerteza como propriedade das ondas, não como defeito dos instrumentos.",
+      "skills": [
+        {
+          "id": "m5-pacote-de-onda",
+          "name": "Relacionar o tamanho de um pacote de onda com a mistura de comprimentos de onda",
+          "bloom": "understand"
+        },
+        {
+          "id": "m5-incerteza",
+          "name": "Explicar e usar Δx·Δp ≥ ħ/2 para estimativas simples",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Por que não dá para saber tudo",
+          "goal": "Ver a ligação entre localizar uma onda e misturar comprimentos de onda.",
+          "skills": ["m5-pacote-de-onda", "m5-incerteza"]
+        },
+        {
+          "type": "text",
+          "title": "O princípio da incerteza de Heisenberg",
+          "goal": "Entender a desigualdade e o que ela proíbe.",
+          "skills": ["m5-incerteza", "m5-pacote-de-onda"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: estimativas com a incerteza",
+          "goal": "Fazer estimativas de ordem de grandeza com a incerteza.",
+          "skills": ["m5-incerteza"]
+        },
+        {
+          "type": "text",
+          "title": "O que a incerteza não é",
+          "goal": "Separar a incerteza quântica do erro de medição e de exageros da divulgação.",
+          "skills": ["m5-incerteza", "m5-pacote-de-onda"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: incerteza e pacotes de onda",
+          "goal": "Distinguir afirmações certas e erradas sobre a incerteza.",
+          "skills": ["m5-incerteza", "m5-pacote-de-onda"]
+        }
+      ],
+      "project": {
+        "title": "Caçador de mitos da incerteza",
+        "prompt": "Encontre duas frases sobre o princípio da incerteza em vídeos, livros de autoajuda ou redes sociais. Para cada uma, diga se está certa, errada ou exagerada, e reescreva-a de forma correta usando o que aprendeu no módulo.",
+        "rubric": [
+          "Traz duas frases reais, com a fonte.",
+          "Classifica cada uma com uma justificativa física.",
+          "Reescreve cada frase de forma correta e clara."
+        ]
+      }
+    },
+    {
+      "title": "Superposição e medição",
+      "goal": "Entender o que é superposição, o que acontece na medição e o interferômetro com um único fóton.",
+      "skills": [
+        {
+          "id": "m6-superposicao",
+          "name": "Explicar o que é um estado de superposição",
+          "bloom": "understand"
+        },
+        {
+          "id": "m6-medicao",
+          "name": "Descrever o que a medição faz com um sistema em superposição",
+          "bloom": "understand"
+        },
+        {
+          "id": "m6-interferometro",
+          "name": "Explicar o resultado do interferômetro de Mach-Zehnder com um fóton",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Um fóton, dois caminhos",
+          "goal": "Ver o interferômetro de Mach-Zehnder com fótons um a um.",
+          "skills": ["m6-interferometro", "m6-superposicao"]
+        },
+        {
+          "type": "text",
+          "title": "O que é superposição",
+          "goal": "Entender superposição sem cair no 'está num ou no outro e não sabemos'.",
+          "skills": ["m6-superposicao", "m6-medicao"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: superposição",
+          "goal": "Reconhecer superposições e prever medições.",
+          "skills": ["m6-superposicao", "m6-medicao"]
+        },
+        {
+          "type": "text",
+          "title": "Medição, colapso e o gato de Schrödinger",
+          "goal": "Entender o que é 'observar' na física e o que o gato quer ilustrar.",
+          "skills": ["m6-medicao", "m6-interferometro"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: medição e interferômetro",
+          "goal": "Prever resultados do interferômetro com e sem detector.",
+          "skills": ["m6-medicao", "m6-interferometro", "m6-superposicao"]
+        }
+      ],
+      "project": {
+        "title": "Explique o interferômetro",
+        "prompt": "Desenhe o interferômetro de Mach-Zehnder e escreva uma explicação de meia página, para alguém que nunca estudou física, do que acontece quando um fóton entra nele: sem detector nos caminhos e com detector num dos caminhos.",
+        "rubric": [
+          "O desenho mostra os dois divisores de feixe, os espelhos e os dois detectores.",
+          "Explica que, sem detector nos caminhos, o fóton chega sempre ao mesmo detector.",
+          "Explica que, com detector num caminho, os dois detectores finais passam a disparar.",
+          "Usa a palavra superposição de forma correta."
+        ]
+      }
+    },
+    {
+      "title": "Spin",
+      "goal": "Entender o spin pelo experimento de Stern-Gerlach e o que acontece em medições sucessivas.",
+      "skills": [
+        {
+          "id": "m7-stern-gerlach",
+          "name": "Descrever o experimento de Stern-Gerlach e seu resultado",
+          "bloom": "understand"
+        },
+        {
+          "id": "m7-spin-meio",
+          "name": "Explicar o que significa o elétron ter spin 1/2",
+          "bloom": "understand"
+        },
+        {
+          "id": "m7-medicoes-sucessivas",
+          "name": "Prever resultados de medições de spin em sequência",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Dois pontos numa placa",
+          "goal": "Ver o experimento de Stern-Gerlach e por que surpreendeu.",
+          "skills": ["m7-stern-gerlach", "m7-spin-meio"]
+        },
+        {
+          "type": "text",
+          "title": "Spin: um ímã que só aponta de dois jeitos",
+          "goal": "Entender spin 1/2 e o que ele não é (uma bolinha girando).",
+          "skills": ["m7-spin-meio", "m7-stern-gerlach"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: Stern-Gerlach",
+          "goal": "Prever o que aparece na placa em diferentes situações.",
+          "skills": ["m7-stern-gerlach", "m7-spin-meio"]
+        },
+        {
+          "type": "text",
+          "title": "Medições em sequência",
+          "goal": "Entender o que acontece ao medir o spin em eixos diferentes, um depois do outro.",
+          "skills": ["m7-medicoes-sucessivas", "m7-spin-meio"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: spin em sequência",
+          "goal": "Prever as frações de átomos em cadeias de aparelhos.",
+          "skills": ["m7-medicoes-sucessivas", "m7-stern-gerlach", "m7-spin-meio"]
+        }
+      ],
+      "project": {
+        "title": "Cadeia de aparelhos com moedas",
+        "prompt": "Monte, com moedas, a simulação de três aparelhos de Stern-Gerlach em sequência (vertical, horizontal, vertical): a cada aparelho que mede num eixo diferente do anterior, jogue a moeda para decidir o resultado. Siga 40 átomos e anote quantos saem 'para cima' no último aparelho. Compare com a previsão das aulas e explique o resultado.",
+        "rubric": [
+          "Registra os 40 átomos nos três aparelhos.",
+          "Compara a fração final com a prevista.",
+          "Explica por que o aparelho do meio 'apaga' o resultado do primeiro."
+        ]
+      }
+    },
+    {
+      "title": "Emaranhamento e o que vem depois",
+      "goal": "Entender o que é emaranhamento, o que ele permite e o que não permite, e ter uma ideia do que é um qubit.",
+      "skills": [
+        {
+          "id": "m8-emaranhamento",
+          "name": "Explicar o que é um par emaranhado e suas correlações",
+          "bloom": "understand"
+        },
+        {
+          "id": "m8-sem-mensagem",
+          "name": "Explicar por que o emaranhamento não permite mandar mensagens instantâneas",
+          "bloom": "understand"
+        },
+        {
+          "id": "m8-qubit",
+          "name": "Descrever o que é um qubit e onde a física quântica está no dia a dia",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Correlações que assustaram Einstein",
+          "goal": "Ver o que é um par emaranhado e por que ele surpreende.",
+          "skills": ["m8-emaranhamento", "m8-sem-mensagem"]
+        },
+        {
+          "type": "text",
+          "title": "Emaranhamento sem mistério",
+          "goal": "Entender as correlações de um par emaranhado e o que elas não permitem.",
+          "skills": ["m8-emaranhamento", "m8-sem-mensagem"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: pares emaranhados",
+          "goal": "Prever correlações e desmontar afirmações erradas.",
+          "skills": ["m8-emaranhamento", "m8-sem-mensagem"]
+        },
+        {
+          "type": "text",
+          "title": "Qubits e a física quântica do dia a dia",
+          "goal": "Ver o que é um qubit e onde a física quântica já está (laser, LED, chips).",
+          "skills": ["m8-qubit", "m8-emaranhamento"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino final: revisão do curso",
+          "goal": "Retomar as ideias principais de todos os módulos.",
+          "skills": ["m8-qubit", "m8-emaranhamento", "m8-sem-mensagem"]
+        }
+      ],
+      "project": {
+        "title": "Cartilha da física quântica",
+        "prompt": "Escreva uma cartilha de uma ou duas páginas com as cinco ideias da física quântica que mais surpreenderam você no curso. Para cada uma, diga o experimento que a sustenta e um mito comum sobre ela, com a correção.",
+        "rubric": [
+          "Traz cinco ideias diferentes do curso.",
+          "Liga cada ideia a um experimento real.",
+          "Corrige um mito para cada ideia de forma fisicamente correta.",
+          "Usa linguagem que um leigo entende."
+        ]
+      }
+    }
+  ],
+  "bibliography": [
+    {
+      "title": "University Physics Volume 3, capítulo 6: Photons and Matter Waves",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-introduction",
+      "license": "cc-by-nc-sa",
+      "reason": "Livro-texto aberto com a sequência clássica: corpo negro, fotoelétrico, Compton, Bohr, de Broglie e dualidade. Espinha dos módulos 1 a 3."
+    },
+    {
+      "title": "6.1 Blackbody Radiation (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-1-blackbody-radiation",
+      "license": "cc-by-nc-sa",
+      "reason": "Corpo negro, catástrofe do ultravioleta e a hipótese de Planck (E = nhf), com o valor da constante h."
+    },
+    {
+      "title": "6.2 Photoelectric Effect (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-2-photoelectric-effect",
+      "license": "cc-by-nc-sa",
+      "reason": "As três observações que a física clássica não explica e a equação de Einstein K_max = hf − φ, com tabela de funções trabalho."
+    },
+    {
+      "title": "6.4 Bohr's Model of the Hydrogen Atom (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-4-bohrs-model-of-the-hydrogen-atom",
+      "license": "cc-by-nc-sa",
+      "reason": "Espectros de linhas, postulados de Bohr e níveis de energia do hidrogênio (−13,6 eV/n²)."
+    },
+    {
+      "title": "6.5 De Broglie's Matter Waves (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-5-de-broglies-matter-waves",
+      "license": "cc-by-nc-sa",
+      "reason": "λ = h/p, o experimento de Davisson-Germer e a difração de nêutrons e moléculas de C60."
+    },
+    {
+      "title": "6.6 Wave-Particle Duality (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-6-wave-particle-duality",
+      "license": "cc-by-nc-sa",
+      "reason": "Dupla fenda com luz e com elétrons enviados um a um (Tonomura, 1989)."
+    },
+    {
+      "title": "7.1 Wave Functions (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions",
+      "license": "cc-by-nc-sa",
+      "reason": "Interpretação de Born (probabilidade), colapso na visão de Copenhague, gato de Schrödinger."
+    },
+    {
+      "title": "7.2 The Heisenberg Uncertainty Principle (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/7-2-the-heisenberg-uncertainty-principle",
+      "license": "cc-by-nc-sa",
+      "reason": "Δx·Δp ≥ ħ/2 explicado por pacotes de onda, e a estimativa da energia do hidrogênio pela incerteza."
+    },
+    {
+      "title": "8.3 Electron Spin (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/8-3-electron-spin",
+      "license": "cc-by-nc-sa",
+      "reason": "Spin 1/2 do elétron e o experimento de Stern-Gerlach com átomos de prata (duas faixas na tela)."
+    },
+    {
+      "title": "8.04 Quantum Physics I (Spring 2016)",
+      "author": "Barton Zwiebach",
+      "institution": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/",
+      "license": "cc-by-nc-sa",
+      "reason": "Curso universitário completo, com vídeos. Referência para quem quiser ir além do básico depois deste curso."
+    },
+    {
+      "title": "8.04 Quantum Physics I: Lecture Notes",
+      "author": "Barton Zwiebach",
+      "institution": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes",
+      "license": "cc-by-nc-sa",
+      "reason": "Notas 1 a 3: características-chave da mecânica quântica (superposição, emaranhamento), fótons no interferômetro de Mach-Zehnder e efeito fotoelétrico. Inspira a ordem dos módulos 6 a 8."
+    },
+    {
+      "title": "Photoelectric Effect (simulação)",
+      "author": "PhET Interactive Simulations",
+      "institution": "University of Colorado Boulder",
+      "type": "site",
+      "url": "https://phet.colorado.edu/en/simulations/photoelectric",
+      "license": "unknown",
+      "reason": "Simulação gratuita para variar metal, cor e intensidade da luz e ver o efeito na corrente. Base do projeto do módulo 1."
+    },
+    {
+      "title": "Quantum Wave Interference (simulação)",
+      "author": "PhET Interactive Simulations",
+      "institution": "University of Colorado Boulder",
+      "type": "site",
+      "url": "https://phet.colorado.edu/en/simulations/quantum-wave-interference",
+      "license": "unknown",
+      "reason": "Dupla fenda com fótons, elétrons e átomos, uma partícula de cada vez. Base do projeto do módulo 2."
+    },
+    {
+      "title": "Stern–Gerlach experiment",
+      "author": "Colaboradores da Wikipedia",
+      "institution": "Wikipedia",
+      "type": "article",
+      "url": "https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment",
+      "license": "cc-by-sa",
+      "reason": "História (1922) e descrição do experimento, incluindo medições sucessivas em eixos diferentes."
+    },
+    {
+      "title": "Double-slit experiment",
+      "author": "Colaboradores da Wikipedia",
+      "institution": "Wikipedia",
+      "type": "article",
+      "url": "https://en.wikipedia.org/wiki/Double-slit_experiment",
+      "license": "cc-by-sa",
+      "reason": "Panorama do experimento de Young (1801) às versões com partículas e com detecção de 'qual fenda'."
+    },
+    {
+      "title": "Quantum computing for the very curious",
+      "author": "Andy Matuschak e Michael Nielsen",
+      "institution": "quantum.country",
+      "type": "site",
+      "url": "https://quantum.country/qcvc",
+      "license": "unknown",
+      "reason": "Introdução gratuita a qubits, superposição, medição e estados emaranhados, escrita para iniciantes curiosos. Base do módulo 8."
+    }
+  ]
+}

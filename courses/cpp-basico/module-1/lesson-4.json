@@ -1,0 +1,127 @@
+{
+  "title": "Tipos têm tamanho: o que muda vindo de outra linguagem",
+  "scenes": [
+    {
+      "type": "title",
+      "title": "Tipos têm tamanho",
+      "subtitle": "C++ moderno para quem já programa, módulo 1",
+      "narration": "Em muitas linguagens, um número é só um número. Em Python, um inteiro cresce o quanto precisar. Em cê mais mais, cada variável é um pedaço de memória com um tamanho fixo, e o tipo diz quantos bytes esse pedaço tem e como ler o que está lá dentro. Essa diferença explica boa parte das surpresas de quem chega na linguagem: contas que dão resultado estranho, números que viram negativos do nada, e variáveis que começam com lixo. Vamos ver de onde vem cada uma. A explicação segue os capítulos um e quatro do site learncpp."
+    },
+    {
+      "type": "bullets",
+      "title": "Os tipos fundamentais",
+      "bullets": [
+        "char: 1 byte, um caractere",
+        "int: no mínimo 16 bits; quase sempre 32 nos computadores atuais",
+        "long long: no mínimo 64 bits",
+        "double: número com casas decimais, quase sempre 64 bits",
+        "bool: true ou false"
+      ],
+      "narration": "Estes são os tipos fundamentais que você mais vai usar. O char ocupa exatamente um byte e guarda um caractere. O int é o inteiro do dia a dia. Repare que o padrão da linguagem não fixa o tamanho dele: garante só um mínimo de dezesseis bits. Na prática, nos computadores de hoje, ele tem trinta e dois bits, o que dá aproximadamente de menos dois bilhões a mais dois bilhões. Para números maiores, existe o long long, com pelo menos sessenta e quatro bits. O double guarda números com casas decimais e quase sempre ocupa sessenta e quatro bits. E o bool guarda verdadeiro ou falso. Para saber o tamanho exato na sua máquina, existe o operador sizeof, que devolve o tamanho em bytes."
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "code": "int a{7};\nint b{2};\nstd::cout << a / b << '\\n';    // 3\nstd::cout << a % b << '\\n';    // 1\n\ndouble c{7.0};\nstd::cout << c / b << '\\n';    // 3.5",
+      "highlights": [3, 7],
+      "narration": "Primeira surpresa: a divisão. Quando os dois lados são inteiros, a divisão também é inteira, e a parte fracionária é jogada fora. Sete dividido por dois dá três, não três e meio. O resto dessa divisão você pega com o operador de porcentagem, que aqui dá um. Se pelo menos um dos lados for double, a conta é feita com casas decimais, e aí sim sete dividido por dois dá três e meio. Python três faz o contrário, a barra simples sempre dá número com casas decimais. Por isso esse erro é tão comum em quem chega de lá: uma média calculada só com inteiros perde as casas decimais sem nenhum aviso."
+    },
+    {
+      "type": "bullets",
+      "title": "Quando o número não cabe",
+      "bullets": [
+        "int com sinal passou do limite: comportamento indefinido",
+        "unsigned passou do limite: dá a volta e recomeça do zero",
+        "zero menos um em unsigned vira um número enorme"
+      ],
+      "narration": "Segunda surpresa: o que acontece quando o resultado não cabe no tipo. Para o int comum, que tem sinal, passar do limite é o que o padrão chama de comportamento indefinido. Isso não quer dizer que dá erro. Quer dizer que a linguagem não promete nada: o programa pode dar um número estranho, pode parecer funcionar, e o compilador pode até otimizar o código partindo do princípio de que isso nunca acontece. Já os tipos unsigned, sem sinal, dão a volta, como um odômetro de carro. E é aqui que mora uma armadilha clássica: em um unsigned de trinta e dois bits, zero menos um não dá menos um, dá mais de quatro bilhões. O learncpp dedica uma lição inteira a isso e recomenda evitar unsigned para contas comuns."
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "code": "#include <iostream>\n\nint main()\n{\n    int total;              // sem valor inicial!\n    total = total + 10;     // lê lixo\n    std::cout << total << '\\n';\n}",
+      "highlights": [5, 6],
+      "narration": "Terceira surpresa, e a mais perigosa. Na linha cinco, a variável total é criada sem valor inicial. Em Java e em cê sharp, o compilador se recusaria a usar uma variável local assim. Em cê mais mais, o código compila. A variável recebe um pedaço de memória e fica com o que já estava lá, um valor qualquer. Na linha seis, ler esse valor é comportamento indefinido. O programa pode imprimir dez, pode imprimir um número aleatório, pode imprimir dez na sua máquina e outra coisa no servidor. É o tipo de bug que aparece só às vezes, o pior tipo que existe. A boa notícia: com traço W all ligado, o compilador costuma avisar sobre casos como esse."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "multiple_choice",
+        "id": "v4-uninit",
+        "skill": "m1-initialization",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "No programa do vídeo, `int total;` é criada sem valor e depois o programa faz `total = total + 10;`. O que o C++ garante sobre o valor impresso?",
+        "hints": ["Pense no que estava naquele pedaço de memória antes."],
+        "choices": [
+          {
+            "text": "Garante que imprime 10, porque int começa em zero",
+            "explanation": "É o que acontece com campos em Java, mas em C++ uma variável local sem valor inicial não começa em zero."
+          },
+          {
+            "text": "Não garante nada: ler a variável sem valor é comportamento indefinido",
+            "explanation": "Certo: o programa compila, mas a linguagem não promete nenhum resultado."
+          },
+          {
+            "text": "Garante um erro de compilação",
+            "explanation": "Java e C# recusariam esse código; C++ compila, no máximo com um aviso."
+          }
+        ],
+        "correct": 1,
+        "solution": "Nada é garantido. Ler uma variável local que nunca recebeu valor é comportamento indefinido: o resultado pode mudar de máquina para máquina ou de execução para execução."
+      },
+      "narration": "Pause e responda: o que o cê mais mais garante sobre o valor que esse programa imprime?"
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "code": "int contador{};       // vale 0\nint idade{30};        // vale 30\ndouble preco{19.90};\n\nint x = 3.7;          // compila: x vira 3\nint y{3.7};           // erro: estreitamento\n\nauto n{42};           // int\nauto media{7.5};      // double",
+      "highlights": [1, 5, 6, 8],
+      "narration": "A defesa é simples: inicialize sempre, e prefira as chaves. Chaves vazias, como no contador da linha um, dão o valor zero. Chaves com um valor dão aquele valor. As chaves têm uma segunda vantagem. Compare as linhas cinco e seis. Com o sinal de igual, guardar três vírgula sete num int compila, e o valor vira três: a parte decimal é cortada, e no máximo o compilador dá um aviso. Com chaves, o compilador recusa, porque isso seria um estreitamento: um valor que perde informação ao caber no tipo. Por fim, a palavra auto pede ao compilador que deduza o tipo pelo valor inicial. Quarenta e dois vira int, sete vírgula cinco vira double. O tipo continua fixo, só não precisa ser escrito."
+    },
+    {
+      "type": "question",
+      "item": {
+        "type": "multiple_choice",
+        "id": "v4-narrowing",
+        "skill": "m1-initialization",
+        "bloom": "understand",
+        "difficulty": 2,
+        "prompt": "Qual das linhas abaixo NÃO compila?",
+        "hints": ["Lembre o que as chaves recusam e o sinal de igual aceita."],
+        "choices": [
+          {
+            "text": "int a = 9.99;",
+            "explanation": "Compila: com o sinal de igual, o valor é cortado para 9, sem erro."
+          },
+          {
+            "text": "int b{};",
+            "explanation": "Compila: chaves vazias inicializam com 0."
+          },
+          {
+            "text": "auto c{9.99};",
+            "explanation": "Compila: auto deduz double a partir de 9.99."
+          },
+          {
+            "text": "int d{9.99};",
+            "explanation": "Certo: com chaves, transformar 9.99 em int seria estreitamento, e o compilador recusa."
+          }
+        ],
+        "correct": 3,
+        "solution": "int d{9.99}; não compila. A inicialização com chaves proíbe conversões que perdem informação; com o sinal de igual, o 9.99 seria cortado para 9 sem erro, no máximo com um aviso."
+      },
+      "narration": "Última pergunta. Pause e escolha: qual destas linhas não compila?"
+    },
+    {
+      "type": "bullets",
+      "title": "Para levar",
+      "bullets": [
+        "Cada tipo tem tamanho e limites",
+        "Inteiro dividido por inteiro descarta as casas decimais",
+        "Variável local sem valor: comportamento indefinido",
+        "Inicialize sempre, com chaves"
+      ],
+      "narration": "Para levar desta aula. Cada tipo tem tamanho e limites, e o int quase sempre tem trinta e dois bits. Inteiro dividido por inteiro dá inteiro. Variável local sem valor inicial é comportamento indefinido, então inicialize sempre, de preferência com chaves, que ainda pegam conversões perigosas. Essas regras estão também nas diretrizes do cê mais mais moderno, as Core Guidelines. Na aula de texto a seguir você vê os detalhes, com exemplos para testar no compilador."
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+/*
+ * The "notebook" look: warm paper and ink by day, a desk lamp at night (it follows the system setting). The tokens live
+ * in @theme (they become Tailwind utilities: bg-page, text-ink, border-line…) and point to the CSS variables below, so
+ * light and dark share every class. A new color comes from here, never loose in a component.
+ *
+ * Color hierarchy: paper is the background and ink is the text; the accent (forest green) is the action; terracotta
+ * ("info") marks what is happening now; ochre ("gold") is ONLY for achievement (XP, the certificate) — if everything
+ * shines, nothing shines.
+ */
+@import 'tailwindcss';
+
+@theme {
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-sunken: var(--sunken);
+  --color-tint: var(--tint);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-info: var(--info);
+  --color-gold: var(--gold);
+  --color-rose: var(--rose);
+  --color-error: var(--error);
+  --color-success: var(--success);
+
+  --font-display: 'Fraunces Variable', 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Instrument Sans Variable', 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', 'Geist Mono', ui-monospace, monospace;
+
+  --radius-pill: 999px;
+  --radius-panel: 18px;
+  --radius-tile: 12px;
+
+  --animate-throb: throb 2.4s ease-in-out infinite;
+  --animate-spin-slow: spin-slow-kf 60s linear infinite;
+  --animate-appear: appear 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-pop: pop 0.6s cubic-bezier(0.2, 0.9, 0.1, 1.2) both;
+  --animate-shake: shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+
+  @keyframes throb {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(1.35);
+      opacity: 0.35;
+    }
+  }
+  @keyframes shake {
+    10%,
+    90% {
+      transform: translateX(-2px);
+    }
+    20%,
+    80% {
+      transform: translateX(4px);
+    }
+    30%,
+    50%,
+    70% {
+      transform: translateX(-8px);
+    }
+    40%,
+    60% {
+      transform: translateX(8px);
+    }
+  }
+  @keyframes spin-slow-kf {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* day: warm paper and ink */
+:root {
+  color-scheme: light;
+  --page: #f6f2e9;
+  --card: #fffdf8;
+  --sunken: #efe9dc;
+  --tint: #e9e2d2;
+  --ink: #1f1b16;
+  --ink-soft: #5a5246;
+  --ink-faint: #877e70;
+  --line: rgb(31 27 22 / 0.12);
+  --line-strong: rgb(31 27 22 / 0.24);
+  --accent: #2e5e4e;
+  --accent-hover: #264f42;
+  --accent-ink: #2b5a4b;
+  --info: #b0532c;
+  --gold: #a86e12;
+  --rose: #a4456a;
+  --error: #b4321f;
+  --success: #2f7a4d;
+  --shadow: 0 1px 2px rgb(31 27 22 / 0.06), 0 8px 24px -16px rgb(31 27 22 / 0.25);
+}
+
+/* night: a desk lamp over dark paper */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #1b1916;
+    --card: #23201c;
+    --sunken: #151310;
+    --tint: #2c2823;
+    --ink: #ede6d8;
+    --ink-soft: #b8ae9d;
+    --ink-faint: #877e70;
+    --line: rgb(237 230 216 / 0.12);
+    --line-strong: rgb(237 230 216 / 0.24);
+    --accent: #3f7a65;
+    --accent-hover: #4a8a73;
+    --accent-ink: #8cc4ae;
+    --info: #e08c62;
+    --gold: #e3b25e;
+    --rose: #df86a8;
+    --error: #f08878;
+    --success: #74c494;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 30px -18px rgb(0 0 0 / 0.7);
+  }
+}
+
+@layer base {
+  html {
+    background: var(--page);
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--page);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+  :focus-visible {
+    outline: 2px solid var(--info);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 560;
+    font-variation-settings: 'opsz' 72;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* a sheet of paper on the desk: solid, a thin edge and a soft shadow */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+  /* the main action stands out by color and a gentle lift, not by glow */
+  .lift {
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 0.12) inset,
+      0 6px 16px -10px color-mix(in srgb, var(--accent) 80%, black);
+  }
+  /* a highlighted word in a title: the accent color, in italic serif */
+  .accent-text {
+    color: var(--accent-ink);
+    font-style: italic;
+  }
+  /* lesson reading: reading width, line rhythm and the Markdown pieces */
+  .reading {
+    max-width: 68ch;
+    color: var(--ink);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  .reading > * + * {
+    margin-top: 0.9em;
+  }
+  .reading h2,
+  .reading h3 {
+    margin-top: 1.6em;
+    font-size: 1.2rem;
+  }
+  .reading a {
+    color: var(--accent-ink);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--accent-ink) 40%, transparent);
+    text-underline-offset: 3px;
+  }
+  .reading strong {
+    color: var(--ink);
+    font-weight: 650;
+  }
+  .reading ul,
+  .reading ol {
+    padding-left: 1.3em;
+  }
+  .reading ul {
+    list-style: disc;
+  }
+  .reading ol {
+    list-style: decimal;
+  }
+  .reading li + li {
+    margin-top: 0.3em;
+  }
+  .reading li::marker {
+    color: var(--accent-ink);
+  }
+  .reading code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--sunken);
+    border: 1px solid var(--line);
+    padding: 0.1em 0.35em;
+    border-radius: 6px;
+  }
+  .reading pre {
+    background: var(--sunken);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-tile);
+    padding: 1em 1.1em;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .reading pre code {
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+  .reading blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 1em;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .reading table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .reading th,
+  .reading td {
+    border-bottom: 1px solid var(--line);
+    padding: 0.5em 0.6em;
+    text-align: left;
+  }
+  .reading th {
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+  .reading .katex-display {
+    overflow-x: auto;
+    padding: 0.4em 0;
+  }
+}
+
+@media print {
+  :root {
+    --page: #fff;
+    --card: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 400
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "level": {
+      "type": "string",
+      "enum": ["basic", "intermediate", "advanced", "mastery"]
+    },
+    "priorKnowledge": {
+      "default": "",
+      "type": "string",
+      "maxLength": 1000
+    },
+    "hoursPerWeek": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 40
+    },
+    "deadlineWeeks": {
+      "default": null,
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 104
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "format": {
+      "default": "balanced",
+      "type": "string",
+      "enum": ["balanced", "more_video", "more_text", "more_practice"]
+    },
+    "context": {
+      "default": "",
+      "type": "string",
+      "maxLength": 1000
+    },
+    "hasComputer": {
+      "default": true,
+      "type": "boolean"
+    },
+    "readsEnglish": {
+      "default": false,
+      "type": "boolean"
+    },
+    "language": {
+      "default": "en",
+      "type": "string",
+      "enum": ["en", "pt-BR"]
+    }
+  },
+  "required": ["topic", "scope", "goal", "level", "hoursPerWeek"],
+  "additionalProperties": false
+}

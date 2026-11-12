@@ -1,0 +1,45 @@
+# After a community course is merged: rebuild the catalog the app's Community tab reads and publish it as the only
+# file on the `community-index` branch (force-pushed; main's history stays clean and branch protection is untouched).
+name: Community catalog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'community/courses/**'
+      - 'scripts/community.ts'
+      - 'server/community/catalog.ts'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: community-index
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish index.json
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run community:index -- --out "$RUNNER_TEMP/catalog/index.json"
+      - name: Push to the community-index branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd "$RUNNER_TEMP/catalog"
+          git init -q -b community-index
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -q -m "Community catalog for ${GITHUB_SHA::7}"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" community-index
+          echo "Published $(grep -c '"slug"' index.json) course(s)." >> "$GITHUB_STEP_SUMMARY"

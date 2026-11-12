@@ -1,0 +1,116 @@
+{
+  "introduction": "Ao final desta aula você consegue descrever o efeito fotoelétrico, dizer por que a ideia de luz como onda não o explica e usar a equação de Einstein para prever se uma luz arranca elétrons de um metal e com que energia. A aula segue a seção 6.2 (Photoelectric Effect) do livro aberto University Physics Volume 3, da OpenStax. Para ver o efeito acontecendo, use a simulação gratuita Photoelectric Effect, do PhET, que é a base do projeto do módulo.",
+  "sections": [
+    {
+      "title": "O experimento",
+      "markdown": "Monte assim: uma placa de metal dentro de um tubo sem ar, uma segunda placa à frente e um medidor de corrente ligando as duas.\n\n1. Ilumine a primeira placa.\n2. Se a luz for adequada, **elétrons saem do metal**, atravessam o vácuo e chegam à outra placa.\n3. O medidor registra uma **corrente elétrica**.\n\nOs elétrons arrancados pela luz se chamam **fotoelétrons**. Para medir a energia com que eles saem, os físicos aplicam uma voltagem contrária que os freia e procuram a voltagem que os para de vez (o **potencial de corte**). Daí sai a **energia cinética máxima** $K_{\\max}$ dos elétrons.\n\nAté aqui, nada estranho: a luz carrega energia, e parte dela vai para os elétrons. O estranho está nos detalhes.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t4-o-que-sai",
+        "skill": "m1-efeito-fotoeletrico",
+        "bloom": "remember",
+        "difficulty": 1,
+        "prompt": "No efeito fotoelétrico, o que a luz arranca da placa de metal?",
+        "hints": ["O medidor registra uma corrente elétrica."],
+        "choices": [
+          {
+            "text": "Prótons",
+            "explanation": "Os prótons ficam presos nos núcleos; quem se move numa corrente comum são os elétrons."
+          },
+          {
+            "text": "Átomos inteiros do metal",
+            "explanation": "A placa não se desmancha; o que sai são partículas bem menores."
+          },
+          {
+            "text": "Elétrons",
+            "explanation": "Isso: os fotoelétrons, que formam a corrente medida."
+          }
+        ],
+        "correct": 2,
+        "solution": "A luz arranca elétrons do metal, os fotoelétrons. Eles atravessam o vácuo e formam a corrente que o medidor registra."
+      }
+    },
+    {
+      "title": "O que a onda previa e o que se viu",
+      "markdown": "Se a luz fosse só uma onda, a energia dela estaria espalhada pela frente de onda, e uma luz **mais intensa** teria ondas mais altas, com mais energia. Isso levava a três previsões. Todas falharam:\n\n| A teoria de onda previa | O experimento mostrou |\n|---|---|\n| Luz mais intensa dá elétrons mais rápidos. | $K_{\\max}$ **não depende** da intensidade; depende da **frequência**. |\n| Qualquer cor arranca elétrons, se for forte o bastante. | Abaixo de uma **frequência de corte**, nenhum elétron sai, por mais forte que seja a luz. |\n| Com luz fraca, o elétron demora para juntar energia. | Os elétrons saem **na hora**, mesmo com luz muito fraca. |\n\nA intensidade muda só uma coisa: **quantos** elétrons saem por segundo (o tamanho da corrente).",
+      "question": {
+        "type": "true_false",
+        "id": "t4-vf-luz-forte",
+        "skill": "m1-efeito-fotoeletrico",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Verdadeiro ou falso: se uma luz vermelha não arranca elétrons de um metal, basta usar uma luz vermelha muito mais forte para que eles comecem a sair.",
+        "hints": ["Releia a segunda linha da tabela."],
+        "correct": false,
+        "solution": "Falso. Abaixo da frequência de corte nenhum elétron sai, qualquer que seja a intensidade. Aumentar a intensidade não muda a frequência da luz."
+      }
+    },
+    {
+      "title": "A explicação de Einstein",
+      "markdown": "Em 1905, Einstein explicou tudo com uma ideia: a luz é feita de **fótons**, cada um com energia $hf$, e **cada fóton entrega toda a sua energia a um único elétron**.\n\nPara escapar do metal, o elétron precisa gastar uma energia mínima, a **função trabalho** $\\phi$ (fi), que depende do metal. O que sobra vira energia de movimento:\n\n$$K_{\\max} = h f - \\phi$$\n\nAgora as três observações se encaixam:\n\n- **Frequência manda na energia**: $K_{\\max}$ cresce com $f$, e a intensidade nem aparece na fórmula.\n- **Frequência de corte**: se $hf < \\phi$, o fóton não tem energia para soltar o elétron, e não adianta mandar mais fótons fracos (um elétron não soma dois fótons). O corte é $f_0 = \\phi / h$, ou, em comprimento de onda, $\\lambda_0 \\approx 1240/\\phi$ (nm, com $\\phi$ em eV).\n- **Sem demora**: o elétron recebe o pacote inteiro de uma vez.\n\nFoi por essa lei do efeito fotoelétrico, e não pela relatividade, que Einstein recebeu o Prêmio Nobel de Física de 1921.",
+      "question": {
+        "type": "numeric",
+        "id": "t4-kmax",
+        "skill": "m1-efeito-fotoeletrico",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "Um metal tem função trabalho de 2,0 eV. Ele é iluminado com fótons de 3,1 eV (luz violeta). Qual é a energia cinética máxima dos elétrons, em eV?",
+        "hints": ["A energia do fóton paga primeiro a 'taxa de saída', e o resto fica com o elétron."],
+        "answer": 1.1,
+        "tolerance": 0.02,
+        "unit": "eV",
+        "solution": "$K_{\\max} = hf - \\phi = 3{,}1 - 2{,}0 = 1{,}1$ eV."
+      }
+    },
+    {
+      "title": "Intensidade e frequência: cada uma com seu papel",
+      "markdown": "A confusão mais comum é misturar as duas. Pense nos fótons como **moedas**:\n\n- a **frequência** decide o **valor de cada moeda** ($hf$);\n- a **intensidade** decide **quantas moedas** chegam por segundo.\n\nPara soltar um elétron é preciso uma moeda de valor suficiente; muitas moedas pequenas não servem, porque cada elétron recebe uma moeda só.\n\nAssim, numa luz **acima** do corte:\n\n- dobrar a intensidade **dobra o número de elétrons** (e a corrente), mas **não muda** $K_{\\max}$;\n- aumentar a frequência **aumenta** $K_{\\max}$.\n\nNuma luz **abaixo** do corte, nada sai, seja ela fraca ou forte.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t4-dobrar-intensidade",
+        "skill": "m1-efeito-fotoeletrico",
+        "bloom": "understand",
+        "difficulty": 2,
+        "prompt": "Uma luz azul já arranca elétrons de um metal. Você dobra a intensidade dela, sem mudar a cor. O que acontece?",
+        "hints": ["Na analogia, o que muda: o valor das moedas ou a quantidade?"],
+        "choices": [
+          {
+            "text": "Sai o dobro de elétrons, com a mesma energia máxima",
+            "explanation": "Isso: mais fótons, mais elétrons; cada fóton tem a mesma energia, então $K_{\\max}$ não muda."
+          },
+          {
+            "text": "Sai o mesmo número de elétrons, com o dobro da energia",
+            "explanation": "Essa é a previsão da teoria de onda, que o experimento derrubou."
+          },
+          {
+            "text": "Os elétrons param de sair",
+            "explanation": "Mais luz da mesma cor não pode impedir o que já acontecia."
+          },
+          {
+            "text": "Sai o dobro de elétrons, cada um com o dobro da energia",
+            "explanation": "A energia de cada elétron depende da energia de cada fóton, que não mudou."
+          }
+        ],
+        "correct": 0,
+        "solution": "Dobrar a intensidade dobra o número de fótons por segundo e, portanto, o número de elétrons. Como cada fóton tem a mesma energia $hf$, a energia máxima de cada elétron continua igual."
+      }
+    }
+  ],
+  "workedExample": {
+    "prompt": "Um metal tem função trabalho $\\phi = 2{,}5$ eV. (a) Uma luz vermelha de 700 nm arranca elétrons dele? (b) E uma luz violeta de 400 nm? Se sim, com que energia máxima? (c) Qual é o comprimento de onda de corte desse metal?",
+    "steps": [
+      "Energia do fóton vermelho: $E \\approx 1240/700 \\approx 1{,}8$ eV.",
+      "(a) Como $1{,}8$ eV é menor que $\\phi = 2{,}5$ eV, nenhum elétron sai, por mais forte que seja a luz vermelha.",
+      "Energia do fóton violeta: $E \\approx 1240/400 = 3{,}1$ eV.",
+      "(b) Como $3{,}1 > 2{,}5$, elétrons saem, com $K_{\\max} = 3{,}1 - 2{,}5 = 0{,}6$ eV.",
+      "(c) No corte, a energia do fóton é igual à função trabalho: $\\lambda_0 \\approx 1240/2{,}5 = 496$ nm. Luz com comprimento de onda menor que 496 nm (azul, violeta) arranca elétrons; com comprimento maior (amarela, vermelha e a maior parte do verde), não."
+    ]
+  },
+  "summary": [
+    "No efeito fotoelétrico, a luz arranca elétrons de um metal.",
+    "A energia dos elétrons depende da frequência da luz, não da intensidade.",
+    "Abaixo da frequência de corte, nenhum elétron sai, por mais forte que seja a luz.",
+    "Einstein: cada fóton dá sua energia $hf$ a um elétron, e $K_{\\max} = hf - \\phi$.",
+    "A intensidade só muda quantos elétrons saem por segundo."
+  ]
+}

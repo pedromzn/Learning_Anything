@@ -1,0 +1,230 @@
+{
+  "summary": "As boas fontes introdutórias contam a física quântica na ordem histórica e experimental: primeiro os fatos que a física clássica não explicava (radiação de corpo negro, efeito fotoelétrico, espectros de linhas dos átomos), depois as ideias que os explicaram (o quantum de Planck, o fóton de Einstein, o átomo de Bohr, as ondas de matéria de de Broglie) e só então a teoria nova: função de onda como amplitude de probabilidade, princípio da incerteza, superposição e medição. É assim no capítulo 6 e 7 do University Physics Volume 3 (OpenStax) e na parte inicial do curso 8.04 do MIT (Barton Zwiebach), que abre com as 'características-chave' da mecânica quântica: linearidade, superposição, probabilidade e emaranhamento, ilustradas com fótons em interferômetros. Spin entra pelo experimento de Stern-Gerlach (1922), que mostra um resultado discreto (dois pontos), e é a porta natural para sistemas de dois estados e emaranhamento, que textos como 'Quantum computing for the very curious' (Matuschak e Nielsen) apresentam sem cálculo pesado. Para um aluno de nível básico, que estuda por curiosidade 4 horas por semana, o foco é entender as ideias e os experimentos, com contas de ensino médio (E = hf, c = λf, λ = h/p, níveis de energia do hidrogênio) e sem equação de Schrödinger nem álgebra linear formal. Simulações gratuitas (PhET, da Universidade do Colorado) substituem o laboratório.",
+  "bullets": [
+    {
+      "title": "Luz como onda: frequência, comprimento de onda e cor",
+      "description": "A luz clássica como onda eletromagnética; a relação c = λf; o espectro visível e as cores; interferência na dupla fenda de Young como prova de comportamento ondulatório.",
+      "prerequisites": []
+    },
+    {
+      "title": "Radiação de corpo negro e o quantum de Planck",
+      "description": "Objetos quentes emitem luz cuja cor depende da temperatura; a teoria clássica previa energia infinita no ultravioleta; Planck (1900) supôs energia em pacotes E = nhf, com h = 6,626 × 10⁻³⁴ J·s.",
+      "prerequisites": ["Luz como onda: frequência, comprimento de onda e cor"]
+    },
+    {
+      "title": "O fóton e o efeito fotoelétrico",
+      "description": "Luz arranca elétrons de metais; a energia do elétron depende da frequência, não da intensidade; existe frequência de corte; Einstein explica com fótons: K_max = hf − φ.",
+      "prerequisites": ["Radiação de corpo negro e o quantum de Planck"]
+    },
+    {
+      "title": "Ondas de matéria de de Broglie",
+      "description": "Toda partícula com momento p tem comprimento de onda λ = h/p; a difração de elétrons (Davisson-Germer) confirma; por que não vemos a onda de uma bola de futebol.",
+      "prerequisites": ["O fóton e o efeito fotoelétrico"]
+    },
+    {
+      "title": "Dualidade onda-partícula e a dupla fenda com partículas",
+      "description": "Elétrons enviados um a um formam, ponto a ponto, um padrão de interferência; observar por qual fenda passou apaga o padrão.",
+      "prerequisites": ["Ondas de matéria de de Broglie"]
+    },
+    {
+      "title": "Espectros atômicos e o modelo de Bohr",
+      "description": "Gases emitem cores específicas (linhas); Bohr propõe órbitas com energias permitidas E_n = −13,6 eV/n² no hidrogênio; o fóton emitido tem a energia da diferença entre níveis.",
+      "prerequisites": ["O fóton e o efeito fotoelétrico"]
+    },
+    {
+      "title": "Função de onda e probabilidade",
+      "description": "A interpretação de Born: o quadrado da função de onda dá a probabilidade de encontrar a partícula; a teoria prevê frequências estatísticas, não o resultado de uma medida isolada.",
+      "prerequisites": ["Dualidade onda-partícula e a dupla fenda com partículas"]
+    },
+    {
+      "title": "Princípio da incerteza de Heisenberg",
+      "description": "Δx·Δp ≥ ħ/2: quanto mais localizado o pacote de onda, mais espalhado o momento; não é defeito do instrumento, é propriedade das ondas.",
+      "prerequisites": ["Função de onda e probabilidade"]
+    },
+    {
+      "title": "Superposição e medição",
+      "description": "Um sistema pode estar numa combinação de estados; a medição dá um resultado definido com certa probabilidade; o interferômetro de Mach-Zehnder com um fóton e o gato de Schrödinger como ilustrações.",
+      "prerequisites": ["Função de onda e probabilidade"]
+    },
+    {
+      "title": "Spin e o experimento de Stern-Gerlach",
+      "description": "Átomos de prata num campo magnético não uniforme se separam em dois feixes, não numa mancha contínua; o elétron tem spin 1/2, com duas possibilidades em cada eixo; medições em eixos diferentes.",
+      "prerequisites": ["Superposição e medição"]
+    },
+    {
+      "title": "Emaranhamento",
+      "description": "Dois sistemas podem ter um estado conjunto em que os resultados das medidas são correlacionados sem que cada um tenha valor definido antes; não permite enviar mensagens mais rápido que a luz.",
+      "prerequisites": ["Spin e o experimento de Stern-Gerlach"]
+    },
+    {
+      "title": "Qubits e aplicações",
+      "description": "O qubit como sistema de dois estados em superposição; ideia geral de computação quântica; aplicações cotidianas da física quântica (laser, LED, semicondutores).",
+      "prerequisites": ["Emaranhamento"]
+    }
+  ],
+  "commonMistakes": [
+    "Achar que luz mais intensa arranca elétrons mais rápidos no efeito fotoelétrico (é a frequência que manda na energia de cada elétron).",
+    "Confundir intensidade (quantidade de fótons) com energia de cada fóton.",
+    "Pensar que luz vermelha tem mais energia por fóton que a azul por ter comprimento de onda maior.",
+    "Imaginar o elétron do átomo como um planetinha numa órbita bem definida, levando o modelo de Bohr ao pé da letra.",
+    "Achar que o princípio da incerteza é só uma limitação dos instrumentos de medida.",
+    "Entender superposição como 'a partícula está num lugar ou no outro e nós não sabemos'.",
+    "Pensar que 'observar' exige uma pessoa consciente olhando, em vez de qualquer interação que registre a informação.",
+    "Achar que o emaranhamento permite mandar mensagens instantâneas.",
+    "Esquecer de converter nanômetros em metros ou elétron-volts em joules nas contas."
+  ],
+  "possibleProjects": [
+    "Usar a simulação gratuita Photoelectric Effect, do PhET, para descobrir o comprimento de onda de corte de dois metais e comparar com a previsão de E = hf.",
+    "Olhar o reflexo de lâmpadas diferentes (incandescente, LED, fluorescente) num CD ou DVD e registrar se o espectro é contínuo ou em faixas.",
+    "Usar a simulação Quantum Wave Interference, do PhET, para montar o padrão da dupla fenda com partículas uma a uma e descrever o que muda ao pôr um detector numa fenda.",
+    "Montar uma tabela de 'fótons do dia a dia' (controle remoto infravermelho, luz vermelha, verde, azul, ultravioleta do sol) com frequência e energia de cada um.",
+    "Escrever uma explicação de uma página do experimento de Stern-Gerlach para um amigo que não estuda física.",
+    "Simular, com uma moeda e dados, as estatísticas de medição de um sistema de dois estados e comparar com a previsão de probabilidade."
+  ],
+  "references": [
+    {
+      "title": "University Physics Volume 3, capítulo 6: Photons and Matter Waves",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-introduction",
+      "license": "cc-by-nc-sa",
+      "reason": "Livro-texto aberto com a sequência clássica: corpo negro, fotoelétrico, Compton, Bohr, de Broglie e dualidade. Espinha dos módulos 1 a 3."
+    },
+    {
+      "title": "6.1 Blackbody Radiation (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-1-blackbody-radiation",
+      "license": "cc-by-nc-sa",
+      "reason": "Corpo negro, catástrofe do ultravioleta e a hipótese de Planck (E = nhf), com o valor da constante h."
+    },
+    {
+      "title": "6.2 Photoelectric Effect (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-2-photoelectric-effect",
+      "license": "cc-by-nc-sa",
+      "reason": "As três observações que a física clássica não explica e a equação de Einstein K_max = hf − φ, com tabela de funções trabalho."
+    },
+    {
+      "title": "6.4 Bohr's Model of the Hydrogen Atom (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-4-bohrs-model-of-the-hydrogen-atom",
+      "license": "cc-by-nc-sa",
+      "reason": "Espectros de linhas, postulados de Bohr e níveis de energia do hidrogênio (−13,6 eV/n²)."
+    },
+    {
+      "title": "6.5 De Broglie's Matter Waves (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-5-de-broglies-matter-waves",
+      "license": "cc-by-nc-sa",
+      "reason": "λ = h/p, o experimento de Davisson-Germer e a difração de nêutrons e moléculas de C60."
+    },
+    {
+      "title": "6.6 Wave-Particle Duality (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/6-6-wave-particle-duality",
+      "license": "cc-by-nc-sa",
+      "reason": "Dupla fenda com luz e com elétrons enviados um a um (Tonomura, 1989)."
+    },
+    {
+      "title": "7.1 Wave Functions (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions",
+      "license": "cc-by-nc-sa",
+      "reason": "Interpretação de Born (probabilidade), colapso na visão de Copenhague, gato de Schrödinger."
+    },
+    {
+      "title": "7.2 The Heisenberg Uncertainty Principle (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/7-2-the-heisenberg-uncertainty-principle",
+      "license": "cc-by-nc-sa",
+      "reason": "Δx·Δp ≥ ħ/2 explicado por pacotes de onda, e a estimativa da energia do hidrogênio pela incerteza."
+    },
+    {
+      "title": "8.3 Electron Spin (University Physics Volume 3)",
+      "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+      "institution": "OpenStax (Rice University)",
+      "type": "book",
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/8-3-electron-spin",
+      "license": "cc-by-nc-sa",
+      "reason": "Spin 1/2 do elétron e o experimento de Stern-Gerlach com átomos de prata (duas faixas na tela)."
+    },
+    {
+      "title": "8.04 Quantum Physics I (Spring 2016)",
+      "author": "Barton Zwiebach",
+      "institution": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/",
+      "license": "cc-by-nc-sa",
+      "reason": "Curso universitário completo, com vídeos. Referência para quem quiser ir além do básico depois deste curso."
+    },
+    {
+      "title": "8.04 Quantum Physics I: Lecture Notes",
+      "author": "Barton Zwiebach",
+      "institution": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes",
+      "license": "cc-by-nc-sa",
+      "reason": "Notas 1 a 3: características-chave da mecânica quântica (superposição, emaranhamento), fótons no interferômetro de Mach-Zehnder e efeito fotoelétrico. Inspira a ordem dos módulos 6 a 8."
+    },
+    {
+      "title": "Photoelectric Effect (simulação)",
+      "author": "PhET Interactive Simulations",
+      "institution": "University of Colorado Boulder",
+      "type": "site",
+      "url": "https://phet.colorado.edu/en/simulations/photoelectric",
+      "license": "unknown",
+      "reason": "Simulação gratuita para variar metal, cor e intensidade da luz e ver o efeito na corrente. Base do projeto do módulo 1."
+    },
+    {
+      "title": "Quantum Wave Interference (simulação)",
+      "author": "PhET Interactive Simulations",
+      "institution": "University of Colorado Boulder",
+      "type": "site",
+      "url": "https://phet.colorado.edu/en/simulations/quantum-wave-interference",
+      "license": "unknown",
+      "reason": "Dupla fenda com fótons, elétrons e átomos, uma partícula de cada vez. Base do projeto do módulo 2."
+    },
+    {
+      "title": "Stern–Gerlach experiment",
+      "author": "Colaboradores da Wikipedia",
+      "institution": "Wikipedia",
+      "type": "article",
+      "url": "https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment",
+      "license": "cc-by-sa",
+      "reason": "História (1922) e descrição do experimento, incluindo medições sucessivas em eixos diferentes."
+    },
+    {
+      "title": "Double-slit experiment",
+      "author": "Colaboradores da Wikipedia",
+      "institution": "Wikipedia",
+      "type": "article",
+      "url": "https://en.wikipedia.org/wiki/Double-slit_experiment",
+      "license": "cc-by-sa",
+      "reason": "Panorama do experimento de Young (1801) às versões com partículas e com detecção de 'qual fenda'."
+    },
+    {
+      "title": "Quantum computing for the very curious",
+      "author": "Andy Matuschak e Michael Nielsen",
+      "institution": "quantum.country",
+      "type": "site",
+      "url": "https://quantum.country/qcvc",
+      "license": "unknown",
+      "reason": "Introdução gratuita a qubits, superposição, medição e estados emaranhados, escrita para iniciantes curiosos. Base do módulo 8."
+    }
+  ]
+}

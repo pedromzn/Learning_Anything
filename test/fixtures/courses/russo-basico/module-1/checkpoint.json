@@ -1,0 +1,142 @@
+{
+  "items": [
+    {
+      "type": "multiple_choice",
+      "id": "cp-falsa-amiga",
+      "skill": "m1-reconhecer-letras",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Qual das letras abaixo parece uma letra latina, mas soa de modo diferente?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "К (soa «k»)",
+          "explanation": "К soa k, como o c de casa."
+        },
+        {
+          "text": "М (soa «m»)",
+          "explanation": "М soa m."
+        },
+        {
+          "text": "Н (soa «n»)",
+          "explanation": "Certo: Н parece um H, mas soa n."
+        }
+      ],
+      "correct": 2,
+      "solution": "Н é uma falsa amiga: parece H e soa «n»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "cp-som-sh",
+      "skill": "m1-sons-das-letras",
+      "bloom": "remember",
+      "difficulty": 1,
+      "prompt": "Qual letra russa tem o som do «ch» de «chá»?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "Ш",
+          "explanation": "Certo: Ш soa como o «ch» de chá, um pouco mais grosso."
+        },
+        {
+          "text": "Ч",
+          "explanation": "Ч soa «tch», como em tchau."
+        },
+        {
+          "text": "Ц",
+          "explanation": "Ц soa «ts»."
+        }
+      ],
+      "correct": 0,
+      "solution": "Ш soa como o «ch» de chá."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "cp-reducao",
+      "skill": "m1-acento-e-reducao",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Como se lê «вода» (água), com o acento na última sílaba (вода́)?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "«va-DÁ»",
+          "explanation": "Certo: o О sem acento soa «a»."
+        },
+        {
+          "text": "«vo-DÁ»",
+          "explanation": "O О sem acento não soa «o»."
+        },
+        {
+          "text": "«VÓ-da»",
+          "explanation": "O acento está na última sílaba."
+        }
+      ],
+      "correct": 0,
+      "solution": "O О átono soa «a»: «va-DÁ»."
+    },
+    {
+      "type": "multiple_choice",
+      "id": "cp-hleb",
+      "skill": "m1-sinais-e-sonoridade",
+      "bloom": "apply",
+      "difficulty": 2,
+      "prompt": "Como soa a última letra de «хлеб» (pão)?",
+      "hints": [],
+      "choices": [
+        {
+          "text": "Como «b»",
+          "explanation": "No fim da palavra a consoante sonora fica surda."
+        },
+        {
+          "text": "Como «p»",
+          "explanation": "Certo: no fim da palavra, б perde a voz e soa p."
+        },
+        {
+          "text": "Como «v»",
+          "explanation": "O som de v é de В."
+        }
+      ],
+      "correct": 1,
+      "solution": "O б final soa «p»: «HLIEP»."
+    },
+    {
+      "type": "true_false",
+      "id": "cp-sinal-suave",
+      "skill": "m1-sinais-e-sonoridade",
+      "bloom": "understand",
+      "difficulty": 1,
+      "prompt": "Verdadeiro ou falso: o sinal suave (Ь) não tem som e suaviza a consoante que vem antes dele.",
+      "hints": [],
+      "correct": true,
+      "solution": "Verdadeiro. O Ь não é pronunciado e suaviza a consoante anterior."
+    },
+    {
+      "type": "short_answer",
+      "id": "cp-ler-bank",
+      "skill": "m1-ler-palavras",
+      "bloom": "apply",
+      "difficulty": 1,
+      "prompt": "Escreva em letras latinas como se lê a palavra «банк» (banco).",
+      "hints": [],
+      "accepted": ["bank", "банк"],
+      "solution": "Б = b, А = a, Н = n, К = k: «bank»."
+    },
+    {
+      "type": "ordering",
+      "id": "cp-roteiro",
+      "skill": "m1-ler-palavras",
+      "bloom": "understand",
+      "difficulty": 2,
+      "prompt": "Coloque em ordem os passos para ler uma palavra russa nova.",
+      "hints": [],
+      "steps": [
+        "Separe as letras e dê o som de cada uma",
+        "Marque a sílaba forte",
+        "Enfraqueça as vogais sem acento",
+        "Ajuste as consoantes que perdem a voz"
+      ],
+      "solution": "Letras e sons, acento, vogais fracas e consoantes sem voz, nesta ordem."
+    }
+  ]
+}

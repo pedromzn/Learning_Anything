@@ -1,0 +1,604 @@
+{
+  "title": "Marketing para pequenas empresas: atrair e manter clientes com pouco orçamento",
+  "summary": "Formação prática para dono ou dona de pequeno negócio que não tem equipe de marketing e estuda cerca de quatro horas por semana. Você começa escolhendo o cliente e o posicionamento, monta a oferta, organiza o Google e o Instagram, cria conteúdo, atende bem no WhatsApp, faz o cliente voltar e indicar, testa anúncios com valor pequeno e acompanha poucos números. Cada módulo termina com um projeto aplicado no seu negócio. O material completo das fontes continua gratuito nelas, e você é sempre levado até lá.",
+  "results": [
+    "Ao final você consegue descrever o seu cliente ideal em uma ficha baseada em clientes reais.",
+    "Ao final você consegue escrever uma frase de posicionamento que o cliente consiga verificar.",
+    "Ao final você consegue montar uma oferta e calcular se a promoção dá lucro.",
+    "Ao final você consegue manter o Perfil da Empresa no Google e o Instagram completos e coerentes.",
+    "Ao final você consegue planejar 30 dias de conteúdo que cabem no seu tempo.",
+    "Ao final você consegue atender no WhatsApp Business com mensagens prontas e acompanhamento.",
+    "Ao final você consegue testar um anúncio com orçamento definido e ler o resultado.",
+    "Ao final você consegue acompanhar poucos indicadores e decidir o que manter, mudar ou parar."
+  ],
+  "prerequisites": [
+    "Ter um negócio em funcionamento ou pelo menos uma oferta definida.",
+    "Ter um celular com WhatsApp e Instagram.",
+    "Sem conhecimento prévio de marketing."
+  ],
+  "modules": [
+    {
+      "title": "Cliente ideal e posicionamento",
+      "goal": "Escolher quem você quer atender primeiro, descrever esse cliente e definir em uma frase em que o seu negócio é diferente das alternativas.",
+      "skills": [
+        {
+          "id": "m1-cliente-ideal",
+          "name": "Distinguir público-alvo amplo de cliente ideal e escolher um segmento por critérios",
+          "bloom": "analyze"
+        },
+        {
+          "id": "m1-ficha-cliente",
+          "name": "Descrever o cliente ideal em uma ficha com situação, dor, desejo, objeções e onde ele está",
+          "bloom": "apply"
+        },
+        {
+          "id": "m1-concorrencia",
+          "name": "Identificar os concorrentes diretos, indiretos e a opção de não comprar",
+          "bloom": "analyze"
+        },
+        {
+          "id": "m1-posicionamento",
+          "name": "Formular o posicionamento do negócio em uma frase com diferencial e prova",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Por que o marketing começa pelo cliente",
+          "goal": "Entender por que vender para todo mundo não funciona e o que define um cliente ideal.",
+          "skills": ["m1-cliente-ideal"]
+        },
+        {
+          "type": "text",
+          "title": "Do público-alvo à ficha do cliente ideal",
+          "goal": "Escolher um segmento por critérios e preencher a ficha do cliente ideal, com um exemplo de padaria de bairro.",
+          "skills": ["m1-cliente-ideal", "m1-ficha-cliente"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: escolher e descrever o cliente",
+          "goal": "Aplicar os critérios de escolha e a ficha em casos de pequenos negócios.",
+          "skills": ["m1-cliente-ideal", "m1-ficha-cliente"]
+        },
+        {
+          "type": "text",
+          "title": "Concorrência e posicionamento",
+          "goal": "Mapear as alternativas do cliente e escrever a frase de posicionamento, com um exemplo de salão de beleza.",
+          "skills": ["m1-concorrencia", "m1-posicionamento"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: concorrência e posicionamento",
+          "goal": "Analisar alternativas, separar diferencial de promessa vazia e redigir um posicionamento.",
+          "skills": ["m1-concorrencia", "m1-posicionamento"]
+        }
+      ],
+      "project": {
+        "title": "A ficha do cliente ideal e a frase de posicionamento do seu negócio",
+        "prompt": "Escolha UM segmento de clientes do seu negócio. Olhe os seus dez melhores clientes (os que mais compram, voltam e indicam) e converse com pelo menos três deles ou revise as conversas de WhatsApp e as avaliações recebidas. Preencha a ficha do cliente ideal: quem é, em que situação está, qual é a dor ou o desejo, quais objeções tem, onde está e como decide a compra. Depois liste três concorrentes ou alternativas reais que ele considera, incluindo não comprar, e escreva a frase de posicionamento: para quem, que necessidade, que diferencial, com que prova. Entregue a ficha e a frase.",
+        "rubric": [
+          "A ficha descreve um segmento específico, e não um público amplo como 'todas as mulheres' ou 'todo mundo'.",
+          "A ficha vem de fatos observados em clientes reais, com pelo menos três conversas ou registros citados.",
+          "Os três concorrentes ou alternativas incluem pelo menos uma opção indireta ou a opção de não comprar.",
+          "A frase de posicionamento tem cliente, necessidade, diferencial e uma prova que o cliente consegue verificar."
+        ]
+      }
+    },
+    {
+      "title": "Proposta de valor e oferta",
+      "goal": "Transformar o que você vende em uma oferta clara, com preço que dá lucro e sem depender de desconto.",
+      "skills": [
+        {
+          "id": "m2-proposta-valor",
+          "name": "Escrever a proposta de valor em termos de resultado para o cliente",
+          "bloom": "apply"
+        },
+        {
+          "id": "m2-oferta",
+          "name": "Montar uma oferta com pacote, garantia e prazo que o cliente entende rápido",
+          "bloom": "apply"
+        },
+        {
+          "id": "m2-preco-margem",
+          "name": "Calcular margem e testar se uma promoção cobre o custo",
+          "bloom": "analyze"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "O que o cliente está comprando de verdade",
+          "goal": "Ver a diferença entre produto e resultado, e por que a oferta importa mais que o desconto.",
+          "skills": ["m2-proposta-valor"]
+        },
+        {
+          "type": "text",
+          "title": "Proposta de valor e oferta",
+          "goal": "Escrever a proposta de valor e montar a oferta principal do negócio.",
+          "skills": ["m2-proposta-valor", "m2-oferta"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: propostas e ofertas",
+          "goal": "Melhorar propostas de valor e montar ofertas para casos reais.",
+          "skills": ["m2-proposta-valor", "m2-oferta"]
+        },
+        {
+          "type": "exercises",
+          "title": "Preço, margem e promoção sem prejuízo",
+          "goal": "Calcular margem, ponto de promoção e efeito de descontos.",
+          "skills": ["m2-preco-margem"]
+        }
+      ],
+      "project": {
+        "title": "A oferta principal do seu negócio em uma página",
+        "prompt": "Escreva em uma página a oferta principal do seu negócio para o cliente da sua ficha: proposta de valor em uma frase, o que está incluído, preço, prazo ou condição, garantia e como o cliente compra. Anexe a conta de margem do preço (preço menos custos variáveis) e simule uma promoção, mostrando quanto cada venda deixa de lucro.",
+        "rubric": [
+          "A proposta de valor fala do resultado para o cliente, e não só do produto.",
+          "A oferta tem preço, o que inclui, condição e forma de compra, de modo que um desconhecido entende sem perguntar.",
+          "A margem é calculada com todos os custos variáveis do item, com a conta visível.",
+          "A simulação da promoção mostra o lucro por venda e quantas vendas a mais seriam necessárias."
+        ]
+      }
+    },
+    {
+      "title": "Presença digital básica: Google e Instagram",
+      "goal": "Ser encontrado por quem procura o que você vende, com o Perfil da Empresa no Google e o Instagram bem montados.",
+      "skills": [
+        {
+          "id": "m3-perfil-google",
+          "name": "Montar e manter um Perfil da Empresa completo e coerente com o posicionamento",
+          "bloom": "apply"
+        },
+        {
+          "id": "m3-instagram",
+          "name": "Organizar o perfil do Instagram (nome, bio, destaques e link) para quem chega ali decidir rápido",
+          "bloom": "apply"
+        },
+        {
+          "id": "m3-avaliacoes",
+          "name": "Pedir e responder avaliações de clientes com um procedimento simples",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Onde o seu cliente procura você",
+          "goal": "Entender os dois lugares onde o cliente confere um negócio local antes de comprar.",
+          "skills": ["m3-perfil-google"]
+        },
+        {
+          "type": "text",
+          "title": "Perfil da Empresa no Google passo a passo",
+          "goal": "Verificar, completar e manter o Perfil, e entender relevância, distância e proeminência.",
+          "skills": ["m3-perfil-google", "m3-avaliacoes"]
+        },
+        {
+          "type": "text",
+          "title": "Instagram: perfil que converte visita em contato",
+          "goal": "Organizar nome, bio, destaques e link.",
+          "skills": ["m3-instagram"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: auditar perfis",
+          "goal": "Encontrar o que falta e o que atrapalha em perfis de pequenos negócios.",
+          "skills": ["m3-perfil-google", "m3-instagram"]
+        },
+        {
+          "type": "exercises",
+          "title": "Avaliações: pedir e responder",
+          "goal": "Escolher o jeito certo de pedir avaliação e de responder elogio e crítica.",
+          "skills": ["m3-avaliacoes"]
+        }
+      ],
+      "project": {
+        "title": "Auditoria e ajuste do seu Perfil no Google e do seu Instagram",
+        "prompt": "Faça uma lista de verificação do seu Perfil da Empresa no Google (verificado, categoria, horário, telefone, endereço, descrição, fotos, produtos ou serviços, avaliações respondidas) e do seu Instagram (nome, bio com a frase de posicionamento, destaques, link, forma de contato). Corrija tudo o que for possível nesta semana e registre antes e depois com capturas de tela.",
+        "rubric": [
+          "A lista cobre todos os itens pedidos nos dois perfis.",
+          "A bio e a descrição usam o posicionamento do módulo 1, sem copiar texto de concorrente.",
+          "Há pelo menos cinco fotos reais atualizadas e as avaliações recebidas foram respondidas.",
+          "O antes e depois está registrado, com o que foi mudado e por quê."
+        ]
+      }
+    },
+    {
+      "title": "Conteúdo que vende sem dinheiro",
+      "goal": "Produzir com o celular um conteúdo útil e constante que leva o cliente do interesse ao contato.",
+      "skills": [
+        {
+          "id": "m4-pilares",
+          "name": "Definir três ou quatro pilares de conteúdo ligados ao cliente ideal e à oferta",
+          "bloom": "apply"
+        },
+        {
+          "id": "m4-calendario",
+          "name": "Montar um calendário de 30 dias que cabe em poucas horas por semana",
+          "bloom": "apply"
+        },
+        {
+          "id": "m4-chamada-acao",
+          "name": "Escrever chamadas para ação claras que levam ao WhatsApp, à visita ou à compra",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Conteúdo não é aparecer, é ajudar a decidir",
+          "goal": "Ver o que faz uma postagem trazer cliente em vez de curtida.",
+          "skills": ["m4-pilares"]
+        },
+        {
+          "type": "text",
+          "title": "Pilares de conteúdo",
+          "goal": "Escolher os assuntos que sustentam as postagens.",
+          "skills": ["m4-pilares", "m4-chamada-acao"]
+        },
+        {
+          "type": "text",
+          "title": "Calendário de 30 dias e rotina de produção",
+          "goal": "Planejar e gravar em lote com o celular.",
+          "skills": ["m4-calendario"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: pilares e chamadas para ação",
+          "goal": "Classificar postagens, corrigir chamadas fracas.",
+          "skills": ["m4-pilares", "m4-chamada-acao"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: montar o calendário",
+          "goal": "Distribuir postagens por semana e por objetivo.",
+          "skills": ["m4-calendario", "m4-pilares"]
+        }
+      ],
+      "project": {
+        "title": "O calendário de conteúdo de 30 dias",
+        "prompt": "Monte o calendário de 30 dias do seu negócio: 12 a 16 postagens, cada uma com pilar, formato, objetivo, texto da chamada para ação e dia de produção. Mostre que cabe nas suas horas semanais (some o tempo de cada tarefa) e produza as três primeiras postagens.",
+        "rubric": [
+          "Os pilares nascem da ficha do cliente e da oferta, e não de modismo.",
+          "Cada postagem tem objetivo e chamada para ação específica.",
+          "A soma do tempo de produção cabe no tempo semanal que você tem.",
+          "As três primeiras postagens estão prontas para publicar."
+        ]
+      }
+    },
+    {
+      "title": "WhatsApp Business e atendimento que converte",
+      "goal": "Organizar o WhatsApp como canal de vendas, com resposta rápida, mensagens prontas e acompanhamento.",
+      "skills": [
+        {
+          "id": "m5-whatsapp-config",
+          "name": "Configurar o perfil comercial, a saudação e a mensagem de ausência",
+          "bloom": "apply"
+        },
+        {
+          "id": "m5-atendimento",
+          "name": "Conduzir uma conversa de atendimento da dúvida ao fechamento",
+          "bloom": "apply"
+        },
+        {
+          "id": "m5-followup",
+          "name": "Acompanhar quem pediu orçamento e não respondeu, sem ser inconveniente",
+          "bloom": "analyze"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "O WhatsApp é a sua loja de portas abertas",
+          "goal": "Ver o que o cliente espera de uma conversa de venda no WhatsApp.",
+          "skills": ["m5-atendimento"]
+        },
+        {
+          "type": "text",
+          "title": "Configurar o WhatsApp Business",
+          "goal": "Perfil comercial, produtos e serviços, saudação e ausência.",
+          "skills": ["m5-whatsapp-config"]
+        },
+        {
+          "type": "text",
+          "title": "Roteiro de atendimento e acompanhamento",
+          "goal": "Do primeiro Oi ao fechamento e ao acompanhamento.",
+          "skills": ["m5-atendimento", "m5-followup"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: configurar e atender",
+          "goal": "Casos de atendimento e escolha das mensagens.",
+          "skills": ["m5-whatsapp-config", "m5-atendimento"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: acompanhar sem incomodar",
+          "goal": "Decidir quando e como retomar a conversa.",
+          "skills": ["m5-followup", "m5-atendimento"]
+        }
+      ],
+      "project": {
+        "title": "O kit de mensagens do seu WhatsApp Business",
+        "prompt": "Escreva e configure o seu kit: saudação, mensagem de ausência, resposta para a pergunta mais comum de preço, mensagem de orçamento, duas mensagens de acompanhamento (três dias e uma semana depois) e mensagem de pós-venda. Teste o fluxo com duas pessoas conhecidas.",
+        "rubric": [
+          "O kit cobre as sete mensagens pedidas, no tom do seu negócio.",
+          "Cada mensagem tem um próximo passo claro para o cliente.",
+          "O perfil comercial está completo e a saudação e a ausência estão ativas.",
+          "O teste com duas pessoas gerou pelo menos um ajuste, registrado."
+        ]
+      }
+    },
+    {
+      "title": "Indicação, recompra e fidelização",
+      "goal": "Fazer o cliente que já comprou voltar e trazer outros, que é a forma mais barata de crescer.",
+      "skills": [
+        {
+          "id": "m6-recompra",
+          "name": "Identificar o momento natural de recompra e se antecipar a ele",
+          "bloom": "apply"
+        },
+        {
+          "id": "m6-indicacao",
+          "name": "Desenhar um pedido de indicação simples e justo",
+          "bloom": "apply"
+        },
+        {
+          "id": "m6-posvenda",
+          "name": "Fazer um pós-venda que recupera problemas e gera confiança",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Cliente novo custa mais que cliente que volta",
+          "goal": "Entender o valor de um cliente ao longo do tempo.",
+          "skills": ["m6-recompra"]
+        },
+        {
+          "type": "text",
+          "title": "Recompra, pós-venda e indicação",
+          "goal": "Os três hábitos que fazem a base de clientes crescer.",
+          "skills": ["m6-recompra", "m6-indicacao", "m6-posvenda"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: ciclo de recompra",
+          "goal": "Calcular quando o cliente volta e o valor ao longo do tempo.",
+          "skills": ["m6-recompra"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: indicação e pós-venda",
+          "goal": "Escolher e corrigir pedidos de indicação e mensagens de pós-venda.",
+          "skills": ["m6-indicacao", "m6-posvenda"]
+        }
+      ],
+      "project": {
+        "title": "Um programa de indicação e recompra do seu negócio",
+        "prompt": "Desenhe o seu programa: o momento certo do pedido de indicação, a mensagem, o benefício para quem indica e para quem chega, e como você registra. Inclua a mensagem de recompra para o seu cliente típico e um pós-venda de sete dias. Rode com cinco clientes.",
+        "rubric": [
+          "O benefício é viável pela margem calculada no módulo 2.",
+          "Há mensagem pronta de indicação, recompra e pós-venda.",
+          "O registro permite saber quem indicou quem.",
+          "Os cinco clientes foram contatados e os resultados foram anotados."
+        ]
+      }
+    },
+    {
+      "title": "Anúncios com orçamento pequeno",
+      "goal": "Testar anúncios pagos com valor limitado, sem queimar dinheiro.",
+      "skills": [
+        {
+          "id": "m7-objetivo",
+          "name": "Escolher o objetivo do anúncio entre mensagem, visita ao perfil e venda",
+          "bloom": "analyze"
+        },
+        {
+          "id": "m7-publico-orcamento",
+          "name": "Definir público e orçamento de teste coerentes com a ficha do cliente",
+          "bloom": "apply"
+        },
+        {
+          "id": "m7-leitura",
+          "name": "Ler o resultado e decidir se mantém, muda ou para",
+          "bloom": "analyze"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Anúncio amplifica o que já funciona",
+          "goal": "Ver por que anunciar só depois de ter oferta, perfil e atendimento.",
+          "skills": ["m7-objetivo"]
+        },
+        {
+          "type": "text",
+          "title": "Objetivo, público e orçamento",
+          "goal": "Montar um anúncio de teste simples.",
+          "skills": ["m7-objetivo", "m7-publico-orcamento"]
+        },
+        {
+          "type": "text",
+          "title": "Ler os resultados",
+          "goal": "Custo por contato, custo por venda e quando parar.",
+          "skills": ["m7-leitura"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: montar o teste",
+          "goal": "Escolher objetivo, público e orçamento em casos.",
+          "skills": ["m7-objetivo", "m7-publico-orcamento"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: ler o resultado",
+          "goal": "Calcular custos e decidir.",
+          "skills": ["m7-leitura"]
+        }
+      ],
+      "project": {
+        "title": "Um anúncio de teste com orçamento definido por você",
+        "prompt": "Defina um orçamento de teste que você aceite perder, escolha o objetivo, o público e a oferta, rode por uma a duas semanas e registre: valor gasto, contatos, vendas, custo por contato e por venda. Escreva a decisão: manter, mudar ou parar, e por quê.",
+        "rubric": [
+          "O orçamento de teste foi definido antes e respeitado.",
+          "Objetivo, público e oferta são coerentes com a ficha do cliente.",
+          "Os números foram registrados e os custos calculados corretamente.",
+          "A decisão final se apoia nos números."
+        ]
+      }
+    },
+    {
+      "title": "Indicadores simples e rotina semanal",
+      "goal": "Acompanhar poucos números e transformar tudo isso numa rotina que cabe nas suas quatro horas por semana.",
+      "skills": [
+        {
+          "id": "m8-indicadores",
+          "name": "Escolher e registrar quatro a seis indicadores que o dono consegue acompanhar",
+          "bloom": "apply"
+        },
+        {
+          "id": "m8-rotina",
+          "name": "Montar uma rotina semanal de marketing com tarefas e horário fixos",
+          "bloom": "apply"
+        },
+        {
+          "id": "m8-decisao",
+          "name": "Usar os números para decidir o que manter, mudar ou parar",
+          "bloom": "analyze"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "O que não se mede não se melhora, mas meça pouco",
+          "goal": "Ver quais números importam para um pequeno negócio.",
+          "skills": ["m8-indicadores"]
+        },
+        {
+          "type": "text",
+          "title": "Indicadores e planilha semanal",
+          "goal": "Montar o painel mais simples possível.",
+          "skills": ["m8-indicadores", "m8-decisao"]
+        },
+        {
+          "type": "exercises",
+          "title": "Praticando: ler números",
+          "goal": "Calcular taxas e custos e interpretar.",
+          "skills": ["m8-indicadores", "m8-decisao"]
+        },
+        {
+          "type": "exercises",
+          "title": "Montar a rotina semanal",
+          "goal": "Distribuir quatro horas por semana entre as tarefas.",
+          "skills": ["m8-rotina"]
+        }
+      ],
+      "project": {
+        "title": "O painel de indicadores e a rotina de marketing da semana",
+        "prompt": "Crie uma planilha com quatro a seis indicadores (por exemplo contatos novos, orçamentos, vendas, avaliações novas, recompras e indicações), preencha quatro semanas e monte a rotina de quatro horas por semana com dia e hora de cada tarefa. Escreva uma decisão por semana, apoiada nos números.",
+        "rubric": [
+          "Os indicadores medem contato e venda, e não só curtidas.",
+          "A planilha tem quatro semanas preenchidas.",
+          "A rotina soma no máximo quatro horas e tem dias definidos.",
+          "Cada semana termina com uma decisão apoiada nos números."
+        ]
+      }
+    }
+  ],
+  "bibliography": [
+    {
+      "title": "15.810 Marketing Management (Fall 2010)",
+      "author": "Natalie Mizik",
+      "institution": "MIT Sloan School of Management, MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010/",
+      "license": "cc-by-nc-sa",
+      "reason": "A espinha da formação: análise do cliente e da concorrência, segmentação e posicionamento, depois produto, preço, promoção e distribuição. Em inglês."
+    },
+    {
+      "title": "15.810 Marketing Management (Fall 2010): calendário das sessões",
+      "author": "Natalie Mizik",
+      "institution": "MIT Sloan School of Management, MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/15-810-marketing-management-fall-2010/pages/calendar/",
+      "license": "cc-by-nc-sa",
+      "reason": "A lista das vinte sessões, que mostra a ordem em que o MIT ensina análise de mercado, estratégia e programa de marketing."
+    },
+    {
+      "title": "Marketing digital e redes sociais",
+      "author": "",
+      "institution": "Sebrae",
+      "type": "course",
+      "url": "https://loja.sebrae.com.br/marketing-digital-e-redes-sociais-1-372000114127",
+      "license": "unknown",
+      "reason": "Curso online de 7 horas para pequenos empreendedores, com segmentação de público, anúncios e definição de orçamento. A página indica custo zero e pede confirmar a inscrição pela central do Sebrae."
+    },
+    {
+      "title": "Como otimizar seu Perfil de Empresa no Google (vídeo)",
+      "author": "",
+      "institution": "Sebrae Paraná",
+      "type": "video",
+      "url": "https://sebraepr.com.br/?p=133776",
+      "license": "unknown",
+      "reason": "Vídeo de cerca de 5 minutos, em português e voltado a MEIs e microempresas, sobre categoria, descrição, fotos, avaliações e atualização do Perfil da Empresa."
+    },
+    {
+      "title": "Dicas para melhorar seu ranking local no Google",
+      "author": "",
+      "institution": "Google, Central de Ajuda do Perfil da Empresa",
+      "type": "documentation",
+      "url": "https://support.google.com/business/answer/7091",
+      "license": "unknown",
+      "reason": "A explicação oficial de que o ranking local se baseia em relevância, distância e proeminência, e do que o dono pode fazer: verificar, completar, responder avaliações, pôr fotos."
+    },
+    {
+      "title": "Digital Marketing Certification Course",
+      "author": "",
+      "institution": "HubSpot Academy",
+      "type": "course",
+      "url": "https://academy.hubspot.com/courses/digital-marketing",
+      "license": "unknown",
+      "reason": "Curso gratuito, em inglês, sobre estratégia de marketing digital centrada na pessoa, com SEO, redes sociais e e-mail. A página o declara gratuito."
+    },
+    {
+      "title": "Persona: o que é, como definir e por que criar uma para sua empresa",
+      "author": "Bruna Dourado",
+      "institution": "RD Station",
+      "type": "article",
+      "url": "https://www.rdstation.com/blog/marketing/inbound-marketing/persona-o-que-e/",
+      "license": "unknown",
+      "reason": "Em português, explica a diferença entre persona e público-alvo e traz perguntas para levantar dados do cliente ideal."
+    },
+    {
+      "title": "Marketing e Vendas: materiais gratuitos",
+      "author": "",
+      "institution": "RD Station",
+      "type": "site",
+      "url": "https://www.rdstation.com/blog/materiais/",
+      "license": "unknown",
+      "reason": "Biblioteca em português de eBooks, planilhas e templates, com uma trilha de marketing e vendas para pequenos empreendedores. Alguns materiais levam a páginas externas."
+    },
+    {
+      "title": "Meta Blueprint: treinamento online gratuito para publicidade",
+      "author": "",
+      "institution": "Meta",
+      "type": "course",
+      "url": "https://www.facebook.com/business/learn",
+      "license": "unknown",
+      "reason": "Cursos no seu ritmo, webinars e certificação para anunciar no Facebook, Instagram, Messenger e WhatsApp. A página diz que aprender não custa nada; o custo da certificação não consta nela."
+    },
+    {
+      "title": "WhatsApp Business: aplicativo",
+      "author": "",
+      "institution": "Meta, WhatsApp Business",
+      "type": "site",
+      "url": "https://whatsappbusiness.com/pt-br/products/business-app/",
+      "license": "unknown",
+      "reason": "Apresentação oficial do app para pequenos negócios: perfil comercial, exibição de produtos e serviços e atendimento quando o dono não está disponível."
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "introduction": "Ao final desta aula você consegue ajustar a leitura letra por letra para soar como o russo de verdade: sabe onde cai o acento, como as vogais fracas se transformam, quando a consoante perde a voz e o que o sinal suave faz. Seguimos de perto as regras de pronúncia da lição de alfabeto da Wikibooks (Russian/Alphabet) e a chave de pronúncia da Wikipedia (Help:IPA/Russian), com exemplos meus.",
+  "sections": [
+    {
+      "title": "O acento russo é livre e não vem marcado",
+      "markdown": "Em português, a sílaba forte segue regras e vem marcada com acento em muitas palavras. Em russo, o acento é **livre**: pode cair em qualquer sílaba, e **no texto comum não vem marcado**. A marca de acento (o acento agudo, ´) aparece em dicionários, livros infantis e materiais de estudo, como este (a Wikipedia mostra o par «за́мок» e «замо́к», que mudam de sentido só pelo acento).\n\nPor isso, a regra de ouro é **aprender cada palavra já com a sílaba forte**: «мама» (mama, “MÁ-ma”), «спасибо» (spasibo, “spa-SI-ba”), «хорошо» (khorosho, “ha-ra-SHÓ”).\n\nUma ajuda: o **Ё** quase sempre marca a sílaba forte da palavra onde aparece. No dia a dia ele costuma ser escrito como Е, e o acento tem de ser aprendido.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "a4-por-que-acento",
+        "skill": "m1-acento-e-reducao",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Por que é útil aprender cada palavra russa já com a sílaba forte marcada?",
+        "hints": ["Pense onde o acento aparece escrito: em textos comuns ou só em materiais de estudo?"],
+        "choices": [
+          {
+            "text": "Porque o acento russo é livre e, no texto comum, não vem marcado",
+            "explanation": "Certo: ele pode cair em qualquer sílaba, e você só o vê marcado em dicionários e livros de estudo."
+          },
+          {
+            "text": "Porque o acento russo cai sempre na última sílaba",
+            "explanation": "Não há regra assim: o acento pode estar na primeira, na última ou no meio, e muda de palavra para palavra."
+          },
+          {
+            "text": "Porque o acento russo cai sempre na primeira sílaba",
+            "explanation": "Também não: em «спасибо» ele cai na segunda sílaba e em «хорошо» na última."
+          }
+        ],
+        "correct": 0,
+        "solution": "O acento russo é livre e não é escrito nos textos comuns, então se aprende com a palavra."
+      }
+    },
+    {
+      "title": "Vogais átonas: o o vira a, o е vira i",
+      "markdown": "Em português, também enfraquecemos vogais átonas (o «o» final de *bolo* soa quase «u»). Em russo isso é mais forte e é regular, em dois casos básicos (Wikibooks, *Russian/Alphabet*, seção sobre redução de vogais):\n\n- Um **О** sem acento soa como **«a» fraco**: «вода» (voda, “va-DÁ”), *água*, e «молоко» (moloko, “ma-la-KÓ”), *leite*.\n- Um **Е** sem acento soa como **«i» fraco**: «ресторан» (restoran, “ris-ta-RAN”), *restaurante*.\n\nQuem lê «вода» como «VÓ-da» é entendido, mas soa muito estrangeiro. A redução é o que dá o ritmo do russo. Atenção: **só vale fora da sílaba forte**. Na sílaba forte, О soa «o» e Е soa «ie».",
+      "question": {
+        "type": "multiple_choice",
+        "id": "a4-vod",
+        "skill": "m1-acento-e-reducao",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "Como se lê «вода» (água), com o acento na última sílaba (вода́)?",
+        "hints": [
+          "O acento está na segunda sílaba. O que acontece com o О da primeira?",
+          "Um О sem acento soa como um «a» fraco."
+        ],
+        "choices": [
+          {
+            "text": "«vo-DÁ»",
+            "explanation": "Falta a redução: o О sem acento soa «a», e não «o»."
+          },
+          {
+            "text": "«va-DÁ»",
+            "explanation": "Certo: o primeiro О não tem acento e soa «a»; a sílaba forte é a última."
+          },
+          {
+            "text": "«VÓ-da»",
+            "explanation": "Aqui o acento foi para a primeira sílaba, e o О não foi reduzido. O acento de «вода» está na última sílaba."
+          }
+        ],
+        "correct": 1,
+        "solution": "O О sem acento vira «a» fraco, e o acento está na última sílaba: «va-DÁ»."
+      }
+    },
+    {
+      "title": "Sonoras e surdas: a consoante perde a voz",
+      "markdown": "Algumas consoantes vêm em **pares**: uma **sonora** (a garganta vibra) e uma **surda** (não vibra): **Б/П**, **В/Ф**, **Г/К**, **Д/Т**, **Ж/Ш**, **З/С**.\n\nEm russo, a consoante sonora **perde a voz em dois casos** (Wikibooks, *Russian/Alphabet*):\n\n- **No fim da palavra:** «друг» (drug, “DRUK”), *amigo*, termina em «k», e não «g». «хлеб» (khleb, “HLIEP”), *pão*, termina em «p».\n- **Antes de uma consoante surda:** «водка» (vodka, “VÓT-ka”) soa com «t» no meio. «завтра» (zavtra, “ZÁF-tra”), *amanhã*, soa com «f».\n\nIsso só muda a pronúncia: a palavra continua escrita igual, e o ouvido se acostuma rápido.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "a4-druk",
+        "skill": "m1-sinais-e-sonoridade",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "Como soa a última consoante da palavra «друг» (amigo)?",
+        "hints": ["No fim de uma palavra, uma consoante sonora fica surda.", "O par surdo de Г é К."],
+        "choices": [
+          {
+            "text": "Como «g»",
+            "explanation": "É o que a letra sugere, mas no fim da palavra a consoante sonora perde a voz."
+          },
+          {
+            "text": "Como «k»",
+            "explanation": "Certo: no fim da palavra, Г soa «k». A leitura é «druk»."
+          },
+          {
+            "text": "Como «kh» (um h áspero)",
+            "explanation": "O h áspero é o som da letra Х, e não o de Г sem voz."
+          }
+        ],
+        "correct": 1,
+        "solution": "O Г final fica surdo, e soa «k»: «druk»."
+      }
+    },
+    {
+      "title": "O sinal suave e o sinal duro",
+      "markdown": "O **sinal suave (Ь)** não tem som: ele **suaviza a consoante antes dele**, com a língua subindo de leve, como no «ni» de *aninhar*. Compare «мат» (mat, “MAT”), com o «t» duro, e «мать» (mat’, “MAT’”), *mãe*, com o «t» suave (a Wikibooks descreve esse efeito na parte de palatalização).\n\nNa transliteração o sinal suave é marcado com um apóstrofo: «день» (den’, “DIÉN’”), *dia*. O **sinal duro (Ъ)** é raro: separa o prefixo da vogal seguinte, como em «объект» (ob’yekt, “ab-IEKT”), *objeto*.\n\nLembre também que as vogais suaves (Я, Е, Ё, Ю, И) suavizam a consoante anterior, como o Ь faz.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "a4-sinal-suave",
+        "skill": "m1-sinais-e-sonoridade",
+        "bloom": "understand",
+        "difficulty": 2,
+        "prompt": "O que o sinal suave (Ь) faz na palavra «мать» (mãe)?",
+        "hints": ["O Ь não é uma vogal.", "Ele age sobre a letra que vem antes dele."],
+        "choices": [
+          {
+            "text": "Não tem som e suaviza o Т antes dele",
+            "explanation": "Certo: o Ь muda a qualidade do Т, tornando-o suave."
+          },
+          {
+            "text": "Soa como um «e» no fim da palavra",
+            "explanation": "Não: Ь nunca soa como vogal."
+          },
+          {
+            "text": "Soa como um «i» curto",
+            "explanation": "O «i» curto é o som de Й, e não de Ь."
+          }
+        ],
+        "correct": 0,
+        "solution": "O Ь não é pronunciado: ele suaviza o Т, e o som sai «mat’»."
+      }
+    },
+    {
+      "title": "Juntando tudo: o roteiro de leitura",
+      "markdown": "Agora você pode ler uma palavra nova com um roteiro de cinco passos:\n\n1. Separe as letras e dê o som de cada uma.\n2. Descubra (ou procure) onde está o acento.\n3. Enfraqueça as vogais sem acento: О vira «a» e Е vira «i».\n4. Ajuste as consoantes: no fim da palavra ou antes de surda, a sonora fica surda.\n5. Leia a palavra inteira e, se puder, confira com um áudio (os da Wikibooks e da Wikipedia são gratuitos).\n\nOs passos 3 e 4 só fazem sentido depois que você sabe onde está o acento. É por isso que o passo 2 vem antes deles.",
+      "question": {
+        "type": "ordering",
+        "id": "a4-roteiro",
+        "skill": "m1-ler-palavras",
+        "bloom": "understand",
+        "difficulty": 2,
+        "prompt": "Coloque em ordem os passos para ler uma palavra russa com a pronúncia ajustada.",
+        "hints": [
+          "O ajuste das vogais fracas depende de saber onde está o acento.",
+          "Conferir com um áudio é o último passo."
+        ],
+        "steps": [
+          "Separe as letras e dê o som de cada uma",
+          "Marque a sílaba forte (o acento)",
+          "Enfraqueça as vogais sem acento (О vira «a», Е vira «i»)",
+          "Ajuste as consoantes que perdem a voz",
+          "Leia a palavra inteira e confira com um áudio"
+        ],
+        "solution": "A ordem é: letras e sons, acento, vogais fracas, consoantes sem voz, leitura final com conferência."
+      }
+    }
+  ],
+  "workedExample": {
+    "prompt": "Leia «хорошо» (bem, bom), que se escreve com o acento na última sílaba (хорошо́).",
+    "steps": [
+      "Separe as letras e dê o som: х (h áspero), о, р (r vibrado), о, ш («ch» de chá, mais grosso), о.",
+      "Marque o acento: a última sílaba é a forte (хорошо́).",
+      "Enfraqueça as vogais sem acento: o primeiro о e o segundo о não têm acento e soam «a» fraco: «ha-ra».",
+      "Não há consoante sonora no fim, então nenhum ajuste de sonoridade é necessário.",
+      "Leia tudo: «ha-ra-SHÓ». Significa «bem» ou «bom», e é uma das respostas mais comuns para «Как дела?» (kak dela?, “kak di-LÁ”), «como vai?»."
+    ]
+  },
+  "summary": [
+    "O acento russo é livre e não vem marcado nos textos comuns: aprenda cada palavra com a sílaba forte.",
+    "Fora da sílaba forte, О soa «a» fraco e Е soa «i» fraco.",
+    "No fim da palavra e antes de consoante surda, a sonora perde a voz: друг soa «druk», водка soa «VÓT-ka».",
+    "O Ь não tem som e suaviza a consoante antes dele; o Ъ é raro."
+  ]
+}

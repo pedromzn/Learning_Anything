@@ -1,0 +1,114 @@
+{
+  "introduction": "Ao final desta aula você consegue compilar e executar um programa C++ pelo terminal, escolhendo a versão da linguagem e ligando os avisos, ler e escrever no terminal com `std::cin` e `std::cout`, e dizer se um erro aconteceu na compilação, na ligação ou na execução. A sequência segue o capítulo 0 do learncpp.com (lições 0.5 a 0.12) e a aula 1 do curso 6.096 do MIT, ambos gratuitos. Em português, o Microsoft Learn tem um passo a passo de compilação pela linha de comando no Windows.",
+  "sections": [
+    {
+      "title": "O primeiro programa, linha por linha",
+      "markdown": "Todo programa C++ começa pela função `main`. Veja o menor programa útil:\n\n```cpp\n#include <iostream>\n\nint main()\n{\n    std::cout << \"Olá, C++!\\n\";\n    return 0;\n}\n```\n\n- `#include <iostream>` é uma ordem ao **pré-processador**: copie aqui as declarações da parte da biblioteca padrão que cuida de entrada e saída. Sem ela, o compilador não sabe o que é `std::cout`.\n- `int main()` é o ponto de entrada. O sistema operacional chama `main`, e o `int` que ela devolve é o **código de saída**: `0` quer dizer sucesso.\n- `std::cout` é a saída padrão (o terminal). O `std::` diz que o nome mora no *namespace* `std`, o espaço de nomes da biblioteca padrão. O operador `<<` empurra o que está à direita para a saída.\n- `\\n` dentro das aspas é a quebra de linha. Você também verá `std::endl`, que quebra a linha **e** força a gravação imediata da saída; para uso comum, `\\n` basta e é mais leve.\n\nUm detalhe: em `main`, e só em `main`, o `return 0;` pode ser omitido; se a execução chegar ao fim, o programa devolve 0 sozinho.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t2-include",
+        "skill": "m1-build-pipeline",
+        "bloom": "understand",
+        "difficulty": 1,
+        "prompt": "Você apagou a linha `#include <iostream>` e manteve o resto do programa. O que acontece?",
+        "hints": ["Pense em quem precisa saber o que é `std::cout` e em que etapa."],
+        "choices": [
+          {
+            "text": "Erro de ligação: o linker não acha a biblioteca de entrada e saída",
+            "explanation": "O problema aparece antes da ligação: sem a declaração, o compilador nem aceita o código."
+          },
+          {
+            "text": "Erro de compilação: o compilador não conhece `std::cout`",
+            "explanation": "Certo: sem o cabeçalho, `std::cout` nunca foi declarado, e o compilador exige ver a declaração antes do uso."
+          },
+          {
+            "text": "Compila e roda, mas não imprime nada",
+            "explanation": "C++ não ignora nomes desconhecidos: usar um nome não declarado é erro."
+          }
+        ],
+        "correct": 1,
+        "solution": "É um erro de compilação. O `#include` traz a declaração de `std::cout`; sem ela, o compilador encontra um nome que nunca foi declarado e para."
+      }
+    },
+    {
+      "title": "O comando de compilação",
+      "markdown": "Para compilar, você precisa de um compilador. Três caminhos comuns:\n\n- **macOS**: `xcode-select --install` instala as ferramentas de linha de comando da Apple, com o `clang++` (o comando `g++` também existe e aponta para o clang).\n- **Linux**: o pacote do GCC (no Debian e no Ubuntu, `build-essential`, que traz o `g++`).\n- **Windows**: o Visual Studio Community, com a carga de trabalho de C++, ou o GCC pelo MSYS2.\n\nSe não puder instalar nada agora, o Compiler Explorer (godbolt.org) compila e executa no navegador.\n\nO comando que vamos usar no curso inteiro:\n\n```bash\ng++ -std=c++20 -Wall -Wextra ola.cpp -o ola\n./ola\n```\n\n| Parte | O que faz |\n| --- | --- |\n| `-std=c++20` | escolhe a versão da linguagem (o padrão C++20) |\n| `-Wall -Wextra` | ligam avisos sobre código suspeito |\n| `ola.cpp` | os arquivos-fonte (pode haver vários) |\n| `-o ola` | o nome do executável |\n\nSem `-o`, o executável se chama `a.out`. Quem usa `clang++` troca só o nome do comando: as opções são as mesmas.\n\nEsse comando faz as três etapas de uma vez. Dá para separá-las, e isso ajuda a entender os erros: `-c` para depois da compilação e gera só o arquivo objeto.\n\n```bash\ng++ -std=c++20 -Wall -Wextra -c main.cpp   # gera main.o\ng++ -std=c++20 -Wall -Wextra -c util.cpp   # gera util.o\ng++ main.o util.o -o programa              # só a ligação\n```\n\nO learncpp (lição 0.11) recomenda tratar todo aviso como um erro a corrigir; quem quiser forçar isso acrescenta `-Werror`, que transforma avisos em erros.",
+      "question": {
+        "type": "short_answer",
+        "id": "t2-flag-c",
+        "skill": "m1-compile-run",
+        "bloom": "remember",
+        "difficulty": 1,
+        "prompt": "Qual opção do g++ faz ele parar depois da compilação e gerar apenas o arquivo objeto (`.o`), sem ligar? Escreva só a opção.",
+        "hints": ["É uma letra só, depois de um traço.", "A letra é a inicial de *compile*."],
+        "accepted": ["-c", "c"],
+        "solution": "`-c`. Com ela, `g++ -c main.cpp` gera `main.o` e não chama o linker."
+      }
+    },
+    {
+      "title": "Lendo os erros: em que etapa foi?",
+      "markdown": "Diante de qualquer erro, a primeira pergunta é: **em que etapa?** Cada uma tem uma cara.\n\n**Erro de compilação.** Aponta arquivo, linha e coluna. Esqueça o ponto e vírgula depois de `std::cout << x` e o GCC diz algo como:\n\n```text\nola.cpp:6:5: error: expected ';' before '}' token\n```\n\nO problema está no arquivo e perto da linha indicada (às vezes na linha de cima).\n\n**Erro de ligação.** Fala de símbolos e quase nunca aponta uma linha do seu código. Se `dobro` foi declarada e chamada, mas nunca definida (ou o arquivo com a definição ficou fora do comando), aparece algo como:\n\n```text\nundefined reference to `dobro(int)'\n```\n\nNo macOS a mensagem é \"Undefined symbols for architecture...\". Outra falha de ligação comum é a **definição repetida** (`multiple definition` no GCC, `duplicate symbol` no macOS): a mesma função definida em dois arquivos.\n\n**Erro de execução.** O programa compilou e ligou, mas trava ou dá resultado errado. Não há mensagem do compilador; quem acha esses erros são testes, impressões de depuração e o depurador.\n\n**Aviso** (`warning`) não é erro: o executável é gerado. Mas um aviso como \"variável usada sem ser inicializada\" quase sempre é um erro de execução esperando para acontecer.",
+      "question": {
+        "type": "multiple_choice",
+        "id": "t2-multiple-def",
+        "skill": "m1-read-errors",
+        "bloom": "understand",
+        "difficulty": 2,
+        "prompt": "Você copiou a função `int dobro(int x) { return 2 * x; }` inteira em `main.cpp` e também em `util.cpp`, e compilou os dois juntos. Cada arquivo compila sem erro. O que acontece?",
+        "hints": ["Cada arquivo é compilado isoladamente: isoladamente, cada um está correto.", "Quem vê os dois arquivos ao mesmo tempo?"],
+        "choices": [
+          {
+            "text": "Funciona: o compilador usa a primeira definição",
+            "explanation": "C++ não escolhe uma das definições: uma função comum só pode ser definida uma vez no programa inteiro."
+          },
+          {
+            "text": "Erro de compilação em `util.cpp`",
+            "explanation": "O compilador olha um arquivo de cada vez; dentro de `util.cpp` há uma só definição, que é válida."
+          },
+          {
+            "text": "Erro de execução quando `dobro` é chamada",
+            "explanation": "O programa nem chega a existir: o problema é detectado antes de gerar o executável."
+          },
+          {
+            "text": "Erro de ligação: definição repetida",
+            "explanation": "Certo: só o linker vê os dois objetos juntos e encontra duas definições de `dobro`."
+          }
+        ],
+        "correct": 3,
+        "solution": "Erro de ligação (`multiple definition` no GCC, `duplicate symbol` no macOS). Cada arquivo compilado sozinho está certo; o conflito só aparece quando o linker junta os objetos e acha duas definições do mesmo símbolo."
+      }
+    },
+    {
+      "title": "Ler do teclado com std::cin",
+      "markdown": "`std::cin` é a entrada padrão. O operador `>>` tira um valor da entrada e guarda na variável, convertendo para o tipo dela:\n\n```cpp\n#include <iostream>\n\nint main()\n{\n    std::cout << \"Digite sua idade: \";\n    int idade{};\n    std::cin >> idade;\n    std::cout << \"Ano que vem você terá \" << idade + 1 << \" anos.\\n\";\n}\n```\n\nRegras que valem guardar (learncpp, lição 1.5):\n\n- `>>` **pula espaços e quebras de linha** no início e lê até o próximo espaço. Por isso, `std::cin >> nome` com a entrada `Ana Maria` guarda só `Ana`.\n- Dá para encadear: `std::cin >> a >> b;` lê dois valores separados por espaço ou Enter.\n- Se o usuário digitar algo que não cabe no tipo (letras para um `int`), a leitura falha, a variável recebe 0 e o `std::cin` fica em estado de erro. Tratar isso é assunto de um módulo posterior.\n\nO `int idade{};` com chaves vazias cria a variável já valendo 0. Na próxima aula você verá por que inicializar sempre é obrigatório em C++.",
+      "question": {
+        "type": "short_answer",
+        "id": "t2-cin-word",
+        "skill": "m1-io-basics",
+        "bloom": "apply",
+        "difficulty": 2,
+        "prompt": "O programa faz `std::string nome{}; std::cin >> nome; std::cout << nome;` e o usuário digita `Ana Maria` e Enter. O que é impresso?",
+        "hints": ["O `>>` para de ler em um certo caractere."],
+        "accepted": ["Ana"],
+        "solution": "Imprime `Ana`. O `>>` lê até o primeiro espaço; `Maria` continua esperando na entrada para a próxima leitura."
+      }
+    }
+  ],
+  "workedExample": {
+    "prompt": "Um colega montou o projeto com `main.cpp` (que chama `dobro(21)` depois de declarar `int dobro(int x);`) e `util.cpp` (que define `dobro`). Ele roda `g++ -std=c++20 -Wall -Wextra main.cpp -o programa` e recebe `undefined reference to 'dobro(int)'`. Diagnostique e corrija.",
+    "steps": [
+      "Classifique o erro: a mensagem fala de um símbolo (`dobro(int)`) e não aponta linha do código. É a cara de um erro de **ligação**, não de compilação.",
+      "Lembre o que o linker precisa: a definição de `dobro` em algum arquivo objeto. A declaração em `main.cpp` satisfez o compilador, mas a definição está em `util.cpp`.",
+      "Olhe o comando: só `main.cpp` foi passado. O `util.cpp` nunca foi compilado, então o objeto com a definição não existe na ligação.",
+      "Corrija incluindo o arquivo: `g++ -std=c++20 -Wall -Wextra main.cpp util.cpp -o programa`.",
+      "Confirme: o comando termina sem mensagens e `./programa` imprime `42`."
+    ]
+  },
+  "summary": [
+    "Todo programa começa em `main`; `#include <iostream>` traz `std::cout` e `std::cin`.",
+    "Compile com `g++ -std=c++20 -Wall -Wextra arquivos.cpp -o nome` e corrija todos os avisos.",
+    "Erro com arquivo e linha é de compilação; erro que fala de símbolo indefinido ou repetido é de ligação.",
+    "Erro de execução não tem mensagem do compilador: o programa roda e faz a coisa errada.",
+    "`std::cin >> x` pula espaços iniciais e lê até o próximo espaço."
+  ]
+}

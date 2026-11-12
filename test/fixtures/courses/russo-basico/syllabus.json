@@ -1,0 +1,584 @@
+{
+  "title": "Russo do zero: alfabeto, pronúncia e as primeiras conversas",
+  "summary": "Uma formação de russo para brasileiros adultos que nunca estudaram a língua. Você aprende a ler o alfabeto cirílico e a pronunciar com segurança, e depois monta as primeiras conversas do dia a dia: cumprimentar, se apresentar, contar, pagar, pedir um café e perguntar o caminho. O conteúdo organiza e explica o que cursos abertos e livros gratuitos ensinam (Wikibooks, Wikipedia, MIT OpenCourseWare, Universidade do Texas e Universidade de Chicago), e sempre manda você a eles para continuar.",
+  "results": [
+    "Ao final você consegue ler em voz alta palavras e frases curtas em cirílico, com acento e redução das vogais razoáveis.",
+    "Ao final você consegue se apresentar, cumprimentar de modo formal e informal e fazer perguntas simples.",
+    "Ao final você consegue contar até cem e entender e dizer preços em rublos.",
+    "Ao final você consegue usar o nominativo, o acusativo e o preposicional nas frases mais comuns e conjugar verbos regulares no presente.",
+    "Ao final você consegue pedir algo no café, comprar e perguntar como chegar a um lugar, em diálogos curtos."
+  ],
+  "prerequisites": ["Nenhum: basta saber ler em português e ter cerca de 4 horas por semana."],
+  "modules": [
+    {
+      "title": "Alfabeto e sons",
+      "goal": "Reconhecer as 33 letras do cirílico, associar cada uma ao seu som e ler palavras simples aplicando acento, redução das vogais e sonoridade.",
+      "skills": [
+        {
+          "id": "m1-reconhecer-letras",
+          "name": "Reconhecer as letras do alfabeto cirílico e separá-las em amigas, falsas amigas e novas",
+          "bloom": "remember"
+        },
+        {
+          "id": "m1-sons-das-letras",
+          "name": "Associar cada letra ao seu som aproximado em português",
+          "bloom": "understand"
+        },
+        {
+          "id": "m1-acento-e-reducao",
+          "name": "Explicar o papel do acento e da redução das vogais átonas",
+          "bloom": "understand"
+        },
+        {
+          "id": "m1-sinais-e-sonoridade",
+          "name": "Explicar o sinal suave, o sinal duro e a perda de sonoridade no fim da palavra",
+          "bloom": "understand"
+        },
+        {
+          "id": "m1-ler-palavras",
+          "name": "Ler em voz alta palavras curtas em cirílico",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "O cirílico não é tão estranho: três grupos de letras",
+          "goal": "Ver o alfabeto como três grupos (amigas, falsas amigas e novas) para começar a ler já na primeira semana.",
+          "skills": ["m1-reconhecer-letras", "m1-sons-das-letras"]
+        },
+        {
+          "type": "text",
+          "title": "As 33 letras e os seus sons",
+          "goal": "Conhecer o som de cada letra, as duas famílias de vogais e as letras sem som próprio.",
+          "skills": ["m1-reconhecer-letras", "m1-sons-das-letras"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: reconhecer letras e sons",
+          "goal": "Praticar a identificação das letras e a leitura de palavras formadas por elas.",
+          "skills": ["m1-reconhecer-letras", "m1-sons-das-letras"]
+        },
+        {
+          "type": "text",
+          "title": "Acento, vogais fracas, sonoridade e sinais",
+          "goal": "Ajustar a leitura letra a letra com acento, redução, sonoridade e o sinal suave.",
+          "skills": ["m1-acento-e-reducao", "m1-sinais-e-sonoridade", "m1-ler-palavras"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: ler palavras de verdade",
+          "goal": "Ler palavras completas, aplicando todas as regras do módulo.",
+          "skills": ["m1-acento-e-reducao", "m1-sinais-e-sonoridade", "m1-ler-palavras"]
+        }
+      ],
+      "project": {
+        "title": "Grave-se lendo",
+        "prompt": "Escolha 15 palavras da lista do módulo (por exemplo: мама, друг, вода, хлеб, ресторан, метро, студент, хорошо, спасибо, борщ, школа, Россия, такси, парк, ночь). Grave um áudio de celular lendo cada uma duas vezes, devagar. Depois ouça o áudio das mesmas palavras nas fontes do módulo (Wikibooks Russian/Alphabet e Help:IPA/Russian) e anote, ao lado de cada palavra, onde a sua leitura diferiu: acento, vogal fraca ou consoante final.",
+        "rubric": [
+          "Lê todas as 15 palavras sem confundir as falsas amigas (В, Н, Р, С, У, Х).",
+          "Marca em cada palavra de mais de uma sílaba onde está o acento.",
+          "Aplica a redução de о e е átonos em pelo menos três palavras.",
+          "Registra por escrito ao menos três diferenças entre a própria leitura e a de referência."
+        ]
+      }
+    },
+    {
+      "title": "Leitura e escrita de palavras e placas",
+      "goal": "Ler palavras internacionais, letra de mão e placas e rótulos simples do cotidiano.",
+      "skills": [
+        {
+          "id": "m2-palavras-internacionais",
+          "name": "Reconhecer palavras russas parecidas com o português ou o inglês",
+          "bloom": "remember"
+        },
+        {
+          "id": "m2-letra-de-mao",
+          "name": "Ler e escrever a letra de mão cirílica",
+          "bloom": "apply"
+        },
+        {
+          "id": "m2-ler-placas",
+          "name": "Ler placas, cardápios e rótulos simples",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Palavras que você já sabe em russo",
+          "goal": "Descobrir quantas palavras russas já são reconhecíveis por quem lê cirílico.",
+          "skills": ["m2-palavras-internacionais"]
+        },
+        {
+          "type": "text",
+          "title": "Letra de imprensa e letra de mão",
+          "goal": "Escrever as letras à mão e perceber as formas que mudam.",
+          "skills": ["m2-letra-de-mao"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: palavras internacionais e letra de mão",
+          "goal": "Ler palavras internacionais e transcrever palavras curtas.",
+          "skills": ["m2-palavras-internacionais", "m2-letra-de-mao"]
+        },
+        {
+          "type": "text",
+          "title": "Placas, cardápios e rótulos",
+          "goal": "Ler vocabulário de placas: вход, выход, открыто, закрыто, аптека, магазин.",
+          "skills": ["m2-ler-placas"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: ler placas e cardápios",
+          "goal": "Ler placas e cardápios reais e entender o essencial.",
+          "skills": ["m2-ler-placas", "m2-palavras-internacionais"]
+        }
+      ],
+      "project": {
+        "title": "A rua em cirílico",
+        "prompt": "Procure na internet cinco fotos de ruas de cidades russas com placas e um cardápio. Para cada foto, copie à mão (letra de mão) três palavras, transcreva para letras latinas e escreva o que acha que significam. Confira com um dicionário aberto.",
+        "rubric": [
+          "Copia à mão pelo menos 15 palavras com letra legível.",
+          "Transcreve corretamente a maior parte das palavras.",
+          "Identifica pelo menos cinco palavras internacionais."
+        ]
+      }
+    },
+    {
+      "title": "Saudações e apresentação",
+      "goal": "Cumprimentar, se apresentar e fazer perguntas pessoais simples, com a distinção entre ты e вы.",
+      "skills": [
+        {
+          "id": "m3-saudacoes",
+          "name": "Usar saudações e despedidas formais e informais",
+          "bloom": "apply"
+        },
+        {
+          "id": "m3-apresentacao",
+          "name": "Dizer nome, origem e profissão sem o verbo ser no presente",
+          "bloom": "apply"
+        },
+        {
+          "id": "m3-ty-e-vy",
+          "name": "Escolher entre ты e вы conforme a situação",
+          "bloom": "understand"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Olá em russo: informal e formal",
+          "goal": "Entender quando usar привет e quando usar здравствуйте.",
+          "skills": ["m3-saudacoes", "m3-ty-e-vy"]
+        },
+        {
+          "type": "text",
+          "title": "Saudações e o tratamento ты e вы",
+          "goal": "Consolidar saudações, despedidas e a regra de ты e вы.",
+          "skills": ["m3-saudacoes", "m3-ty-e-vy"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: saudações",
+          "goal": "Escolher a saudação certa para cada situação.",
+          "skills": ["m3-saudacoes", "m3-ty-e-vy"]
+        },
+        {
+          "type": "text",
+          "title": "Eu sou..., eu venho de...: a apresentação",
+          "goal": "Construir frases de apresentação sem o verbo ser.",
+          "skills": ["m3-apresentacao"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: apresentar-se",
+          "goal": "Montar e corrigir frases de apresentação.",
+          "skills": ["m3-apresentacao", "m3-saudacoes"]
+        }
+      ],
+      "project": {
+        "title": "Um diálogo de apresentação",
+        "prompt": "Escreva e leia em voz alta, gravando, um diálogo de 8 falas entre duas pessoas que se conhecem: uma situação informal (ты) e uma formal (вы). Inclua saudação, nome, origem, profissão e despedida.",
+        "rubric": [
+          "Usa ты no diálogo informal e вы no formal, sem misturar.",
+          "Inclui nome, origem e profissão em frases sem o verbo ser.",
+          "O áudio é claro e respeita o acento das palavras."
+        ]
+      }
+    },
+    {
+      "title": "Números e preços",
+      "goal": "Contar até cem e entender e dizer preços em rublos.",
+      "skills": [
+        {
+          "id": "m4-numeros-ate-100",
+          "name": "Contar até cem em russo",
+          "bloom": "remember"
+        },
+        {
+          "id": "m4-rublo-e-numero",
+          "name": "Escolher a forma de рубль conforme o número",
+          "bloom": "apply"
+        },
+        {
+          "id": "m4-perguntar-preco",
+          "name": "Perguntar e entender um preço",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Contar em russo de 1 a 10",
+          "goal": "Ouvir e associar os primeiros números.",
+          "skills": ["m4-numeros-ate-100"]
+        },
+        {
+          "type": "text",
+          "title": "De onze a cem",
+          "goal": "Formar as dezenas e os números compostos.",
+          "skills": ["m4-numeros-ate-100"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: números",
+          "goal": "Ler e escrever números em russo.",
+          "skills": ["m4-numeros-ate-100"]
+        },
+        {
+          "type": "text",
+          "title": "Rublos e preços",
+          "goal": "Aprender a forma de рубль (1; 2 a 4; 5 ou mais) e a pergunta сколько стоит.",
+          "skills": ["m4-rublo-e-numero", "m4-perguntar-preco"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: preços",
+          "goal": "Resolver situações de preço.",
+          "skills": ["m4-rublo-e-numero", "m4-perguntar-preco", "m4-numeros-ate-100"]
+        }
+      ],
+      "project": {
+        "title": "A lista de compras com preços",
+        "prompt": "Monte uma lista de cinco itens de um mercado, com preço em rublos escrito por extenso em russo. Diga em voz alta (gravando) a pergunta e a resposta para cada item.",
+        "rubric": [
+          "Escreve corretamente cinco números em russo.",
+          "Usa a forma certa de рубль em cada preço.",
+          "Faz a pergunta сколько стоит em cada item."
+        ]
+      }
+    },
+    {
+      "title": "Casos básicos: o essencial",
+      "goal": "Entender a ideia de caso e usar nominativo, acusativo e preposicional nos usos mais frequentes.",
+      "skills": [
+        {
+          "id": "m5-ideia-de-caso",
+          "name": "Explicar por que o russo muda o final das palavras",
+          "bloom": "understand"
+        },
+        {
+          "id": "m5-acusativo",
+          "name": "Formar o acusativo dos substantivos femininos em -а e dos inanimados",
+          "bloom": "apply"
+        },
+        {
+          "id": "m5-preposicional",
+          "name": "Usar в e на com o caso preposicional para lugar",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "Por que o final das palavras muda?",
+          "goal": "Entender a lógica dos casos com exemplos simples.",
+          "skills": ["m5-ideia-de-caso"]
+        },
+        {
+          "type": "text",
+          "title": "Nominativo e acusativo",
+          "goal": "Ver o acusativo como o objeto direto.",
+          "skills": ["m5-ideia-de-caso", "m5-acusativo"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: acusativo",
+          "goal": "Escolher e formar o acusativo.",
+          "skills": ["m5-acusativo"]
+        },
+        {
+          "type": "text",
+          "title": "Onde? O caso preposicional",
+          "goal": "Formar o preposicional com в e на.",
+          "skills": ["m5-preposicional"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: lugar e objeto",
+          "goal": "Combinar acusativo e preposicional em frases.",
+          "skills": ["m5-preposicional", "m5-acusativo"]
+        }
+      ],
+      "project": {
+        "title": "Onde está o quê",
+        "prompt": "Escreva dez frases curtas sobre o seu dia: cinco com um objeto direto (Я читаю книгу) e cinco com um lugar (Я в магазине). Grife o final que mudou em cada palavra.",
+        "rubric": [
+          "Cinco frases com acusativo correto.",
+          "Cinco frases com preposicional correto.",
+          "Identifica o final que mudou em cada palavra."
+        ]
+      }
+    },
+    {
+      "title": "Verbos no presente",
+      "goal": "Conjugar verbos regulares no presente e formar frases afirmativas e negativas.",
+      "skills": [
+        {
+          "id": "m6-primeira-conjugacao",
+          "name": "Conjugar verbos da primeira conjugação no presente",
+          "bloom": "apply"
+        },
+        {
+          "id": "m6-segunda-conjugacao",
+          "name": "Conjugar verbos da segunda conjugação no presente",
+          "bloom": "apply"
+        },
+        {
+          "id": "m6-negacao",
+          "name": "Negar uma frase com не",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "O presente em russo: duas famílias de verbos",
+          "goal": "Ver as duas conjugações como padrões.",
+          "skills": ["m6-primeira-conjugacao", "m6-segunda-conjugacao"]
+        },
+        {
+          "type": "text",
+          "title": "Primeira conjugação: читать, работать, знать",
+          "goal": "Conjugar e usar os verbos regulares em -ать.",
+          "skills": ["m6-primeira-conjugacao"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: primeira conjugação",
+          "goal": "Conjugar e completar frases.",
+          "skills": ["m6-primeira-conjugacao", "m6-negacao"]
+        },
+        {
+          "type": "text",
+          "title": "Segunda conjugação: говорить, любить",
+          "goal": "Conjugar os verbos em -ить e negar.",
+          "skills": ["m6-segunda-conjugacao", "m6-negacao"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: as duas conjugações",
+          "goal": "Misturar as duas famílias em frases do dia a dia.",
+          "skills": ["m6-primeira-conjugacao", "m6-segunda-conjugacao", "m6-negacao"]
+        }
+      ],
+      "project": {
+        "title": "O meu dia em russo",
+        "prompt": "Escreva um texto de 8 frases sobre a sua rotina, usando pelo menos quatro verbos diferentes e duas frases negativas. Leia em voz alta.",
+        "rubric": [
+          "Usa pelo menos quatro verbos conjugados corretamente.",
+          "Inclui duas frases negativas com не.",
+          "A leitura em voz alta respeita o acento."
+        ]
+      }
+    },
+    {
+      "title": "Situações do dia a dia",
+      "goal": "Pedir no café, perguntar o caminho e comprar, em diálogos curtos.",
+      "skills": [
+        {
+          "id": "m7-pedir-no-cafe",
+          "name": "Pedir comida e bebida com можно e пожалуйста",
+          "bloom": "apply"
+        },
+        {
+          "id": "m7-transporte",
+          "name": "Perguntar o caminho e entender indicações simples",
+          "bloom": "apply"
+        },
+        {
+          "id": "m7-comprar",
+          "name": "Comprar algo e entender o total a pagar",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "video",
+          "title": "No café: o pedido",
+          "goal": "Ver um diálogo de café do começo ao fim.",
+          "skills": ["m7-pedir-no-cafe"]
+        },
+        {
+          "type": "text",
+          "title": "Pedir e pagar",
+          "goal": "Frases úteis para pedir e pagar.",
+          "skills": ["m7-pedir-no-cafe", "m7-comprar"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: café e compras",
+          "goal": "Montar diálogos de pedido e compra.",
+          "skills": ["m7-pedir-no-cafe", "m7-comprar"]
+        },
+        {
+          "type": "text",
+          "title": "Transporte: metrô, ônibus e táxi",
+          "goal": "Perguntar o caminho e o preço da passagem.",
+          "skills": ["m7-transporte"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: caminho e transporte",
+          "goal": "Entender indicações e responder.",
+          "skills": ["m7-transporte"]
+        }
+      ],
+      "project": {
+        "title": "Três cenas do dia a dia",
+        "prompt": "Escreva e grave três diálogos curtos (café, compra e transporte), de cerca de 6 falas cada.",
+        "rubric": [
+          "Os três diálogos têm começo, pedido e despedida.",
+          "Usa пожалуйста e спасибо de forma natural.",
+          "Inclui um preço e uma pergunta de direção."
+        ]
+      }
+    },
+    {
+      "title": "Revisão e conversa",
+      "goal": "Rever tudo e conversar numa situação completa, do cumprimento ao pagamento.",
+      "skills": [
+        {
+          "id": "m8-revisar-leitura",
+          "name": "Rever leitura, acento e redução das vogais",
+          "bloom": "apply"
+        },
+        {
+          "id": "m8-conversa-completa",
+          "name": "Conduzir uma conversa curta do cumprimento ao pagamento",
+          "bloom": "apply"
+        }
+      ],
+      "lessons": [
+        {
+          "type": "text",
+          "title": "Revisão: alfabeto, pronúncia e frases-chave",
+          "goal": "Rever os pontos mais frequentes de erro.",
+          "skills": ["m8-revisar-leitura"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: revisão geral",
+          "goal": "Misturar leitura, números e verbos.",
+          "skills": ["m8-revisar-leitura", "m8-conversa-completa"]
+        },
+        {
+          "type": "video",
+          "title": "Uma conversa do começo ao fim",
+          "goal": "Ver e comentar uma conversa completa.",
+          "skills": ["m8-conversa-completa"]
+        },
+        {
+          "type": "exercises",
+          "title": "Treino: monte a sua conversa",
+          "goal": "Ordenar e completar uma conversa.",
+          "skills": ["m8-conversa-completa"]
+        }
+      ],
+      "project": {
+        "title": "A minha conversa em russo",
+        "prompt": "Grave-se em uma conversa de 12 falas, representando as duas pessoas: cumprimento, apresentação, pedido, preço e despedida.",
+        "rubric": [
+          "Cobre as cinco etapas: cumprimento, apresentação, pedido, preço e despedida.",
+          "A pronúncia respeita acento e redução das vogais.",
+          "Usa corretamente ao menos um verbo no presente e uma frase com preço."
+        ]
+      }
+    }
+  ],
+  "bibliography": [
+    {
+      "title": "Russian/Alphabet (Wikibooks, livro aberto de russo)",
+      "author": "Colaboradores da Wikibooks",
+      "institution": "Wikibooks (Wikimedia)",
+      "type": "book",
+      "url": "https://en.wikibooks.org/wiki/Russian/Alphabet",
+      "license": "cc-by-sa",
+      "reason": "A lição de alfabeto mais direta e gratuita: tabela com som de cada letra, regras de sonoridade, sinais, palatalização e redução das vogais, com áudio. É a base do módulo 1."
+    },
+    {
+      "title": "Russian (Wikibooks, livro aberto de russo)",
+      "author": "Colaboradores da Wikibooks",
+      "institution": "Wikibooks (Wikimedia)",
+      "type": "book",
+      "url": "https://en.wikibooks.org/wiki/Russian",
+      "license": "cc-by-sa",
+      "reason": "Curso aberto completo, com texto principal, suplemento de gramática, apêndice e vocabulário; serve para seguir estudando depois de cada módulo."
+    },
+    {
+      "title": "Russian alphabet (Wikipedia)",
+      "author": "Colaboradores da Wikipedia",
+      "institution": "Wikipedia (Wikimedia)",
+      "type": "article",
+      "url": "https://en.wikipedia.org/wiki/Russian_alphabet",
+      "license": "cc-by-sa",
+      "reason": "Tabela das 33 letras com forma de imprensa e de mão, o papel do acento agudo e do Ё, e a história do alfabeto."
+    },
+    {
+      "title": "Appendix:Russian alphabet (Wiktionary)",
+      "author": "Colaboradores do Wiktionary",
+      "institution": "Wiktionary (Wikimedia)",
+      "type": "documentation",
+      "url": "https://en.wiktionary.org/wiki/Appendix:Russian_alphabet",
+      "license": "cc-by-sa",
+      "reason": "Referência com os nomes das letras, a pronúncia em IPA e a comparação entre os sistemas de transliteração para o alfabeto latino."
+    },
+    {
+      "title": "Help:IPA/Russian (Wikipedia)",
+      "author": "Colaboradores da Wikipedia",
+      "institution": "Wikipedia (Wikimedia)",
+      "type": "documentation",
+      "url": "https://en.wikipedia.org/wiki/Help:IPA/Russian",
+      "license": "cc-by-sa",
+      "reason": "Chave de pronúncia com consoantes duras e suaves, vogais tônicas e átonas e exemplos com áudio; ajuda a conferir a redução das vogais."
+    },
+    {
+      "title": "Телемосты (Telebridges) Russian Conversation Exchange Site, RES.21G-601",
+      "author": "Maria Khotimsky",
+      "institution": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/res-21g-601-telebridges-russian-conversation-exchange-site-fall-2021/",
+      "license": "cc-by-nc-sa",
+      "reason": "Material aberto do MIT com temas de conversa organizados por nível (padrão ACTFL); fonte para os módulos de conversa e para praticar com falantes."
+    },
+    {
+      "title": "Будем на связи: Open Textbook for Russian",
+      "author": "Universidade do Texas em Austin (COERLL e CREEES)",
+      "institution": "University of Texas at Austin",
+      "type": "book",
+      "url": "https://coerll.utexas.edu/coerll/project/%D0%B1%D1%83%D0%B4%D0%B5%D0%BC-%D0%BD%D0%B0-%D1%81%D0%B2%D1%8F%D0%B7%D0%B8-open-textbook-for-russian/",
+      "license": "unknown",
+      "reason": "Livro-texto aberto em dois volumes, de uma universidade que ensina russo de verdade; é o passo seguinte natural depois deste básico."
+    },
+    {
+      "title": "Между нами: free online Russian textbook",
+      "author": "Equipe do CEERES",
+      "institution": "University of Chicago, Center for East European and Russian/Eurasian Studies",
+      "type": "book",
+      "url": "https://mezhdunami.org/",
+      "license": "proprietary",
+      "reason": "Programa gratuito de primeiro ano, com lições, áudios, vocabulário e tabelas de casos e conjugações; boa fonte de diálogos para os módulos de situações do dia a dia."
+    }
+  ]
+}
