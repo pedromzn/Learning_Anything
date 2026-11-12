@@ -31,19 +31,19 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@fontsource-variable/fraunces": "5.2.8",
+    "@fontsource-variable/fraunces": "5.3.0",
     "@fontsource-variable/geist-mono": "5.3.0",
     "@fontsource-variable/instrument-sans": "5.3.0",
     "@fontsource-variable/unbounded": "5.3.0",
-    "@mediapipe/tasks-vision": "1.1.1",
+    "@mediapipe/tasks-vision": "1.2.2",
     "@phosphor-icons/react": "2.1.10",
-    "@remotion/bundler": "4.0.541",
-    "@remotion/renderer": "4.0.541",
-    "@tailwindcss/vite": "4.1.14",
+    "@remotion/bundler": "4.0.542",
+    "@remotion/renderer": "4.0.542",
+    "@tailwindcss/vite": "4.3.5",
     "@vitejs/plugin-react": "4.7.0",
     "express": "4.21.2",
-    "hls.js": "1.6.13",
-    "katex": "0.16.25",
+    "hls.js": "1.7.4",
+    "katex": "0.19.1",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "react-markdown": "9.1.0",
@@ -55,8 +55,8 @@
     "tailwindcss": "4.1.14",
     "tsx": "4.20.6",
     "vite": "6.3.6",
-    "zod": "4.1.12",
-    "zustand": "5.0.8"
+    "zod": "4.6.7",
+    "zustand": "5.1.0"
   },
   "devDependencies": {
     "@types/express": "4.17.21",
