@@ -1,0 +1,2203 @@
+{
+  "format": "learning-anything-course",
+  "version": 1,
+  "slug": "fisica-quantica",
+  "title": "Física quântica do zero",
+  "language": "pt-BR",
+  "exportedAt": "2026-11-12T20:35:57.934Z",
+  "author": "pedromzn",
+  "files": {
+    "brief.json": {
+      "topic": "Física quântica",
+      "scope": "Física quântica conceitual do zero, por curiosidade: luz e fótons, dualidade onda-partícula, átomo e níveis de energia, incerteza, superposição, medição, spin e emaranhamento, usando só a matemática do ensino médio",
+      "level": "basic",
+      "hoursPerWeek": 4,
+      "deadlineWeeks": 8,
+      "format": "balanced",
+      "hasComputer": true,
+      "readsEnglish": true,
+      "language": "pt-BR"
+    },
+    "dossier.json": {
+      "summary": "As boas fontes introdutórias contam a física quântica na ordem histórica e experimental: primeiro os fatos que a física clássica não explicava (radiação de corpo negro, efeito fotoelétrico, espectros de linhas dos átomos), depois as ideias que os explicaram (o quantum de Planck, o fóton de Einstein, o átomo de Bohr, as ondas de matéria de de Broglie) e só então a teoria nova: função de onda como amplitude de probabilidade, princípio da incerteza, superposição e medição. É assim no capítulo 6 e 7 do University Physics Volume 3 (OpenStax) e na parte inicial do curso 8.04 do MIT (Barton Zwiebach), que abre com as 'características-chave' da mecânica quântica: linearidade, superposição, probabilidade e emaranhamento, ilustradas com fótons em interferômetros. Spin entra pelo experimento de Stern-Gerlach (1922), que mostra um resultado discreto (dois pontos), e é a porta natural para sistemas de dois estados e emaranhamento, que textos como 'Quantum computing for the very curious' (Matuschak e Nielsen) apresentam sem cálculo pesado. Para um aluno de nível básico, que estuda por curiosidade 4 horas por semana, o foco é entender as ideias e os experimentos, com contas de ensino médio (E = hf, c = λf, λ = h/p, níveis de energia do hidrogênio) e sem equação de Schrödinger nem álgebra linear formal. Simulações gratuitas (PhET, da Universidade do Colorado) substituem o laboratório.",
+      "bullets": [
+        {
+          "title": "Luz como onda: frequência, comprimento de onda e cor",
+          "description": "A luz clássica como onda eletromagnética; a relação c = λf; o espectro visível e as cores; interferência na dupla fenda de Young como prova de comportamento ondulatório.",
+          "prerequisites": []
+        },
+        {
+          "title": "Radiação de corpo negro e o quantum de Planck",
+          "description": "Objetos quentes emitem luz cuja cor depende da temperatura; a teoria clássica previa energia infinita no ultravioleta; Planck (1900) supôs energia em pacotes E = nhf, com h = 6,626 × 10⁻³⁴ J·s.",
+          "prerequisites": [
+            "Luz como onda: frequência, comprimento de onda e cor"
+          ]
+        },
+        {
+          "title": "O fóton e o efeito fotoelétrico",
+          "description": "Luz arranca elétrons de metais; a energia do elétron depende da frequência, não da intensidade; existe frequência de corte; Einstein explica com fótons: K_max = hf − φ.",
+          "prerequisites": [
+            "Radiação de corpo negro e o quantum de Planck"
+          ]
+        },
+        {
+          "title": "Ondas de matéria de de Broglie",
+          "description": "Toda partícula com momento p tem comprimento de onda λ = h/p; a difração de elétrons (Davisson-Germer) confirma; por que não vemos a onda de uma bola de futebol.",
+          "prerequisites": [
+            "O fóton e o efeito fotoelétrico"
+          ]
+        },
+        {
+          "title": "Dualidade onda-partícula e a dupla fenda com partículas",
+          "description": "Elétrons enviados um a um formam, ponto a ponto, um padrão de interferência; observar por qual fenda passou apaga o padrão.",
+          "prerequisites": [
+            "Ondas de matéria de de Broglie"
+          ]
+        },
+        {
+          "title": "Espectros atômicos e o modelo de Bohr",
+          "description": "Gases emitem cores específicas (linhas); Bohr propõe órbitas com energias permitidas E_n = −13,6 eV/n² no hidrogênio; o fóton emitido tem a energia da diferença entre níveis.",
+          "prerequisites": [
+            "O fóton e o efeito fotoelétrico"
+          ]
+        },
+        {
+          "title": "Função de onda e probabilidade",
+          "description": "A interpretação de Born: o quadrado da função de onda dá a probabilidade de encontrar a partícula; a teoria prevê frequências estatísticas, não o resultado de uma medida isolada.",
+          "prerequisites": [
+            "Dualidade onda-partícula e a dupla fenda com partículas"
+          ]
+        },
+        {
+          "title": "Princípio da incerteza de Heisenberg",
+          "description": "Δx·Δp ≥ ħ/2: quanto mais localizado o pacote de onda, mais espalhado o momento; não é defeito do instrumento, é propriedade das ondas.",
+          "prerequisites": [
+            "Função de onda e probabilidade"
+          ]
+        },
+        {
+          "title": "Superposição e medição",
+          "description": "Um sistema pode estar numa combinação de estados; a medição dá um resultado definido com certa probabilidade; o interferômetro de Mach-Zehnder com um fóton e o gato de Schrödinger como ilustrações.",
+          "prerequisites": [
+            "Função de onda e probabilidade"
+          ]
+        },
+        {
+          "title": "Spin e o experimento de Stern-Gerlach",
+          "description": "Átomos de prata num campo magnético não uniforme se separam em dois feixes, não numa mancha contínua; o elétron tem spin 1/2, com duas possibilidades em cada eixo; medições em eixos diferentes.",
+          "prerequisites": [
+            "Superposição e medição"
+          ]
+        },
+        {
+          "title": "Emaranhamento",
+          "description": "Dois sistemas podem ter um estado conjunto em que os resultados das medidas são correlacionados sem que cada um tenha valor definido antes; não permite enviar mensagens mais rápido que a luz.",
+          "prerequisites": [
+            "Spin e o experimento de Stern-Gerlach"
+          ]
+        },
+        {
+          "title": "Qubits e aplicações",
+          "description": "O qubit como sistema de dois estados em superposição; ideia geral de computação quântica; aplicações cotidianas da física quântica (laser, LED, semicondutores).",
+          "prerequisites": [
+            "Emaranhamento"
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Achar que luz mais intensa arranca elétrons mais rápidos no efeito fotoelétrico (é a frequência que manda na energia de cada elétron).",
+        "Confundir intensidade (quantidade de fótons) com energia de cada fóton.",
+        "Pensar que luz vermelha tem mais energia por fóton que a azul por ter comprimento de onda maior.",
+        "Imaginar o elétron do átomo como um planetinha numa órbita bem definida, levando o modelo de Bohr ao pé da letra.",
+        "Achar que o princípio da incerteza é só uma limitação dos instrumentos de medida.",
+        "Entender superposição como 'a partícula está num lugar ou no outro e nós não sabemos'.",
+        "Pensar que 'observar' exige uma pessoa consciente olhando, em vez de qualquer interação que registre a informação.",
+        "Achar que o emaranhamento permite mandar mensagens instantâneas.",
+        "Esquecer de converter nanômetros em metros ou elétron-volts em joules nas contas."
+      ],
+      "possibleProjects": [
+        "Usar a simulação gratuita Photoelectric Effect, do PhET, para descobrir o comprimento de onda de corte de dois metais e comparar com a previsão de E = hf.",
+        "Olhar o reflexo de lâmpadas diferentes (incandescente, LED, fluorescente) num CD ou DVD e registrar se o espectro é contínuo ou em faixas.",
+        "Usar a simulação Quantum Wave Interference, do PhET, para montar o padrão da dupla fenda com partículas uma a uma e descrever o que muda ao pôr um detector numa fenda.",
+        "Montar uma tabela de 'fótons do dia a dia' (controle remoto infravermelho, luz vermelha, verde, azul, ultravioleta do sol) com frequência e energia de cada um.",
+        "Escrever uma explicação de uma página do experimento de Stern-Gerlach para um amigo que não estuda física.",
+        "Simular, com uma moeda e dados, as estatísticas de medição de um sistema de dois estados e comparar com a previsão de probabilidade."
+      ],
+      "references": [
+        {
+          "title": "University Physics Volume 3, capítulo 6: Photons and Matter Waves",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-introduction",
+          "license": "cc-by-nc-sa",
+          "reason": "Livro-texto aberto com a sequência clássica: corpo negro, fotoelétrico, Compton, Bohr, de Broglie e dualidade. Espinha dos módulos 1 a 3."
+        },
+        {
+          "title": "6.1 Blackbody Radiation (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-1-blackbody-radiation",
+          "license": "cc-by-nc-sa",
+          "reason": "Corpo negro, catástrofe do ultravioleta e a hipótese de Planck (E = nhf), com o valor da constante h."
+        },
+        {
+          "title": "6.2 Photoelectric Effect (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-2-photoelectric-effect",
+          "license": "cc-by-nc-sa",
+          "reason": "As três observações que a física clássica não explica e a equação de Einstein K_max = hf − φ, com tabela de funções trabalho."
+        },
+        {
+          "title": "6.4 Bohr's Model of the Hydrogen Atom (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-4-bohrs-model-of-the-hydrogen-atom",
+          "license": "cc-by-nc-sa",
+          "reason": "Espectros de linhas, postulados de Bohr e níveis de energia do hidrogênio (−13,6 eV/n²)."
+        },
+        {
+          "title": "6.5 De Broglie's Matter Waves (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-5-de-broglies-matter-waves",
+          "license": "cc-by-nc-sa",
+          "reason": "λ = h/p, o experimento de Davisson-Germer e a difração de nêutrons e moléculas de C60."
+        },
+        {
+          "title": "6.6 Wave-Particle Duality (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-6-wave-particle-duality",
+          "license": "cc-by-nc-sa",
+          "reason": "Dupla fenda com luz e com elétrons enviados um a um (Tonomura, 1989)."
+        },
+        {
+          "title": "7.1 Wave Functions (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions",
+          "license": "cc-by-nc-sa",
+          "reason": "Interpretação de Born (probabilidade), colapso na visão de Copenhague, gato de Schrödinger."
+        },
+        {
+          "title": "7.2 The Heisenberg Uncertainty Principle (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/7-2-the-heisenberg-uncertainty-principle",
+          "license": "cc-by-nc-sa",
+          "reason": "Δx·Δp ≥ ħ/2 explicado por pacotes de onda, e a estimativa da energia do hidrogênio pela incerteza."
+        },
+        {
+          "title": "8.3 Electron Spin (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/8-3-electron-spin",
+          "license": "cc-by-nc-sa",
+          "reason": "Spin 1/2 do elétron e o experimento de Stern-Gerlach com átomos de prata (duas faixas na tela)."
+        },
+        {
+          "title": "8.04 Quantum Physics I (Spring 2016)",
+          "author": "Barton Zwiebach",
+          "institution": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/",
+          "license": "cc-by-nc-sa",
+          "reason": "Curso universitário completo, com vídeos. Referência para quem quiser ir além do básico depois deste curso."
+        },
+        {
+          "title": "8.04 Quantum Physics I: Lecture Notes",
+          "author": "Barton Zwiebach",
+          "institution": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes",
+          "license": "cc-by-nc-sa",
+          "reason": "Notas 1 a 3: características-chave da mecânica quântica (superposição, emaranhamento), fótons no interferômetro de Mach-Zehnder e efeito fotoelétrico. Inspira a ordem dos módulos 6 a 8."
+        },
+        {
+          "title": "Photoelectric Effect (simulação)",
+          "author": "PhET Interactive Simulations",
+          "institution": "University of Colorado Boulder",
+          "type": "site",
+          "url": "https://phet.colorado.edu/en/simulations/photoelectric",
+          "license": "unknown",
+          "reason": "Simulação gratuita para variar metal, cor e intensidade da luz e ver o efeito na corrente. Base do projeto do módulo 1."
+        },
+        {
+          "title": "Quantum Wave Interference (simulação)",
+          "author": "PhET Interactive Simulations",
+          "institution": "University of Colorado Boulder",
+          "type": "site",
+          "url": "https://phet.colorado.edu/en/simulations/quantum-wave-interference",
+          "license": "unknown",
+          "reason": "Dupla fenda com fótons, elétrons e átomos, uma partícula de cada vez. Base do projeto do módulo 2."
+        },
+        {
+          "title": "Stern–Gerlach experiment",
+          "author": "Colaboradores da Wikipedia",
+          "institution": "Wikipedia",
+          "type": "article",
+          "url": "https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment",
+          "license": "cc-by-sa",
+          "reason": "História (1922) e descrição do experimento, incluindo medições sucessivas em eixos diferentes."
+        },
+        {
+          "title": "Double-slit experiment",
+          "author": "Colaboradores da Wikipedia",
+          "institution": "Wikipedia",
+          "type": "article",
+          "url": "https://en.wikipedia.org/wiki/Double-slit_experiment",
+          "license": "cc-by-sa",
+          "reason": "Panorama do experimento de Young (1801) às versões com partículas e com detecção de 'qual fenda'."
+        },
+        {
+          "title": "Quantum computing for the very curious",
+          "author": "Andy Matuschak e Michael Nielsen",
+          "institution": "quantum.country",
+          "type": "site",
+          "url": "https://quantum.country/qcvc",
+          "license": "unknown",
+          "reason": "Introdução gratuita a qubits, superposição, medição e estados emaranhados, escrita para iniciantes curiosos. Base do módulo 8."
+        }
+      ]
+    },
+    "module-1/checkpoint.json": {
+      "items": [
+        {
+          "type": "multiple_choice",
+          "id": "cp-maior-lambda",
+          "skill": "m1-luz-como-onda",
+          "bloom": "understand",
+          "difficulty": 1,
+          "prompt": "A luz B tem frequência de $6 \\times 10^{14}$ Hz e a luz A, de $4 \\times 10^{14}$ Hz. Qual tem o maior comprimento de onda?",
+          "hints": [],
+          "choices": [
+            {
+              "text": "A luz B",
+              "explanation": "B tem frequência maior, então comprimento de onda menor."
+            },
+            {
+              "text": "A luz A",
+              "explanation": "Certo: com $c = \\lambda f$ fixo, frequência menor dá comprimento de onda maior."
+            },
+            {
+              "text": "As duas têm o mesmo",
+              "explanation": "Frequências diferentes no vácuo dão comprimentos de onda diferentes."
+            }
+          ],
+          "correct": 1,
+          "solution": "Como $c = \\lambda f$ é o mesmo para as duas, a de menor frequência (A) tem o maior comprimento de onda."
+        },
+        {
+          "type": "numeric",
+          "id": "cp-ev-800",
+          "skill": "m1-energia-do-foton",
+          "bloom": "apply",
+          "difficulty": 2,
+          "prompt": "Qual é a energia, em eV, de um fóton infravermelho de 800 nm? (Use $E \\approx 1240/\\lambda$, com $\\lambda$ em nm.)",
+          "hints": [],
+          "answer": 1.55,
+          "tolerance": 0.03,
+          "unit": "eV",
+          "solution": "$E \\approx 1240/800 = 1{,}55$ eV."
+        },
+        {
+          "type": "true_false",
+          "id": "cp-vf-dobrar-freq",
+          "skill": "m1-energia-do-foton",
+          "bloom": "understand",
+          "difficulty": 1,
+          "prompt": "Verdadeiro ou falso: dobrar a frequência de uma luz dobra a energia de cada fóton dela.",
+          "hints": [],
+          "correct": true,
+          "solution": "Verdadeiro: $E = hf$ é proporcional à frequência."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "cp-verde-fraca",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Uma luz verde fraca arranca elétrons de um metal, mas uma luz vermelha muito forte não arranca nenhum. Qual é a explicação?",
+          "hints": [],
+          "choices": [
+            {
+              "text": "A luz vermelha forte aquece o metal e prende os elétrons",
+              "explanation": "Aquecimento não é o que decide o efeito; o que decide é a energia de cada fóton."
+            },
+            {
+              "text": "A luz verde viaja mais rápido que a vermelha",
+              "explanation": "No vácuo, todas as cores viajam à mesma velocidade."
+            },
+            {
+              "text": "Cada fóton verde tem energia acima da função trabalho; cada fóton vermelho, abaixo",
+              "explanation": "Certo: cada elétron recebe um fóton, e só o fóton verde tem energia suficiente."
+            },
+            {
+              "text": "A luz vermelha forte tem fótons demais e eles se atrapalham",
+              "explanation": "Mais fótons só significariam mais elétrons, se cada fóton tivesse energia suficiente."
+            }
+          ],
+          "correct": 2,
+          "solution": "Cada elétron recebe a energia de um único fóton. O fóton verde tem $hf$ maior que a função trabalho do metal; o vermelho, menor. Mandar muitos fótons vermelhos não soma as energias num elétron."
+        },
+        {
+          "type": "numeric",
+          "id": "cp-kmax",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "apply",
+          "difficulty": 2,
+          "prompt": "Uma luz ultravioleta de 310 nm atinge um metal com função trabalho de 2,8 eV. Qual é a energia cinética máxima dos elétrons, em eV?",
+          "hints": [],
+          "answer": 1.2,
+          "tolerance": 0.03,
+          "unit": "eV",
+          "solution": "Energia do fóton: $1240/310 = 4{,}0$ eV. $K_{\\max} = 4{,}0 - 2{,}8 = 1{,}2$ eV."
+        },
+        {
+          "type": "numeric",
+          "id": "cp-lambda-corte",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "apply",
+          "difficulty": 3,
+          "prompt": "Um metal tem função trabalho de 2,48 eV. Acima de qual comprimento de onda, em nm, a luz deixa de arrancar elétrons dele?",
+          "hints": [],
+          "answer": 500,
+          "tolerance": 3,
+          "unit": "nm",
+          "solution": "No corte, a energia do fóton é igual à função trabalho: $\\lambda_0 \\approx 1240/2{,}48 = 500$ nm. Comprimentos de onda maiores dão fótons com menos energia, e nada sai."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "cp-catastrofe",
+          "skill": "m1-energia-do-foton",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "O que foi a 'catástrofe do ultravioleta' e como Planck a resolveu?",
+          "hints": [],
+          "choices": [
+            {
+              "text": "A luz ultravioleta do Sol queimava os instrumentos; Planck inventou um filtro",
+              "explanation": "A catástrofe foi um fracasso de teoria, não um problema de equipamento."
+            },
+            {
+              "text": "Ninguém conseguia medir o ultravioleta; Planck criou um detector",
+              "explanation": "O problema era a previsão teórica, que dava um resultado impossível."
+            },
+            {
+              "text": "A luz ultravioleta não fazia interferência; Planck provou que fazia",
+              "explanation": "A interferência da luz já era conhecida; o problema era a luz de corpos quentes."
+            },
+            {
+              "text": "A teoria clássica previa energia sem limite no ultravioleta; Planck supôs energia em pacotes $hf$",
+              "explanation": "Certo: com pacotes de tamanho $hf$, a emissão cai nas frequências altas, como nas medidas."
+            }
+          ],
+          "correct": 3,
+          "solution": "A física clássica previa que um corpo negro emitiria cada vez mais energia nas frequências altas, sem limite. Planck (1900) supôs que a energia só é trocada em pacotes $hf$, e a fórmula passou a bater com as medidas."
+        }
+      ]
+    },
+    "module-1/feynman.json": {
+      "topic": "Por que a luz, que era onda, também é feita de fótons",
+      "request": "Explique para um amigo curioso, que nunca estudou física, por que os físicos achavam que a luz era uma onda, o que deixou de se encaixar e como a ideia do fóton resolveu. Use as suas palavras e, se puder, um exemplo do dia a dia.",
+      "opening": "Oi, eu sou a Ana. Sempre ouvi que a luz é uma onda, mas aí falam em fóton e eu me perco. Me explica do começo: por que todo mundo achava que a luz era onda?",
+      "keyPoints": [
+        {
+          "id": "luz-onda",
+          "idea": "A luz se comporta como onda porque faz interferência: na experiência das duas fendas de Young aparecem faixas claras e escuras.",
+          "cues": [
+            "interferencia",
+            "duas fendas",
+            "fenda dupla",
+            "young",
+            "faixas claras",
+            "faixas escuras",
+            "franjas"
+          ],
+          "question": "Que experimento convenceu os físicos de que a luz era uma onda, e o que aparecia nele?"
+        },
+        {
+          "id": "frequencia-cor",
+          "idea": "A cor da luz depende da frequência e do comprimento de onda, ligados por c igual a lambda vezes f: comprimento de onda maior, frequência menor.",
+          "cues": [
+            "frequencia",
+            "comprimento de onda",
+            "lambda",
+            "velocidade da luz",
+            "cor da luz",
+            "hertz"
+          ],
+          "question": "O que muda entre a luz vermelha e a violeta, em termos de onda?"
+        },
+        {
+          "id": "fatos-que-nao-fechavam",
+          "idea": "A física da onda falhou em fatos como a luz do corpo negro, que previa energia infinita no ultravioleta (a catástrofe do ultravioleta), e o efeito fotoelétrico.",
+          "cues": [
+            "corpo negro",
+            "catastrofe do ultravioleta",
+            "ultravioleta",
+            "energia infinita",
+            "efeito fotoeletrico",
+            "ferro em brasa"
+          ],
+          "question": "Se a ideia de onda era tão boa, o que deu errado? Que fato ela não conseguia explicar?"
+        },
+        {
+          "id": "foton-energia",
+          "idea": "A luz troca energia em pacotes, os fótons, e cada fóton tem energia E igual a h vezes a frequência, com h a constante de Planck.",
+          "cues": [
+            "foton",
+            "fotons",
+            "pacote",
+            "pacotes",
+            "quantum",
+            "constante de planck",
+            "h vezes",
+            "planck",
+            "agá vezes"
+          ],
+          "question": "E de onde veio a ideia do fóton? Do que depende a energia de cada um?"
+        },
+        {
+          "id": "fotoeletrico-frequencia",
+          "idea": "No efeito fotoelétrico, cada fóton entrega sua energia a um elétron: a frequência decide se o elétron sai e com que energia; a intensidade só muda quantos elétrons saem.",
+          "cues": [
+            "eletron",
+            "eletrons",
+            "intensidade",
+            "frequencia de corte",
+            "funcao trabalho",
+            "um eletron",
+            "arrancar",
+            "moeda"
+          ],
+          "question": "Se eu iluminar um metal com uma luz vermelha muito forte e ele não soltar elétrons, por que isso acontece?"
+        }
+      ],
+      "commonMistakes": [
+        {
+          "error": "Luz mais forte, mais intensa, tem fótons com mais energia.",
+          "correction": "A intensidade muda quantos fótons chegam por segundo; a energia de cada fóton depende só da frequência."
+        },
+        {
+          "error": "A luz deixou de ser onda: agora ela é só partícula.",
+          "correction": "A luz continua fazendo interferência como onda; ela também troca energia em pacotes. As duas descrições valem."
+        },
+        {
+          "error": "Comprimento de onda maior quer dizer frequência maior.",
+          "correction": "É o contrário: como c é igual a lambda vezes f, comprimento de onda maior significa frequência menor."
+        },
+        {
+          "error": "A luz vermelha tem mais energia que a azul porque é mais quente.",
+          "correction": "O fóton azul tem frequência maior, então carrega mais energia que o vermelho."
+        }
+      ],
+      "questions": [
+        "Me dá um exemplo do dia a dia em que a cor da luz mostra a temperatura de alguma coisa.",
+        "Por que um fóton de luz azul carrega mais energia que um de luz vermelha?",
+        "E se a luz fosse só onda, o que você esperaria ver no efeito fotoelétrico?",
+        "Por que dá para usar uma comparação com moedas para explicar a intensidade e a frequência?"
+      ],
+      "skills": [
+        "m1-luz-como-onda",
+        "m1-energia-do-foton",
+        "m1-efeito-fotoeletrico"
+      ]
+    },
+    "module-1/lesson-1.json": {
+      "title": "A luz era onda... até não ser mais",
+      "scenes": [
+        {
+          "type": "title",
+          "title": "A luz era onda... até não ser mais",
+          "subtitle": "Física quântica do zero, módulo 1",
+          "narration": "No fim do século dezenove, muitos físicos achavam que a física estava quase pronta. Sabiam explicar o movimento dos planetas, o calor, a eletricidade e a luz. Mas alguns fatos teimosos sobre a luz não se encaixavam. Tentar explicá-los fez nascer a física quântica. Vamos começar pelo que já se sabia: a luz se comporta como uma onda."
+        },
+        {
+          "type": "bullets",
+          "title": "A luz como onda",
+          "bullets": [
+            "Comprimento de onda: a distância entre duas cristas",
+            "Frequência: quantas cristas passam por segundo",
+            "Cor: depende do comprimento de onda",
+            "Visível: de cerca de 400 nm (violeta) a 700 nm (vermelho)"
+          ],
+          "narration": "Pense numa onda no mar. A distância entre duas cristas é o comprimento de onda. Quantas cristas passam por um ponto a cada segundo é a frequência, medida em hertz. Com a luz é igual, só que as cristas ficam muito próximas: menos de um milésimo de milímetro. O comprimento de onda decide a cor que vemos. A luz visível vai de cerca de quatrocentos nanômetros, no violeta, até cerca de setecentos nanômetros, no vermelho. Um nanômetro é um bilionésimo de metro."
+        },
+        {
+          "type": "equation",
+          "lines": [
+            "c = \\lambda \\, f",
+            "c \\approx 3 \\times 10^{8}\\ \\text{m/s}",
+            "\\lambda \\text{ maior} \\Rightarrow f \\text{ menor}"
+          ],
+          "captions": "Velocidade da luz = comprimento de onda × frequência",
+          "narration": "Comprimento de onda e frequência estão presos um ao outro. A velocidade da luz, que chamamos de cê, é o comprimento de onda vezes a frequência. No vácuo, cê vale cerca de trezentos mil quilômetros por segundo, sempre, para qualquer cor. Então, se o comprimento de onda é maior, a frequência tem de ser menor, para o produto dar o mesmo valor. A luz vermelha tem comprimento de onda maior que a violeta. Logo, a vermelha tem frequência menor, e a violeta, frequência maior."
+        },
+        {
+          "type": "question",
+          "item": {
+            "type": "multiple_choice",
+            "id": "v1-freq-cor",
+            "skill": "m1-luz-como-onda",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "A luz vermelha tem comprimento de onda maior que a luz violeta. Qual das duas tem frequência maior?",
+            "hints": [
+              "Lembre que o comprimento de onda vezes a frequência dá sempre a velocidade da luz."
+            ],
+            "choices": [
+              {
+                "text": "A vermelha",
+                "explanation": "Esse é o erro de achar que 'maior' vai junto com 'maior'. Se o comprimento de onda cresce, a frequência diminui."
+              },
+              {
+                "text": "A violeta",
+                "explanation": "Isso: com comprimento de onda menor, ela precisa de frequência maior para manter a mesma velocidade."
+              },
+              {
+                "text": "As duas têm a mesma frequência",
+                "explanation": "O que é igual para as duas é a velocidade no vácuo, não a frequência."
+              }
+            ],
+            "correct": 1,
+            "solution": "Como c = λf e c é o mesmo para todas as cores, quem tem λ menor (a violeta) tem f maior."
+          },
+          "narration": "Pause o vídeo e responda: a luz vermelha tem comprimento de onda maior que a violeta. Qual das duas tem frequência maior?"
+        },
+        {
+          "type": "diagram",
+          "title": "A prova de que a luz é onda",
+          "nodes": [
+            {
+              "id": "fonte",
+              "label": "Luz de uma cor só"
+            },
+            {
+              "id": "fendas",
+              "label": "Duas fendas estreitas"
+            },
+            {
+              "id": "tela",
+              "label": "Tela"
+            },
+            {
+              "id": "faixas",
+              "label": "Faixas claras e escuras"
+            }
+          ],
+          "links": [
+            {
+              "from": "fonte",
+              "to": "fendas",
+              "label": ""
+            },
+            {
+              "from": "fendas",
+              "to": "tela",
+              "label": "as ondas se somam"
+            },
+            {
+              "from": "tela",
+              "to": "faixas",
+              "label": "interferência"
+            }
+          ],
+          "narration": "Por que se acreditava que a luz era onda? Por causa de experimentos como o de Thomas Young, no começo do século dezenove. Ele fez a luz passar por duas fendas estreitas. Na tela apareciam faixas claras e escuras, alternadas. Isso é interferência: onde as cristas das duas ondas chegam juntas, a luz se reforça; onde uma crista encontra um vale, elas se cancelam e fica escuro. Partículas comuns, como bolinhas, não fazem isso. Ondas fazem."
+        },
+        {
+          "type": "bullets",
+          "title": "Três fatos que não se encaixavam",
+          "bullets": [
+            "A cor da luz de objetos quentes (corpo negro)",
+            "Luz arrancando elétrons de metais (efeito fotoelétrico)",
+            "Gases que emitem só algumas cores (espectro de linhas)"
+          ],
+          "narration": "Mesmo assim, três fatos não fechavam. O primeiro: a luz emitida por objetos quentes, como o filamento de uma lâmpada ou o ferro em brasa. O segundo: a luz que arranca elétrons de um metal, o chamado efeito fotoelétrico. O terceiro: gases aquecidos, como o hidrogênio, que só emitem algumas cores bem definidas. Neste módulo vamos tratar dos dois primeiros. Os átomos ficam para o módulo três."
+        },
+        {
+          "type": "bullets",
+          "title": "O problema do corpo negro",
+          "bullets": [
+            "Objeto quente brilha: vermelho, depois amarelo, depois branco",
+            "A teoria clássica previa energia sem limite no ultravioleta",
+            "Planck, 1900: a energia só vem em pacotes"
+          ],
+          "narration": "Aqueça um pedaço de ferro. Primeiro ele fica vermelho escuro, depois laranja, amarelo e, muito quente, quase branco. Os físicos chamam o objeto ideal que absorve e emite toda luz de corpo negro. Quando usaram a física da época para prever a luz de um corpo negro, a conta dava um absurdo: energia cada vez maior nas frequências altas, sem limite, no ultravioleta. Isso ficou conhecido como catástrofe do ultravioleta. Em mil e novecentos, o físico alemão Max Planck achou a saída: supôs que a energia só pode ser trocada em pacotes, que ele chamou de quanta. A palavra quântica vem daí."
+        },
+        {
+          "type": "equation",
+          "lines": [
+            "E = h \\, f",
+            "h = 6{,}626 \\times 10^{-34}\\ \\text{J}\\cdot\\text{s}"
+          ],
+          "captions": "A energia de um pacote de luz",
+          "narration": "O tamanho de cada pacote depende da frequência. A energia é igual a agá vezes a frequência. Agá é a constante de Planck, um número minúsculo: seis vírgula seis dois seis vezes dez elevado a menos trinta e quatro, em joules vezes segundo. Em mil novecentos e cinco, Albert Einstein levou a ideia mais longe: a própria luz é feita desses pacotes. Hoje chamamos cada pacote de fóton. Repare na consequência: frequência maior quer dizer fóton com mais energia."
+        },
+        {
+          "type": "equation",
+          "lines": [
+            "\\lambda = 500\\ \\text{nm} \\Rightarrow f = \\frac{3 \\times 10^{8}}{5 \\times 10^{-7}} = 6 \\times 10^{14}\\ \\text{Hz}",
+            "E = 6{,}626 \\times 10^{-34} \\times 6 \\times 10^{14} \\approx 4 \\times 10^{-19}\\ \\text{J}"
+          ],
+          "captions": "Um fóton de luz verde",
+          "narration": "Vamos ver o tamanho de um fóton de luz verde, com comprimento de onda de quinhentos nanômetros. Primeiro a frequência: três vezes dez à oitava dividido por cinco vezes dez à menos sete dá seis vezes dez à décima quarta hertz. Depois a energia: agá vezes essa frequência dá cerca de quatro vezes dez elevado a menos dezenove joules. É pouquíssimo. Por isso não percebemos que a luz chega em pacotes: uma lâmpada comum solta uma quantidade enorme de fótons por segundo. Um fóton azul ou violeta, de frequência maior, carrega mais energia que esse verde. Um fóton vermelho carrega menos."
+        },
+        {
+          "type": "question",
+          "item": {
+            "type": "multiple_choice",
+            "id": "v1-energia-cor",
+            "skill": "m1-energia-do-foton",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "Qual fóton carrega mais energia: um de luz vermelha ou um de luz azul?",
+            "hints": [
+              "A energia do fóton é a constante de Planck vezes a frequência."
+            ],
+            "choices": [
+              {
+                "text": "O vermelho, porque tem comprimento de onda maior",
+                "explanation": "A energia cresce com a frequência, não com o comprimento de onda. Comprimento de onda maior quer dizer frequência menor."
+              },
+              {
+                "text": "Os dois carregam a mesma energia",
+                "explanation": "Seria assim se a energia não dependesse da cor, mas E = hf depende da frequência."
+              },
+              {
+                "text": "O azul, porque tem frequência maior",
+                "explanation": "Isso: E = hf, e a luz azul tem frequência maior que a vermelha."
+              }
+            ],
+            "correct": 2,
+            "solution": "E = hf. A luz azul tem frequência maior que a vermelha, então cada fóton azul tem mais energia."
+          },
+          "narration": "Hora de testar. Pause e responda: qual fóton carrega mais energia, um de luz vermelha ou um de luz azul?"
+        },
+        {
+          "type": "bullets",
+          "title": "Para guardar",
+          "bullets": [
+            "A luz faz interferência: se comporta como onda",
+            "A luz troca energia em pacotes: os fótons",
+            "Energia de um fóton: E = hf",
+            "Mais frequência, mais energia por fóton"
+          ],
+          "narration": "Recapitulando. A luz faz interferência, então se comporta como onda. Mas ela troca energia em pacotes, os fótons, cada um com energia agá vezes a frequência. Quanto maior a frequência, mais energia em cada fóton. Na próxima aula, de texto, você vê com calma o corpo negro e a ideia de Planck. Depois, na aula do efeito fotoelétrico, vai ver por que Einstein precisou dos fótons para explicar o que acontecia com os metais."
+        }
+      ]
+    },
+    "module-1/lesson-2.json": {
+      "introduction": "Ao final desta aula você consegue passar do comprimento de onda para a frequência de uma luz, explicar o que Planck propôs para resolver o problema do corpo negro e calcular a energia de um fóton em joules e em elétron-volts. A sequência segue a seção 6.1 (Blackbody Radiation) do livro aberto University Physics Volume 3, da OpenStax, que você pode ler de graça em inglês.",
+      "sections": [
+        {
+          "title": "Comprimento de onda e frequência",
+          "markdown": "Toda onda tem duas medidas que andam juntas:\n\n- o **comprimento de onda** $\\lambda$ (lambda): a distância entre duas cristas, em metros;\n- a **frequência** $f$: quantas cristas passam por um ponto a cada segundo, em hertz (Hz).\n\nPara a luz no vácuo, as duas se ligam pela velocidade da luz $c \\approx 3 \\times 10^8$ m/s:\n\n$$c = \\lambda f \\quad\\Longrightarrow\\quad f = \\frac{c}{\\lambda}$$\n\nComo $c$ é o mesmo para todas as cores, **comprimento de onda maior significa frequência menor**.\n\nA luz visível vai de cerca de 400 nm (violeta) a 700 nm (vermelho). Um nanômetro é $10^{-9}$ m. Abaixo de 400 nm fica o ultravioleta; acima de 700 nm, o infravermelho.\n\n**Exemplo rápido.** Luz vermelha de 700 nm = $7 \\times 10^{-7}$ m:\n\n$$f = \\frac{3 \\times 10^8}{7 \\times 10^{-7}} \\approx 4{,}3 \\times 10^{14}\\ \\text{Hz}$$\n\nSão quase 430 trilhões de cristas por segundo.",
+          "question": {
+            "type": "numeric",
+            "id": "t2-freq-600",
+            "skill": "m1-luz-como-onda",
+            "bloom": "apply",
+            "difficulty": 1,
+            "prompt": "Uma luz laranja tem comprimento de onda de 600 nm. Qual é a frequência dela, em unidades de $10^{14}$ Hz? (Use $c = 3 \\times 10^8$ m/s.)",
+            "hints": [
+              "Converta 600 nm para metros: $6 \\times 10^{-7}$ m.",
+              "Divida $3 \\times 10^8$ por $6 \\times 10^{-7}$: primeiro os números (3/6), depois as potências de dez."
+            ],
+            "answer": 5,
+            "tolerance": 0.05,
+            "unit": "× 10¹⁴ Hz",
+            "solution": "$f = c/\\lambda = (3 \\times 10^8)/(6 \\times 10^{-7}) = 0{,}5 \\times 10^{15} = 5 \\times 10^{14}$ Hz. A resposta é 5."
+          }
+        },
+        {
+          "title": "A cor de um objeto quente",
+          "markdown": "Todo objeto emite luz por estar quente. Na temperatura do nosso corpo, essa luz é infravermelha e não a vemos (as câmeras térmicas veem). Aqueça um pedaço de ferro e ele passa a brilhar: primeiro **vermelho escuro**, depois **laranja**, **amarelo** e, muito quente, quase **branco**.\n\nOs físicos estudam um objeto ideal chamado **corpo negro**: ele absorve toda a luz que chega e emite luz só por causa da temperatura. Na prática, ele é bem imitado por uma caixa fechada com um furinho: a luz que sai pelo furo depende só da temperatura das paredes.\n\nA luz do corpo negro mistura muitas cores, mas tem um **pico**, a cor emitida com mais intensidade. E a regra observada é simples:\n\n> quanto **mais quente** o corpo, **menor** o comprimento de onda do pico (mais para o azul).\n\nÉ por isso que estrelas mais quentes parecem azuladas e as mais frias, avermelhadas.",
+          "question": {
+            "type": "true_false",
+            "id": "t2-vf-pico",
+            "skill": "m1-luz-como-onda",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "Verdadeiro ou falso: quando um corpo negro esquenta, o pico da luz que ele emite vai para comprimentos de onda maiores (mais para o vermelho).",
+            "hints": [
+              "Pense na sequência de cores do ferro aquecido: vermelho, laranja, amarelo, branco."
+            ],
+            "correct": false,
+            "solution": "Falso. Mais quente, o pico vai para comprimentos de onda **menores**: do vermelho para o amarelo e o azul. O ferro começa vermelho e fica mais claro e branco ao esquentar."
+          }
+        },
+        {
+          "title": "A catástrofe do ultravioleta e o quantum de Planck",
+          "markdown": "No fim do século 19, os físicos tentaram prever a luz do corpo negro com a física da época. Para comprimentos de onda longos, a conta funcionava. Para comprimentos de onda curtos, dava um absurdo: a intensidade crescia **sem limite** rumo ao ultravioleta. Somando tudo, o corpo emitiria energia infinita. Esse fracasso ficou conhecido como **catástrofe do ultravioleta**.\n\nEm 1900, Max Planck encontrou uma fórmula que batia com as medidas. Para chegar a ela, fez uma suposição estranha: a energia das partes que vibram nas paredes **não pode ter qualquer valor**. Ela só vem em múltiplos inteiros de um pacote mínimo:\n\n$$E = n\\,h f, \\qquad n = 0, 1, 2, 3, \\dots$$\n\nO número $h$ é hoje chamado **constante de Planck**:\n\n$$h = 6{,}626 \\times 10^{-34}\\ \\text{J}\\cdot\\text{s}$$\n\nCada pacote se chama **quantum** (plural: **quanta**). Por que isso resolve a catástrofe? Nas frequências altas o pacote $hf$ fica grande demais para a energia térmica disponível nas paredes, então quase não é emitido, e a intensidade cai em vez de subir sem fim.\n\nPlanck via isso como um truque de conta. Quem levou a sério foi Einstein, como você vai ver na aula do efeito fotoelétrico.",
+          "question": {
+            "type": "multiple_choice",
+            "id": "t2-planck",
+            "skill": "m1-energia-do-foton",
+            "bloom": "understand",
+            "difficulty": 2,
+            "prompt": "O que Planck supôs para obter a fórmula certa da luz do corpo negro?",
+            "hints": [
+              "A palavra 'quântica' vem da ideia dele."
+            ],
+            "choices": [
+              {
+                "text": "Que a luz viaja mais devagar em frequências altas",
+                "explanation": "A velocidade da luz no vácuo é a mesma para todas as frequências. A hipótese de Planck é sobre energia."
+              },
+              {
+                "text": "Que a energia só pode ser trocada em pacotes de tamanho $hf$",
+                "explanation": "Isso: a energia vem em múltiplos inteiros de $hf$, o quantum."
+              },
+              {
+                "text": "Que o corpo negro não emite ultravioleta porque é preto",
+                "explanation": "O nome 'negro' quer dizer que ele absorve toda luz; ele emite, sim, em todas as frequências."
+              },
+              {
+                "text": "Que a energia pode ter qualquer valor, por menor que seja",
+                "explanation": "Essa era justamente a ideia clássica, a que levava à catástrofe."
+              }
+            ],
+            "correct": 1,
+            "solution": "Planck supôs que a energia só é trocada em múltiplos inteiros de $hf$. Esse pacote mínimo é o quantum."
+          }
+        },
+        {
+          "title": "A energia de um fóton, em joules e em elétron-volts",
+          "markdown": "Em 1905, Einstein propôs que **a própria luz** é feita desses pacotes, hoje chamados **fótons**. Cada fóton de frequência $f$ carrega a energia\n\n$$E = h f = \\frac{h c}{\\lambda}$$\n\nEm joules, os números ficam minúsculos. Por isso, em física atômica se usa outra unidade, o **elétron-volt** (eV):\n\n$$1\\ \\text{eV} = 1{,}602 \\times 10^{-19}\\ \\text{J}$$\n\nE há um atalho útil. Calculando $hc$ em eV vezes nanômetro, dá cerca de 1240. Então:\n\n$$E\\ (\\text{em eV}) \\approx \\frac{1240}{\\lambda\\ (\\text{em nm})}$$\n\nAlguns valores:\n\n| Luz | $\\lambda$ | $E$ por fóton |\n|---|---|---|\n| vermelha | 700 nm | cerca de 1,8 eV |\n| verde | 500 nm | cerca de 2,5 eV |\n| violeta | 400 nm | cerca de 3,1 eV |\n\nNote: **mais frequência (menor $\\lambda$), mais energia por fóton**.",
+          "question": {
+            "type": "numeric",
+            "id": "t2-ev-620",
+            "skill": "m1-energia-do-foton",
+            "bloom": "apply",
+            "difficulty": 2,
+            "prompt": "Use o atalho $E \\approx 1240/\\lambda$ para achar a energia, em eV, de um fóton de luz de 620 nm.",
+            "hints": [
+              "Basta dividir 1240 pelo comprimento de onda em nanômetros."
+            ],
+            "answer": 2,
+            "tolerance": 0.05,
+            "unit": "eV",
+            "solution": "$E \\approx 1240/620 = 2{,}0$ eV."
+          }
+        }
+      ],
+      "workedExample": {
+        "prompt": "Calcule a energia de um fóton de luz violeta de 400 nm, em joules e em elétron-volts, sem usar o atalho. Use $h = 6{,}626 \\times 10^{-34}$ J·s, $c = 3 \\times 10^8$ m/s e $1\\ \\text{eV} = 1{,}602 \\times 10^{-19}$ J.",
+        "steps": [
+          "Converta o comprimento de onda para metros: $400\\ \\text{nm} = 4 \\times 10^{-7}$ m.",
+          "Ache a frequência: $f = c/\\lambda = (3 \\times 10^8)/(4 \\times 10^{-7}) = 7{,}5 \\times 10^{14}$ Hz.",
+          "Multiplique pela constante de Planck: $E = hf = 6{,}626 \\times 10^{-34} \\times 7{,}5 \\times 10^{14} \\approx 4{,}97 \\times 10^{-19}$ J.",
+          "Passe para elétron-volts dividindo por $1{,}602 \\times 10^{-19}$: $E \\approx 3{,}1$ eV.",
+          "Confira com o atalho: $1240/400 = 3{,}1$ eV. Os dois caminhos dão o mesmo resultado."
+        ]
+      },
+      "summary": [
+        "Para a luz, $c = \\lambda f$: comprimento de onda maior, frequência menor.",
+        "Um corpo mais quente emite com pico em comprimento de onda menor (mais azul).",
+        "A física clássica previa energia infinita no ultravioleta: a catástrofe do ultravioleta.",
+        "Planck (1900) supôs energia em pacotes $E = nhf$; Einstein (1905) disse que a luz é feita de fótons.",
+        "Energia de um fóton: $E = hf$, ou $E \\approx 1240/\\lambda$ em eV com $\\lambda$ em nm."
+      ]
+    },
+    "module-1/lesson-3.json": {
+      "guidance": "Treine passar de comprimento de onda para frequência e de frequência para energia do fóton. Os primeiros itens têm mais apoio; os últimos misturam as ideias. Tenha uma calculadora por perto e use as dicas se travar: elas empurram, mas não entregam a resposta.",
+      "items": [
+        {
+          "type": "multiple_choice",
+          "id": "ex-o-que-e-frequencia",
+          "skill": "m1-luz-como-onda",
+          "bloom": "remember",
+          "difficulty": 1,
+          "prompt": "O que mede a frequência de uma onda de luz?",
+          "hints": [
+            "A unidade é o hertz, que quer dizer 'por segundo'."
+          ],
+          "choices": [
+            {
+              "text": "Quantas cristas passam por um ponto a cada segundo",
+              "explanation": "Isso: frequência é contagem por segundo, em hertz."
+            },
+            {
+              "text": "A distância entre duas cristas",
+              "explanation": "Essa é a definição de comprimento de onda, não de frequência."
+            },
+            {
+              "text": "A velocidade com que a onda avança",
+              "explanation": "A velocidade é c; ela é o produto do comprimento de onda pela frequência."
+            },
+            {
+              "text": "A altura da crista (o brilho da luz)",
+              "explanation": "A altura da onda tem a ver com a intensidade, não com a frequência."
+            }
+          ],
+          "correct": 0,
+          "solution": "Frequência é o número de cristas (ciclos) que passam por um ponto a cada segundo, medido em hertz (Hz)."
+        },
+        {
+          "type": "true_false",
+          "id": "ex-vf-velocidade",
+          "skill": "m1-luz-como-onda",
+          "bloom": "remember",
+          "difficulty": 1,
+          "prompt": "Verdadeiro ou falso: no vácuo, a luz vermelha e a luz azul viajam com a mesma velocidade.",
+          "hints": [
+            "Na fórmula $c = \\lambda f$, o que muda de uma cor para outra?"
+          ],
+          "correct": true,
+          "solution": "Verdadeiro. No vácuo, toda luz viaja a $c \\approx 3 \\times 10^8$ m/s. O que muda entre as cores é o comprimento de onda e, com ele, a frequência."
+        },
+        {
+          "type": "numeric",
+          "id": "ex-freq-750",
+          "skill": "m1-luz-como-onda",
+          "bloom": "apply",
+          "difficulty": 1,
+          "prompt": "A luz de 750 nm fica no limite entre o vermelho e o infravermelho. Qual é a frequência dela, em unidades de $10^{14}$ Hz? (Use $c = 3 \\times 10^8$ m/s.)",
+          "hints": [
+            "Converta 750 nm para metros: $7{,}5 \\times 10^{-7}$ m.",
+            "Divida $3 \\times 10^8$ por $7{,}5 \\times 10^{-7}$; 3 dividido por 7,5 dá 0,4."
+          ],
+          "answer": 4,
+          "tolerance": 0.05,
+          "unit": "× 10¹⁴ Hz",
+          "solution": "$f = (3 \\times 10^8)/(7{,}5 \\times 10^{-7}) = 0{,}4 \\times 10^{15} = 4 \\times 10^{14}$ Hz."
+        },
+        {
+          "type": "ordering",
+          "id": "ex-ordem-energia",
+          "skill": "m1-energia-do-foton",
+          "bloom": "understand",
+          "difficulty": 1,
+          "prompt": "Ponha os fótons em ordem de energia, do que tem MENOS para o que tem MAIS energia.",
+          "hints": [
+            "Energia cresce com a frequência; frequência cresce quando o comprimento de onda diminui."
+          ],
+          "steps": [
+            "Infravermelho (de um controle remoto)",
+            "Luz vermelha",
+            "Luz verde",
+            "Luz violeta",
+            "Ultravioleta (do Sol)"
+          ],
+          "solution": "Do maior comprimento de onda para o menor: infravermelho, vermelho, verde, violeta, ultravioleta. Como $E = hc/\\lambda$, essa é também a ordem de energia crescente."
+        },
+        {
+          "type": "numeric",
+          "id": "ex-ev-310",
+          "skill": "m1-energia-do-foton",
+          "bloom": "apply",
+          "difficulty": 1,
+          "prompt": "Use o atalho $E \\approx 1240/\\lambda$ (E em eV, $\\lambda$ em nm) para achar a energia de um fóton ultravioleta de 310 nm.",
+          "hints": [
+            "Divida 1240 pelo comprimento de onda em nanômetros; a conta dá um número inteiro."
+          ],
+          "answer": 4,
+          "tolerance": 0.05,
+          "unit": "eV",
+          "solution": "$E \\approx 1240/310 = 4{,}0$ eV. É mais que o dobro da energia de um fóton vermelho (cerca de 1,8 eV)."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "ex-intensidade-cor",
+          "skill": "m1-energia-do-foton",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Uma lanterna vermelha muito forte e uma lanterna azul fraca estão acesas. Em qual das duas CADA fóton carrega mais energia?",
+          "hints": [
+            "Separe duas coisas: quantos fótons saem por segundo e quanta energia tem cada um.",
+            "A energia de um fóton depende só da frequência."
+          ],
+          "choices": [
+            {
+              "text": "Na vermelha, porque ela é mais forte",
+              "explanation": "Esse é o erro mais comum: confundir intensidade (quantidade de fótons) com a energia de cada fóton."
+            },
+            {
+              "text": "Nas duas é igual, porque luz é luz",
+              "explanation": "A energia por fóton muda com a cor: E = hf."
+            },
+            {
+              "text": "Não dá para saber sem medir a potência",
+              "explanation": "A potência diz a energia total por segundo. Para um fóton só, basta a frequência."
+            },
+            {
+              "text": "Na azul, porque a frequência dela é maior",
+              "explanation": "Isso: cada fóton azul tem mais energia; a vermelha forte só tem muito mais fótons."
+            }
+          ],
+          "correct": 3,
+          "solution": "A energia de cada fóton é $E = hf$ e só depende da frequência. A luz azul tem frequência maior, então cada fóton azul tem mais energia. A lanterna vermelha forte emite mais fótons por segundo, mas cada um com menos energia."
+        },
+        {
+          "type": "numeric",
+          "id": "ex-energia-joule",
+          "skill": "m1-energia-do-foton",
+          "bloom": "apply",
+          "difficulty": 2,
+          "prompt": "Um fóton tem frequência $5 \\times 10^{14}$ Hz. Qual é a energia dele, em unidades de $10^{-19}$ J? (Use $h = 6{,}626 \\times 10^{-34}$ J·s.)",
+          "hints": [
+            "Multiplique os números (6,626 × 5) e some os expoentes (−34 + 14).",
+            "O resultado sai em $10^{-20}$; passe para $10^{-19}$ andando uma casa com a vírgula."
+          ],
+          "answer": 3.31,
+          "tolerance": 0.02,
+          "unit": "× 10⁻¹⁹ J",
+          "solution": "$E = hf = 6{,}626 \\times 10^{-34} \\times 5 \\times 10^{14} = 33{,}13 \\times 10^{-20} = 3{,}31 \\times 10^{-19}$ J."
+        },
+        {
+          "type": "short_answer",
+          "id": "ex-nome-h",
+          "skill": "m1-energia-do-foton",
+          "bloom": "remember",
+          "difficulty": 1,
+          "prompt": "Na fórmula $E = hf$, como se chama a constante $h$?",
+          "hints": [
+            "Leva o nome do físico que, em 1900, supôs a energia em pacotes."
+          ],
+          "accepted": [
+            "constante de Planck",
+            "Planck",
+            "constante de Plank",
+            "a constante de Planck"
+          ],
+          "solution": "É a constante de Planck, $h = 6{,}626 \\times 10^{-34}$ J·s, em homenagem a Max Planck."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "ex-foton-radio",
+          "skill": "m1-energia-do-foton",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Uma rádio FM transmite em 100 MHz ($1 \\times 10^8$ Hz). A luz verde tem frequência de cerca de $6 \\times 10^{14}$ Hz. Comparado a um fóton de luz verde, um fóton da rádio tem energia:",
+          "hints": [
+            "Como $E = hf$, a razão entre as energias é a razão entre as frequências."
+          ],
+          "choices": [
+            {
+              "text": "maior, porque as ondas de rádio são enormes",
+              "explanation": "Comprimento de onda grande quer dizer frequência baixa e, portanto, energia baixa por fóton."
+            },
+            {
+              "text": "cerca de 6 vezes menor",
+              "explanation": "Cuidado com as potências de dez: a razão é $6 \\times 10^{14} / 10^8$, não 6/1."
+            },
+            {
+              "text": "cerca de 6 milhões de vezes menor",
+              "explanation": "Isso: $6 \\times 10^{14} / 10^8 = 6 \\times 10^6$."
+            },
+            {
+              "text": "igual, porque rádio também é onda eletromagnética",
+              "explanation": "Ser onda eletromagnética não basta: a energia por fóton depende da frequência."
+            }
+          ],
+          "correct": 2,
+          "solution": "A razão das energias é a razão das frequências: $(6 \\times 10^{14})/(1 \\times 10^8) = 6 \\times 10^6$. Um fóton de rádio FM tem cerca de 6 milhões de vezes menos energia que um fóton verde."
+        },
+        {
+          "type": "true_false",
+          "id": "ex-vf-vermelho-forte",
+          "skill": "m1-energia-do-foton",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Verdadeiro ou falso: os fótons de uma luz vermelha muito forte têm, cada um, mais energia que os fótons de uma luz vermelha fraca da mesma cor.",
+          "hints": [
+            "Mesma cor quer dizer mesma frequência."
+          ],
+          "correct": false,
+          "solution": "Falso. Mesma cor, mesma frequência, mesma energia por fóton ($E = hf$). A luz forte só tem mais fótons por segundo."
+        },
+        {
+          "type": "numeric",
+          "id": "ex-lambda-de-energia",
+          "skill": "m1-energia-do-foton",
+          "bloom": "apply",
+          "difficulty": 3,
+          "prompt": "Um fóton tem energia de 2,5 eV. Qual é o comprimento de onda dele, em nanômetros? (Use o atalho $E \\approx 1240/\\lambda$, com E em eV e $\\lambda$ em nm.)",
+          "hints": [
+            "Isole o comprimento de onda no atalho: se $E = 1240/\\lambda$, então $\\lambda = 1240/E$."
+          ],
+          "answer": 496,
+          "tolerance": 5,
+          "unit": "nm",
+          "solution": "$\\lambda \\approx 1240/2{,}5 = 496$ nm, uma luz verde-azulada."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "ex-estrela-quente",
+          "skill": "m1-luz-como-onda",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "A luz do Sol tem pico perto de 500 nm. Outra estrela tem pico perto de 300 nm, no ultravioleta. O que se pode dizer dessa estrela?",
+          "hints": [
+            "Lembre a sequência de cores do ferro que esquenta."
+          ],
+          "choices": [
+            {
+              "text": "Ela é mais fria que o Sol",
+              "explanation": "Pico em comprimento de onda maior é que indicaria corpo mais frio."
+            },
+            {
+              "text": "Ela é mais quente que o Sol",
+              "explanation": "Isso: mais quente, o pico vai para comprimentos de onda menores."
+            },
+            {
+              "text": "Ela tem a mesma temperatura, só está mais longe",
+              "explanation": "A distância muda o brilho que chega, não a posição do pico."
+            }
+          ],
+          "correct": 1,
+          "solution": "Num corpo negro, quanto mais quente, menor o comprimento de onda do pico. Pico em 300 nm, menor que os 500 nm do Sol, indica uma estrela mais quente."
+        }
+      ]
+    },
+    "module-1/lesson-4.json": {
+      "introduction": "Ao final desta aula você consegue descrever o efeito fotoelétrico, dizer por que a ideia de luz como onda não o explica e usar a equação de Einstein para prever se uma luz arranca elétrons de um metal e com que energia. A aula segue a seção 6.2 (Photoelectric Effect) do livro aberto University Physics Volume 3, da OpenStax. Para ver o efeito acontecendo, use a simulação gratuita Photoelectric Effect, do PhET, que é a base do projeto do módulo.",
+      "sections": [
+        {
+          "title": "O experimento",
+          "markdown": "Monte assim: uma placa de metal dentro de um tubo sem ar, uma segunda placa à frente e um medidor de corrente ligando as duas.\n\n1. Ilumine a primeira placa.\n2. Se a luz for adequada, **elétrons saem do metal**, atravessam o vácuo e chegam à outra placa.\n3. O medidor registra uma **corrente elétrica**.\n\nOs elétrons arrancados pela luz se chamam **fotoelétrons**. Para medir a energia com que eles saem, os físicos aplicam uma voltagem contrária que os freia e procuram a voltagem que os para de vez (o **potencial de corte**). Daí sai a **energia cinética máxima** $K_{\\max}$ dos elétrons.\n\nAté aqui, nada estranho: a luz carrega energia, e parte dela vai para os elétrons. O estranho está nos detalhes.",
+          "question": {
+            "type": "multiple_choice",
+            "id": "t4-o-que-sai",
+            "skill": "m1-efeito-fotoeletrico",
+            "bloom": "remember",
+            "difficulty": 1,
+            "prompt": "No efeito fotoelétrico, o que a luz arranca da placa de metal?",
+            "hints": [
+              "O medidor registra uma corrente elétrica."
+            ],
+            "choices": [
+              {
+                "text": "Prótons",
+                "explanation": "Os prótons ficam presos nos núcleos; quem se move numa corrente comum são os elétrons."
+              },
+              {
+                "text": "Átomos inteiros do metal",
+                "explanation": "A placa não se desmancha; o que sai são partículas bem menores."
+              },
+              {
+                "text": "Elétrons",
+                "explanation": "Isso: os fotoelétrons, que formam a corrente medida."
+              }
+            ],
+            "correct": 2,
+            "solution": "A luz arranca elétrons do metal, os fotoelétrons. Eles atravessam o vácuo e formam a corrente que o medidor registra."
+          }
+        },
+        {
+          "title": "O que a onda previa e o que se viu",
+          "markdown": "Se a luz fosse só uma onda, a energia dela estaria espalhada pela frente de onda, e uma luz **mais intensa** teria ondas mais altas, com mais energia. Isso levava a três previsões. Todas falharam:\n\n| A teoria de onda previa | O experimento mostrou |\n|---|---|\n| Luz mais intensa dá elétrons mais rápidos. | $K_{\\max}$ **não depende** da intensidade; depende da **frequência**. |\n| Qualquer cor arranca elétrons, se for forte o bastante. | Abaixo de uma **frequência de corte**, nenhum elétron sai, por mais forte que seja a luz. |\n| Com luz fraca, o elétron demora para juntar energia. | Os elétrons saem **na hora**, mesmo com luz muito fraca. |\n\nA intensidade muda só uma coisa: **quantos** elétrons saem por segundo (o tamanho da corrente).",
+          "question": {
+            "type": "true_false",
+            "id": "t4-vf-luz-forte",
+            "skill": "m1-efeito-fotoeletrico",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "Verdadeiro ou falso: se uma luz vermelha não arranca elétrons de um metal, basta usar uma luz vermelha muito mais forte para que eles comecem a sair.",
+            "hints": [
+              "Releia a segunda linha da tabela."
+            ],
+            "correct": false,
+            "solution": "Falso. Abaixo da frequência de corte nenhum elétron sai, qualquer que seja a intensidade. Aumentar a intensidade não muda a frequência da luz."
+          }
+        },
+        {
+          "title": "A explicação de Einstein",
+          "markdown": "Em 1905, Einstein explicou tudo com uma ideia: a luz é feita de **fótons**, cada um com energia $hf$, e **cada fóton entrega toda a sua energia a um único elétron**.\n\nPara escapar do metal, o elétron precisa gastar uma energia mínima, a **função trabalho** $\\phi$ (fi), que depende do metal. O que sobra vira energia de movimento:\n\n$$K_{\\max} = h f - \\phi$$\n\nAgora as três observações se encaixam:\n\n- **Frequência manda na energia**: $K_{\\max}$ cresce com $f$, e a intensidade nem aparece na fórmula.\n- **Frequência de corte**: se $hf < \\phi$, o fóton não tem energia para soltar o elétron, e não adianta mandar mais fótons fracos (um elétron não soma dois fótons). O corte é $f_0 = \\phi / h$, ou, em comprimento de onda, $\\lambda_0 \\approx 1240/\\phi$ (nm, com $\\phi$ em eV).\n- **Sem demora**: o elétron recebe o pacote inteiro de uma vez.\n\nFoi por essa lei do efeito fotoelétrico, e não pela relatividade, que Einstein recebeu o Prêmio Nobel de Física de 1921.",
+          "question": {
+            "type": "numeric",
+            "id": "t4-kmax",
+            "skill": "m1-efeito-fotoeletrico",
+            "bloom": "apply",
+            "difficulty": 2,
+            "prompt": "Um metal tem função trabalho de 2,0 eV. Ele é iluminado com fótons de 3,1 eV (luz violeta). Qual é a energia cinética máxima dos elétrons, em eV?",
+            "hints": [
+              "A energia do fóton paga primeiro a 'taxa de saída', e o resto fica com o elétron."
+            ],
+            "answer": 1.1,
+            "tolerance": 0.02,
+            "unit": "eV",
+            "solution": "$K_{\\max} = hf - \\phi = 3{,}1 - 2{,}0 = 1{,}1$ eV."
+          }
+        },
+        {
+          "title": "Intensidade e frequência: cada uma com seu papel",
+          "markdown": "A confusão mais comum é misturar as duas. Pense nos fótons como **moedas**:\n\n- a **frequência** decide o **valor de cada moeda** ($hf$);\n- a **intensidade** decide **quantas moedas** chegam por segundo.\n\nPara soltar um elétron é preciso uma moeda de valor suficiente; muitas moedas pequenas não servem, porque cada elétron recebe uma moeda só.\n\nAssim, numa luz **acima** do corte:\n\n- dobrar a intensidade **dobra o número de elétrons** (e a corrente), mas **não muda** $K_{\\max}$;\n- aumentar a frequência **aumenta** $K_{\\max}$.\n\nNuma luz **abaixo** do corte, nada sai, seja ela fraca ou forte.",
+          "question": {
+            "type": "multiple_choice",
+            "id": "t4-dobrar-intensidade",
+            "skill": "m1-efeito-fotoeletrico",
+            "bloom": "understand",
+            "difficulty": 2,
+            "prompt": "Uma luz azul já arranca elétrons de um metal. Você dobra a intensidade dela, sem mudar a cor. O que acontece?",
+            "hints": [
+              "Na analogia, o que muda: o valor das moedas ou a quantidade?"
+            ],
+            "choices": [
+              {
+                "text": "Sai o dobro de elétrons, com a mesma energia máxima",
+                "explanation": "Isso: mais fótons, mais elétrons; cada fóton tem a mesma energia, então $K_{\\max}$ não muda."
+              },
+              {
+                "text": "Sai o mesmo número de elétrons, com o dobro da energia",
+                "explanation": "Essa é a previsão da teoria de onda, que o experimento derrubou."
+              },
+              {
+                "text": "Os elétrons param de sair",
+                "explanation": "Mais luz da mesma cor não pode impedir o que já acontecia."
+              },
+              {
+                "text": "Sai o dobro de elétrons, cada um com o dobro da energia",
+                "explanation": "A energia de cada elétron depende da energia de cada fóton, que não mudou."
+              }
+            ],
+            "correct": 0,
+            "solution": "Dobrar a intensidade dobra o número de fótons por segundo e, portanto, o número de elétrons. Como cada fóton tem a mesma energia $hf$, a energia máxima de cada elétron continua igual."
+          }
+        }
+      ],
+      "workedExample": {
+        "prompt": "Um metal tem função trabalho $\\phi = 2{,}5$ eV. (a) Uma luz vermelha de 700 nm arranca elétrons dele? (b) E uma luz violeta de 400 nm? Se sim, com que energia máxima? (c) Qual é o comprimento de onda de corte desse metal?",
+        "steps": [
+          "Energia do fóton vermelho: $E \\approx 1240/700 \\approx 1{,}8$ eV.",
+          "(a) Como $1{,}8$ eV é menor que $\\phi = 2{,}5$ eV, nenhum elétron sai, por mais forte que seja a luz vermelha.",
+          "Energia do fóton violeta: $E \\approx 1240/400 = 3{,}1$ eV.",
+          "(b) Como $3{,}1 > 2{,}5$, elétrons saem, com $K_{\\max} = 3{,}1 - 2{,}5 = 0{,}6$ eV.",
+          "(c) No corte, a energia do fóton é igual à função trabalho: $\\lambda_0 \\approx 1240/2{,}5 = 496$ nm. Luz com comprimento de onda menor que 496 nm (azul, violeta) arranca elétrons; com comprimento maior (amarela, vermelha e a maior parte do verde), não."
+        ]
+      },
+      "summary": [
+        "No efeito fotoelétrico, a luz arranca elétrons de um metal.",
+        "A energia dos elétrons depende da frequência da luz, não da intensidade.",
+        "Abaixo da frequência de corte, nenhum elétron sai, por mais forte que seja a luz.",
+        "Einstein: cada fóton dá sua energia $hf$ a um elétron, e $K_{\\max} = hf - \\phi$.",
+        "A intensidade só muda quantos elétrons saem por segundo."
+      ]
+    },
+    "module-1/lesson-5.json": {
+      "guidance": "Treine prever quando a luz arranca elétrons e com que energia. Use o atalho $E \\approx 1240/\\lambda$ (E em eV, $\\lambda$ em nm) e a equação de Einstein $K_{\\max} = hf - \\phi$. Os primeiros itens são de conceito; os últimos pedem conta e juntam tudo o que você viu no módulo.",
+      "items": [
+        {
+          "type": "multiple_choice",
+          "id": "ex-funcao-trabalho",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "remember",
+          "difficulty": 1,
+          "prompt": "O que é a função trabalho $\\phi$ de um metal?",
+          "hints": [
+            "Pense numa 'taxa de saída' que o elétron paga."
+          ],
+          "choices": [
+            {
+              "text": "A energia de cada fóton que chega ao metal",
+              "explanation": "A energia do fóton é $hf$ e depende da luz, não do metal."
+            },
+            {
+              "text": "A energia mínima para um elétron escapar do metal",
+              "explanation": "Isso: cada metal tem a sua, e o fóton precisa ter pelo menos essa energia."
+            },
+            {
+              "text": "A energia cinética com que o elétron sai",
+              "explanation": "Essa é $K_{\\max}$, o que sobra depois de pagar $\\phi$."
+            },
+            {
+              "text": "A intensidade de luz mínima para haver corrente",
+              "explanation": "Não existe intensidade mínima: o que existe é uma frequência mínima."
+            }
+          ],
+          "correct": 1,
+          "solution": "A função trabalho é a energia mínima que um elétron precisa receber para escapar do metal. Ela depende do metal."
+        },
+        {
+          "type": "true_false",
+          "id": "ex-vf-sem-demora",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "remember",
+          "difficulty": 1,
+          "prompt": "Verdadeiro ou falso: com luz acima da frequência de corte, os elétrons começam a sair praticamente na hora, mesmo que a luz seja muito fraca.",
+          "hints": [
+            "Cada elétron recebe a energia de um fóton inteiro, de uma vez."
+          ],
+          "correct": true,
+          "solution": "Verdadeiro. Como cada fóton entrega todo o seu pacote de uma vez, o elétron não precisa 'juntar' energia. Luz fraca só quer dizer menos fótons, e portanto menos elétrons por segundo."
+        },
+        {
+          "type": "numeric",
+          "id": "ex-kmax-simples",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "apply",
+          "difficulty": 1,
+          "prompt": "Fótons de 2,6 eV atingem um metal com função trabalho de 2,0 eV. Qual é a energia cinética máxima dos elétrons, em eV?",
+          "hints": [
+            "Use $K_{\\max} = hf - \\phi$, com $hf$ = energia do fóton."
+          ],
+          "answer": 0.6,
+          "tolerance": 0.02,
+          "unit": "eV",
+          "solution": "$K_{\\max} = 2{,}6 - 2{,}0 = 0{,}6$ eV."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "ex-qual-luz-arranca",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Um metal tem função trabalho de 3,0 eV. Qual destas luzes arranca elétrons dele?",
+          "hints": [
+            "Calcule a energia do fóton de cada opção com $E \\approx 1240/\\lambda$.",
+            "Compare cada energia com 3,0 eV."
+          ],
+          "choices": [
+            {
+              "text": "Infravermelho de 900 nm, muito forte",
+              "explanation": "Cerca de 1,4 eV por fóton: abaixo de 3,0 eV. A intensidade alta não ajuda."
+            },
+            {
+              "text": "Luz vermelha de 700 nm",
+              "explanation": "Cerca de 1,8 eV por fóton: abaixo de 3,0 eV."
+            },
+            {
+              "text": "Luz verde de 500 nm",
+              "explanation": "Cerca de 2,5 eV por fóton: ainda abaixo de 3,0 eV."
+            },
+            {
+              "text": "Ultravioleta de 300 nm",
+              "explanation": "Isso: cerca de 4,1 eV por fóton, acima de 3,0 eV."
+            }
+          ],
+          "correct": 3,
+          "solution": "Energias aproximadas: 900 nm → 1,4 eV; 700 nm → 1,8 eV; 500 nm → 2,5 eV; 300 nm → 4,1 eV. Só o ultravioleta passa de 3,0 eV."
+        },
+        {
+          "type": "numeric",
+          "id": "ex-lambda-corte",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "apply",
+          "difficulty": 2,
+          "prompt": "Um metal tem função trabalho de 3,1 eV. Qual é o comprimento de onda de corte dele, em nanômetros?",
+          "hints": [
+            "No corte, a energia do fóton é exatamente igual à função trabalho.",
+            "Use $\\lambda_0 \\approx 1240/\\phi$."
+          ],
+          "answer": 400,
+          "tolerance": 3,
+          "unit": "nm",
+          "solution": "$\\lambda_0 \\approx 1240/3{,}1 = 400$ nm. Só luz com comprimento de onda menor que 400 nm (ultravioleta) arranca elétrons desse metal."
+        },
+        {
+          "type": "ordering",
+          "id": "ex-ordem-evento",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "understand",
+          "difficulty": 1,
+          "prompt": "Ponha em ordem o que acontece, segundo Einstein, quando um fóton com energia suficiente atinge o metal.",
+          "hints": [
+            "Comece pelo fóton e termine no medidor de corrente."
+          ],
+          "steps": [
+            "O fóton chega à placa de metal",
+            "O fóton entrega toda a sua energia a um único elétron",
+            "O elétron gasta a função trabalho para escapar do metal",
+            "A energia que sobra vira energia de movimento do elétron",
+            "O elétron chega à outra placa e faz parte da corrente"
+          ],
+          "solution": "Fóton chega → entrega a energia a um elétron → o elétron paga a função trabalho → o resto vira energia cinética → o elétron chega à outra placa e forma a corrente."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "ex-aumentar-freq",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Uma luz já arranca elétrons de um metal. Você troca a luz por outra de frequência maior, com o mesmo número de fótons por segundo. O que acontece com a energia cinética máxima dos elétrons?",
+          "hints": [
+            "Na equação de Einstein, o que muda quando $f$ cresce?"
+          ],
+          "choices": [
+            {
+              "text": "Diminui, porque a luz fica mais 'fina'",
+              "explanation": "Frequência maior quer dizer fóton com mais energia, não menos."
+            },
+            {
+              "text": "Não muda, porque o número de fótons é o mesmo",
+              "explanation": "O número de fótons decide quantos elétrons saem, não a energia de cada um."
+            },
+            {
+              "text": "Aumenta, porque cada fóton traz mais energia",
+              "explanation": "Isso: $K_{\\max} = hf - \\phi$ cresce com $f$."
+            },
+            {
+              "text": "Só muda se a intensidade também aumentar",
+              "explanation": "A intensidade não aparece na fórmula de $K_{\\max}$."
+            }
+          ],
+          "correct": 2,
+          "solution": "Em $K_{\\max} = hf - \\phi$, a função trabalho é fixa e $hf$ cresce com a frequência. Logo $K_{\\max}$ aumenta."
+        },
+        {
+          "type": "true_false",
+          "id": "ex-vf-esperar",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Verdadeiro ou falso: se uma luz está abaixo da frequência de corte, basta deixá-la acesa por bastante tempo que os elétrons acabam juntando energia e saindo.",
+          "hints": [
+            "Um elétron pode somar a energia de dois fótons fracos, na explicação de Einstein?"
+          ],
+          "correct": false,
+          "solution": "Falso. Na explicação de Einstein, cada elétron recebe um fóton por vez, e um fóton abaixo do corte não tem energia para soltá-lo. Esperar não muda a energia de cada fóton."
+        },
+        {
+          "type": "numeric",
+          "id": "ex-kmax-uv",
+          "skill": "m1-efeito-fotoeletrico",
+          "bloom": "apply",
+          "difficulty": 3,
+          "prompt": "Uma luz ultravioleta de 248 nm atinge um metal com função trabalho de 4,5 eV. Qual é a energia cinética máxima dos elétrons, em eV?",
+          "hints": [
+            "Primeiro ache a energia do fóton com o atalho de 1240.",
+            "Depois desconte a função trabalho."
+          ],
+          "answer": 0.5,
+          "tolerance": 0.03,
+          "unit": "eV",
+          "solution": "Energia do fóton: $1240/248 = 5{,}0$ eV. Então $K_{\\max} = 5{,}0 - 4{,}5 = 0{,}5$ eV."
+        },
+        {
+          "type": "numeric",
+          "id": "ex-freq-400",
+          "skill": "m1-luz-como-onda",
+          "bloom": "apply",
+          "difficulty": 2,
+          "prompt": "Revisão da aula 2: qual é a frequência da luz violeta de 400 nm, em unidades de $10^{14}$ Hz? (Use $c = 3 \\times 10^8$ m/s.)",
+          "hints": [
+            "400 nm = $4 \\times 10^{-7}$ m. Depois use $f = c/\\lambda$."
+          ],
+          "answer": 7.5,
+          "tolerance": 0.05,
+          "unit": "× 10¹⁴ Hz",
+          "solution": "$f = (3 \\times 10^8)/(4 \\times 10^{-7}) = 0{,}75 \\times 10^{15} = 7{,}5 \\times 10^{14}$ Hz."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "ex-por-que-foton",
+          "skill": "m1-energia-do-foton",
+          "bloom": "understand",
+          "difficulty": 3,
+          "prompt": "Qual observação do efeito fotoelétrico é a pista mais forte de que a luz chega em pacotes (fótons), e não como uma onda de energia espalhada?",
+          "hints": [
+            "Procure a observação em que a intensidade da luz, por maior que seja, não resolve.",
+            "Uma onda espalhada poderia entregar energia aos poucos; pacotes, não."
+          ],
+          "choices": [
+            {
+              "text": "Existe uma frequência de corte: abaixo dela nada sai, por mais forte que seja a luz",
+              "explanation": "Isso: se a energia viesse espalhada, luz forte o bastante sempre funcionaria. Só pacotes de tamanho $hf$ explicam o corte."
+            },
+            {
+              "text": "A luz forte produz uma corrente maior",
+              "explanation": "Isso também acontece numa visão de onda (mais energia, mais efeito). Não distingue as duas ideias."
+            },
+            {
+              "text": "Os elétrons saem do metal",
+              "explanation": "Que a luz carrega energia e pode soltar elétrons, as duas visões aceitam."
+            },
+            {
+              "text": "Metais diferentes têm funções trabalho diferentes",
+              "explanation": "Isso é uma propriedade do metal, e não diz nada sobre a natureza da luz."
+            }
+          ],
+          "correct": 0,
+          "solution": "A frequência de corte é a pista decisiva. Se a energia da luz chegasse espalhada e contínua, uma luz forte o bastante sempre arrancaria elétrons. O fato de nada sair abaixo de certa frequência, qualquer que seja a intensidade, mostra que a energia chega em pacotes de $hf$, e cada elétron recebe um pacote só."
+        }
+      ]
+    },
+    "syllabus.json": {
+      "title": "Física quântica do zero",
+      "summary": "Um passeio guiado pelas ideias que mudaram a física no século 20, na ordem em que os experimentos as forçaram: a luz que chega em pacotes, a matéria que se comporta como onda, os átomos com níveis de energia, a probabilidade, a incerteza, a superposição, o spin e o emaranhamento. Tudo com a matemática do ensino médio e simulações gratuitas no lugar do laboratório. Oito módulos, um por semana, com cerca de quatro horas de estudo cada.",
+      "results": [
+        "Ao final você consegue explicar por que a física clássica não dava conta da luz e dos átomos, citando três experimentos.",
+        "Ao final você consegue calcular a energia de um fóton a partir da sua cor (frequência ou comprimento de onda).",
+        "Ao final você consegue explicar o efeito fotoelétrico e a dupla fenda com partículas usando a ideia de dualidade onda-partícula.",
+        "Ao final você consegue relacionar as linhas do espectro do hidrogênio com saltos entre níveis de energia.",
+        "Ao final você consegue explicar com suas palavras o que dizem a função de onda, o princípio da incerteza e a superposição, e o que eles não dizem.",
+        "Ao final você consegue descrever o experimento de Stern-Gerlach e o que é um par de partículas emaranhadas.",
+        "Ao final você consegue identificar e corrigir os mal-entendidos mais comuns sobre física quântica que aparecem na divulgação."
+      ],
+      "prerequisites": [
+        "Matemática do ensino médio: frações, potências de dez e notação científica.",
+        "Noção básica de energia e velocidade (física do ensino médio ajuda, mas o curso relembra o que precisa)."
+      ],
+      "modules": [
+        {
+          "title": "A luz em pacotes: o fóton",
+          "goal": "Entender por que a luz, que se comportava como onda, precisou ser vista também como feita de fótons, e calcular a energia de um fóton.",
+          "skills": [
+            {
+              "id": "m1-luz-como-onda",
+              "name": "Relacionar frequência, comprimento de onda e cor da luz",
+              "bloom": "understand"
+            },
+            {
+              "id": "m1-energia-do-foton",
+              "name": "Explicar e calcular a energia de um fóton com E = hf",
+              "bloom": "understand"
+            },
+            {
+              "id": "m1-efeito-fotoeletrico",
+              "name": "Explicar o efeito fotoelétrico com o modelo do fóton",
+              "bloom": "understand"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "A luz era onda... até não ser mais",
+              "goal": "Ver por que a luz parecia onda e quais fatos começaram a não se encaixar.",
+              "skills": [
+                "m1-luz-como-onda",
+                "m1-energia-do-foton"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Planck, o corpo negro e o quantum de energia",
+              "goal": "Saber o que é frequência e comprimento de onda e como Planck chegou a E = hf.",
+              "skills": [
+                "m1-luz-como-onda",
+                "m1-energia-do-foton"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: cor, frequência e energia",
+              "goal": "Praticar c = λf e E = hf com luzes do dia a dia.",
+              "skills": [
+                "m1-luz-como-onda",
+                "m1-energia-do-foton"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "O efeito fotoelétrico",
+              "goal": "Entender as observações do efeito fotoelétrico e a explicação de Einstein.",
+              "skills": [
+                "m1-efeito-fotoeletrico",
+                "m1-energia-do-foton"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: efeito fotoelétrico",
+              "goal": "Prever quando a luz arranca elétrons e com que energia.",
+              "skills": [
+                "m1-efeito-fotoeletrico",
+                "m1-energia-do-foton",
+                "m1-luz-como-onda"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Caça ao comprimento de onda de corte",
+            "prompt": "Abra a simulação gratuita Photoelectric Effect, do PhET (phet.colorado.edu/en/simulations/photoelectric). Escolha dois metais. Para cada um, comece com luz vermelha e vá diminuindo o comprimento de onda até os elétrons começarem a sair: anote esse valor. Depois, com uma cor que já arranca elétrons, aumente e diminua a intensidade e anote o que muda (número de elétrons? velocidade deles?). Calcule a energia do fóton no comprimento de onda de corte de cada metal, em elétron-volts, e escreva um parágrafo explicando o que você viu com a ideia de fóton.",
+            "rubric": [
+              "Registra o comprimento de onda de corte dos dois metais.",
+              "Calcula a energia do fóton no corte, com a unidade certa.",
+              "Descreve que a intensidade muda a quantidade de elétrons, e não a energia de cada um.",
+              "Explica o resultado com a ideia de que cada fóton entrega sua energia a um elétron."
+            ]
+          }
+        },
+        {
+          "title": "Matéria que se comporta como onda",
+          "goal": "Entender a hipótese de de Broglie e a dupla fenda feita com partículas, uma a uma.",
+          "skills": [
+            {
+              "id": "m2-onda-de-materia",
+              "name": "Explicar e estimar o comprimento de onda de de Broglie (λ = h/p)",
+              "bloom": "understand"
+            },
+            {
+              "id": "m2-dupla-fenda",
+              "name": "Descrever a dupla fenda com partículas e o efeito de medir por qual fenda",
+              "bloom": "understand"
+            },
+            {
+              "id": "m2-dualidade",
+              "name": "Explicar a dualidade onda-partícula sem cair no 'é um ou outro'",
+              "bloom": "understand"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Elétrons que fazem interferência",
+              "goal": "Ver a dupla fenda com luz, com bolinhas e com elétrons, e o que muda.",
+              "skills": [
+                "m2-dupla-fenda",
+                "m2-dualidade"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "De Broglie: toda partícula tem uma onda",
+              "goal": "Entender λ = h/p e por que só notamos a onda em coisas muito pequenas.",
+              "skills": [
+                "m2-onda-de-materia"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: ondas de matéria",
+              "goal": "Comparar comprimentos de onda de elétrons, átomos e bolas.",
+              "skills": [
+                "m2-onda-de-materia"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "A dupla fenda, partícula por partícula",
+              "goal": "Entender o padrão que se forma ponto a ponto e o papel da medição.",
+              "skills": [
+                "m2-dupla-fenda",
+                "m2-dualidade"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: dupla fenda e dualidade",
+              "goal": "Prever o padrão na tela em situações diferentes.",
+              "skills": [
+                "m2-dupla-fenda",
+                "m2-dualidade",
+                "m2-onda-de-materia"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Dupla fenda no computador",
+            "prompt": "Na simulação Quantum Wave Interference, do PhET, monte a dupla fenda com elétrons e solte uma partícula de cada vez. Tire três capturas de tela: com poucas partículas, com muitas e com um detector numa das fendas. Escreva um parágrafo para cada captura dizendo o que aparece e por quê.",
+            "rubric": [
+              "Mostra que com poucas partículas os pontos parecem aleatórios.",
+              "Mostra que com muitas partículas surgem faixas de interferência.",
+              "Descreve que o detector numa fenda faz as faixas sumirem.",
+              "Usa a ideia de onda de matéria para explicar as faixas."
+            ]
+          }
+        },
+        {
+          "title": "O átomo e os níveis de energia",
+          "goal": "Entender por que cada elemento emite cores próprias e o que o modelo de Bohr acerta e erra.",
+          "skills": [
+            {
+              "id": "m3-espectros",
+              "name": "Distinguir espectro contínuo de espectro de linhas",
+              "bloom": "understand"
+            },
+            {
+              "id": "m3-niveis-de-bohr",
+              "name": "Usar os níveis de energia do hidrogênio para achar a energia do fóton emitido",
+              "bloom": "understand"
+            },
+            {
+              "id": "m3-limites-de-bohr",
+              "name": "Explicar o que o modelo de Bohr não consegue descrever",
+              "bloom": "understand"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "A impressão digital dos átomos",
+              "goal": "Ver os espectros de linhas e a ideia de níveis de energia.",
+              "skills": [
+                "m3-espectros",
+                "m3-niveis-de-bohr"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "O modelo de Bohr do hidrogênio",
+              "goal": "Entender os níveis E = −13,6 eV/n² e os saltos entre eles.",
+              "skills": [
+                "m3-niveis-de-bohr",
+                "m3-espectros"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: saltos e cores",
+              "goal": "Calcular a energia e a cor de fótons emitidos pelo hidrogênio.",
+              "skills": [
+                "m3-niveis-de-bohr",
+                "m3-espectros"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Onde o modelo de Bohr falha",
+              "goal": "Ver como as ondas de matéria explicam os níveis e por que órbitas não existem de fato.",
+              "skills": [
+                "m3-limites-de-bohr",
+                "m3-niveis-de-bohr"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: átomos e espectros",
+              "goal": "Misturar espectros, níveis e limites do modelo.",
+              "skills": [
+                "m3-espectros",
+                "m3-niveis-de-bohr",
+                "m3-limites-de-bohr"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Espectroscópio de CD",
+            "prompt": "Use um CD ou DVD velho como rede de difração: olhe o reflexo de lâmpadas diferentes (incandescente, LED branco, fluorescente, a tela do celular) e desenhe o que vê. Nunca olhe para o Sol. Classifique cada espectro como contínuo ou com faixas separadas e explique a diferença com a ideia de níveis de energia.",
+            "rubric": [
+              "Registra o espectro de pelo menos três fontes de luz.",
+              "Classifica corretamente cada um como contínuo ou com faixas.",
+              "Relaciona as faixas separadas a saltos entre níveis de energia de átomos."
+            ]
+          }
+        },
+        {
+          "title": "Probabilidade e função de onda",
+          "goal": "Entender que a mecânica quântica prevê probabilidades e o que é a função de onda.",
+          "skills": [
+            {
+              "id": "m4-interpretacao-de-born",
+              "name": "Explicar que o quadrado da função de onda dá a probabilidade",
+              "bloom": "understand"
+            },
+            {
+              "id": "m4-previsao-estatistica",
+              "name": "Distinguir a previsão de uma medida isolada da previsão de muitas medidas",
+              "bloom": "understand"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Deus joga dados?",
+              "goal": "Ver por que a teoria prevê padrões, e não pontos.",
+              "skills": [
+                "m4-previsao-estatistica",
+                "m4-interpretacao-de-born"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "A função de onda e a regra de Born",
+              "goal": "Ler um gráfico de probabilidade e saber o que ele promete.",
+              "skills": [
+                "m4-interpretacao-de-born"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: lendo probabilidades",
+              "goal": "Interpretar gráficos de probabilidade e frequências de resultados.",
+              "skills": [
+                "m4-interpretacao-de-born",
+                "m4-previsao-estatistica"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Uma medida, muitas medidas",
+              "goal": "Separar o que é aleatório do que é previsível na teoria.",
+              "skills": [
+                "m4-previsao-estatistica"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: previsões quânticas",
+              "goal": "Prever frequências de resultados em experimentos repetidos.",
+              "skills": [
+                "m4-previsao-estatistica",
+                "m4-interpretacao-de-born"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Simulando medidas com dados",
+            "prompt": "Imagine uma partícula com 1/6 de chance de ser achada na região A e 5/6 na região B. Use um dado para simular 60 medições (1 = região A). Anote os resultados de 10 em 10 e compare a frequência observada com a prevista. Escreva o que é previsível e o que não é.",
+            "rubric": [
+              "Registra as 60 simulações em blocos de 10.",
+              "Compara a frequência observada com 1/6.",
+              "Explica que um resultado isolado não é previsível, mas a frequência em muitas medidas é."
+            ]
+          }
+        },
+        {
+          "title": "O princípio da incerteza",
+          "goal": "Entender o princípio da incerteza como propriedade das ondas, não como defeito dos instrumentos.",
+          "skills": [
+            {
+              "id": "m5-pacote-de-onda",
+              "name": "Relacionar o tamanho de um pacote de onda com a mistura de comprimentos de onda",
+              "bloom": "understand"
+            },
+            {
+              "id": "m5-incerteza",
+              "name": "Explicar e usar Δx·Δp ≥ ħ/2 para estimativas simples",
+              "bloom": "understand"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Por que não dá para saber tudo",
+              "goal": "Ver a ligação entre localizar uma onda e misturar comprimentos de onda.",
+              "skills": [
+                "m5-pacote-de-onda",
+                "m5-incerteza"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "O princípio da incerteza de Heisenberg",
+              "goal": "Entender a desigualdade e o que ela proíbe.",
+              "skills": [
+                "m5-incerteza",
+                "m5-pacote-de-onda"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: estimativas com a incerteza",
+              "goal": "Fazer estimativas de ordem de grandeza com a incerteza.",
+              "skills": [
+                "m5-incerteza"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "O que a incerteza não é",
+              "goal": "Separar a incerteza quântica do erro de medição e de exageros da divulgação.",
+              "skills": [
+                "m5-incerteza",
+                "m5-pacote-de-onda"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: incerteza e pacotes de onda",
+              "goal": "Distinguir afirmações certas e erradas sobre a incerteza.",
+              "skills": [
+                "m5-incerteza",
+                "m5-pacote-de-onda"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Caçador de mitos da incerteza",
+            "prompt": "Encontre duas frases sobre o princípio da incerteza em vídeos, livros de autoajuda ou redes sociais. Para cada uma, diga se está certa, errada ou exagerada, e reescreva-a de forma correta usando o que aprendeu no módulo.",
+            "rubric": [
+              "Traz duas frases reais, com a fonte.",
+              "Classifica cada uma com uma justificativa física.",
+              "Reescreve cada frase de forma correta e clara."
+            ]
+          }
+        },
+        {
+          "title": "Superposição e medição",
+          "goal": "Entender o que é superposição, o que acontece na medição e o interferômetro com um único fóton.",
+          "skills": [
+            {
+              "id": "m6-superposicao",
+              "name": "Explicar o que é um estado de superposição",
+              "bloom": "understand"
+            },
+            {
+              "id": "m6-medicao",
+              "name": "Descrever o que a medição faz com um sistema em superposição",
+              "bloom": "understand"
+            },
+            {
+              "id": "m6-interferometro",
+              "name": "Explicar o resultado do interferômetro de Mach-Zehnder com um fóton",
+              "bloom": "understand"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Um fóton, dois caminhos",
+              "goal": "Ver o interferômetro de Mach-Zehnder com fótons um a um.",
+              "skills": [
+                "m6-interferometro",
+                "m6-superposicao"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "O que é superposição",
+              "goal": "Entender superposição sem cair no 'está num ou no outro e não sabemos'.",
+              "skills": [
+                "m6-superposicao",
+                "m6-medicao"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: superposição",
+              "goal": "Reconhecer superposições e prever medições.",
+              "skills": [
+                "m6-superposicao",
+                "m6-medicao"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Medição, colapso e o gato de Schrödinger",
+              "goal": "Entender o que é 'observar' na física e o que o gato quer ilustrar.",
+              "skills": [
+                "m6-medicao",
+                "m6-interferometro"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: medição e interferômetro",
+              "goal": "Prever resultados do interferômetro com e sem detector.",
+              "skills": [
+                "m6-medicao",
+                "m6-interferometro",
+                "m6-superposicao"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Explique o interferômetro",
+            "prompt": "Desenhe o interferômetro de Mach-Zehnder e escreva uma explicação de meia página, para alguém que nunca estudou física, do que acontece quando um fóton entra nele: sem detector nos caminhos e com detector num dos caminhos.",
+            "rubric": [
+              "O desenho mostra os dois divisores de feixe, os espelhos e os dois detectores.",
+              "Explica que, sem detector nos caminhos, o fóton chega sempre ao mesmo detector.",
+              "Explica que, com detector num caminho, os dois detectores finais passam a disparar.",
+              "Usa a palavra superposição de forma correta."
+            ]
+          }
+        },
+        {
+          "title": "Spin",
+          "goal": "Entender o spin pelo experimento de Stern-Gerlach e o que acontece em medições sucessivas.",
+          "skills": [
+            {
+              "id": "m7-stern-gerlach",
+              "name": "Descrever o experimento de Stern-Gerlach e seu resultado",
+              "bloom": "understand"
+            },
+            {
+              "id": "m7-spin-meio",
+              "name": "Explicar o que significa o elétron ter spin 1/2",
+              "bloom": "understand"
+            },
+            {
+              "id": "m7-medicoes-sucessivas",
+              "name": "Prever resultados de medições de spin em sequência",
+              "bloom": "understand"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Dois pontos numa placa",
+              "goal": "Ver o experimento de Stern-Gerlach e por que surpreendeu.",
+              "skills": [
+                "m7-stern-gerlach",
+                "m7-spin-meio"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Spin: um ímã que só aponta de dois jeitos",
+              "goal": "Entender spin 1/2 e o que ele não é (uma bolinha girando).",
+              "skills": [
+                "m7-spin-meio",
+                "m7-stern-gerlach"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: Stern-Gerlach",
+              "goal": "Prever o que aparece na placa em diferentes situações.",
+              "skills": [
+                "m7-stern-gerlach",
+                "m7-spin-meio"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Medições em sequência",
+              "goal": "Entender o que acontece ao medir o spin em eixos diferentes, um depois do outro.",
+              "skills": [
+                "m7-medicoes-sucessivas",
+                "m7-spin-meio"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: spin em sequência",
+              "goal": "Prever as frações de átomos em cadeias de aparelhos.",
+              "skills": [
+                "m7-medicoes-sucessivas",
+                "m7-stern-gerlach",
+                "m7-spin-meio"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Cadeia de aparelhos com moedas",
+            "prompt": "Monte, com moedas, a simulação de três aparelhos de Stern-Gerlach em sequência (vertical, horizontal, vertical): a cada aparelho que mede num eixo diferente do anterior, jogue a moeda para decidir o resultado. Siga 40 átomos e anote quantos saem 'para cima' no último aparelho. Compare com a previsão das aulas e explique o resultado.",
+            "rubric": [
+              "Registra os 40 átomos nos três aparelhos.",
+              "Compara a fração final com a prevista.",
+              "Explica por que o aparelho do meio 'apaga' o resultado do primeiro."
+            ]
+          }
+        },
+        {
+          "title": "Emaranhamento e o que vem depois",
+          "goal": "Entender o que é emaranhamento, o que ele permite e o que não permite, e ter uma ideia do que é um qubit.",
+          "skills": [
+            {
+              "id": "m8-emaranhamento",
+              "name": "Explicar o que é um par emaranhado e suas correlações",
+              "bloom": "understand"
+            },
+            {
+              "id": "m8-sem-mensagem",
+              "name": "Explicar por que o emaranhamento não permite mandar mensagens instantâneas",
+              "bloom": "understand"
+            },
+            {
+              "id": "m8-qubit",
+              "name": "Descrever o que é um qubit e onde a física quântica está no dia a dia",
+              "bloom": "understand"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Correlações que assustaram Einstein",
+              "goal": "Ver o que é um par emaranhado e por que ele surpreende.",
+              "skills": [
+                "m8-emaranhamento",
+                "m8-sem-mensagem"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Emaranhamento sem mistério",
+              "goal": "Entender as correlações de um par emaranhado e o que elas não permitem.",
+              "skills": [
+                "m8-emaranhamento",
+                "m8-sem-mensagem"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino: pares emaranhados",
+              "goal": "Prever correlações e desmontar afirmações erradas.",
+              "skills": [
+                "m8-emaranhamento",
+                "m8-sem-mensagem"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Qubits e a física quântica do dia a dia",
+              "goal": "Ver o que é um qubit e onde a física quântica já está (laser, LED, chips).",
+              "skills": [
+                "m8-qubit",
+                "m8-emaranhamento"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Treino final: revisão do curso",
+              "goal": "Retomar as ideias principais de todos os módulos.",
+              "skills": [
+                "m8-qubit",
+                "m8-emaranhamento",
+                "m8-sem-mensagem"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Cartilha da física quântica",
+            "prompt": "Escreva uma cartilha de uma ou duas páginas com as cinco ideias da física quântica que mais surpreenderam você no curso. Para cada uma, diga o experimento que a sustenta e um mito comum sobre ela, com a correção.",
+            "rubric": [
+              "Traz cinco ideias diferentes do curso.",
+              "Liga cada ideia a um experimento real.",
+              "Corrige um mito para cada ideia de forma fisicamente correta.",
+              "Usa linguagem que um leigo entende."
+            ]
+          }
+        }
+      ],
+      "bibliography": [
+        {
+          "title": "University Physics Volume 3, capítulo 6: Photons and Matter Waves",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-introduction",
+          "license": "cc-by-nc-sa",
+          "reason": "Livro-texto aberto com a sequência clássica: corpo negro, fotoelétrico, Compton, Bohr, de Broglie e dualidade. Espinha dos módulos 1 a 3."
+        },
+        {
+          "title": "6.1 Blackbody Radiation (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-1-blackbody-radiation",
+          "license": "cc-by-nc-sa",
+          "reason": "Corpo negro, catástrofe do ultravioleta e a hipótese de Planck (E = nhf), com o valor da constante h."
+        },
+        {
+          "title": "6.2 Photoelectric Effect (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-2-photoelectric-effect",
+          "license": "cc-by-nc-sa",
+          "reason": "As três observações que a física clássica não explica e a equação de Einstein K_max = hf − φ, com tabela de funções trabalho."
+        },
+        {
+          "title": "6.4 Bohr's Model of the Hydrogen Atom (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-4-bohrs-model-of-the-hydrogen-atom",
+          "license": "cc-by-nc-sa",
+          "reason": "Espectros de linhas, postulados de Bohr e níveis de energia do hidrogênio (−13,6 eV/n²)."
+        },
+        {
+          "title": "6.5 De Broglie's Matter Waves (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-5-de-broglies-matter-waves",
+          "license": "cc-by-nc-sa",
+          "reason": "λ = h/p, o experimento de Davisson-Germer e a difração de nêutrons e moléculas de C60."
+        },
+        {
+          "title": "6.6 Wave-Particle Duality (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/6-6-wave-particle-duality",
+          "license": "cc-by-nc-sa",
+          "reason": "Dupla fenda com luz e com elétrons enviados um a um (Tonomura, 1989)."
+        },
+        {
+          "title": "7.1 Wave Functions (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions",
+          "license": "cc-by-nc-sa",
+          "reason": "Interpretação de Born (probabilidade), colapso na visão de Copenhague, gato de Schrödinger."
+        },
+        {
+          "title": "7.2 The Heisenberg Uncertainty Principle (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/7-2-the-heisenberg-uncertainty-principle",
+          "license": "cc-by-nc-sa",
+          "reason": "Δx·Δp ≥ ħ/2 explicado por pacotes de onda, e a estimativa da energia do hidrogênio pela incerteza."
+        },
+        {
+          "title": "8.3 Electron Spin (University Physics Volume 3)",
+          "author": "Samuel J. Ling, William Moebs, Jeff Sanny",
+          "institution": "OpenStax (Rice University)",
+          "type": "book",
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/8-3-electron-spin",
+          "license": "cc-by-nc-sa",
+          "reason": "Spin 1/2 do elétron e o experimento de Stern-Gerlach com átomos de prata (duas faixas na tela)."
+        },
+        {
+          "title": "8.04 Quantum Physics I (Spring 2016)",
+          "author": "Barton Zwiebach",
+          "institution": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/",
+          "license": "cc-by-nc-sa",
+          "reason": "Curso universitário completo, com vídeos. Referência para quem quiser ir além do básico depois deste curso."
+        },
+        {
+          "title": "8.04 Quantum Physics I: Lecture Notes",
+          "author": "Barton Zwiebach",
+          "institution": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes",
+          "license": "cc-by-nc-sa",
+          "reason": "Notas 1 a 3: características-chave da mecânica quântica (superposição, emaranhamento), fótons no interferômetro de Mach-Zehnder e efeito fotoelétrico. Inspira a ordem dos módulos 6 a 8."
+        },
+        {
+          "title": "Photoelectric Effect (simulação)",
+          "author": "PhET Interactive Simulations",
+          "institution": "University of Colorado Boulder",
+          "type": "site",
+          "url": "https://phet.colorado.edu/en/simulations/photoelectric",
+          "license": "unknown",
+          "reason": "Simulação gratuita para variar metal, cor e intensidade da luz e ver o efeito na corrente. Base do projeto do módulo 1."
+        },
+        {
+          "title": "Quantum Wave Interference (simulação)",
+          "author": "PhET Interactive Simulations",
+          "institution": "University of Colorado Boulder",
+          "type": "site",
+          "url": "https://phet.colorado.edu/en/simulations/quantum-wave-interference",
+          "license": "unknown",
+          "reason": "Dupla fenda com fótons, elétrons e átomos, uma partícula de cada vez. Base do projeto do módulo 2."
+        },
+        {
+          "title": "Stern–Gerlach experiment",
+          "author": "Colaboradores da Wikipedia",
+          "institution": "Wikipedia",
+          "type": "article",
+          "url": "https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment",
+          "license": "cc-by-sa",
+          "reason": "História (1922) e descrição do experimento, incluindo medições sucessivas em eixos diferentes."
+        },
+        {
+          "title": "Double-slit experiment",
+          "author": "Colaboradores da Wikipedia",
+          "institution": "Wikipedia",
+          "type": "article",
+          "url": "https://en.wikipedia.org/wiki/Double-slit_experiment",
+          "license": "cc-by-sa",
+          "reason": "Panorama do experimento de Young (1801) às versões com partículas e com detecção de 'qual fenda'."
+        },
+        {
+          "title": "Quantum computing for the very curious",
+          "author": "Andy Matuschak e Michael Nielsen",
+          "institution": "quantum.country",
+          "type": "site",
+          "url": "https://quantum.country/qcvc",
+          "license": "unknown",
+          "reason": "Introdução gratuita a qubits, superposição, medição e estados emaranhados, escrita para iniciantes curiosos. Base do módulo 8."
+        }
+      ]
+    }
+  }
+}
