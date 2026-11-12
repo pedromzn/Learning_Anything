@@ -22,7 +22,7 @@ machine.
 
 ## Requirements
 
-- **Node.js 22.13 or newer**
+- **Node.js 24 LTS** (recommended; 22.13 or newer works)
 - **ffmpeg** on the PATH (to generate videos and for the Feynman lesson to hear you): `brew install ffmpeg` (macOS),
   `sudo apt install ffmpeg` (Debian/Ubuntu), `winget install Gyan.FFmpeg` (Windows)
 - An AI with access to this repository, to create courses (Claude Code, Codex, Cursor…)

@@ -5,7 +5,7 @@ reports.
 
 ## Before you start
 
-- Node 22.13 or newer and `ffmpeg` (only to work on video).
+- Node 24 LTS (22.13 or newer works) and `ffmpeg` (only to work on video).
 - `git clone`, then `npm install` and `npm run dev` (http://localhost:3040).
 - Read [`AGENTS.md`](AGENTS.md) (the course flow) and the table below (where things live).
 
