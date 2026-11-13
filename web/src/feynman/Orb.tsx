@@ -1,5 +1,5 @@
 /**
- * Ana on screen: a calm voice indicator. A soft disc in the theme's colors, with rings that breathe with the volume —
+ * Mandy on screen: a calm voice indicator. A soft disc in the theme's colors, with rings that breathe with the volume —
  * the student's while she listens (accent green), her own while she speaks (terracotta); while thinking, a thin arc
  * turns around it. Colors come from the theme variables, so it fits paper by day and the lamp at night. Drawn on a
  * canvas every frame; with "reduce motion" on, it stays almost still.

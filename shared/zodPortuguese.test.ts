@@ -12,7 +12,7 @@ describe('validation in Portuguese', function describeValidations() {
     [z.string().max(2), 'abc', 'Use até 2 caracteres.'],
     [z.array(z.string()).max(1), ['a', 'b'], 'O máximo é 1 itens.'],
     [z.enum(['yes', 'no']), 'talvez', 'Escolha uma das opções.'],
-    [z.object({ name: z.string() }).strict(), { name: 'Ana', company: 'outra' }, 'Campo desconhecido: company.'],
+    [z.object({ name: z.string() }).strict(), { name: 'Mandy', company: 'outra' }, 'Campo desconhecido: company.'],
   ] as const)('keeps the form sentence (%s)', function checkBehavior(schema, input, message) {
     const result = schema.safeParse(input)
     expect(result.success).toBe(false)

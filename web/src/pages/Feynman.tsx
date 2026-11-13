@@ -1,5 +1,5 @@
 /**
- * The Feynman lesson: the student teaches the module's central topic to Ana, out loud. Ana (the orb) listens,
+ * The Feynman lesson: the student teaches the module's central topic to Mandy, out loud. Mandy (the orb) listens,
  * thinks and answers by voice, asks and corrects; at the end, the evaluation shows each central point. Without a
  * microphone or without Whisper, the student can type. See `docs/FEYNMAN.md`.
  */
@@ -24,7 +24,7 @@ import {
   type FeynmanEvaluation,
   type StudentFeynman,
   type Turn,
-  type AnaTurn,
+  type MandyTurn,
 } from '@shared/feynman'
 import { api, useData } from '@/lib/api'
 import { announce } from '@/lib/rewards'
@@ -100,7 +100,7 @@ export default function Feynman() {
     return <ScreenError error={error ?? { message: t.feynman.notFound }} onRetry={() => void reload()} />
 
   const currentBlock = block
-  // Ana speaks the course language; the buttons follow the interface
+  // Mandy speaks the course language; the buttons follow the interface
   const utterances = textsIn(currentBlock.language).feynman.utterances
   const back = `/courses/${id}`
 
@@ -109,7 +109,7 @@ export default function Feynman() {
     setHistory(historyRef.current)
   }
 
-  async function anaSpeech(text: string) {
+  async function mandySpeech(text: string) {
     if (!active.current) return
     setMoment('speaking')
     await speech.current?.speak(text)
@@ -137,7 +137,7 @@ export default function Feynman() {
       if (!r.ok) throw new Error(j.error ?? t.general.serverResponded(r.status))
       const text = j.data?.text.trim() ?? ''
       if (text.split(/\s+/).filter(Boolean).length < 2) {
-        await anaSpeech(utterances.repeat)
+        await mandySpeech(utterances.repeat)
         studentTurn()
         return
       }
@@ -153,7 +153,7 @@ export default function Feynman() {
     setMoment('thinking')
     setCorrection(null)
     try {
-      const r = await api.post<AnaTurn>(`${base}/conversation`, {
+      const r = await api.post<MandyTurn>(`${base}/conversation`, {
         history: historyRef.current,
         coveredIds: coveredPointsRef.current,
       })
@@ -161,19 +161,19 @@ export default function Feynman() {
       coveredPointsRef.current = r.coveredIds
       setCovered(r.coveredIds)
       setCorrection(r.correction)
-      append({ who: 'ana', text: r.answer })
-      await anaSpeech(r.answer)
+      append({ who: 'mandy', text: r.answer })
+      await mandySpeech(r.answer)
       studentTurn()
     } catch (e) {
-      setWarning(e instanceof Error ? e.message : t.feynman.anaNoReply)
+      setWarning(e instanceof Error ? e.message : t.feynman.mandyNoReply)
       setMoment('idle')
     }
   }
 
   async function getStarted() {
     setWarning(null)
-    speech.current = new Speech((n) => (level.current = n), LANGUAGE_DATA[currentBlock.language].anaVoice)
-    if (currentBlock.ana.listener && !typingRef.current) {
+    speech.current = new Speech((n) => (level.current = n), LANGUAGE_DATA[currentBlock.language].mandyVoice)
+    if (currentBlock.mandy.listener && !typingRef.current) {
       try {
         microphone.current = await MicRecorder.open({
           onLevel: (n) => (level.current = n),
@@ -186,8 +186,8 @@ export default function Feynman() {
       }
     } else setTyping(true)
     setStage('conversation')
-    append({ who: 'ana', text: currentBlock.opening })
-    await anaSpeech(currentBlock.opening)
+    append({ who: 'mandy', text: currentBlock.opening })
+    await mandySpeech(currentBlock.opening)
     studentTurn()
   }
 
@@ -315,7 +315,7 @@ export default function Feynman() {
                 )}
               >
                 <span className="mb-0.5 block text-[11px] text-ink-faint">
-                  {turn.who === 'student' ? t.feynman.you : 'Ana'}
+                  {turn.who === 'student' ? t.feynman.you : 'Mandy'}
                 </span>
                 {turn.text}
               </div>
@@ -431,15 +431,15 @@ function Start({
 
       <Panel className="w-full max-w-xl p-4 text-left text-sm">
         <ul className="flex flex-col gap-2">
-          <Requirement ok={block.ana.listener} text={t.feynman.listener} missingText={t.feynman.listenerMissing} />
-          <Requirement ok={block.ana.voice} text={t.feynman.voice} missingText={t.feynman.voiceMissing} />
+          <Requirement ok={block.mandy.listener} text={t.feynman.listener} missingText={t.feynman.listenerMissing} />
+          <Requirement ok={block.mandy.voice} text={t.feynman.voice} missingText={t.feynman.voiceMissing} />
           <Requirement
-            ok={block.ana.ollama}
-            text={block.ana.ollama ? t.feynman.brainWith(block.ana.model ?? '') : t.feynman.brain}
+            ok={block.mandy.ollama}
+            text={block.mandy.ollama ? t.feynman.brainWith(block.mandy.model ?? '') : t.feynman.brain}
             missingText={t.feynman.brainMissing}
           />
         </ul>
-        {(!block.ana.listener || !block.ana.voice || !block.ana.ollama) && (
+        {(!block.mandy.listener || !block.mandy.voice || !block.mandy.ollama) && (
           <div className="mt-3">
             <p className="mb-2 text-ink-faint">{t.feynman.toEnable}</p>
             <Command text="npm run feynman:install" />
@@ -459,7 +459,7 @@ function Start({
         >
           {typing ? t.feynman.startTyping : t.feynman.startExplaining}
         </Button>
-        {block.ana.listener && (
+        {block.mandy.listener && (
           <Button variant="ghost" onClick={() => onType(!typing)}>
             {typing ? t.feynman.preferSpeaking : t.feynman.preferTyping}
           </Button>

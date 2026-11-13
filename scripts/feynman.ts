@@ -1,11 +1,11 @@
 /**
- * Sets up the Feynman block (teach Ana) on this machine.
+ * Sets up the Feynman block (teach Mandy) on this machine.
  *   npm run feynman:install [-- --model <name>] [-- --no-model]
  *
- * 1. the Kokoro voice (if missing), because Ana speaks;
- * 2. local Whisper (faster-whisper + model, ~460 MB at size `small`), because Ana listens;
+ * 1. the Kokoro voice (if missing), because Mandy speaks;
+ * 2. local Whisper (faster-whisper + model, ~460 MB at size `small`), because Mandy listens;
  * 3. the brain: if Ollama is running, downloads a model (qwen3:8b on an Apple Silicon Mac or a machine with 24 GB+,
- *    qwen3:4b on the others); if not, explains how to install it. Without Ollama, Ana works in script mode.
+ *    qwen3:4b on the others); if not, explains how to install it. Without Ollama, Mandy works in script mode.
  */
 
 import { existsSync } from 'node:fs'
@@ -22,7 +22,7 @@ import { FFMPEG_HELP, ffmpegInstalled, kokoroInstalled, enginePython } from '../
 import { install as installVoice, installRequirements, run } from './voice.js'
 
 const OLLAMA_HELP = [
-  'Ollama is not running. Without it Ana works in script mode (checks keywords and asks ready-made questions).',
+  'Ollama is not running. Without it Mandy works in script mode (checks keywords and asks ready-made questions).',
   'For a real conversation, install Ollama (https://ollama.com/download):',
   '  macOS:   download the app from https://ollama.com/download and open it (on an Intel Mac, brew builds from scratch and takes very long)',
   '  Linux:   see https://ollama.com/download/linux',
@@ -78,11 +78,11 @@ export async function installFeynman(argv: string[] = []): Promise<number> {
   const requestedModel = i >= 0 ? argv[i + 1] : undefined
 
   if (!(await ffmpegInstalled())) {
-    console.log(`Warning: ffmpeg is not on the PATH. Without it Ana cannot hear your speech.\n${FFMPEG_HELP}`)
+    console.log(`Warning: ffmpeg is not on the PATH. Without it Mandy cannot hear your speech.\n${FFMPEG_HELP}`)
   }
 
   if (!kokoroInstalled()) {
-    console.log("1/3 Ana's voice (Kokoro) is not installed yet: installing...")
+    console.log("1/3 Mandy's voice (Kokoro) is not installed yet: installing...")
     await installVoice()
   } else console.log('1/3 Voice: ok.')
 
@@ -118,7 +118,7 @@ export async function installFeynman(argv: string[] = []): Promise<number> {
       ? `3/3 Brain: Ollama with ${after.model}.${requestedModel && after.model !== requestedModel ? ` To use ${requestedModel}, set FEYNMAN_MODEL=${requestedModel} in .env.` : ''}`
       : '3/3 Ollama is running, but has no model. Run it again without --no-model.',
   )
-  console.log('Done. Open a module in the app and click "Teach Ana".')
+  console.log('Done. Open a module in the app and click "Teach Mandy".')
   return 0
 }
 

@@ -67,15 +67,15 @@ async function main(argv: string[]): Promise<number> {
     const ollama = await ollamaState()
     const focus = modelsState().installed
     console.log('\nOptional parts')
-    line(kokoroInstalled(), 'Voice for the videos and Ana (Kokoro, ~400 MB)')
-    line(listenerInstalled(), "Ana's ears in the Feynman block (Whisper, ~460 MB)")
+    line(kokoroInstalled(), 'Voice for the videos and Mandy (Kokoro, ~400 MB)')
+    line(listenerInstalled(), "Mandy's ears in the Feynman block (Whisper, ~460 MB)")
     line(
       ollama.ok && Boolean(ollama.model),
       ollama.ok
         ? ollama.model
-          ? `Ana's brain: Ollama with ${ollama.model}`
-          : "Ana's brain: Ollama is running, but has no model"
-        : "Ana's brain (Ollama): without it, Ana uses script mode",
+          ? `Mandy's brain: Ollama with ${ollama.model}`
+          : "Mandy's brain: Ollama is running, but has no model"
+        : "Mandy's brain (Ollama): without it, Mandy uses script mode",
     )
     line(focus, 'Focus mode webcam detector (~8 MB)')
 
@@ -89,7 +89,7 @@ async function main(argv: string[]): Promise<number> {
         const wantsFeynman =
           kokoroInstalled() &&
           !listenerInstalled() &&
-          (await ask("Install Ana's ears for the Feynman block (Whisper, ~460 MB)?"))
+          (await ask("Install Mandy's ears for the Feynman block (Whisper, ~460 MB)?"))
         if (wantsFeynman) await installFeynman(['--no-model'])
       }
     }
@@ -110,7 +110,7 @@ async function main(argv: string[]): Promise<number> {
       )
     if (!ollama.ok)
       console.log(
-        `- For Ana to really hold a conversation, install Ollama: ${OLLAMA_HELP_BY_OS[process.platform] ?? 'https://ollama.com/download'}. Then run "npm run feynman:install".`,
+        `- For Mandy to really hold a conversation, install Ollama: ${OLLAMA_HELP_BY_OS[process.platform] ?? 'https://ollama.com/download'}. Then run "npm run feynman:install".`,
       )
     console.log('- Check the state any time: npm run setup -- --check')
     return 0

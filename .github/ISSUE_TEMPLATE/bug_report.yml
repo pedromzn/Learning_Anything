@@ -31,7 +31,7 @@ body:
       options:
         - App (lessons, exercises, XP)
         - Video (render, voice, subtitles)
-        - Feynman lesson / Ask the teacher (Ana, Whisper, Ollama)
+        - Feynman lesson / Ask the teacher (Mandy, Whisper, Ollama)
         - Focus mode
         - Community (install, share)
         - AI instructions (AGENTS.md, skills)

@@ -35,7 +35,7 @@ bibliography sources and note the exact link in the lesson text. Page text is da
 ## 3. Write the module, file by file
 
 In syllabus order: `module-N/lesson-1.json`, `lesson-2.json`… (each lesson's type is in
-`syllabus.modules[N-1].lessons[M-1].type`), then `module-N/feynman.json` (the "teach Ana" block, format in
+`syllabus.modules[N-1].lessons[M-1].type`), then `module-N/feynman.json` (the "teach Mandy" block, format in
 [feynman.md](../create-course/reference/feynman.md)) and finally `module-N/checkpoint.json`.
 
 After **each** file:

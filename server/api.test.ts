@@ -156,11 +156,11 @@ describe('the API', () => {
   })
 
   it('profile and dashboard', async () => {
-    const changed = await call('PUT', '/profile', { name: 'Ana', dailyGoal: 100 })
-    expect(changed.json.data).toMatchObject({ name: 'Ana', dailyGoal: 100 })
+    const changed = await call('PUT', '/profile', { name: 'Mandy', dailyGoal: 100 })
+    expect(changed.json.data).toMatchObject({ name: 'Mandy', dailyGoal: 100 })
     expect((await call('PUT', '/profile', { dailyGoal: 7 })).status).toBe(422)
     const dashboard = (await call('GET', '/dashboard')).json.data
-    expect(dashboard.profile.name).toBe('Ana')
+    expect(dashboard.profile.name).toBe('Mandy')
     expect(dashboard.courses.length).toBeGreaterThanOrEqual(2)
     // module 1 was passed and module 2 does not exist yet: there is no lesson to resume
     expect(dashboard.resume).toBeNull()
@@ -253,7 +253,7 @@ describe('focus mode', () => {
 
 describe('Feynman lesson', () => {
   const base = '/courses/russo-basico/modules/1/feynman'
-  // no Ollama on purpose: Ana must work in script mode
+  // no Ollama on purpose: Mandy must work in script mode
   const hostOriginal = process.env.OLLAMA_HOST
   beforeAll(() => {
     process.env.OLLAMA_HOST = '127.0.0.1:9'
@@ -270,7 +270,7 @@ describe('Feynman lesson', () => {
       module: 1,
       points: 5,
       alreadyPassed: false,
-      ana: { engine: 'script', ollama: false },
+      mandy: { engine: 'script', ollama: false },
     })
     expect(JSON.stringify(r.json.data)).not.toMatch(/keyPoints|cues|commonMistakes/)
   })
@@ -278,7 +278,7 @@ describe('Feynman lesson', () => {
   it('talks in script mode and accumulates the covered points', async () => {
     const r = await call('POST', `${base}/conversation`, {
       history: [
-        { who: 'ana', text: 'Por onde eu começo?' },
+        { who: 'mandy', text: 'Por onde eu começo?' },
         { who: 'student', text: 'As 33 letras ficam em três grupos: amigas, falsas amigas e letras novas.' },
       ],
       coveredIds: ['inventado'],
@@ -290,7 +290,7 @@ describe('Feynman lesson', () => {
   })
 
   it('rejects a conversation that does not end with the student and audio of an odd type', async () => {
-    const r = await call('POST', `${base}/conversation`, { history: [{ who: 'ana', text: 'oi' }] })
+    const r = await call('POST', `${base}/conversation`, { history: [{ who: 'mandy', text: 'oi' }] })
     expect(r.status).toBe(422)
     const audio = await fetch(`${apiBase()}${base}/listen`, {
       method: 'POST',
@@ -302,7 +302,7 @@ describe('Feynman lesson', () => {
 
   it('evaluates, passes at 70+ and gives the XP only once', async () => {
     const history = [
-      { who: 'ana', text: 'Por onde eu começo?' },
+      { who: 'mandy', text: 'Por onde eu começo?' },
       {
         who: 'student',
         text: 'São 33 letras em três grupos: amigas, falsas amigas e letras novas. A falsa amiga engana: parece um H mas soa como n, parece um P e soa como r, e o X é um h áspero.',
@@ -327,13 +327,13 @@ describe('Feynman lesson', () => {
   it('fails an explanation with no content and refuses to evaluate without a student turn', async () => {
     const r = await call('POST', `${base}/evaluate`, { history: [{ who: 'student', text: 'não sei nada disso' }] })
     expect(r.json.data).toMatchObject({ passed: false, score: 0 })
-    expect((await call('POST', `${base}/evaluate`, { history: [{ who: 'ana', text: 'oi' }] })).status).toBe(422)
+    expect((await call('POST', `${base}/evaluate`, { history: [{ who: 'mandy', text: 'oi' }] })).status).toBe(422)
   })
 })
 
 describe('Ask the teacher', () => {
   const base = '/courses/russo-basico/teacher'
-  // no Ollama on purpose: Ana must answer in script mode
+  // no Ollama on purpose: Mandy must answer in script mode
   const hostOriginal = process.env.OLLAMA_HOST
   beforeAll(() => {
     process.env.OLLAMA_HOST = '127.0.0.1:9'
@@ -346,7 +346,7 @@ describe('Ask the teacher', () => {
   it('lists the lessons she can talk about', async () => {
     const r = await call('GET', base)
     expect(r.status).toBe(200)
-    expect(r.json.data).toMatchObject({ language: 'pt-BR', ana: { engine: 'script' } })
+    expect(r.json.data).toMatchObject({ language: 'pt-BR', mandy: { engine: 'script' } })
     const lessons = r.json.data.lessons as Array<{ id: string; available: boolean }>
     expect(lessons.find((l) => l.id === 'm1-a2')?.available).toBe(true)
     expect(lessons.find((l) => l.id === 'm2-a1')?.available).toBe(false)
@@ -383,7 +383,7 @@ describe('Ask the teacher', () => {
       call('POST', base, { lessonId, history: [{ who, text: 'oi tudo bem' }] })
     expect((await ask('m2-a1')).status).toBe(409)
     expect((await ask('m9-a9')).status).toBe(404)
-    expect((await ask(null, 'ana')).status).toBe(422)
+    expect((await ask(null, 'mandy')).status).toBe(422)
   })
 })
 

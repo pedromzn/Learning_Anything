@@ -114,7 +114,7 @@ Write the `exercises` lessons and `checkpoint.json`. Formats: [exercises.md](ref
 
 ## Role 4b: Feynman teacher → `module-N/feynman.json`
 
-Write the module's Feynman block: the answer key **Ana** (an AI with a voice) uses to listen to the student explain the
+Write the module's Feynman block: the answer key **Mandy** (an AI with a voice) uses to listen to the student explain the
 central topic out loud, ask questions and correct. Format and example: [feynman.md](reference/feynman.md).
 
 - **3 to 7 key points** (4 or 5 is ideal): what a good explanation MUST say, faithful to the module's lessons.

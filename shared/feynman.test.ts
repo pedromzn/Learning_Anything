@@ -5,7 +5,7 @@ import {
   feynmanSchema,
   normalizeSpeech,
   feynmanScore,
-  anaReplySchema,
+  mandyReplySchema,
   type Feynman,
 } from './feynman.js'
 
@@ -86,9 +86,9 @@ describe('the score', () => {
 
   it('the brain reply has a fixed shape', () => {
     expect(
-      anaReplySchema.safeParse({ answer: 'Legal! E a frequência?', coveredPoints: ['fotons'], correction: null })
+      mandyReplySchema.safeParse({ answer: 'Legal! E a frequência?', coveredPoints: ['fotons'], correction: null })
         .success,
     ).toBe(true)
-    expect(anaReplySchema.safeParse({ answer: '', coveredPoints: [], correction: null }).success).toBe(false)
+    expect(mandyReplySchema.safeParse({ answer: '', coveredPoints: [], correction: null }).success).toBe(false)
   })
 })

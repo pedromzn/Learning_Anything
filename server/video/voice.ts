@@ -230,7 +230,7 @@ async function generateSilence(text: string, output: string) {
 /**
  * Narrates a chunk with the chosen engine; the same text with the same engine and voice comes from the cache.
  * `options.language` is the course language (picks the voice and the pronunciation); `options.voice` swaps the voice for
- * this line only (Ana in the Feynman lesson has her own).
+ * this line only (Mandy in the Feynman lesson has her own).
  */
 export async function narrate(
   text: string,

@@ -1,7 +1,7 @@
 {
   "topic": "Como um programa C++ vira executável e por que tipos e inicialização exigem cuidado",
   "request": "Explique para um colega que só programou em Python o caminho de um arquivo .cpp até o programa rodando, em que etapa cada tipo de erro aparece, e por que em C++ é preciso pensar no tamanho dos tipos e inicializar toda variável. Use um exemplo concreto, como uma média que dá o resultado errado ou uma função que foi declarada e nunca definida.",
-  "opening": "Oi, eu sou a Ana. Eu programo em Python, e lá eu só rodo o arquivo e pronto. Me disseram que em cê mais mais tem compilador, linker e não sei mais o quê. O que acontece desde o arquivo até o programa rodar?",
+  "opening": "Oi, eu sou a Mandy. Eu programo em Python, e lá eu só rodo o arquivo e pronto. Me disseram que em cê mais mais tem compilador, linker e não sei mais o quê. O que acontece desde o arquivo até o programa rodar?",
   "keyPoints": [
     {
       "id": "tres-etapas",

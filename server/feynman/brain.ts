@@ -1,30 +1,30 @@
 /**
- * Ana's brain: an open model running on Ollama, on the person's machine (`http://127.0.0.1:11434`). The answer comes
+ * Mandy's brain: an open model running on Ollama, on the person's machine (`http://127.0.0.1:11434`). The answer comes
  * as JSON with a schema (Ollama's `format` feature), checked by zod. Without Ollama, without a model, or if the model
- * fails midway, Ana falls back to script mode — the lesson does not break.
+ * fails midway, Mandy falls back to script mode — the lesson does not break.
  */
 
 import { z } from 'zod'
 import {
   brainEvaluationSchema,
-  anaReplySchema,
+  mandyReplySchema,
   type BrainEvaluation,
   type Feynman,
-  type AnaEngine,
-  type AnaReply,
+  type MandyEngine,
+  type MandyReply,
   type Turn,
 } from '../../shared/feynman.js'
 import {
   studentUtterances,
   evaluationInstruction,
-  anaInstruction,
+  mandyInstruction,
   conversationMessages,
   speechesLabel,
 } from './context.js'
 import type { Language } from '../../shared/languages.js'
 import { scriptEvaluation, scriptTurn } from './script.js'
 
-/** The models Ana prefers, in order (the first installed one wins). `FEYNMAN_MODEL` overrides them. */
+/** The models Mandy prefers, in order (the first installed one wins). `FEYNMAN_MODEL` overrides them. */
 export const PREFERRED_MODELS = ['qwen3:8b', 'qwen3:4b', 'llama3.1:8b', 'gemma3:4b'] as const
 
 /** The Ollama address: `OLLAMA_HOST` (the same variable Ollama uses), with `http://` and no trailing slash. */
@@ -116,18 +116,18 @@ export function toSpeech(text: string): string {
     .trim()
 }
 
-export async function anaReply(
+export async function mandyReply(
   f: Feynman,
   lessons: string,
   history: readonly Turn[],
   coveredIds: readonly string[],
   language: Language,
-): Promise<{ answer: AnaReply; engine: AnaEngine }> {
+): Promise<{ answer: MandyReply; engine: MandyEngine }> {
   const { model } = await ollamaState()
   if (model) {
     try {
-      const messages = conversationMessages(anaInstruction(f, lessons, coveredIds, language), history)
-      const r = await chatWithOllama(model, messages, anaReplySchema)
+      const messages = conversationMessages(mandyInstruction(f, lessons, coveredIds, language), history)
+      const r = await chatWithOllama(model, messages, mandyReplySchema)
       const validIds = new Set(f.keyPoints.map((p) => p.id))
       return {
         answer: {
@@ -145,12 +145,12 @@ export async function anaReply(
   return { answer: scriptTurn(f, history, coveredIds, language), engine: 'script' }
 }
 
-export async function anaEvaluation(
+export async function mandyEvaluation(
   f: Feynman,
   lessons: string,
   history: readonly Turn[],
   language: Language,
-): Promise<{ evaluation: BrainEvaluation; engine: AnaEngine }> {
+): Promise<{ evaluation: BrainEvaluation; engine: MandyEngine }> {
   const { model } = await ollamaState()
   if (model) {
     try {

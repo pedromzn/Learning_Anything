@@ -77,7 +77,7 @@ function StepDetail({
     }
   } else if (step.type === 'feynman') {
     type = t.course.feynmanType(m.order)
-    title = m.feynmanPassed ? t.course.youTaughtAna : t.course.teachAna
+    title = m.feynmanPassed ? t.course.youTaughtMandy : t.course.teachMandy
     body = <p className="text-ink-soft">{t.course.feynmanBody}</p>
     if (status === 'locked')
       action = (

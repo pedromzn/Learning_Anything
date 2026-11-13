@@ -321,7 +321,7 @@
     "module-1/feynman.json": {
       "topic": "Como um programa Java é executado e como organizar sua solução em tipos, fluxo e métodos",
       "request": "Explique para uma pessoa que já programou em outra linguagem como um arquivo Java chega à JVM, como tipos influenciam as operações e como você transforma uma regra em métodos e controle de fluxo. Dê um exemplo pequeno e diga como investigaria um erro.",
-      "opening": "Oi, sou a Ana. Você já programa, mas quer entender o que muda quando o código passa pela JVM. Pode me explicar o caminho de um programa Java e depois mostrar como você organiza uma regra?",
+      "opening": "Oi, sou a Mandy. Você já programa, mas quer entender o que muda quando o código passa pela JVM. Pode me explicar o caminho de um programa Java e depois mostrar como você organiza uma regra?",
       "keyPoints": [
         {
           "id": "f1-compilation",

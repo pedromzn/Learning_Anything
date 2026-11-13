@@ -56,7 +56,7 @@ courses/<slug>/
 | `readsEnglish`   | boolean                    | default `false`              |
 | `language`       | `en` or `pt-BR`            | default `en`                 |
 
-`language` is the language the whole course is written in, narrated in and discussed with Ana in (voice, subtitles and
+`language` is the language the whole course is written in, narrated in and discussed with Mandy in (voice, subtitles and
 Whisper follow it). It does not depend on the app's interface language: someone using the app in Portuguese can study a
 course in English, and the other way around.
 
@@ -155,7 +155,7 @@ Used in text lessons, exercises, checkpoints and `question` scenes. The `type` f
 
 ## `module-N/feynman.json`
 
-The "teach Ana" block (see [FEYNMAN.md](FEYNMAN.md) and the reference
+The "teach Mandy" block (see [FEYNMAN.md](FEYNMAN.md) and the reference
 [feynman.md](../.claude/skills/create-course/reference/feynman.md)).
 
 | Field            | Rule                                                                                                                             |

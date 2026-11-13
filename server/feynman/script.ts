@@ -1,5 +1,5 @@
 /**
- * Script mode: Ana without AI, for whoever does not have Ollama. It checks the speech against the `cues` of each key
+ * Script mode: Mandy without AI, for whoever does not have Ollama. It checks the speech against the `cues` of each key
  * point, comments on what came up and asks the ready-made question of the next missing point; with everything covered,
  * it asks the follow-up questions. It does not catch content mistakes (that needs a real model) — and the evaluation
  * says so.
@@ -11,7 +11,7 @@ import {
   type BrainEvaluation,
   type Feynman,
   type KeyPoint,
-  type AnaReply,
+  type MandyReply,
   type Turn,
 } from '../../shared/feynman.js'
 import type { Language } from '../../shared/languages.js'
@@ -47,7 +47,7 @@ const PHRASES: Record<
     coveredAll: 'You went through all the central points.',
     review: (n) =>
       `Review the ${n === 1 ? 'point that was' : `${n} points that were`} incomplete in the module lessons.`,
-    noAI: ' In script mode Ana checks keywords and does not correct content mistakes; install Ollama for a real conversation.',
+    noAI: ' In script mode Mandy checks keywords and does not correct content mistakes; install Ollama for a real conversation.',
   },
   'pt-BR': {
     manyNew: 'Boa, isso esclareceu bastante coisa.',
@@ -62,11 +62,11 @@ const PHRASES: Record<
     coveredAll: 'Você passou por todos os pontos centrais.',
     review: (n) =>
       `Reveja os ${n === 1 ? 'ponto que ficou' : `${n} pontos que ficaram`} incompletos nas aulas do módulo.`,
-    noAI: ' No modo roteiro a Ana confere palavras-chave e não corrige erros de conteúdo; instale o Ollama para uma conversa de verdade.',
+    noAI: ' No modo roteiro a Mandy confere palavras-chave e não corrige erros de conteúdo; instale o Ollama para uma conversa de verdade.',
   },
 }
 
-/** The comment for a point Ana did not evaluate (so the route can complete the evaluation). */
+/** The comment for a point Mandy did not evaluate (so the route can complete the evaluation). */
 export const missingComment = (language: Language): string => PHRASES[language].missing
 
 /** How many distinct cues of each point appear in the text. */
@@ -76,14 +76,14 @@ export function cuesInSpeech(text: string, f: Feynman): Map<string, number> {
 }
 
 const lastAnaSpeech = (history: readonly Turn[]): string =>
-  [...history].reverse().find((t) => t.who === 'ana')?.text ?? ''
+  [...history].reverse().find((t) => t.who === 'mandy')?.text ?? ''
 
 export function scriptTurn(
   f: Feynman,
   history: readonly Turn[],
   coveredIds: readonly string[],
   language: Language,
-): AnaReply {
+): MandyReply {
   const phrases = PHRASES[language]
   const speech = [...history].reverse().find((t) => t.who === 'student')?.text ?? ''
   const cues = cuesInSpeech(speech, f)
@@ -105,7 +105,7 @@ export function scriptTurn(
     question = repeated && remaining[1] ? remaining[1].question : next.question
     if (repeated && !remaining[1]) question = phrases.anotherWay(next.question)
   } else {
-    const newOne = f.questions.find((p) => !history.some((t) => t.who === 'ana' && t.text.includes(p)))
+    const newOne = f.questions.find((p) => !history.some((t) => t.who === 'mandy' && t.text.includes(p)))
     question = newOne ?? phrases.allCovered
   }
   return { answer: `${beginning} ${question}`, coveredPoints: newOnes.map((p) => p.id), correction: null }

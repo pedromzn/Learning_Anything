@@ -36,7 +36,7 @@ export const FIXED_XP: Record<Exclude<EventType, 'correctAnswer'>, number> = {
   checkpoint_passed: 50,
   checkpoint_perfect: 25,
   course_completed: 200,
-  /** explaining the module to Ana with a score of 70+: explaining is the hardest proof of understanding */
+  /** explaining the module to Mandy with a score of 70+: explaining is the hardest proof of understanding */
   feynman_passed: 40,
   daily_goal_reached: 15,
   /** a correct spaced review (once per exercise per day) */

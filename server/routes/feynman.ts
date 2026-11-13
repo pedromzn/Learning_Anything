@@ -2,9 +2,9 @@
  * The Feynman lesson in the API (see `docs/FEYNMAN.md`):
  * - `GET  /courses/:id/modules/:order/feynman`               the block, without the answer key, and the available engines;
  * - `POST /courses/:id/modules/:order/feynman/listen`        the speech audio (raw body) → text, through local Whisper;
- * - `POST /courses/:id/modules/:order/feynman/conversation`  the conversation so far → Ana's next line;
+ * - `POST /courses/:id/modules/:order/feynman/conversation`  the conversation so far → Mandy's next line;
  * - `POST /courses/:id/modules/:order/feynman/evaluate`      the whole conversation → score, points, errors, XP;
- * - `POST /voice/speak`                                      a short text → mp3 (Ana's voice).
+ * - `POST /voice/speak`                                      a short text → mp3 (Mandy's voice).
  *
  * No audio or transcript is stored: only the score and the status of each point.
  */
@@ -18,15 +18,15 @@ import {
   turnSchema,
   MAX_TURNS,
   type FeynmanEvaluation,
-  type AnaState,
+  type MandyState,
   type StudentFeynman,
-  type AnaTurn,
+  type MandyTurn,
 } from '../../shared/feynman.js'
 import { FIXED_XP } from '../../shared/gamification.js'
 import { HttpError } from '../errors.js'
 import { find, readCourse, type ReadCourse } from '../courses/repository.js'
 import { progressOf, moduleUnlocked } from '../courses/summaries.js'
-import { anaEvaluation, ollamaState, toSpeech, anaReply } from '../feynman/brain.js'
+import { mandyEvaluation, ollamaState, toSpeech, mandyReply } from '../feynman/brain.js'
 import { lessonSummaries } from '../feynman/context.js'
 import { missingComment } from '../feynman/script.js'
 import { LISTENER_HELP, vocabularyHint, listenerInstalled, acceptedAudioType, transcribe } from '../feynman/listener.js'
@@ -60,7 +60,7 @@ function moduleWithFeynman(course: ReadCourse, order: number) {
   return { module, feynman: module.feynman }
 }
 
-export async function anaState(): Promise<AnaState> {
+export async function mandyState(): Promise<MandyState> {
   const ollama = await ollamaState()
   return {
     listener: listenerInstalled(),
@@ -87,7 +87,7 @@ feynmanRouter.get(
       points: feynman.keyPoints.length,
       alreadyPassed: passedOnes.has(module.order),
       bestScore: bestScores.get(module.order) ?? null,
-      ana: await anaState(),
+      mandy: await mandyState(),
       language: course.brief.language,
     }
     res.json({ data: payload })
@@ -121,14 +121,14 @@ feynmanRouter.post(
     if (history.at(-1)?.who !== 'student') throw new HttpError(422, "The last turn must be the student's.", 'invalid')
     const validIds = new Set(feynman.keyPoints.map((p) => p.id))
     const before = coveredIds.filter((id) => validIds.has(id))
-    const { answer, engine } = await anaReply(
+    const { answer, engine } = await mandyReply(
       feynman,
       lessonSummaries(module, course.brief.language),
       history,
       before,
       course.brief.language,
     )
-    const payload: AnaTurn = {
+    const payload: MandyTurn = {
       answer: answer.answer,
       coveredIds: [...new Set([...before, ...answer.coveredPoints])],
       correction: answer.correction,
@@ -146,8 +146,8 @@ feynmanRouter.post(
     const { course, module, feynman } = blockFromUrl(req)
     const { history } = evaluationRequestSchema.parse(req.body ?? {})
     if (!history.some((t) => t.who === 'student'))
-      throw new HttpError(422, 'Explain something to Ana before asking for the evaluation.', 'no_explanation')
-    const { evaluation, engine } = await anaEvaluation(
+      throw new HttpError(422, 'Explain something to Mandy before asking for the evaluation.', 'no_explanation')
+    const { evaluation, engine } = await mandyEvaluation(
       feynman,
       lessonSummaries(module, course.brief.language),
       history,

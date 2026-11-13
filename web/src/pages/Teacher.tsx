@@ -1,5 +1,5 @@
 /**
- * Ask the teacher: a page of each course where the student talks with Ana, the course teacher — about the whole course
+ * Ask the teacher: a page of each course where the student talks with Mandy, the course teacher — about the whole course
  * or about one lesson picked from the list (`?lesson=m1-a2` opens with it chosen). By voice (Whisper + Kokoro) or
  * typing. The voice starts only when the student asks for it (the browser needs a click to play sound and use the
  * microphone), and the microphone is held only while the student speaks. See `shared/teacher.ts`.
@@ -54,9 +54,11 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
   }
 
   const [lessonId, setLessonId] = useState<string | null>(initial)
-  const [entries, setEntries] = useState<Entry[]>([{ kind: 'turn', turn: { who: 'ana', text: greetingFor(initial) } }])
+  const [entries, setEntries] = useState<Entry[]>([
+    { kind: 'turn', turn: { who: 'mandy', text: greetingFor(initial) } },
+  ])
   const [moment, setMoment] = useState<Moment>('idle')
-  const [scriptMode, setScriptMode] = useState(!state.ana.ollama)
+  const [scriptMode, setScriptMode] = useState(!state.mandy.ollama)
   const [draft, setDraft] = useState('')
   const [warning, setWarning] = useState<string | null>(null)
   const [canFinish, setCanFinish] = useState(false)
@@ -65,7 +67,7 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
   const microphone = useRef<MicRecorder | null>(null)
   const speech = useRef<Speech | null>(null)
   /** the turns about the current subject: only these go to the teacher */
-  const subjectTurns = useRef<Turn[]>([{ who: 'ana', text: greetingFor(initial) }])
+  const subjectTurns = useRef<Turn[]>([{ who: 'mandy', text: greetingFor(initial) }])
   const voiceRef = useRef(false)
   const lessonRef = useRef(lessonId)
   lessonRef.current = lessonId
@@ -98,11 +100,11 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
 
   /** The voice is created on a click (browsers only play sound after one). */
   function ensureSpeech() {
-    if (!speech.current && state.ana.voice)
-      speech.current = new Speech((n) => (level.current = n), LANGUAGE_DATA[state.language].anaVoice)
+    if (!speech.current && state.mandy.voice)
+      speech.current = new Speech((n) => (level.current = n), LANGUAGE_DATA[state.language].mandyVoice)
   }
 
-  async function anaSays(text: string) {
+  async function mandySays(text: string) {
     if (!active.current || !speech.current) return
     setMoment('speaking')
     await speech.current.speak(text)
@@ -126,9 +128,9 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
         history: subjectTurns.current.slice(-20),
       })
       if (!active.current) return
-      addTurn({ who: 'ana', text: r.answer }, r.source ?? undefined)
+      addTurn({ who: 'mandy', text: r.answer }, r.source ?? undefined)
       setScriptMode(r.engine === 'script')
-      await anaSays(r.answer)
+      await mandySays(r.answer)
       studentTurn()
     } catch (e) {
       setWarning(e instanceof Error ? e.message : t.teacher.failed)
@@ -150,7 +152,7 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
       if (!r.ok) throw new Error(j.error ?? t.general.serverResponded(r.status))
       const text = j.data?.text.trim() ?? ''
       if (text.split(/\s+/).filter(Boolean).length < 2) {
-        await anaSays(utterances.repeat)
+        await mandySays(utterances.repeat)
         studentTurn()
         return
       }
@@ -164,7 +166,7 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
   async function startVoice() {
     setWarning(null)
     ensureSpeech()
-    if (!microphone.current && state.ana.listener) {
+    if (!microphone.current && state.mandy.listener) {
       try {
         microphone.current = await MicRecorder.open({
           onLevel: (n) => (level.current = n),
@@ -177,7 +179,7 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
     }
     voiceRef.current = true
     const last = subjectTurns.current.at(-1)
-    if (last?.who === 'ana') await anaSays(last.text)
+    if (last?.who === 'mandy') await mandySays(last.text)
     if (microphone.current && active.current) {
       microphone.current.listen()
       setMoment('listening')
@@ -202,13 +204,13 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
     const lesson = state.lessons.find((l) => l.id === next)
     const label = lesson ? lesson.title : t.teacher.wholeCourse
     const greeting = greetingFor(next)
-    subjectTurns.current = [{ who: 'ana', text: greeting }]
+    subjectTurns.current = [{ who: 'mandy', text: greeting }]
     setEntries((e) => [
       ...e,
       { kind: 'divider', label: t.teacher.nowAbout(label) },
-      { kind: 'turn', turn: { who: 'ana', text: greeting } },
+      { kind: 'turn', turn: { who: 'mandy', text: greeting } },
     ])
-    if (voiceRef.current) void anaSays(greeting).then(studentTurn)
+    if (voiceRef.current) void mandySays(greeting).then(studentTurn)
     else setMoment('idle')
   }
 
@@ -287,7 +289,7 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
               key={i}
               className={join(
                 'max-w-[85%] rounded-tile px-4 py-3 text-[15px] leading-relaxed',
-                entry.turn.who === 'ana' ? 'self-start bg-accent/15 text-ink' : 'self-end bg-tint text-ink-soft',
+                entry.turn.who === 'mandy' ? 'self-start bg-accent/15 text-ink' : 'self-end bg-tint text-ink-soft',
               )}
             >
               {entry.turn.text}
@@ -302,8 +304,8 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
 
       <div className="mt-3 flex shrink-0 flex-col gap-2 border-t border-line pt-3">
         {scriptMode ? <p className="text-[12px] text-ink-faint">{t.teacher.scriptNote}</p> : null}
-        {!state.ana.voice ? <p className="text-[12px] text-ink-faint">{t.teacher.noVoice}</p> : null}
-        {!state.ana.listener ? <p className="text-[12px] text-ink-faint">{t.teacher.noListener}</p> : null}
+        {!state.mandy.voice ? <p className="text-[12px] text-ink-faint">{t.teacher.noVoice}</p> : null}
+        {!state.mandy.listener ? <p className="text-[12px] text-ink-faint">{t.teacher.noListener}</p> : null}
         {warning ? <p className="text-[13px] text-error">{warning}</p> : null}
 
         {moment === 'listening' ? (
@@ -324,7 +326,7 @@ function Conversation({ courseId, state }: { courseId: string; state: TeacherSta
         ) : null}
 
         <form onSubmit={sendTyped} className="flex items-center gap-2">
-          {state.ana.listener && moment !== 'listening' ? (
+          {state.mandy.listener && moment !== 'listening' ? (
             <button
               type="button"
               onClick={() => void startVoice()}

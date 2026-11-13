@@ -57,7 +57,7 @@ sequence and **validate after each file**:
    exercises or video, according to the lesson's `type` in the syllabus).
 4. **Problem teacher** — the exercise lessons and `module-1/checkpoint.json`.
    **Feynman teacher** — `module-1/feynman.json`: the answer key of the block in which the student explains the module
-   out loud to Ana (an AI with a voice) before the checkpoint.
+   out loud to Mandy (an AI with a voice) before the checkpoint.
 5. **Scriptwriter** — the video lessons (the file is the scene script).
 6. **Reviewer** — read everything again as a skeptical teacher and fix it.
 7. Tell the person: the course is in the app; the videos are generated with `npm run course:video -- <slug>`
@@ -75,7 +75,7 @@ courses/<slug>/
 ├── syllabus.json         every planned module
 └── module-N/
     ├── lesson-M.json     M = position of the lesson in syllabus.modules[N-1].lessons, starting at 1
-    ├── feynman.json      the "teach Ana" block: topic, key points, common mistakes, questions
+    ├── feynman.json      the "teach Mandy" block: topic, key points, common mistakes, questions
     └── checkpoint.json   5 to 8 exact-grading items
 ```
 
@@ -124,7 +124,7 @@ They apply to every file. Details in the skills.
 - **In the course's language** (`brief.language`: `en` or `pt-BR`; English is the default), clear and direct, short
   sentences. In a Portuguese course, an English term only when it is the name used in the field, explained the first
   time. The video narration and the Feynman opening and questions are also in that language: the voice, the subtitles
-  and Ana follow the brief.
+  and Mandy follow the brief.
 - **Original content, with cited sources.** Explain in your own words what the best sources teach; do not copy
   sentences. A literal quote only if short (up to two lines), in quotation marks, with the source. Say in the text where
   the idea comes from ("as in lecture 3 of MIT's 18.01").
@@ -177,7 +177,7 @@ with `npm run voice:install`. If something fails, see [generate-videos](.claude/
 install anything with elevated permissions without telling the person.
 
 **Setting up the machine.** If the person just downloaded the repository and wants everything working, or if the
-microphone, the camera, Ana (Feynman lesson), Ollama or focus mode do not work, follow the
+microphone, the camera, Mandy (Feynman lesson), Ollama or focus mode do not work, follow the
 [setup-machine](.claude/skills/setup-machine/SKILL.md) skill: what each optional part needs, how to install it on each
 system, the common problems and how to uninstall.
 

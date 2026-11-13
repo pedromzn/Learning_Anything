@@ -53,12 +53,12 @@ describe('the streak', () => {
 
 describe('profile and certificate', () => {
   it('stores the name and one certificate per course', () => {
-    updateProfile({ name: 'Ana' })
+    updateProfile({ name: 'Mandy' })
     const data = { course: 'russo-basico', title: 'Russo', level: 'basic' as const, lessons: 5, modules: 2 }
     const code = issueCertificate(data)
     expect(code).toMatch(/^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/)
     expect(issueCertificate(data)).toBe(code)
-    expect(readCertificate(code)).toMatchObject({ name: 'Ana', courseId: 'russo-basico', modules: 2 })
+    expect(readCertificate(code)).toMatchObject({ name: 'Mandy', courseId: 'russo-basico', modules: 2 })
     expect(readCertificate('NADA-NADA-NADA')).toBeNull()
     expect(fullProfile().certificates).toHaveLength(1)
   })

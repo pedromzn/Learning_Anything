@@ -5,11 +5,11 @@
  * Two different things carry a language:
  * - the **interface** (buttons, menus, messages): the person's choice, asked the first time the app opens;
  * - each **course** (`brief.language`): the language the AI writes the lessons in, and the one the narration, the
- *   subtitles and Ana (the Feynman lesson) speak. A Portuguese speaker can study a course written in English, and the
+ *   subtitles and Mandy (the Feynman lesson) speak. A Portuguese speaker can study a course written in English, and the
  *   other way around.
  *
  * To add a language: add it here (with its Kokoro voices and Whisper code), write `web/src/i18n/<code>.ts` and the
- * Ana prompts in `server/feynman/context.ts`.
+ * Mandy prompts in `server/feynman/context.ts`.
  */
 
 import { z } from 'zod'
@@ -28,8 +28,8 @@ export interface LanguageData {
   kokoro: string
   /** the Kokoro voices for this language; the first is the default narrator */
   voices: readonly string[]
-  /** the voice Ana speaks with in the Feynman lesson */
-  anaVoice: string
+  /** the voice Mandy speaks with in the Feynman lesson */
+  mandyVoice: string
   /** the Whisper language code */
   whisper: string
 }
@@ -40,7 +40,7 @@ export const LANGUAGE_DATA: Record<Language, LanguageData> = {
     bcp47: 'en-US',
     kokoro: 'en-us',
     voices: ['af_heart', 'af_bella', 'am_michael', 'am_fenrir'],
-    anaVoice: 'af_heart',
+    mandyVoice: 'af_heart',
     whisper: 'en',
   },
   'pt-BR': {
@@ -48,7 +48,7 @@ export const LANGUAGE_DATA: Record<Language, LanguageData> = {
     bcp47: 'pt-BR',
     kokoro: 'pt-br',
     voices: ['pf_dora', 'pm_alex', 'pm_santa'],
-    anaVoice: 'pf_dora',
+    mandyVoice: 'pf_dora',
     whisper: 'pt',
   },
 }

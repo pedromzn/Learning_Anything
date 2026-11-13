@@ -74,7 +74,7 @@ export interface ReadModule {
   plan: PlannedModule
   state: ModuleState
   lessons: ReadLesson[]
-  /** the Feynman block (teach Ana), between the lessons and the checkpoint */
+  /** the Feynman block (teach Mandy), between the lessons and the checkpoint */
   feynman: Feynman | null
   hasFeynmanFile: boolean
   checkpoint: Checkpoint | null

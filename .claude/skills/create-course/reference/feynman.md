@@ -1,11 +1,11 @@
 # Feynman block: `courses/<slug>/module-N/feynman.json`
 
-Between the last lesson and the checkpoint, the student **explains out loud** the module's central topic to **Ana**,
+Between the last lesson and the checkpoint, the student **explains out loud** the module's central topic to **Mandy**,
 an AI with a voice that listens, asks and corrects (the Feynman technique). You do not write the conversation: you write
-the **answer key** that anchors Ana to what the module taught. Schema: `feynmanSchema` in `shared/feynman.ts`.
+the **answer key** that anchors Mandy to what the module taught. Schema: `feynmanSchema` in `shared/feynman.ts`.
 Overview: `docs/FEYNMAN.md`.
 
-Ana uses the file in two ways:
+Mandy uses the file in two ways:
 
 - **With Ollama** (a local model): it gets the answer key and the summary of the lessons, talks freely and corrects
   against the answer key.
@@ -18,7 +18,7 @@ Ana uses the file in two ways:
 | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `topic`          | text(200): the module's central topic, in a sentence the student understands                                         |
 | `request`        | text(600): the instruction the student reads ("explain it to a friend who has never seen..."), asking for an example |
-| `opening`        | text(400): Ana's first line, short, curious, ending in a question. It is spoken: **no `$` and no LaTeX**             |
+| `opening`        | text(400): Mandy's first line, short, curious, ending in a question. It is spoken: **no `$` and no LaTeX**           |
 | `keyPoints`      | 3 to 7 points (see below)                                                                                            |
 | `commonMistakes` | 1 to 6: `error` text(300), `correction` text(400). Mistakes students really make on this topic                       |
 | `questions`      | 2 to 6 follow-up questions: "why", "what if", "give me an example", "read this word"                                 |
@@ -31,7 +31,7 @@ Each key point:
 | `id`       | `^[a-z0-9-]{2,40}$`, unique in the file                                                                                                    |
 | `idea`     | text(300): what a good explanation MUST say, in one sentence, faithful to the lessons                                                      |
 | `cues`     | 2 to 10 short words or phrases (up to 60) that show the idea in speech, with no repeats (the validator compares ignoring accents and case) |
-| `question` | text(300): the question Ana asks if the point does not come up. It does not give the answer away                                           |
+| `question` | text(300): the question Mandy asks if the point does not come up. It does not give the answer away                                         |
 
 ## How to write it well
 
@@ -41,12 +41,12 @@ Each key point:
   think "h times the frequency", "photons", "two slits", not "E=hf". Include synonyms and the casual form. A single cue
   counts as "partial" in script mode; two or more, "covered". Avoid generic cues that show up in any sentence ("light",
   "letter"): they give points away for free.
-- **A correct, checkable idea**: no fact, number or formula that the module's lessons did not teach. Ana will correct
+- **A correct, checkable idea**: no fact, number or formula that the module's lessons did not teach. Mandy will correct
   the student against it; a mistake here turns into a wrong correction.
-- **Real common mistakes**, each with the correction in one sentence. Those are what Ana watches for.
+- **Real common mistakes**, each with the correction in one sentence. Those are what Mandy watches for.
 - **Questions that make you think**: they ask for an example, a cause, a contrast or an application, never a memorized
   "what is X?".
-- **An opening in the role of someone who wants to learn**: Ana introduces herself and asks the first question. In the
+- **An opening in the role of someone who wants to learn**: Mandy introduces herself and asks the first question. In the
   course's language (`brief.language`), in spoken language.
 
 ## Minimal valid example
@@ -55,7 +55,7 @@ Each key point:
 {
   "topic": "Why light, which was a wave, is also made of photons",
   "request": "Explain to a curious friend why light looked like a wave, what stopped fitting, and how the photon solved it. Use an everyday example.",
-  "opening": "Hi, I'm Ana. I always heard that light is a wave, but then people talk about photons and I get lost. Can you explain it from the start?",
+  "opening": "Hi, I'm Mandy. I always heard that light is a wave, but then people talk about photons and I get lost. Can you explain it from the start?",
   "keyPoints": [
     {
       "id": "light-wave",

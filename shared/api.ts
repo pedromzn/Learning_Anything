@@ -70,7 +70,7 @@ export interface ModuleSummary {
   skills: Array<{ id: string; name: string; bloom: Bloom }>
   project: { title: string; prompt: string; rubric: string[] }
   lessons: LessonSummary[]
-  /** the Feynman block (teach Ana) is ready */
+  /** the Feynman block (teach Mandy) is ready */
   hasFeynman: boolean
   feynmanPassed: boolean
   hasCheckpoint: boolean

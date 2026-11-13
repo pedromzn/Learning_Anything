@@ -64,7 +64,7 @@ export const useT = (): Dictionary => DICTIONARIES[useLanguage((s) => s.language
 /** The texts outside React (they follow the current choice). */
 export const t = (): Dictionary => DICTIONARIES[useLanguage.getState().language]
 
-/** The texts in a given language (Ana speaks the course language, not the interface one). */
+/** The texts in a given language (Mandy speaks the course language, not the interface one). */
 export const textsIn = (language: Language): Dictionary => DICTIONARIES[language]
 
 const bcp47 = () => LANGUAGE_DATA[useLanguage.getState().language].bcp47

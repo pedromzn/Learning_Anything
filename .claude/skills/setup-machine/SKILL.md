@@ -1,6 +1,6 @@
 ---
 name: setup-machine
-description: Use when the person has just downloaded the repository and wants everything working ("install everything", "set up the project", "how do I start"), when they want to turn on an optional part (video voice, the Feynman lesson with Ana, Ollama, focus mode with the webcam), when one of those parts does not work (microphone, camera, Ana with no voice, Ana in "script mode", Whisper, slow Ollama) or when they want to uninstall one of them.
+description: Use when the person has just downloaded the repository and wants everything working ("install everything", "set up the project", "how do I start"), when they want to turn on an optional part (video voice, the Feynman lesson with Mandy, Ollama, focus mode with the webcam), when one of those parts does not work (microphone, camera, Mandy with no voice, Mandy in "script mode", Whisper, slow Ollama) or when they want to uninstall one of them.
 ---
 
 # Set up the machine
@@ -46,7 +46,7 @@ and the Feynman block **by typing** in script mode.
 
 Without `uv`, a system Python 3.10 to 3.13 will do. After installing on Windows, **reopen the terminal**.
 
-## 2. The voice (videos and Ana)
+## 2. The voice (videos and Mandy)
 
 ```bash
 npm run voice:install            # Kokoro in data/voice/ (~400 MB, once)
@@ -55,9 +55,9 @@ npm run voice:test -- --play     # speaks a sentence and names the engine
 
 Details, `.env` variables and problems: the [generate-videos](../generate-videos/SKILL.md) skill.
 
-## 3. Feynman lesson ("Teach Ana")
+## 3. Feynman lesson ("Teach Mandy")
 
-Ana **listens** (local Whisper), **thinks** (Ollama, optional) and **speaks** (Kokoro, in the course language: voice
+Mandy **listens** (local Whisper), **thinks** (Ollama, optional) and **speaks** (Kokoro, in the course language: voice
 `af_heart` in English, `pf_dora` in Portuguese). Overview: `docs/FEYNMAN.md`.
 
 ```bash
@@ -66,7 +66,7 @@ npm run feynman:install   # voice (if missing) + Whisper small (~460 MB) + the O
 
 ### Ollama (the brain, optional)
 
-Without Ollama, Ana works in **script mode**: she checks keywords and asks ready-made questions. With it, she really
+Without Ollama, Mandy works in **script mode**: she checks keywords and asks ready-made questions. With it, she really
 converses. Ask the person whether they want it (the model is a few GB).
 
 | System  | Install                                                                                                                                                          |
@@ -97,11 +97,11 @@ Overview and the limits of each distraction: `docs/FOCUS.md`.
 | Symptom                                                       | Likely cause and what to do                                                                                                                                                                                                         |
 | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Microphone or camera does not turn on                         | Open via `http://localhost:3040` or `http://127.0.0.1:3040` (secure origins). Allow it in the padlock of the address bar. **macOS:** System Settings → Privacy & Security → Microphone / Camera → turn on the browser and reopen it |
-| Ana says "script mode"                                        | Ollama is not running or has no model: open Ollama and run `npm run feynman:install`. Check with `curl http://127.0.0.1:11434/api/tags`                                                                                             |
-| Ana does not speak (text only)                                | Kokoro not installed: `npm run voice:install`                                                                                                                                                                                       |
+| Mandy says "script mode"                                      | Ollama is not running or has no model: open Ollama and run `npm run feynman:install`. Check with `curl http://127.0.0.1:11434/api/tags`                                                                                             |
+| Mandy does not speak (text only)                              | Kokoro not installed: `npm run voice:install`                                                                                                                                                                                       |
 | "The listener is not installed" / speech does not become text | `npm run feynman:install`; and `ffmpeg -version` must work                                                                                                                                                                          |
 | Whisper gets technical terms wrong                            | The `cues` in `feynman.json` become a vocabulary hint: include the spoken form ("h times"). On a good machine, `FEYNMAN_WHISPER=medium` in `.env` (and run the installer again)                                                     |
-| Ana takes too long                                            | The model is too big for the machine: `FEYNMAN_MODEL=qwen3:4b` (or `gemma3:4b`)                                                                                                                                                     |
+| Mandy takes too long                                          | The model is too big for the machine: `FEYNMAN_MODEL=qwen3:4b` (or `gemma3:4b`)                                                                                                                                                     |
 | Focus mode does not notice the phone                          | Open the camera preview in the widget: the diagnostics panel shows the numbers. Redo the calibration looking at the screen; try the "Strict" sensitivity                                                                            |
 | Focus mode nudges for no reason                               | "Light" sensitivity; good light on the face; camera at eye level; recalibrate                                                                                                                                                       |
 | Video with no sound or the render failed                      | The [generate-videos](../generate-videos/SKILL.md) skill                                                                                                                                                                            |

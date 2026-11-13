@@ -1,5 +1,5 @@
 /**
- * A module's table of contents: each lesson is a step on a vertical line, then come the Feynman block (teach Ana),
+ * A module's table of contents: each lesson is a step on a vertical line, then come the Feynman block (teach Mandy),
  * the checkpoint and the project. Each step is a real button (focus, keyboard, screen reader) that shows its detail.
  *
  * What the markers mean: filled green with a check = done; terracotta = up next; an empty circle = available; a dashed
@@ -59,7 +59,7 @@ export function statusOf(step: Step, upNext: string | null): Status {
 
 /**
  * Up next: the first ready, unfinished lesson of the unlocked module; with all of them done, the Feynman block (teach
- * Ana) and then the checkpoint. The Feynman block does not lock the checkpoint: it only comes first in the suggestion.
+ * Mandy) and then the checkpoint. The Feynman block does not lock the checkpoint: it only comes first in the suggestion.
  */
 export function upNextOf(module: ModuleSummary): string | null {
   if (!module.unlocked) return null

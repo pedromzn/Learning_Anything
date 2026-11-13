@@ -1,5 +1,5 @@
 /**
- * The Feynman block: the student explains the module's central topic out loud to Ana (an AI with a voice), and she
+ * The Feynman block: the student explains the module's central topic out loud to Mandy (an AI with a voice), and she
  * asks, nudges and corrects. Here live the file the course AI writes (`module-N/feynman.json`), the teaching rules,
  * the shapes of the conversation and the evaluation, and the passing score. See `docs/FEYNMAN.md`.
  */
@@ -23,7 +23,7 @@ export const keyPointSchema = z
     idea: text(300),
     /** words and phrases that show the idea in the student's speech (script mode checks for them) */
     cues: z.array(text(60)).min(2).max(10),
-    /** the question Ana asks if the point does not come up */
+    /** the question Mandy asks if the point does not come up */
     question: text(300),
   })
   .strict()
@@ -35,7 +35,7 @@ export const feynmanSchema = z
     topic: text(200),
     /** the instruction the student reads before starting */
     request: text(600),
-    /** Ana's first line (short, inviting the student to start) */
+    /** Mandy's first line (short, inviting the student to start) */
     opening: text(400),
     keyPoints: z.array(keyPointSchema).min(3).max(7),
     commonMistakes: z
@@ -94,7 +94,7 @@ export const MAX_TURNS = 40
 
 export const turnSchema = z
   .object({
-    who: z.enum(['student', 'ana']),
+    who: z.enum(['student', 'mandy']),
     text: z.string().trim().min(1).max(4000),
   })
   .strict()
@@ -110,9 +110,9 @@ export const conversationRequestSchema = z
 export type ConversationRequest = z.infer<typeof conversationRequestSchema>
 
 /** What the brain returns for each student turn. */
-export const anaReplySchema = z
+export const mandyReplySchema = z
   .object({
-    /** what Ana says now: short, one or two sentences, ending in a question when it makes sense */
+    /** what Mandy says now: short, one or two sentences, ending in a question when it makes sense */
     answer: z.string().trim().min(1).max(600),
     /** the ids of the key points THIS student turn covered */
     coveredPoints: z.array(z.string()).max(7),
@@ -120,17 +120,17 @@ export const anaReplySchema = z
     correction: z.string().trim().max(400).nullable(),
   })
   .strict()
-export type AnaReply = z.infer<typeof anaReplySchema>
+export type MandyReply = z.infer<typeof mandyReplySchema>
 
-export type AnaEngine = 'ollama' | 'script'
+export type MandyEngine = 'ollama' | 'script'
 
 /** `POST …/feynman/conversation` */
-export interface AnaTurn {
+export interface MandyTurn {
   answer: string
   /** all points covered so far (the earlier ones + this turn's) */
   coveredIds: string[]
   correction: string | null
-  engine: AnaEngine
+  engine: MandyEngine
 }
 
 // ── the evaluation ──────────────────────────────────────────────────────────────
@@ -179,7 +179,7 @@ export interface FeynmanEvaluation {
   points: Array<{ id: string; idea: string; status: PointStatus; comment: string }>
   errors: string[]
   advice: string
-  engine: AnaEngine
+  engine: MandyEngine
   /** the XP earned (0 if failed or if already passed before) */
   reward: Reward
 }
@@ -187,22 +187,22 @@ export interface FeynmanEvaluation {
 // ── what the screen receives ──────────────────────────────────────────────────────
 
 /** The engines the machine has right now. */
-export interface AnaState {
+export interface MandyState {
   /** local Whisper is installed (without it, there is no way to listen) */
   listener: boolean
-  /** the Kokoro voice is installed (without it, Ana answers in writing only) */
+  /** the Kokoro voice is installed (without it, Mandy answers in writing only) */
   voice: boolean
   /** Ollama answered and there is a usable model */
   ollama: boolean
   /** the model that will hold the conversation, if any */
   model: string | null
-  engine: AnaEngine
+  engine: MandyEngine
 }
 
 /** `GET /api/courses/:id/modules/:order/feynman`: the block WITHOUT the answer key (ideas appear only once covered). */
 export interface StudentFeynman {
   courseId: string
-  /** the course language: Ana listens, thinks and speaks in it */
+  /** the course language: Mandy listens, thinks and speaks in it */
   language: Language
   courseTitle: string
   module: number
@@ -213,5 +213,5 @@ export interface StudentFeynman {
   points: number
   alreadyPassed: boolean
   bestScore: number | null
-  ana: AnaState
+  mandy: MandyState
 }

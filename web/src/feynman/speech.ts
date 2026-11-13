@@ -1,6 +1,6 @@
 /**
- * Ana's voice in the browser: asks the local server for the mp3 (Kokoro, in Ana's voice for the course language),
- * plays it and measures the volume so the orb pulses along. Without the voice installed, Ana answers in text only
+ * Mandy's voice in the browser: asks the local server for the mp3 (Kokoro, in Mandy's voice for the course language),
+ * plays it and measures the volume so the orb pulses along. Without the voice installed, Mandy answers in text only
  * (the promise resolves after a reading delay).
  */
 

@@ -17,8 +17,8 @@ machine.
 | The course path                                                               | A text lesson                                        |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------- |
 | ![The course: a table of contents, one step per lesson](docs/images/path.jpg) | ![Text lesson with formulas](docs/images/lesson.jpg) |
-| **Teach Ana** (Feynman technique)                                             | **Focus mode** (pomodoro with webcam)                |
-| ![The student explains the topic out loud to Ana](docs/images/feynman.jpg)    | ![The focus mode setup](docs/images/focus.jpg)       |
+| **Teach Mandy** (Feynman technique)                                           | **Focus mode** (pomodoro with webcam)                |
+| ![The student explains the topic out loud to Mandy](docs/images/feynman.jpg)  | ![The focus mode setup](docs/images/focus.jpg)       |
 
 ## Requirements
 
@@ -28,7 +28,7 @@ machine.
 - An AI with access to this repository, to create courses (Claude Code, Codex, Cursor…)
 - For the video voice: [**uv**](https://docs.astral.sh/uv/) (`brew install uv`, `winget install astral-sh.uv` or
   `curl -LsSf https://astral.sh/uv/install.sh | sh`) or Python 3.10+; `npm run voice:install` takes care of the rest
-- Optional, for Ana to really talk in the Feynman lesson: [Ollama](https://ollama.com/download)
+- Optional, for Mandy to really talk in the Feynman lesson: [Ollama](https://ollama.com/download)
 
 Don't want to install by hand? Ask your AI: _"set up my machine for Learning Anything"_. It follows the
 [`setup-machine`](.claude/skills/setup-machine/SKILL.md) skill, checks what you have and asks before downloading.
@@ -75,7 +75,7 @@ is the complete manual; the skills in `.claude/skills/` have the step by step of
 writer, problem teacher, Feynman teacher, scriptwriter, reviewer).
 
 Each course is written in its own language (`brief.language`: `en`, the default, or `pt-BR`); the narration, the
-subtitles and Ana follow it. The interface language is a separate choice, made the first time the app opens.
+subtitles and Mandy follow it. The interface language is a separate choice, made the first time the app opens.
 
 The course starts with **module 1**. When you reach a module that is not written yet, the app shows the command to ask
 your AI to write the next one. You can also ask the AI to **answer questions** about a lesson: it reads the file and
@@ -107,14 +107,14 @@ npm run course:video -- <slug>   # generates the course's videos
 A `VOICE` from another language is ignored for that course. Without the engine installed, the videos come out silent
 with the right duration, and the player warns you.
 
-## Teach Ana (Feynman technique)
+## Teach Mandy (Feynman technique)
 
-In every module, before the checkpoint, you **explain the central topic out loud** to Ana, an AI with a voice that
+In every module, before the checkpoint, you **explain the central topic out loud** to Mandy, an AI with a voice that
 listens, asks questions, asks for examples and corrects what is wrong. At the end comes the score (70 or more passes and
 gives XP), point by point. All local:
 
 - **Listening:** local Whisper (`faster-whisper`): your voice does not leave the computer and is not recorded.
-- **Thinking:** an open model in [Ollama](https://ollama.com) (default `qwen3:8b` or `qwen3:4b`). Without Ollama, Ana
+- **Thinking:** an open model in [Ollama](https://ollama.com) (default `qwen3:8b` or `qwen3:4b`). Without Ollama, Mandy
   works in **script mode**: she checks for keywords and asks ready-made questions.
 - **Speaking:** Kokoro, with the voice `af_heart` in English courses and `pf_dora` in Portuguese ones.
 
@@ -133,7 +133,7 @@ Nothing to set up.
 
 ## Ask the teacher
 
-Every course has an **Ask the teacher** page (button on the course page). There you talk with Ana, the course teacher,
+Every course has an **Ask the teacher** page (button on the course page). There you talk with Mandy, the course teacher,
 by voice or typing: about **the whole course** (what it covers, how the modules connect, what to study next) or about
 **one lesson**, picked from a list. She answers only from the course material, in the course language, and in
 exercises she gives hints, never the answer. With Ollama she explains in her own words; without it, she reads the part
@@ -261,7 +261,7 @@ http://localhost:3040) mostra a trilha, as aulas de texto, os exercícios corrig
 pausas para perguntas, os checkpoints, XP, sequência e certificados.
 
 - A interface existe em inglês e em português do Brasil (escolha na primeira vez que o app abre). Cada curso é escrito
-  na língua da ficha (`brief.language`: `en` ou `pt-BR`); a narração, as legendas e a Ana seguem essa língua.
+  na língua da ficha (`brief.language`: `en` ou `pt-BR`); a narração, as legendas e a Mandy seguem essa língua.
 - O app não chama nenhuma API de IA. A narração roda no processador com o Kokoro (Apache 2.0), com vozes em inglês e em
   português.
 - Requisitos: Node >= 22.13, ffmpeg, uv ou Python 3.10+ para a voz (`npm run voice:install`) e, opcional, o Ollama. Ou

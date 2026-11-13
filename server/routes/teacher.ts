@@ -1,9 +1,9 @@
 /**
  * Ask the teacher in the API (see `shared/teacher.ts`):
- * - `GET  /courses/:id/teacher`                     what Ana can do (voice, listener, Ollama), the language and the
+ * - `GET  /courses/:id/teacher`                     what Mandy can do (voice, listener, Ollama), the language and the
  *                                                   lessons she can talk about;
  * - `POST /courses/:id/teacher`                     the conversation so far (+ the lesson, or null for the course) →
- *                                                   Ana's answer;
+ *                                                   Mandy's answer;
  * - `POST /courses/:id/teacher/listen?lesson=m1-a2` the question audio (raw body) → text, through local Whisper.
  *
  * Nothing is stored: no audio, no transcript, no question.
@@ -17,7 +17,7 @@ import { find, readCourse, type ReadCourse, type ReadLesson } from '../courses/r
 import { progressOf, moduleUnlocked } from '../courses/summaries.js'
 import { askTeacher } from '../teacher/teacher.js'
 import { LISTENER_HELP, acceptedAudioType, listenerInstalled, transcribe, vocabularyHint } from '../feynman/listener.js'
-import { anaState } from './feynman.js'
+import { mandyState } from './feynman.js'
 
 export const teacherRouter = Router()
 
@@ -52,7 +52,7 @@ teacherRouter.get(
   route(async (req, res) => {
     const { course, unlocked } = courseFromUrl(req)
     const payload: TeacherState = {
-      ana: await anaState(),
+      mandy: await mandyState(),
       language: course.brief.language,
       courseTitle: course.title,
       lessons: course.modules.flatMap((m) =>

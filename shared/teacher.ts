@@ -1,14 +1,14 @@
 /**
- * "Ask the teacher": a page of each course where the student talks with Ana, the course teacher, by voice or typing —
+ * "Ask the teacher": a page of each course where the student talks with Mandy, the course teacher, by voice or typing —
  * about the course as a whole (the plan, the modules, what comes next) or about one specific lesson, picked from a
- * list. Ana answers only from the course material, in the course language, and in exercises she gives hints, never
+ * list. Mandy answers only from the course material, in the course language, and in exercises she gives hints, never
  * answers. With Ollama she converses; without it, she reads the part of the material closest to the question.
  */
 
 import { z } from 'zod'
 import type { Language } from './languages.js'
 import type { LessonType } from './course.js'
-import { turnSchema, type AnaEngine, type AnaState } from './feynman.js'
+import { turnSchema, type MandyEngine, type MandyState } from './feynman.js'
 
 export const MAX_TEACHER_TURNS = 30
 
@@ -31,7 +31,7 @@ export const teacherReplySchema = z.object({ answer: z.string().trim().min(1).ma
 
 export interface TeacherAnswer {
   answer: string
-  engine: AnaEngine
+  engine: MandyEngine
   /** where the answer came from (script mode): "lesson — part", or null */
   source: string | null
 }
@@ -48,7 +48,7 @@ export interface TeacherLesson {
 }
 
 export interface TeacherState {
-  ana: AnaState
+  mandy: MandyState
   language: Language
   courseTitle: string
   lessons: TeacherLesson[]

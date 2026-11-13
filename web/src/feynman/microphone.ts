@@ -45,7 +45,7 @@ export class MicRecorder {
   }
 
   /**
-   * Asks for permission once and lets the microphone go right away. Holding it open while Ana speaks makes her voice
+   * Asks for permission once and lets the microphone go right away. Holding it open while Mandy speaks makes her voice
    * sound robotic: Bluetooth headsets drop to the low-quality "call" profile, and macOS voice processing (echo
    * cancellation) runs over everything the computer plays. Turns never overlap, so there is no echo to cancel.
    */
