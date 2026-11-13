@@ -1,0 +1,2694 @@
+{
+  "format": "learning-anything-course",
+  "version": 1,
+  "slug": "java",
+  "title": "Java do fundamento à engenharia de aplicações",
+  "language": "pt-BR",
+  "exportedAt": "2026-11-13T15:50:08.359Z",
+  "author": "LucasGC1708",
+  "files": {
+    "brief.json": {
+      "topic": "Java",
+      "scope": "Estudos do básico ao avançado, com foco em fundamentos da linguagem, orientação a objetos, bibliotecas da plataforma, concorrência, testes e construção de aplicações robustas",
+      "level": "mastery",
+      "hoursPerWeek": 6,
+      "deadlineWeeks": 24,
+      "format": "more_practice",
+      "hasComputer": true,
+      "readsEnglish": false,
+      "language": "pt-BR"
+    },
+    "dossier.json": {
+      "summary": "As fontes convergem em uma progressão que começa pela execução e pelos tipos, passa rapidamente para métodos e orientação a objetos, e só depois introduz coleções, exceções, entrada e saída, testes, concorrência e modularidade. O curso da Universidade de Helsinki se destaca pela quantidade de exercícios testados e pelo uso de ferramentas reais desde o início. A documentação atual do dev.java organiza a linguagem em fundamentos, orientação a objetos, genéricos, lambdas, pattern matching, anotações e exceções, além de tratar coleções, streams e I/O como APIs centrais. A especificação da linguagem serve como referência de precisão para regras de tipos, conversões, classes e execução; não deve ser usada como tutorial principal.",
+      "bullets": [
+        {
+          "title": "Execução, compilação e tipos",
+          "description": "Como o código-fonte é compilado para bytecode, como a JVM participa da execução e como tipos primitivos e de referência determinam operações válidas.",
+          "prerequisites": []
+        },
+        {
+          "title": "Controle de fluxo e métodos",
+          "description": "Expressões, decisões, repetições, escopo, parâmetros, retorno, sobrecarga e decomposição de problemas em métodos pequenos.",
+          "prerequisites": [
+            "Execução, compilação e tipos"
+          ]
+        },
+        {
+          "title": "Classes e encapsulamento",
+          "description": "Estado, comportamento, construtores, modificadores de acesso, invariantes e a diferença entre classe, objeto e referência.",
+          "prerequisites": [
+            "Controle de fluxo e métodos"
+          ]
+        },
+        {
+          "title": "Herança, interfaces e polimorfismo",
+          "description": "Subtipagem, composição, contratos, sobrescrita, classes abstratas, interfaces e escolha entre herança e composição.",
+          "prerequisites": [
+            "Classes e encapsulamento"
+          ]
+        },
+        {
+          "title": "Coleções, generics e igualdade",
+          "description": "List, Set, Map, filas, iteração, tipos parametrizados, equals, hashCode e comparadores para trabalhar com dados em memória.",
+          "prerequisites": [
+            "Classes e encapsulamento",
+            "Herança, interfaces e polimorfismo"
+          ]
+        },
+        {
+          "title": "Exceções e código defensivo",
+          "description": "Exceções verificadas e não verificadas, propagação, tratamento, criação de tipos próprios e validação de contratos sem esconder falhas.",
+          "prerequisites": [
+            "Métodos",
+            "Classes e encapsulamento"
+          ]
+        },
+        {
+          "title": "Lambdas, streams e Optional",
+          "description": "Funções como valores, operações intermediárias e terminais, collectors, composição e uso criterioso de Optional.",
+          "prerequisites": [
+            "Coleções, generics e igualdade"
+          ]
+        },
+        {
+          "title": "I/O, arquivos e serialização de dados",
+          "description": "Paths, arquivos, streams de caracteres e bytes, buffers, recursos, formatos textuais e limites da serialização nativa.",
+          "prerequisites": [
+            "Exceções e código defensivo",
+            "Coleções, generics e igualdade"
+          ]
+        },
+        {
+          "title": "Testes automatizados e qualidade",
+          "description": "Testes unitários, testes de contrato, parametrização, doubles, propriedades, refatoração segura e leitura de falhas.",
+          "prerequisites": [
+            "Métodos",
+            "Exceções e código defensivo"
+          ]
+        },
+        {
+          "title": "Concorrência e memória",
+          "description": "Threads, executors, tarefas, sincronização, visibilidade, atomicidade, imutabilidade e prevenção de condições de corrida.",
+          "prerequisites": [
+            "Classes e encapsulamento",
+            "Coleções, generics e igualdade"
+          ]
+        },
+        {
+          "title": "Módulos, APIs e engenharia de projeto",
+          "description": "Pacotes, módulos, dependências, documentação, logging, configuração, APIs públicas e organização sustentável de aplicações.",
+          "prerequisites": [
+            "I/O, arquivos e serialização de dados",
+            "Testes automatizados e qualidade"
+          ]
+        },
+        {
+          "title": "Projeto integrado e decisões avançadas",
+          "description": "Projeto de uma aplicação Java modular, testada e concorrente, com decisões justificadas sobre domínio, dados, erros, desempenho e manutenção.",
+          "prerequisites": [
+            "Módulos, APIs e engenharia de projeto",
+            "Concorrência e memória"
+          ]
+        }
+      ],
+      "commonMistakes": [
+        "Confundir uma variável de tipo primitivo com uma variável de referência e esperar que a atribuição copie o objeto.",
+        "Usar == para comparar o conteúdo de objetos, especialmente String, em vez de equals.",
+        "Criar hierarquias de herança apenas para reutilizar código quando composição expressaria melhor o domínio.",
+        "Usar tipos crus ou curingas genéricos sem entender o que o compilador consegue garantir.",
+        "Capturar Exception de forma ampla, ignorar a causa e continuar como se o programa estivesse correto.",
+        "Usar streams só para parecer funcional, tornando o código menos legível e dificultando a depuração.",
+        "Compartilhar estado mutável entre threads sem definir a regra de sincronização.",
+        "Confundir teste que verifica comportamento com teste que repete a implementação interna."
+      ],
+      "possibleProjects": [
+        "Aplicação de linha de comando para controlar uma biblioteca pessoal, com busca, empréstimo, persistência em arquivo e testes.",
+        "Processador de arquivos CSV que valida registros, produz um relatório de erros e gera estatísticas com streams.",
+        "Servidor concorrente simples que processa tarefas de uma fila, registra eventos e encerra de forma previsível.",
+        "Aplicação integrada modular para organizar tarefas, com domínio encapsulado, persistência, testes e documentação de decisões."
+      ],
+      "references": [
+        {
+          "title": "Getting to Know the Language",
+          "author": "Oracle",
+          "institution": "Oracle / dev.java",
+          "type": "documentation",
+          "url": "https://dev.java/learn/language/",
+          "license": "unknown",
+          "reason": "Organiza a linguagem atual em fundamentos, orientação a objetos, generics, lambdas, pattern matching, anotações e exceções."
+        },
+        {
+          "title": "Java Language Basics",
+          "author": "Oracle",
+          "institution": "Oracle / dev.java",
+          "type": "documentation",
+          "url": "https://dev.java/learn/language/constructs/basics/",
+          "license": "unknown",
+          "reason": "Apresenta variáveis, tipos primitivos, arrays, operadores, expressões, blocos e controle de fluxo em páginas curtas."
+        },
+        {
+          "title": "Collections and Streams",
+          "author": "Oracle",
+          "institution": "Oracle / dev.java",
+          "type": "documentation",
+          "url": "https://dev.java/learn/api/collections-and-streams/",
+          "license": "unknown",
+          "reason": "É a referência oficial atual para Collections Framework, mapas, Stream API e collectors."
+        },
+        {
+          "title": "The Java I/O API",
+          "author": "Oracle",
+          "institution": "Oracle / dev.java",
+          "type": "documentation",
+          "url": "https://dev.java/learn/api/io/java-io/",
+          "license": "unknown",
+          "reason": "Cobre conceitos de I/O, caminhos, sistema de arquivos, leitura e escrita de dados."
+        },
+        {
+          "title": "Java Programming",
+          "author": "Arto Hellas, Matti Luukkainen e colaboradores",
+          "institution": "University of Helsinki / Agile Education Research",
+          "type": "course",
+          "url": "https://java-programming.mooc.fi/",
+          "license": "cc-by-nc-sa",
+          "reason": "Fornece uma sequência extensa de exercícios práticos, testes automáticos e uso de ferramentas reais, do introdutório ao avançado."
+        },
+        {
+          "title": "The Java Language Specification, Java SE 27 Edition",
+          "author": "James Gosling, Bill Joy, Guy Steele, Gilad Bracha, Alex Buckley, Daniel Smith e Gavin Bierman",
+          "institution": "OpenJDK",
+          "type": "documentation",
+          "url": "https://cr.openjdk.org/~dlsmith/jep401/jep401-20260715/specs/jls/",
+          "license": "unknown",
+          "reason": "É a fonte de precisão para tipos, conversões, classes, interfaces, expressões, exceções e modelo de memória; será consultada quando a regra importar."
+        }
+      ]
+    },
+    "module-1/checkpoint.json": {
+      "items": [
+        {
+          "type": "multiple_choice",
+          "id": "cp-execution-stage",
+          "skill": "m1-execution-model",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Qual sequência representa o caminho normal de um programa Java?",
+          "hints": [],
+          "choices": [
+            {
+              "text": "JVM, código-fonte, compilador, bytecode",
+              "explanation": "A JVM não começa pelo texto-fonte nessa sequência."
+            },
+            {
+              "text": "Código-fonte, compilador, bytecode, JVM",
+              "explanation": "Correto: o compilador produz bytecode e a JVM o carrega e executa."
+            },
+            {
+              "text": "Bytecode, código-fonte, JVM, compilador",
+              "explanation": "O bytecode é produzido a partir do código-fonte; não é uma etapa anterior a ele."
+            }
+          ],
+          "correct": 1,
+          "solution": "O código-fonte é compilado para bytecode, que depois é carregado e executado pela JVM."
+        },
+        {
+          "type": "numeric",
+          "id": "cp-integer-division",
+          "skill": "m1-types-values",
+          "bloom": "apply",
+          "difficulty": 2,
+          "prompt": "Qual é o resultado de `11 / 4` quando os dois operandos são int?",
+          "hints": [],
+          "answer": 2,
+          "tolerance": 0,
+          "unit": "",
+          "solution": "A divisão entre dois int é inteira: 11 dividido por 4 resulta em 2, descartando a parte fracionária."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "cp-loop-rule",
+          "skill": "m1-control-flow",
+          "bloom": "analyze",
+          "difficulty": 2,
+          "prompt": "Um programa precisa repetir uma leitura até que o usuário digite uma palavra de parada. Qual estrutura expressa melhor essa regra?",
+          "hints": [],
+          "choices": [
+            {
+              "text": "while, com uma condição que é atualizada após cada leitura",
+              "explanation": "Correto: a repetição depende de uma condição que pode mudar a cada entrada."
+            },
+            {
+              "text": "if, porque toda repetição é apenas uma decisão",
+              "explanation": "if escolhe uma vez; não repete o corpo sozinho."
+            },
+            {
+              "text": "switch, porque ele sempre executa até o fim da entrada",
+              "explanation": "switch seleciona casos, mas não fornece repetição por si só."
+            }
+          ],
+          "correct": 0,
+          "solution": "while representa uma repetição que continua enquanto a condição de parada ainda não ocorreu."
+        },
+        {
+          "type": "ordering",
+          "id": "cp-method-contract",
+          "skill": "m1-methods",
+          "bloom": "analyze",
+          "difficulty": 2,
+          "prompt": "Ordene os elementos para definir um método antes de implementá-lo.",
+          "hints": [],
+          "steps": [
+            "Definir os dados de entrada",
+            "Definir o resultado ou efeito",
+            "Definir pré-condições e falhas",
+            "Escrever os passos da implementação"
+          ],
+          "solution": "Primeiro descreva entradas e resultado, depois as condições e falhas, e só então escreva a implementação."
+        },
+        {
+          "type": "true_false",
+          "id": "cp-debug-classification",
+          "skill": "m1-debug-errors",
+          "bloom": "analyze",
+          "difficulty": 2,
+          "prompt": "Verdadeiro ou falso: se o programa compila, mas lança uma exceção ao acessar uma entrada inválida, o problema ocorreu durante a execução.",
+          "hints": [],
+          "correct": true,
+          "solution": "Verdadeiro. O programa passou pela compilação e falhou quando estava sendo executado com aquela entrada."
+        },
+        {
+          "type": "short_answer",
+          "id": "cp-reference-copy",
+          "skill": "m1-types-values",
+          "bloom": "apply",
+          "difficulty": 2,
+          "prompt": "Depois de `String a = texto; String b = a;`, o que a atribuição faz com b?",
+          "hints": [],
+          "accepted": [
+            "copia a referência",
+            "aponta para o mesmo objeto",
+            "faz b apontar para o mesmo objeto"
+          ],
+          "solution": "A atribuição copia a referência; b passa a apontar para o mesmo objeto que a."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "cp-separation",
+          "skill": "m1-methods",
+          "bloom": "evaluate",
+          "difficulty": 3,
+          "prompt": "Qual desenho facilita testar a regra de cálculo sem depender do terminal?",
+          "hints": [],
+          "choices": [
+            {
+              "text": "Um único método que lê, calcula e imprime tudo.",
+              "explanation": "A regra fica acoplada à entrada e à saída, dificultando um teste isolado."
+            },
+            {
+              "text": "Um método que só imprime e outro que faz todas as outras tarefas.",
+              "explanation": "Ainda há leitura e cálculo misturados em uma responsabilidade grande."
+            },
+            {
+              "text": "Um método de leitura, um de cálculo que recebe dados e um de apresentação.",
+              "explanation": "Correto: o cálculo pode receber dados diretamente e ser testado sem simular o terminal."
+            }
+          ],
+          "correct": 2,
+          "solution": "Separar leitura, cálculo e apresentação permite testar a regra com entradas preparadas, sem depender do terminal."
+        }
+      ]
+    },
+    "module-1/feynman.json": {
+      "topic": "Como um programa Java é executado e como organizar sua solução em tipos, fluxo e métodos",
+      "request": "Explique para uma pessoa que já programou em outra linguagem como um arquivo Java chega à JVM, como tipos influenciam as operações e como você transforma uma regra em métodos e controle de fluxo. Dê um exemplo pequeno e diga como investigaria um erro.",
+      "opening": "Oi, sou a Ana. Você já programa, mas quer entender o que muda quando o código passa pela JVM. Pode me explicar o caminho de um programa Java e depois mostrar como você organiza uma regra?",
+      "keyPoints": [
+        {
+          "id": "f1-compilation",
+          "idea": "O código-fonte Java é compilado para bytecode, e a JVM carrega e executa esse bytecode; compilação e execução são etapas diferentes.",
+          "cues": [
+            "código fonte",
+            "bytecode",
+            "arquivo class",
+            "JVM",
+            "compilar antes de executar"
+          ],
+          "question": "O que precisa acontecer entre escrever o arquivo e a JVM executar o programa?"
+        },
+        {
+          "id": "f1-types",
+          "idea": "Tipos primitivos guardam valores diretamente, referências apontam para objetos, e os tipos dos operandos influenciam conversões e divisão.",
+          "cues": [
+            "tipo primitivo",
+            "referência para objeto",
+            "divisão inteira",
+            "double",
+            "null"
+          ],
+          "question": "Por que duas divisões que parecem iguais podem produzir resultados diferentes?"
+        },
+        {
+          "id": "f1-control",
+          "idea": "if e switch escolhem caminhos, for e while repetem conforme uma regra, e um laço precisa ter atualização e condição de término.",
+          "cues": [
+            "if e else",
+            "switch",
+            "for",
+            "while",
+            "condição de parada"
+          ],
+          "question": "Como você decide entre uma escolha e uma repetição ao ler um enunciado?"
+        },
+        {
+          "id": "f1-methods",
+          "idea": "Um método nomeia uma responsabilidade e define entradas, saída, pré-condições e efeitos para que o chamador não dependa dos passos internos.",
+          "cues": [
+            "responsabilidade",
+            "parâmetros",
+            "retorno",
+            "pré condição",
+            "contrato do método"
+          ],
+          "question": "O que um chamador precisa saber sobre um método sem conhecer sua implementação?"
+        },
+        {
+          "id": "f1-debug",
+          "idea": "A investigação começa classificando a etapa: compilação, execução, lógica ou ambiente; depois compara o comportamento com um caso pequeno.",
+          "cues": [
+            "erro de compilação",
+            "exceção em execução",
+            "erro de lógica",
+            "mensagem do compilador",
+            "caso pequeno"
+          ],
+          "question": "Qual é sua primeira pergunta quando o programa não apresenta o resultado esperado?"
+        }
+      ],
+      "commonMistakes": [
+        {
+          "error": "Dizer que a JVM executa diretamente o texto do arquivo Java.",
+          "correction": "O texto é compilado para bytecode; a JVM carrega e executa o bytecode."
+        },
+        {
+          "error": "Tratar toda variável como se guardasse um objeto independente.",
+          "correction": "Primitivos guardam valores; atribuições de referências podem fazer duas variáveis apontarem para o mesmo objeto."
+        },
+        {
+          "error": "Usar divisão inteira esperando uma parte decimal.",
+          "correction": "Quando os operandos são int, a parte fracionária é descartada; um double deve participar da operação."
+        },
+        {
+          "error": "Criar um laço sem explicar como a condição pode ficar falsa.",
+          "correction": "O laço precisa atualizar um estado que permita alcançar uma condição de término."
+        },
+        {
+          "error": "Colocar leitura, cálculo, arquivo e apresentação no mesmo método.",
+          "correction": "Separe responsabilidades em métodos com contratos claros e efeitos visíveis."
+        }
+      ],
+      "questions": [
+        "Dê um exemplo de erro que o compilador encontra antes da JVM executar o programa.",
+        "Como você testaria uma média quando a quantidade recebida é zero?",
+        "Quando uma composição de métodos torna uma regra mais fácil de testar?",
+        "Qual diferença você espera entre um resultado errado e uma exceção?"
+      ],
+      "skills": [
+        "m1-execution-model",
+        "m1-types-values",
+        "m1-control-flow",
+        "m1-methods",
+        "m1-debug-errors"
+      ]
+    },
+    "module-1/lesson-1.json": {
+      "title": "O caminho de .java até a JVM",
+      "scenes": [
+        {
+          "type": "title",
+          "title": "O caminho de .java até a JVM",
+          "subtitle": "Java do fundamento à engenharia — módulo 1",
+          "narration": "Um programa Java passa por mais de uma etapa antes de produzir uma resposta. Entender esse caminho ajuda a saber onde procurar quando algo dá errado."
+        },
+        {
+          "type": "diagram",
+          "title": "Três momentos diferentes",
+          "nodes": [
+            {
+              "id": "source",
+              "label": "Código-fonte .java"
+            },
+            {
+              "id": "bytecode",
+              "label": "Bytecode .class"
+            },
+            {
+              "id": "jvm",
+              "label": "JVM em execução"
+            },
+            {
+              "id": "output",
+              "label": "Saída do programa"
+            }
+          ],
+          "links": [
+            {
+              "from": "source",
+              "to": "bytecode",
+              "label": "compila"
+            },
+            {
+              "from": "bytecode",
+              "to": "jvm",
+              "label": "carrega"
+            },
+            {
+              "from": "jvm",
+              "to": "output",
+              "label": "executa"
+            }
+          ],
+          "narration": "O primeiro momento é o código-fonte, escrito por uma pessoa em arquivos com extensão ponto java. O compilador transforma esse texto em bytecode, normalmente guardado em arquivos ponto class. Depois, uma máquina virtual Java carrega esse bytecode, verifica sua estrutura e executa suas instruções. A saída que vemos no terminal só aparece no terceiro momento."
+        },
+        {
+          "type": "bullets",
+          "title": "O papel do compilador",
+          "bullets": [
+            "Lê a sintaxe e os tipos",
+            "Produz bytecode para a JVM",
+            "Recusa programas que violam regras",
+            "Aponta a linha provável do problema"
+          ],
+          "narration": "O compilador não executa o programa para descobrir se a ideia está correta. Ele verifica se o texto respeita a gramática da linguagem e se os tipos podem ser usados daquela forma. Se encontrar uma variável desconhecida, um parêntese ausente ou um valor incompatível, ele interrompe a compilação e mostra uma mensagem. Um programa que não compila ainda não chegou à JVM."
+        },
+        {
+          "type": "code",
+          "lang": "pseudocode",
+          "code": "arquivo: Ola.java\n\nclass Ola {\n    main() {\n        escreva(\"Olá\")\n    }\n}\n\ncompilar Ola.java\nexecutar Ola",
+          "highlights": [
+            1,
+            8,
+            9
+          ],
+          "narration": "Neste esquema, Ola ponto java é o texto que escrevemos. O comando de compilar transforma esse arquivo em uma classe que a máquina virtual consegue carregar. Só depois usamos o comando de executar. A ideia importante é que compilar e executar são ações diferentes. Podemos ter um erro na primeira etapa, antes de qualquer instrução rodar, ou na segunda, quando o programa já está vivo."
+        },
+        {
+          "type": "question",
+          "item": {
+            "type": "multiple_choice",
+            "id": "v1-compile-stage",
+            "skill": "m1-execution-model",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "Em qual etapa um erro de sintaxe, como um ponto e vírgula ausente, deve ser encontrado normalmente?",
+            "hints": [
+              "Pense na etapa que lê a gramática antes da execução."
+            ],
+            "choices": [
+              {
+                "text": "Durante a execução na JVM",
+                "explanation": "A JVM só recebe o bytecode depois que o código-fonte foi aceito pelo compilador."
+              },
+              {
+                "text": "Durante a compilação",
+                "explanation": "Correto: o compilador analisa a sintaxe do código-fonte antes de produzir o bytecode."
+              },
+              {
+                "text": "Depois que a saída aparece no terminal",
+                "explanation": "A saída é posterior à compilação e à execução; o erro impede que ela seja produzida."
+              }
+            ],
+            "correct": 1,
+            "solution": "O compilador analisa sintaxe e tipos antes de produzir o bytecode, então esse erro aparece na compilação."
+          },
+          "narration": "Pause e responda: em qual etapa um erro de sintaxe deve ser encontrado normalmente?"
+        },
+        {
+          "type": "diagram",
+          "title": "Um programa e seu ambiente",
+          "nodes": [
+            {
+              "id": "jdk",
+              "label": "JDK: ferramentas"
+            },
+            {
+              "id": "compiler",
+              "label": "javac: compilador"
+            },
+            {
+              "id": "runtime",
+              "label": "JVM: execução"
+            },
+            {
+              "id": "library",
+              "label": "Bibliotecas Java"
+            }
+          ],
+          "links": [
+            {
+              "from": "jdk",
+              "to": "compiler",
+              "label": "contém"
+            },
+            {
+              "from": "jdk",
+              "to": "runtime",
+              "label": "contém"
+            },
+            {
+              "from": "runtime",
+              "to": "library",
+              "label": "usa"
+            }
+          ],
+          "narration": "Para desenvolver, usamos o JDK, o kit de desenvolvimento Java. Ele inclui ferramentas como o javac, que compila, e componentes necessários para executar programas. A JVM é o ambiente que interpreta ou compila em tempo de execução o bytecode para a máquina atual. As bibliotecas da plataforma oferecem classes prontas, mas continuam sendo chamadas pelo nosso programa dentro desse ambiente."
+        },
+        {
+          "type": "bullets",
+          "title": "O que cada erro diz",
+          "bullets": [
+            "Compilação: o texto não pode virar bytecode",
+            "Execução: o programa iniciou, mas falhou",
+            "Lógica: o programa rodou e respondeu errado",
+            "Ambiente: falta ferramenta, classe ou configuração"
+          ],
+          "narration": "Classificar o erro reduz o espaço de busca. Um erro de compilação pede leitura do código e da mensagem do compilador. Uma exceção em execução pede observar os dados e a pilha de chamadas. Um resultado errado sem exceção pede revisar a regra e os casos de teste. Já um comando inexistente ou uma classe não encontrada pode apontar para o ambiente, o caminho ou a configuração."
+        },
+        {
+          "type": "bullets",
+          "title": "A pergunta certa em cada etapa",
+          "bullets": [
+            "O texto está válido para o compilador?",
+            "O bytecode foi produzido e carregado?",
+            "Quais dados chegaram à instrução que falhou?",
+            "A regra implementada corresponde ao problema?"
+          ],
+          "narration": "Quando um programa falha, não comece mudando linhas ao acaso. Primeiro pergunte se o código chegou a compilar. Depois confirme se a classe certa está sendo executada. Se houve uma exceção, siga a pilha e examine os dados. Se tudo rodou, compare a regra do programa com exemplos pequenos. Esse método funciona mesmo quando você vem de outra linguagem, porque separa fases que costumam ser confundidas."
+        },
+        {
+          "type": "question",
+          "item": {
+            "type": "true_false",
+            "id": "v1-bytecode-stage",
+            "skill": "m1-execution-model",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "Verdadeiro ou falso: a JVM executa diretamente o arquivo de texto .java sem que ele seja compilado.",
+            "hints": [
+              "Lembre-se do artefato intermediário criado antes da execução."
+            ],
+            "correct": false,
+            "solution": "Falso. O código-fonte é compilado para bytecode, normalmente em arquivos .class, que a JVM carrega e executa."
+          },
+          "narration": "Outra pausa: a JVM executa diretamente o arquivo de texto ponto java sem compilação?"
+        },
+        {
+          "type": "bullets",
+          "title": "Portabilidade com uma condição",
+          "bullets": [
+            "O bytecode separa fonte e máquina",
+            "A JVM fornece o ambiente de execução",
+            "Bibliotecas e versões ainda importam",
+            "O comando precisa apontar para o artefato certo"
+          ],
+          "narration": "O bytecode permite que o mesmo programa seja levado a ambientes diferentes quando existe uma JVM adequada. Isso não significa que qualquer configuração funcione sem cuidado. O programa pode depender de uma versão da plataforma, de uma biblioteca ou de um caminho de arquivos. Por isso, portabilidade é uma combinação entre o artefato compilado, a JVM que o carrega e as dependências que o programa espera encontrar. No trabalho diário, confirme qual JDK está sendo usado, qual classe está sendo executada e quais bibliotecas estão disponíveis. Essa verificação evita atribuir à linguagem um problema que pertence ao ambiente. Também ajuda a reproduzir um erro: duas máquinas só podem ser comparadas de verdade quando executam o mesmo artefato com condições equivalentes."
+        },
+        {
+          "type": "diagram",
+          "title": "A ideia para levar",
+          "nodes": [
+            {
+              "id": "write",
+              "label": "Escrever fonte"
+            },
+            {
+              "id": "check",
+              "label": "Compilar e verificar"
+            },
+            {
+              "id": "run",
+              "label": "Executar na JVM"
+            },
+            {
+              "id": "observe",
+              "label": "Observar comportamento"
+            }
+          ],
+          "links": [
+            {
+              "from": "write",
+              "to": "check",
+              "label": "fonte"
+            },
+            {
+              "from": "check",
+              "to": "run",
+              "label": "bytecode"
+            },
+            {
+              "from": "run",
+              "to": "observe",
+              "label": "dados"
+            }
+          ],
+          "narration": "A ideia central é um ciclo: escrevemos código-fonte, compilamos e verificamos, executamos na JVM e observamos o comportamento. Cada etapa tem perguntas e erros diferentes. Quando você consegue dizer em que etapa está, a mensagem deixa de ser um obstáculo genérico e vira uma pista concreta para a próxima investigação."
+        }
+      ]
+    },
+    "module-1/lesson-2.json": {
+      "introduction": "Ao final desta aula, você consegue escolher tipos para dados simples, distinguir valores primitivos de referências e prever o resultado de conversões. A organização segue os fundamentos de linguagem do dev.java, em especial as páginas sobre variáveis, tipos primitivos, operadores e expressões.",
+      "sections": [
+        {
+          "title": "Valor primitivo e referência",
+          "markdown": "Java separa tipos primitivos, como int, double e boolean, de tipos de referência, como String e classes criadas por você. Uma variável primitiva guarda um valor. Uma variável de referência guarda uma referência para um objeto, ou pode estar apontando para null.\n\nEssa diferença explica por que atribuir um int copia seu valor, enquanto atribuir uma referência faz duas variáveis apontarem para o mesmo objeto. Não use null para representar qualquer estado: ele significa ausência de uma referência e pode causar uma exceção quando for desreferenciado.",
+          "question": {
+            "type": "multiple_choice",
+            "id": "t2-primitive-reference",
+            "skill": "m1-types-values",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "Qual afirmação descreve melhor uma variável de tipo primitivo?",
+            "hints": [
+              "Compare o que a variável guarda em um int com o que uma String representa."
+            ],
+            "choices": [
+              {
+                "text": "Ela sempre guarda uma referência para um objeto.",
+                "explanation": "Essa é a ideia de um tipo de referência, não de um primitivo."
+              },
+              {
+                "text": "Ela guarda diretamente um valor do tipo definido.",
+                "explanation": "Correto: um primitivo como int guarda diretamente um valor inteiro."
+              },
+              {
+                "text": "Ela só pode receber o valor null.",
+                "explanation": "null representa ausência de referência e não é um valor válido para tipos primitivos."
+              }
+            ],
+            "correct": 1,
+            "solution": "Tipos primitivos guardam diretamente valores como números, caracteres ou booleanos; referências apontam para objetos."
+          }
+        },
+        {
+          "title": "Conversões e divisão",
+          "markdown": "O compilador permite algumas conversões automáticas quando não há perda esperada, como usar um int em uma expressão double. O caminho inverso exige uma conversão explícita e pode descartar informação.\n\nA divisão também depende dos tipos dos operandos. Em 5 / 2, os dois operandos são inteiros, então o resultado é 2. Em 5.0 / 2, pelo menos um operando é double, então o resultado é 2.5. Escolha o tipo antes da conta, não depois de obter um resultado já truncado.",
+          "question": {
+            "type": "numeric",
+            "id": "t2-integer-division",
+            "skill": "m1-types-values",
+            "bloom": "apply",
+            "difficulty": 1,
+            "prompt": "Qual é o resultado numérico de 7 / 2 quando os dois operandos são do tipo int?",
+            "hints": [
+              "A divisão inteira descarta a parte fracionária."
+            ],
+            "answer": 3,
+            "tolerance": 0,
+            "unit": "",
+            "solution": "Como os dois operandos são int, a divisão é inteira: 7 dividido por 2 resulta em 3, descartando a parte fracionária."
+          }
+        },
+        {
+          "title": "Inicialização, escopo e leitura",
+          "markdown": "Uma variável local precisa receber um valor antes de ser lida. Inicializar na declaração torna a intenção visível e reduz caminhos em que o programa usa um estado não definido pelo código. O escopo de uma variável é a região em que seu nome pode ser usado; um bloco entre chaves pode criar um escopo menor.\n\nPara entrada simples, Scanner pode ler valores do terminal. Em código de produção, pense também em formato, erro de conversão e origem dos dados. A ferramenta não valida automaticamente se o valor faz sentido para o domínio.",
+          "question": {
+            "type": "true_false",
+            "id": "t2-local-init",
+            "skill": "m1-types-values",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "Verdadeiro ou falso: uma variável local pode ser lida em Java antes de receber um valor, porque a JVM sempre escolhe zero para ela.",
+            "hints": [
+              "Diferencie uma variável local de um campo de objeto."
+            ],
+            "correct": false,
+            "solution": "Falso. O compilador exige que uma variável local esteja definitivamente atribuída antes da leitura; não se deve depender de um valor escolhido pelo ambiente."
+          }
+        },
+        {
+          "title": "Operadores como expressões",
+          "markdown": "Uma expressão produz um valor. Operadores aritméticos calculam, operadores relacionais comparam e operadores lógicos combinam condições. A precedência influencia a leitura, mas parênteses tornam a intenção explícita.\n\n```java\nint quantidade = 3;\ndouble preco = 12.50;\ndouble total = quantidade * preco;\nboolean freteGratis = total >= 30.0;\n```\n\nO código acima separa quantidade, preço, total e decisão. Essa separação facilita testar cada regra e evita esconder uma conversão ou uma comparação dentro de uma expressão longa.",
+          "question": {
+            "type": "short_answer",
+            "id": "t2-boolean-expression",
+            "skill": "m1-types-values",
+            "bloom": "apply",
+            "difficulty": 2,
+            "prompt": "No código da seção, qual é o valor de freteGratis? Responda com true ou false.",
+            "hints": [
+              "Calcule primeiro quantidade vezes preço."
+            ],
+            "accepted": [
+              "true"
+            ],
+            "solution": "A quantidade é 3 e o preço é 12,50, então o total é 37,50. Como 37,50 é maior ou igual a 30, freteGratis vale true."
+          }
+        }
+      ],
+      "workedExample": {
+        "prompt": "Preveja a saída e o tipo efetivo das contas neste trecho: int a = 5; int b = 2; double c = 5; System.out.println(a / b); System.out.println(c / b);.",
+        "steps": [
+          "Separe as duas expressões: a / b usa dois operandos int; c / b usa um double e um int.",
+          "Na primeira expressão, a divisão é inteira. O resultado é 2, porque a parte depois da vírgula é descartada.",
+          "Na segunda expressão, o int b participa de uma operação com double. Ele é convertido para double para a conta.",
+          "A saída é 2 na primeira linha e 2.5 na segunda. A diferença vem dos tipos dos operandos, não do comando println."
+        ]
+      },
+      "summary": [
+        "Tipos primitivos guardam valores; tipos de referência apontam para objetos e podem representar ausência com null.",
+        "Conversões explícitas podem perder informação, e divisão inteira descarta a parte fracionária.",
+        "Variáveis locais devem ser inicializadas antes da leitura; o escopo limita onde o nome existe.",
+        "Separar valores e condições em expressões pequenas torna o programa mais fácil de testar e explicar."
+      ]
+    },
+    "module-1/lesson-3.json": {
+      "guidance": "Resolva os itens sem executar o código primeiro. Anote a etapa em que cada problema aparece e só depois confira a solução. Nos itens de saída, acompanhe os tipos dos operandos antes de fazer a conta.",
+      "items": [
+        {
+          "type": "multiple_choice",
+          "id": "e3-stage-syntax",
+          "skill": "m1-debug-errors",
+          "bloom": "understand",
+          "difficulty": 1,
+          "prompt": "O compilador acusa que uma variável não foi declarada. Qual é a melhor classificação?",
+          "hints": [
+            "O programa chegou a iniciar?"
+          ],
+          "choices": [
+            {
+              "text": "Erro de lógica",
+              "explanation": "Erro de lógica produz uma resposta errada depois que o programa executa."
+            },
+            {
+              "text": "Erro de execução",
+              "explanation": "Erro de execução acontece depois que o bytecode foi carregado e começou a rodar."
+            },
+            {
+              "text": "Erro de compilação",
+              "explanation": "Correto: o compilador não consegue transformar o código-fonte em bytecode válido."
+            }
+          ],
+          "correct": 2,
+          "solution": "Uma variável desconhecida é detectada durante a compilação, antes da execução."
+        },
+        {
+          "type": "numeric",
+          "id": "e3-int-division",
+          "skill": "m1-types-values",
+          "bloom": "apply",
+          "difficulty": 1,
+          "prompt": "Qual é o resultado de `9 / 4` quando os dois valores são int?",
+          "hints": [
+            "Não há parte fracionária em uma divisão inteira."
+          ],
+          "answer": 2,
+          "tolerance": 0,
+          "unit": "",
+          "solution": "A divisão inteira de 9 por 4 resulta em 2; o restante fracionário é descartado."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "e3-double-division",
+          "skill": "m1-types-values",
+          "bloom": "apply",
+          "difficulty": 1,
+          "prompt": "Qual expressão produz 2.25?",
+          "hints": [
+            "Basta que um dos operandos faça a operação ser double."
+          ],
+          "choices": [
+            {
+              "text": "9 / 4",
+              "explanation": "Com dois operandos int, o resultado é 2."
+            },
+            {
+              "text": "9.0 / 4",
+              "explanation": "Correto: um operando é double, então a divisão produz 2.25."
+            },
+            {
+              "text": "(int) 9 / 4",
+              "explanation": "O cast para int mantém os dois operandos inteiros."
+            }
+          ],
+          "correct": 1,
+          "solution": "9.0 é double; por isso 9.0 dividido por 4 resulta em 2.25."
+        },
+        {
+          "type": "true_false",
+          "id": "e3-local-variable",
+          "skill": "m1-types-values",
+          "bloom": "understand",
+          "difficulty": 1,
+          "prompt": "Verdadeiro ou falso: declarar `int total;` dentro de um método permite imprimir total imediatamente, pois variáveis locais começam em zero.",
+          "hints": [
+            "O compilador exige uma atribuição antes da leitura."
+          ],
+          "correct": false,
+          "solution": "Falso. Uma variável local precisa ser definitivamente atribuída antes de ser lida."
+        },
+        {
+          "type": "short_answer",
+          "id": "e3-boolean-result",
+          "skill": "m1-types-values",
+          "bloom": "apply",
+          "difficulty": 1,
+          "prompt": "Qual é o resultado de `10 > 3 && 2 == 2`? Responda true ou false.",
+          "hints": [
+            "Avalie cada comparação e depois o operador &&."
+          ],
+          "accepted": [
+            "true"
+          ],
+          "solution": "As duas comparações são verdadeiras, então true && true resulta em true."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "e3-reference-assignment",
+          "skill": "m1-types-values",
+          "bloom": "analyze",
+          "difficulty": 2,
+          "prompt": "Depois de `String a = new String(\"oi\"); String b = a;`, o que a atribuição de b faz?",
+          "hints": [
+            "String é um tipo de referência."
+          ],
+          "choices": [
+            {
+              "text": "Faz a e b apontarem para o mesmo objeto String.",
+              "explanation": "Correto: a atribuição copia a referência, não cria automaticamente outro objeto."
+            },
+            {
+              "text": "Converte o objeto em um valor primitivo char.",
+              "explanation": "String não é convertida automaticamente em char por essa atribuição."
+            },
+            {
+              "text": "Define b como null, porque referências não podem ser copiadas.",
+              "explanation": "Referências podem ser atribuídas; nesse caso b recebe a mesma referência de a."
+            }
+          ],
+          "correct": 0,
+          "solution": "b recebe a mesma referência que a. As duas variáveis apontam para o mesmo objeto."
+        },
+        {
+          "type": "ordering",
+          "id": "e3-debug-order",
+          "skill": "m1-debug-errors",
+          "bloom": "analyze",
+          "difficulty": 2,
+          "prompt": "Ordene uma investigação inicial quando um programa Java não produz a saída esperada.",
+          "hints": [
+            "Comece verificando se o programa chegou a compilar."
+          ],
+          "steps": [
+            "Verificar se o código compila sem erro",
+            "Confirmar qual classe e versão estão sendo executadas",
+            "Ler a mensagem e a pilha caso haja exceção",
+            "Comparar a regra implementada com um caso pequeno"
+          ],
+          "solution": "Primeiro confirme a compilação; depois o artefato e o ambiente; em seguida investigue uma exceção; por fim compare o comportamento com a regra esperada."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "e3-scope",
+          "skill": "m1-types-values",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Qual afirmação sobre escopo está correta?",
+          "hints": [
+            "Pense no que acontece com um nome declarado entre chaves."
+          ],
+          "choices": [
+            {
+              "text": "Uma variável declarada dentro de um bloco pode ser usada em qualquer método da classe.",
+              "explanation": "O bloco restringe o escopo; o nome não fica disponível em qualquer método."
+            },
+            {
+              "text": "O escopo define a região do código em que o nome pode ser usado.",
+              "explanation": "Correto: escopo é a região de visibilidade do nome declarado."
+            },
+            {
+              "text": "Escopo só existe para variáveis do tipo boolean.",
+              "explanation": "Escopo se aplica a nomes de vários tipos, não apenas a boolean."
+            }
+          ],
+          "correct": 1,
+          "solution": "Escopo é a região em que uma declaração pode ser referenciada pelo nome."
+        },
+        {
+          "type": "numeric",
+          "id": "e3-total",
+          "skill": "m1-methods",
+          "bloom": "apply",
+          "difficulty": 2,
+          "prompt": "Um método recebe quantidade 4 e preço 7.5 e calcula `quantidade * preco`. Qual é o total?",
+          "hints": [
+            "O produto é uma operação double."
+          ],
+          "answer": 30,
+          "tolerance": 0.0001,
+          "unit": "",
+          "solution": "4 vezes 7.5 é 30.0."
+        },
+        {
+          "type": "short_answer",
+          "id": "e3-method-purpose",
+          "skill": "m1-methods",
+          "bloom": "understand",
+          "difficulty": 2,
+          "prompt": "Qual é a principal vantagem de separar uma regra em um método com nome claro? Responda com uma ideia curta.",
+          "hints": [
+            "Pense em responsabilidade e teste."
+          ],
+          "accepted": [
+            "separar responsabilidade",
+            "facilitar teste",
+            "decompor o problema",
+            "tornar o código reutilizável"
+          ],
+          "solution": "Um método nomeado separa uma responsabilidade e torna a regra mais fácil de ler, testar e reutilizar."
+        }
+      ]
+    },
+    "module-1/lesson-4.json": {
+      "title": "Decidir, repetir e decompor",
+      "scenes": [
+        {
+          "type": "title",
+          "title": "Decidir, repetir e decompor",
+          "subtitle": "Controle de fluxo e métodos em Java",
+          "narration": "Um programa útil transforma uma regra em passos. Em Java, decisões escolhem caminhos, laços repetem trabalho e métodos dão nome a responsabilidades. A combinação deixa o comportamento observável e modificável."
+        },
+        {
+          "type": "diagram",
+          "title": "Do problema para os passos",
+          "nodes": [
+            {
+              "id": "input",
+              "label": "Dados de entrada"
+            },
+            {
+              "id": "decision",
+              "label": "Regra de decisão"
+            },
+            {
+              "id": "repeat",
+              "label": "Repetição"
+            },
+            {
+              "id": "method",
+              "label": "Método nomeado"
+            },
+            {
+              "id": "result",
+              "label": "Resultado"
+            }
+          ],
+          "links": [
+            {
+              "from": "input",
+              "to": "decision",
+              "label": "lê"
+            },
+            {
+              "from": "decision",
+              "to": "repeat",
+              "label": "controla"
+            },
+            {
+              "from": "repeat",
+              "to": "method",
+              "label": "chama"
+            },
+            {
+              "from": "method",
+              "to": "result",
+              "label": "retorna"
+            }
+          ],
+          "narration": "Começamos com dados de entrada. Uma decisão escolhe o caminho conforme uma condição. Se o mesmo trabalho precisa acontecer várias vezes, um laço controla a repetição. Quando uma parte ganha um nome, ela pode virar um método. O método recebe dados, aplica uma regra e retorna um resultado, ou executa uma ação claramente descrita. O fluxo completo fica mais fácil de ler porque cada construção tem uma função."
+        },
+        {
+          "type": "bullets",
+          "title": "Escolha a estrutura pelo significado",
+          "bullets": [
+            "if: um caminho depende de uma condição",
+            "switch: alternativas de um mesmo caso",
+            "for: repetição com contagem ou percurso",
+            "while: repetição enquanto uma condição for verdadeira"
+          ],
+          "narration": "Use if quando a pergunta tem uma condição e um caminho alternativo. Use switch quando várias alternativas pertencem ao mesmo valor ou categoria. Use for quando a repetição tem uma contagem, um índice ou um percurso claro. Use while quando você repete enquanto uma condição permanece verdadeira e a quantidade de passos não é conhecida de antemão. A sintaxe pode parecer semelhante entre linguagens, mas o objetivo continua sendo comunicar a regra ao leitor."
+        },
+        {
+          "type": "code",
+          "lang": "pseudocode",
+          "code": "total = 0\npara cada valor em valores:\n    se valor >= 0:\n        total = total + valor\nretorne total",
+          "highlights": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "narration": "Este algoritmo soma apenas valores não negativos. O laço percorre os dados. A decisão filtra cada valor. A atualização altera o acumulador. Ao final, o método retorna o total. Um detalhe importante é a inicialização: total começa antes do laço e existe durante todo o cálculo. Se essa variável fosse recriada a cada repetição, o programa perderia o trabalho anterior."
+        },
+        {
+          "type": "question",
+          "item": {
+            "type": "multiple_choice",
+            "id": "v4-loop-choice",
+            "skill": "m1-control-flow",
+            "bloom": "apply",
+            "difficulty": 1,
+            "prompt": "Qual estrutura expressa melhor ‘repetir enquanto o usuário ainda não digitou fim’, quando não sabemos quantas entradas virão?",
+            "hints": [
+              "A condição de continuação é mais importante que uma contagem fixa."
+            ],
+            "choices": [
+              {
+                "text": "while",
+                "explanation": "Correto: while repete enquanto uma condição continuar verdadeira, sem exigir uma contagem conhecida."
+              },
+              {
+                "text": "if",
+                "explanation": "if escolhe um caminho uma vez; não representa repetição por si só."
+              },
+              {
+                "text": "switch",
+                "explanation": "switch escolhe entre alternativas de um valor; não é a estrutura natural para repetir até uma condição mudar."
+              }
+            ],
+            "correct": 0,
+            "solution": "while comunica repetição controlada por uma condição que pode mudar durante a leitura."
+          },
+          "narration": "Pause e responda: qual estrutura representa melhor uma repetição que continua enquanto uma condição for verdadeira?"
+        },
+        {
+          "type": "code",
+          "lang": "pseudocode",
+          "code": "funcao maior(a, b):\n    se a > b:\n        retorne a\n    senao:\n        retorne b\n\nresultado = maior(8, 3)",
+          "highlights": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ],
+          "narration": "O método maior tem um contrato pequeno: recebe dois valores e retorna um deles. Quem chama não precisa repetir a comparação nem conhecer seus passos internos. O nome comunica a intenção, os parâmetros definem a entrada e o retorno define a saída. Um método bom não precisa ser minúsculo a qualquer custo, mas deve ter uma responsabilidade que possa ser explicada em uma frase."
+        },
+        {
+          "type": "bullets",
+          "title": "Um contrato de método",
+          "bullets": [
+            "Nome: qual ação ou cálculo acontece",
+            "Parâmetros: quais dados entram",
+            "Retorno: qual resultado sai",
+            "Pré-condições: o que precisa ser verdade",
+            "Efeito: o que muda fora do método"
+          ],
+          "narration": "Antes de escrever um método, descreva seu contrato. O nome deve indicar a intenção. Os parâmetros mostram os dados necessários. O retorno diz o que o chamador recebe. Uma pré-condição registra uma exigência, como uma lista não nula. O efeito registra uma mudança, como gravar um arquivo. Pensar nesses pontos evita métodos que fazem várias coisas escondidas e facilita escolher testes para entradas normais, limites e falhas."
+        },
+        {
+          "type": "question",
+          "item": {
+            "type": "true_false",
+            "id": "v4-method-contract",
+            "skill": "m1-methods",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "Verdadeiro ou falso: um método com nome, parâmetros e retorno claros permite que seu chamador use a regra sem conhecer todos os passos internos.",
+            "hints": [
+              "Pense no contrato como uma fronteira entre quem chama e quem implementa."
+            ],
+            "correct": true,
+            "solution": "Verdadeiro. O contrato comunica entradas, saída e condições relevantes; a implementação pode mudar sem exigir que o chamador repita seus detalhes."
+          },
+          "narration": "Pause e responda: um contrato claro permite usar um método sem conhecer todos os passos internos?"
+        },
+        {
+          "type": "diagram",
+          "title": "Fluxo legível",
+          "nodes": [
+            {
+              "id": "read",
+              "label": "Ler entrada"
+            },
+            {
+              "id": "validate",
+              "label": "Validar"
+            },
+            {
+              "id": "calculate",
+              "label": "Calcular"
+            },
+            {
+              "id": "present",
+              "label": "Apresentar"
+            }
+          ],
+          "links": [
+            {
+              "from": "read",
+              "to": "validate",
+              "label": "dados"
+            },
+            {
+              "from": "validate",
+              "to": "calculate",
+              "label": "válidos"
+            },
+            {
+              "from": "calculate",
+              "to": "present",
+              "label": "resultado"
+            }
+          ],
+          "narration": "Uma solução de terminal pode ser organizada em quatro passos: ler, validar, calcular e apresentar. Cada passo pode ser um método ou uma pequena sequência bem delimitada. A validação vem antes do cálculo para que a regra não opere sobre dados que não fazem sentido. A apresentação vem depois para não misturar formatação com a lógica. Essa separação é simples, mas cria pontos claros para depuração e teste."
+        },
+        {
+          "type": "bullets",
+          "title": "O ciclo de melhoria",
+          "bullets": [
+            "Escreva a regra em linguagem comum",
+            "Escolha o fluxo que a regra pede",
+            "Extraia uma responsabilidade com nome",
+            "Teste um caso pequeno e um limite",
+            "Leia o resultado e ajuste"
+          ],
+          "narration": "Para sair do enunciado e chegar ao código, escreva primeiro a regra em linguagem comum. Escolha a estrutura de controle que representa essa regra. Extraia uma responsabilidade que possa receber um nome. Teste um caso pequeno e um caso de limite. Depois leia o resultado e compare com o enunciado. Esse ciclo reduz o risco de confundir uma solução que compila com uma solução que realmente responde ao problema."
+        }
+      ]
+    },
+    "module-1/lesson-5.json": {
+      "introduction": "Ao final desta aula, você consegue transformar um problema de terminal em métodos pequenos, controlar decisões e repetições e diagnosticar mensagens comuns. Use o vídeo anterior para a intuição e consulte os fundamentos atuais do dev.java para conferir a sintaxe de variáveis, expressões e controle de fluxo.",
+      "sections": [
+        {
+          "title": "Método como contrato",
+          "markdown": "Um método reúne uma responsabilidade sob um nome. Sua assinatura informa o nome, os parâmetros e o tipo de retorno. O corpo implementa a regra. Quem chama deve saber o que fornecer e o que receber, mas não precisa repetir os passos internos.\n\n```java\nstatic double media(double total, int quantidade) {\n    if (quantidade <= 0) {\n        throw new IllegalArgumentException(\"quantidade\");\n    }\n    return total / quantidade;\n}\n```\n\nO método declara uma pré-condição: a quantidade precisa ser positiva. Assim, não produz uma média enganosa quando recebe dados inválidos.",
+          "question": {
+            "type": "multiple_choice",
+            "id": "t5-method-contract",
+            "skill": "m1-methods",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "O que a pré-condição do método media protege?",
+            "hints": [
+              "Observe o teste antes do return."
+            ],
+            "choices": [
+              {
+                "text": "Impede que a média seja calculada com quantidade zero ou negativa.",
+                "explanation": "Correto: a condição rejeita entradas que não representam uma quantidade válida."
+              },
+              {
+                "text": "Garante que total seja sempre um número inteiro.",
+                "explanation": "total é double; a pré-condição não altera seu tipo."
+              },
+              {
+                "text": "Faz o método retornar zero quando há erro.",
+                "explanation": "O método lança uma exceção; não transforma a entrada inválida em zero."
+              }
+            ],
+            "correct": 0,
+            "solution": "A pré-condição rejeita quantidade menor ou igual a zero antes da divisão."
+          }
+        },
+        {
+          "title": "Decisões sem ambiguidade",
+          "markdown": "Use `if` para escolher entre caminhos baseados em condições. A condição deve ser uma pergunta que resulte em boolean. Quando os caminhos são mutuamente exclusivos, `if` e `else` deixam isso visível.\n\nPara várias alternativas do mesmo valor, `switch` pode comunicar melhor a intenção. Em qualquer caso, trate o caso inesperado de modo explícito. Uma decisão não é só sintaxe: ela define o que acontece nos limites e nos dados que não estavam no exemplo principal.",
+          "question": {
+            "type": "true_false",
+            "id": "t5-if-boolean",
+            "skill": "m1-control-flow",
+            "bloom": "understand",
+            "difficulty": 1,
+            "prompt": "Verdadeiro ou falso: uma condição de if deve resultar em um valor booleano.",
+            "hints": [
+              "if precisa decidir se entra no bloco."
+            ],
+            "correct": true,
+            "solution": "Verdadeiro. O if executa seu bloco quando a expressão condicional resulta em true."
+          }
+        },
+        {
+          "title": "Laços e invariantes",
+          "markdown": "Um laço precisa de três respostas: o que acontece antes da primeira repetição, o que muda a cada repetição e quando ele termina. Essa descrição é um invariante simples do algoritmo.\n\nEm um `for`, inicialização, condição e atualização ficam próximas. Em um `while`, a condição aparece separada e você precisa garantir que o corpo altere algo que possa torná-la falsa. Se nada muda, o laço pode nunca terminar.\n\n```java\nint soma = 0;\nfor (int valor : valores) {\n    soma += valor;\n}\n```\n\nAqui, soma começa em zero e, após cada item, contém a soma dos itens já percorridos.",
+          "question": {
+            "type": "short_answer",
+            "id": "t5-loop-invariant",
+            "skill": "m1-control-flow",
+            "bloom": "analyze",
+            "difficulty": 2,
+            "prompt": "No laço da seção, o que `soma` representa depois de alguns itens terem sido processados?",
+            "hints": [
+              "Observe quais itens já passaram pelo corpo do for."
+            ],
+            "accepted": [
+              "a soma dos itens já percorridos",
+              "soma dos itens já processados",
+              "total dos valores percorridos"
+            ],
+            "solution": "Depois de cada repetição, soma representa o total dos valores que já foram percorridos."
+          }
+        },
+        {
+          "title": "Separar leitura, validação e cálculo",
+          "markdown": "Uma aplicação de terminal costuma misturar entrada, regra e saída no começo. Separar essas partes melhora a leitura e permite testar a regra sem simular o terminal.\n\nUma estrutura útil é:\n\n1. ler dados;\n2. validar dados;\n3. calcular o resultado;\n4. apresentar o resultado.\n\nA validação deve ocorrer antes do cálculo. O cálculo deve receber dados que já respeitam seu contrato. A apresentação pode formatar a resposta sem alterar a regra. Essa divisão não é uma obrigação mecânica; é uma forma de deixar cada motivo de mudança em um lugar previsível.",
+          "question": {
+            "type": "ordering",
+            "id": "t5-program-flow",
+            "skill": "m1-methods",
+            "bloom": "apply",
+            "difficulty": 2,
+            "prompt": "Ordene uma estrutura simples para uma aplicação de terminal.",
+            "hints": [
+              "Não calcule antes de saber se os dados são válidos."
+            ],
+            "steps": [
+              "Ler os dados",
+              "Validar os dados",
+              "Calcular o resultado",
+              "Apresentar o resultado"
+            ],
+            "solution": "A aplicação lê, valida, calcula e apresenta. Essa ordem evita calcular com dados inválidos e separa responsabilidades."
+          }
+        }
+      ],
+      "workedExample": {
+        "prompt": "Projete um método que receba uma lista de valores e retorne o maior valor, rejeitando uma lista vazia.",
+        "steps": [
+          "Defina o contrato: recebe valores e retorna um valor; a lista não pode ser vazia.",
+          "Valide a pré-condição antes de acessar qualquer posição. Se a lista estiver vazia, lance uma exceção adequada.",
+          "Use o primeiro valor como maior provisório. Percorra os demais valores e substitua o provisório quando encontrar um valor maior.",
+          "Retorne o maior provisório depois do laço. O método tem uma responsabilidade e o chamador pode testar entradas normais, iguais e negativas."
+        ]
+      },
+      "summary": [
+        "Métodos tornam responsabilidades nomeadas e expõem contratos de entrada, saída e falha.",
+        "if, switch, for e while devem ser escolhidos pelo significado da regra.",
+        "Um laço precisa de inicialização, atualização e condição de término verificáveis.",
+        "Separar leitura, validação, cálculo e apresentação facilita testar e depurar o programa."
+      ]
+    },
+    "module-1/lesson-6.json": {
+      "guidance": "Antes de olhar a solução, diga em voz alta qual é o contrato, qual condição muda e quando o laço termina. Os últimos itens pedem uma decisão de design, não apenas uma linha de sintaxe.",
+      "items": [
+        {
+          "type": "multiple_choice",
+          "id": "e6-if-or-loop",
+          "skill": "m1-control-flow",
+          "bloom": "understand",
+          "difficulty": 1,
+          "prompt": "Você precisa verificar uma condição uma única vez e escolher entre ‘aceito’ e ‘rejeito’. Qual estrutura é a mais direta?",
+          "hints": [
+            "Não há repetição no enunciado."
+          ],
+          "choices": [
+            {
+              "text": "while",
+              "explanation": "while repete enquanto uma condição for verdadeira; é desnecessário aqui."
+            },
+            {
+              "text": "for",
+              "explanation": "for é útil para repetição controlada, não para uma escolha única."
+            },
+            {
+              "text": "if com um caminho alternativo",
+              "explanation": "Correto: if e else expressam uma escolha entre caminhos."
+            }
+          ],
+          "correct": 2,
+          "solution": "Uma decisão única é expressa diretamente por if, normalmente com else para o caminho alternativo."
+        },
+        {
+          "type": "numeric",
+          "id": "e6-sum-loop",
+          "skill": "m1-control-flow",
+          "bloom": "apply",
+          "difficulty": 1,
+          "prompt": "Um laço começa com soma igual a 0 e adiciona 3, depois 5 e depois 2. Qual é o valor final de soma?",
+          "hints": [
+            "A cada repetição, some o valor atual ao acumulador."
+          ],
+          "answer": 10,
+          "tolerance": 0,
+          "unit": "",
+          "solution": "0 + 3 + 5 + 2 = 10."
+        },
+        {
+          "type": "short_answer",
+          "id": "e6-while-condition",
+          "skill": "m1-control-flow",
+          "bloom": "understand",
+          "difficulty": 1,
+          "prompt": "O que precisa mudar dentro de um while para evitar uma repetição infinita?",
+          "hints": [
+            "Relacione a mudança à condição do laço."
+          ],
+          "accepted": [
+            "a condição precisa poder ficar falsa",
+            "algo que afeta a condição deve mudar",
+            "o estado da condição deve ser atualizado"
+          ],
+          "solution": "O corpo precisa atualizar algum estado que possa fazer a condição de continuação ficar falsa, ou o laço não terá caminho de término."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "e6-method-return",
+          "skill": "m1-methods",
+          "bloom": "apply",
+          "difficulty": 1,
+          "prompt": "Qual assinatura representa um método que recebe dois int e devolve o maior como int?",
+          "hints": [
+            "Observe os tipos dos parâmetros e o tipo antes do nome."
+          ],
+          "choices": [
+            {
+              "text": "static int maior(int a, int b)",
+              "explanation": "Correto: o retorno e os dois parâmetros são int."
+            },
+            {
+              "text": "static void maior(int a, int b)",
+              "explanation": "void não devolve um valor para o chamador."
+            },
+            {
+              "text": "static int maior(String a, String b)",
+              "explanation": "O retorno está certo, mas os parâmetros não correspondem ao requisito."
+            }
+          ],
+          "correct": 0,
+          "solution": "A assinatura correta é static int maior(int a, int b)."
+        },
+        {
+          "type": "ordering",
+          "id": "e6-method-design",
+          "skill": "m1-methods",
+          "bloom": "analyze",
+          "difficulty": 2,
+          "prompt": "Ordene a criação de um método para uma regra nova.",
+          "hints": [
+            "Comece esclarecendo o que entra e o que sai."
+          ],
+          "steps": [
+            "Descrever entrada, saída e falhas esperadas",
+            "Escolher um nome que comunique a responsabilidade",
+            "Implementar a regra em passos pequenos",
+            "Testar casos normais, limites e inválidos"
+          ],
+          "solution": "Primeiro defina o contrato; depois escolha um nome coerente; implemente; por fim teste os casos que podem confirmar ou quebrar a regra."
+        },
+        {
+          "type": "true_false",
+          "id": "e6-switch-fallback",
+          "skill": "m1-control-flow",
+          "bloom": "analyze",
+          "difficulty": 2,
+          "prompt": "Verdadeiro ou falso: uma decisão com switch não precisa considerar valores que não aparecem nos exemplos do enunciado.",
+          "hints": [
+            "Pense no que acontece quando a entrada é diferente de todos os casos conhecidos."
+          ],
+          "correct": false,
+          "solution": "Falso. Dados fora dos exemplos também precisam de um comportamento definido, como um caso default, validação anterior ou erro explícito."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "e6-validation-order",
+          "skill": "m1-methods",
+          "bloom": "analyze",
+          "difficulty": 2,
+          "prompt": "Por que validar uma quantidade antes de calcular uma média?",
+          "hints": [
+            "Considere o caso quantidade igual a zero."
+          ],
+          "choices": [
+            {
+              "text": "Para garantir que o cálculo receba dados que respeitam seu contrato.",
+              "explanation": "Correto: a validação impede divisão sem sentido e torna a falha explícita."
+            },
+            {
+              "text": "Para transformar qualquer entrada em double.",
+              "explanation": "Validação não é conversão de tipo."
+            },
+            {
+              "text": "Para evitar que o método tenha um retorno.",
+              "explanation": "O método ainda pode retornar um resultado válido depois da validação."
+            }
+          ],
+          "correct": 0,
+          "solution": "Validar antes protege o contrato do cálculo e permite tratar a entrada inválida no ponto apropriado."
+        },
+        {
+          "type": "numeric",
+          "id": "e6-average",
+          "skill": "m1-methods",
+          "bloom": "apply",
+          "difficulty": 2,
+          "prompt": "Um método calcula a média de 12, 15 e 18 dividindo a soma pela quantidade. Qual é o resultado?",
+          "hints": [
+            "Some os três valores e divida por 3."
+          ],
+          "answer": 15,
+          "tolerance": 0.0001,
+          "unit": "",
+          "solution": "A soma é 45 e 45 dividido por 3 é 15."
+        },
+        {
+          "type": "short_answer",
+          "id": "e6-responsibility",
+          "skill": "m1-methods",
+          "bloom": "evaluate",
+          "difficulty": 3,
+          "prompt": "Em uma frase, por que um método que lê entrada, calcula, grava arquivo e imprime relatório é difícil de testar?",
+          "hints": [
+            "Conte quantos motivos de mudança estão misturados."
+          ],
+          "accepted": [
+            "tem muitas responsabilidades",
+            "mistura entrada cálculo arquivo e saída",
+            "mistura várias responsabilidades",
+            "tem efeitos colaterais demais"
+          ],
+          "solution": "Ele mistura várias responsabilidades e efeitos externos, então um teste precisa controlar muitas coisas e uma mudança pode quebrar partes não relacionadas."
+        },
+        {
+          "type": "multiple_choice",
+          "id": "e6-loop-boundary",
+          "skill": "m1-control-flow",
+          "bloom": "evaluate",
+          "difficulty": 3,
+          "prompt": "Um laço deve processar valores enquanto ainda houver dados e parar ao encontrar a palavra fim. Qual detalhe é essencial?",
+          "hints": [
+            "A condição de parada precisa ser testada no momento certo."
+          ],
+          "choices": [
+            {
+              "text": "Ignorar a condição e processar sempre mais um valor.",
+              "explanation": "Isso pode processar o marcador fim como dado e causar erro."
+            },
+            {
+              "text": "Definir claramente se o marcador fim é controle ou dado antes de aplicar a regra.",
+              "explanation": "Correto: a fronteira precisa ser decidida antes do processamento para não misturar controle e dados."
+            },
+            {
+              "text": "Usar apenas um método void, sem retorno nem falha.",
+              "explanation": "O tipo de retorno não resolve a regra de parada."
+            }
+          ],
+          "correct": 1,
+          "solution": "O marcador de parada precisa ser reconhecido antes de ser tratado como um valor normal; esse é o limite do laço."
+        }
+      ]
+    },
+    "syllabus.json": {
+      "title": "Java do fundamento à engenharia de aplicações",
+      "summary": "Trilha prática de 24 semanas para um desenvolvedor júnior que já conhece outras linguagens. A sequência começa pelo modelo de execução e pelos tipos, constrói orientação a objetos com contratos claros e avança para coleções, exceções, streams, I/O, testes, concorrência, módulos e uma aplicação integrada. Cada módulo combina conceito, precisão, exercícios e um projeto executável.",
+      "results": [
+        "Ao final você consegue explicar como Java compila para bytecode e diagnosticar erros de compilação, ligação e execução.",
+        "Ao final você consegue escrever código Java idiomático com tipos, métodos, classes e contratos bem definidos.",
+        "Ao final você consegue escolher entre composição, herança e interfaces e justificar a escolha pelo comportamento do domínio.",
+        "Ao final você consegue processar dados com coleções, generics, comparadores, lambdas e streams sem perder legibilidade.",
+        "Ao final você consegue tratar falhas, ler e gravar arquivos e testar comportamentos importantes de uma aplicação.",
+        "Ao final você consegue projetar componentes concorrentes com regras explícitas de segurança e visibilidade.",
+        "Ao final você consegue entregar uma aplicação Java modular, documentada, testada e capaz de evoluir com segurança."
+      ],
+      "prerequisites": [
+        "Experiência prévia com alguma linguagem de programação.",
+        "Saber usar terminal, editor e controle de versão em nível básico.",
+        "JDK instalado e um computador para compilar e executar os exemplos."
+      ],
+      "modules": [
+        {
+          "title": "Do código à execução: tipos e controle de fluxo",
+          "goal": "Entender o caminho do código Java até a JVM e escrever programas pequenos com tipos, entrada, saída e controle de fluxo previsíveis.",
+          "skills": [
+            {
+              "id": "m1-execution-model",
+              "name": "Explicar compilação, bytecode e execução na JVM",
+              "bloom": "understand"
+            },
+            {
+              "id": "m1-types-values",
+              "name": "Escolher tipos primitivos e de referência para um problema",
+              "bloom": "apply"
+            },
+            {
+              "id": "m1-control-flow",
+              "name": "Usar decisões, laços e expressões de forma correta",
+              "bloom": "apply"
+            },
+            {
+              "id": "m1-methods",
+              "name": "Decompor uma solução em métodos com contrato claro",
+              "bloom": "apply"
+            },
+            {
+              "id": "m1-debug-errors",
+              "name": "Classificar e investigar erros do compilador e da execução",
+              "bloom": "analyze"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "O caminho de .java até a JVM",
+              "goal": "Visualizar compilação, bytecode, classes e execução antes de escrever regras da linguagem.",
+              "skills": [
+                "m1-execution-model"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Tipos, variáveis e expressões que o compilador entende",
+              "goal": "Escolher tipos, inicializar variáveis e prever conversões e resultados de expressões.",
+              "skills": [
+                "m1-types-values",
+                "m1-execution-model"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: tipos e resultados de expressões",
+              "goal": "Prever saídas, identificar conversões perigosas e corrigir pequenos programas.",
+              "skills": [
+                "m1-types-values",
+                "m1-debug-errors"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Decidir, repetir e decompor",
+              "goal": "Relacionar controle de fluxo e métodos a uma estratégia de resolução de problemas.",
+              "skills": [
+                "m1-control-flow",
+                "m1-methods"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Controle de fluxo, métodos e diagnóstico",
+              "goal": "Escrever um programa de terminal com decisões, laços, métodos e mensagens de erro compreensíveis.",
+              "skills": [
+                "m1-control-flow",
+                "m1-methods",
+                "m1-debug-errors"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: do enunciado ao programa",
+              "goal": "Implementar e depurar soluções pequenas em Java sem depender de código pronto.",
+              "skills": [
+                "m1-control-flow",
+                "m1-methods",
+                "m1-debug-errors"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Analisador de despesas no terminal",
+            "prompt": "Crie uma aplicação de terminal que leia uma quantidade de despesas, valide valores não negativos, calcule total, média e maior despesa e apresente uma classificação simples do orçamento. Separe a leitura, os cálculos e a apresentação em métodos diferentes. Compile com javac e execute pela linha de comando. Inclua pelo menos três entradas de teste, incluindo uma entrada inválida.",
+            "rubric": [
+              "Compila e executa pela linha de comando sem alterar o código entre os testes.",
+              "Usa tipos adequados e rejeita valores inválidos sem produzir resultado enganoso.",
+              "Separa leitura, cálculo e apresentação em métodos com responsabilidades distintas.",
+              "Calcula total, média e maior despesa corretamente nos casos normal e de uma única despesa.",
+              "Registra exemplos de teste e explica o resultado esperado de cada um."
+            ]
+          }
+        },
+        {
+          "title": "Classes, objetos e encapsulamento",
+          "goal": "Modelar conceitos do domínio com classes que protegem seu estado e expõem operações coerentes.",
+          "skills": [
+            {
+              "id": "m2-classes-objects",
+              "name": "Modelar classes e instanciar objetos",
+              "bloom": "apply"
+            },
+            {
+              "id": "m2-encapsulation",
+              "name": "Proteger invariantes com encapsulamento",
+              "bloom": "analyze"
+            },
+            {
+              "id": "m2-constructors",
+              "name": "Definir construtores e inicialização válida",
+              "bloom": "apply"
+            },
+            {
+              "id": "m2-equality",
+              "name": "Distinguir identidade e igualdade de valor",
+              "bloom": "analyze"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Estado, comportamento e identidade",
+              "goal": "Construir a intuição de objeto como estado protegido e operações permitidas.",
+              "skills": [
+                "m2-classes-objects",
+                "m2-encapsulation"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Classes, construtores e invariantes",
+              "goal": "Escrever classes cujo estado nasce válido e continua protegido.",
+              "skills": [
+                "m2-classes-objects",
+                "m2-constructors",
+                "m2-encapsulation"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: classes que protegem regras",
+              "goal": "Corrigir classes anêmicas e tornar suas regras explícitas.",
+              "skills": [
+                "m2-encapsulation",
+                "m2-constructors"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Quando dois objetos são iguais?",
+              "goal": "Separar identidade, estado e igualdade observável.",
+              "skills": [
+                "m2-equality"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "equals, hashCode e objetos de valor",
+              "goal": "Implementar e usar igualdade de forma consistente em objetos de domínio.",
+              "skills": [
+                "m2-equality",
+                "m2-classes-objects"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: objetos e invariantes",
+              "goal": "Modelar entidades pequenas e testar seus contratos.",
+              "skills": [
+                "m2-classes-objects",
+                "m2-encapsulation",
+                "m2-equality"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Catálogo de produtos",
+            "prompt": "Modele um catálogo com produtos, preço, estoque e operações de entrada e saída. Impeça estados inválidos, defina igualdade de produto de forma justificada e escreva uma aplicação de terminal que execute operações válidas e inválidas.",
+            "rubric": [
+              "As classes escondem o estado mutável e expõem operações significativas.",
+              "Construtores e métodos impedem preço e estoque inválidos.",
+              "A igualdade é documentada e consistente com hashCode.",
+              "O programa demonstra ao menos quatro cenários, incluindo uma falha tratada."
+            ]
+          }
+        },
+        {
+          "title": "Composição, herança e interfaces",
+          "goal": "Escolher e aplicar relações entre tipos sem criar hierarquias frágeis.",
+          "skills": [
+            {
+              "id": "m3-composition",
+              "name": "Compor objetos para reutilizar comportamento",
+              "bloom": "apply"
+            },
+            {
+              "id": "m3-inheritance",
+              "name": "Usar herança quando houver substituição válida",
+              "bloom": "evaluate"
+            },
+            {
+              "id": "m3-interfaces",
+              "name": "Definir interfaces como contratos",
+              "bloom": "apply"
+            },
+            {
+              "id": "m3-polymorphism",
+              "name": "Usar polimorfismo sem condicionais de tipo",
+              "bloom": "analyze"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Uma família de tipos ou vários colaboradores?",
+              "goal": "Comparar herança e composição pelo que muda no acoplamento.",
+              "skills": [
+                "m3-composition",
+                "m3-inheritance"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Interfaces, implementação e substituição",
+              "goal": "Definir contratos e verificar quando uma implementação pode substituir outra.",
+              "skills": [
+                "m3-interfaces",
+                "m3-polymorphism",
+                "m3-inheritance"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: escolher a relação certa",
+              "goal": "Refatorar exemplos com herança excessiva ou composição ausente.",
+              "skills": [
+                "m3-composition",
+                "m3-inheritance"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Polimorfismo em uma chamada",
+              "goal": "Ver como uma mesma operação pode trabalhar com implementações diferentes.",
+              "skills": [
+                "m3-polymorphism",
+                "m3-interfaces"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Classes abstratas e composição de políticas",
+              "goal": "Combinar contratos e componentes sem duplicar decisões.",
+              "skills": [
+                "m3-interfaces",
+                "m3-composition"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: desenho orientado a contratos",
+              "goal": "Implementar e avaliar alternativas de design.",
+              "skills": [
+                "m3-interfaces",
+                "m3-polymorphism",
+                "m3-composition"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Sistema de notificações",
+            "prompt": "Crie um sistema que envie notificações por pelo menos três canais. O serviço principal deve depender de uma interface, não de classes concretas. Adicione uma nova implementação sem modificar o fluxo principal e explique onde composição foi preferida à herança.",
+            "rubric": [
+              "O serviço principal depende de uma interface.",
+              "Há pelo menos três implementações testáveis.",
+              "Adicionar um canal novo não exige alterar o serviço principal.",
+              "O projeto documenta uma decisão entre composição e herança."
+            ]
+          }
+        },
+        {
+          "title": "Coleções, generics e ordenação",
+          "goal": "Representar conjuntos de dados e operações de busca, agrupamento e ordenação com segurança de tipos.",
+          "skills": [
+            {
+              "id": "m4-collections",
+              "name": "Escolher List, Set, Map e fila pelo comportamento necessário",
+              "bloom": "analyze"
+            },
+            {
+              "id": "m4-generics",
+              "name": "Usar generics para preservar segurança de tipos",
+              "bloom": "apply"
+            },
+            {
+              "id": "m4-iterators",
+              "name": "Percorrer coleções com iteração clara",
+              "bloom": "apply"
+            },
+            {
+              "id": "m4-ordering",
+              "name": "Definir ordenação com comparadores",
+              "bloom": "apply"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "A estrutura de dados é uma decisão",
+              "goal": "Relacionar operações necessárias às coleções adequadas.",
+              "skills": [
+                "m4-collections"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Listas, conjuntos, mapas e generics",
+              "goal": "Implementar operações comuns sem perder as garantias do compilador.",
+              "skills": [
+                "m4-collections",
+                "m4-generics"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: coleções e tipos parametrizados",
+              "goal": "Escolher estruturas e corrigir usos de tipos crus.",
+              "skills": [
+                "m4-collections",
+                "m4-generics"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Percorrer, filtrar e ordenar",
+              "goal": "Comparar iteração explícita, iteradores e comparadores.",
+              "skills": [
+                "m4-iterators",
+                "m4-ordering"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Comparators, filas e mapas aninhados",
+              "goal": "Ordenar objetos de domínio e combinar estruturas com critério.",
+              "skills": [
+                "m4-ordering",
+                "m4-collections",
+                "m4-iterators"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: índice de contatos",
+              "goal": "Construir consultas e ordenações sobre uma coleção de objetos.",
+              "skills": [
+                "m4-collections",
+                "m4-generics",
+                "m4-ordering"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Índice de contatos",
+            "prompt": "Construa um índice de contatos que permita inserir, remover, buscar por nome e agrupar por categoria. Ordene os resultados por mais de um critério e justifique a coleção escolhida para cada operação.",
+            "rubric": [
+              "As coleções escolhidas correspondem às operações do requisito.",
+              "O código usa generics sem tipos crus.",
+              "Busca, remoção e agrupamento funcionam em casos vazios e não vazios.",
+              "A ordenação é determinística e está documentada."
+            ]
+          }
+        },
+        {
+          "title": "Exceções, validação e contratos",
+          "goal": "Fazer falhas explícitas, recuperáveis quando possível e observáveis quando não forem.",
+          "skills": [
+            {
+              "id": "m5-exception-model",
+              "name": "Explicar propagação e hierarquia de exceções",
+              "bloom": "understand"
+            },
+            {
+              "id": "m5-validation",
+              "name": "Validar entradas sem esconder erros",
+              "bloom": "apply"
+            },
+            {
+              "id": "m5-custom-exceptions",
+              "name": "Criar exceções de domínio úteis",
+              "bloom": "create"
+            },
+            {
+              "id": "m5-resource-safety",
+              "name": "Garantir fechamento de recursos",
+              "bloom": "apply"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Uma exceção é um contrato de falha",
+              "goal": "Entender o caminho de uma falha até o ponto que consegue tratá-la.",
+              "skills": [
+                "m5-exception-model"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "try, catch, throws e causas",
+              "goal": "Escolher onde tratar, propagar ou transformar uma exceção.",
+              "skills": [
+                "m5-exception-model",
+                "m5-validation"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: tratar sem silenciar",
+              "goal": "Corrigir tratamentos amplos, vazios ou no lugar errado.",
+              "skills": [
+                "m5-exception-model",
+                "m5-validation"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Falhas do domínio e recursos finitos",
+              "goal": "Relacionar exceções próprias e fechamento determinístico.",
+              "skills": [
+                "m5-custom-exceptions",
+                "m5-resource-safety"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Exceções próprias e try-with-resources",
+              "goal": "Modelar falhas úteis e operar recursos de forma segura.",
+              "skills": [
+                "m5-custom-exceptions",
+                "m5-resource-safety"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: importador resistente",
+              "goal": "Validar dados e relatar erros sem interromper o processamento válido.",
+              "skills": [
+                "m5-validation",
+                "m5-custom-exceptions",
+                "m5-resource-safety"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Importador de pedidos",
+            "prompt": "Implemente um importador de pedidos textuais. Ele deve validar campos, separar registros aceitos dos rejeitados, produzir mensagens com linha e motivo e fechar o arquivo mesmo quando ocorre falha.",
+            "rubric": [
+              "Entradas inválidas geram erros específicos e úteis.",
+              "Registros válidos continuam sendo processados quando a regra permitir.",
+              "A causa original não é perdida ao transformar uma exceção.",
+              "O recurso de entrada é fechado em todos os caminhos."
+            ]
+          }
+        },
+        {
+          "title": "Lambdas, streams e Optional",
+          "goal": "Processar coleções de forma declarativa sem sacrificar clareza, custo ou tratamento de ausência.",
+          "skills": [
+            {
+              "id": "m6-lambdas",
+              "name": "Escrever lambdas e referências de método",
+              "bloom": "apply"
+            },
+            {
+              "id": "m6-stream-pipeline",
+              "name": "Construir pipelines de stream corretos",
+              "bloom": "apply"
+            },
+            {
+              "id": "m6-collectors",
+              "name": "Agrupar e reduzir dados com collectors",
+              "bloom": "analyze"
+            },
+            {
+              "id": "m6-optional",
+              "name": "Representar ausência com Optional comedimento",
+              "bloom": "evaluate"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Dados passando por uma pipeline",
+              "goal": "Visualizar origem, operações intermediárias e terminal de um stream.",
+              "skills": [
+                "m6-stream-pipeline"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Lambdas, map, filter e reduce",
+              "goal": "Transformar uma coleção com operações que preservem intenção.",
+              "skills": [
+                "m6-lambdas",
+                "m6-stream-pipeline"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: pipelines legíveis",
+              "goal": "Escrever e revisar pipelines sem efeitos colaterais ocultos.",
+              "skills": [
+                "m6-lambdas",
+                "m6-stream-pipeline"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Agrupar e resumir sem perder o sentido",
+              "goal": "Relacionar collectors a perguntas sobre os dados.",
+              "skills": [
+                "m6-collectors"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Collectors e Optional",
+              "goal": "Agrupar resultados e tratar ausência sem encadear chamadas confusas.",
+              "skills": [
+                "m6-collectors",
+                "m6-optional"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: relatório de vendas",
+              "goal": "Produzir métricas e buscas opcionais sobre objetos de domínio.",
+              "skills": [
+                "m6-collectors",
+                "m6-optional",
+                "m6-stream-pipeline"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Relatório de vendas",
+            "prompt": "Receba uma coleção de vendas e produza relatórios por vendedor e categoria, incluindo totais, médias e a venda de maior valor. Exponha uma busca que possa não encontrar resultado e compare uma solução com loop a uma solução com stream.",
+            "rubric": [
+              "Os resultados por grupo são corretos e reproduzíveis.",
+              "A busca ausente não usa null como sinal silencioso.",
+              "A solução com stream permanece legível e sem efeitos colaterais.",
+              "A comparação com loop explica um trade-off real."
+            ]
+          }
+        },
+        {
+          "title": "Arquivos, I/O e formatos de dados",
+          "goal": "Ler, transformar e gravar dados externos com APIs modernas e tratamento de recursos.",
+          "skills": [
+            {
+              "id": "m7-paths-files",
+              "name": "Manipular caminhos, arquivos e diretórios",
+              "bloom": "apply"
+            },
+            {
+              "id": "m7-text-io",
+              "name": "Ler e escrever texto com charset explícito",
+              "bloom": "apply"
+            },
+            {
+              "id": "m7-data-format",
+              "name": "Separar formato externo e modelo de domínio",
+              "bloom": "analyze"
+            },
+            {
+              "id": "m7-serialization-risks",
+              "name": "Avaliar riscos da serialização nativa",
+              "bloom": "evaluate"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Arquivo não é apenas uma String",
+              "goal": "Distinguir caminho, recurso, bytes, caracteres e formato.",
+              "skills": [
+                "m7-paths-files",
+                "m7-text-io"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Path, Files e leitura segura",
+              "goal": "Implementar leitura e escrita de texto com recursos fechados.",
+              "skills": [
+                "m7-paths-files",
+                "m7-text-io"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: transformar arquivos",
+              "goal": "Processar arquivos pequenos e lidar com caminhos inválidos.",
+              "skills": [
+                "m7-paths-files",
+                "m7-text-io"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "O formato também é uma decisão",
+              "goal": "Separar o formato de persistência do objeto usado pelo domínio.",
+              "skills": [
+                "m7-data-format"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Registros, CSV e fronteiras de dados",
+              "goal": "Converter linhas externas em objetos válidos e vice-versa.",
+              "skills": [
+                "m7-data-format",
+                "m7-serialization-risks"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: persistência simples",
+              "goal": "Salvar, carregar e rejeitar dados malformados com mensagens úteis.",
+              "skills": [
+                "m7-text-io",
+                "m7-data-format",
+                "m7-serialization-risks"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Persistência de tarefas",
+            "prompt": "Construa uma aplicação de tarefas que salve e carregue dados de um arquivo textual. Defina o formato, valide versões ou linhas inválidas, preserve acentos e não perca tarefas válidas por causa de um registro malformado.",
+            "rubric": [
+              "O arquivo é lido e escrito com charset explícito.",
+              "O formato é documentado e separado do modelo de domínio.",
+              "Falhas de caminho e de registro são tratadas com mensagens acionáveis.",
+              "O carregamento preserva dados válidos quando a regra permitir."
+            ]
+          }
+        },
+        {
+          "title": "Testes automatizados e refatoração",
+          "goal": "Usar testes como especificação executável para evoluir código com confiança.",
+          "skills": [
+            {
+              "id": "m8-test-behavior",
+              "name": "Escrever testes focados em comportamento",
+              "bloom": "apply"
+            },
+            {
+              "id": "m8-test-boundaries",
+              "name": "Escolher casos de fronteira e falha",
+              "bloom": "analyze"
+            },
+            {
+              "id": "m8-test-doubles",
+              "name": "Isolar dependências com doubles de teste",
+              "bloom": "apply"
+            },
+            {
+              "id": "m8-refactoring",
+              "name": "Refatorar preservando comportamento",
+              "bloom": "evaluate"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Um teste é uma pergunta executável",
+              "goal": "Identificar o comportamento que vale a pena proteger.",
+              "skills": [
+                "m8-test-behavior"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Arrange, Act, Assert e casos de fronteira",
+              "goal": "Escrever testes pequenos que falhem por uma causa clara.",
+              "skills": [
+                "m8-test-behavior",
+                "m8-test-boundaries"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: testar regras do domínio",
+              "goal": "Completar uma suíte com casos normais, limites e falhas.",
+              "skills": [
+                "m8-test-behavior",
+                "m8-test-boundaries"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Dependências reais e dependências substituíveis",
+              "goal": "Entender quando um double torna o teste mais determinístico.",
+              "skills": [
+                "m8-test-doubles"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Refatoração guiada por testes",
+              "goal": "Separar responsabilidades e melhorar design sem mudar o resultado.",
+              "skills": [
+                "m8-test-doubles",
+                "m8-refactoring"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: corrigir sem quebrar",
+              "goal": "Refatorar código legado com uma rede de testes significativa.",
+              "skills": [
+                "m8-test-boundaries",
+                "m8-test-doubles",
+                "m8-refactoring"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Refatoração segura de um carrinho",
+            "prompt": "Receba um carrinho de compras com regras misturadas em uma classe grande. Escreva testes para o comportamento atual relevante, refatore em componentes menores e adicione uma regra nova sem quebrar os testes existentes.",
+            "rubric": [
+              "A suíte cobre comportamento normal, limites e pelo menos uma falha.",
+              "A refatoração reduz responsabilidades sem mudar comportamento protegido.",
+              "Dependências externas não tornam os testes instáveis.",
+              "A nova regra tem teste próprio e documentação curta."
+            ]
+          }
+        },
+        {
+          "title": "Concorrência, threads e segurança de memória",
+          "goal": "Projetar trabalho concorrente com segurança, encerramento previsível e justificativa das garantias.",
+          "skills": [
+            {
+              "id": "m9-thread-model",
+              "name": "Distinguir tarefa, thread e executor",
+              "bloom": "understand"
+            },
+            {
+              "id": "m9-executors",
+              "name": "Coordenar tarefas com executors e futures",
+              "bloom": "apply"
+            },
+            {
+              "id": "m9-synchronization",
+              "name": "Proteger estado compartilhado contra condições de corrida",
+              "bloom": "analyze"
+            },
+            {
+              "id": "m9-immutability",
+              "name": "Usar imutabilidade e comunicação segura",
+              "bloom": "evaluate"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Concorrência é uma mudança de interleaving",
+              "goal": "Visualizar por que a ordem das operações não pode ser presumida.",
+              "skills": [
+                "m9-thread-model"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Threads, executors e futures",
+              "goal": "Submeter tarefas, obter resultados e encerrar recursos concorrentes.",
+              "skills": [
+                "m9-thread-model",
+                "m9-executors"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: fila de tarefas",
+              "goal": "Executar tarefas com limite, resultado e cancelamento observáveis.",
+              "skills": [
+                "m9-executors",
+                "m9-thread-model"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Visibilidade, atomicidade e proteção",
+              "goal": "Separar problemas que synchronized, atomics e imutabilidade resolvem.",
+              "skills": [
+                "m9-synchronization",
+                "m9-immutability"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Estado compartilhado e encerramento",
+              "goal": "Escolher uma estratégia de segurança e testar o encerramento.",
+              "skills": [
+                "m9-synchronization",
+                "m9-immutability",
+                "m9-executors"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: contador concorrente",
+              "goal": "Encontrar e corrigir uma condição de corrida sem mascarar o problema.",
+              "skills": [
+                "m9-synchronization",
+                "m9-immutability"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Processador concorrente de arquivos",
+            "prompt": "Implemente um processador que receba vários arquivos, conte ocorrências e produza um resultado consolidado. Use um executor, defina como os resultados são combinados, encerre o executor e teste uma falha de tarefa.",
+            "rubric": [
+              "O trabalho é dividido em tarefas independentes com executor explícito.",
+              "A combinação dos resultados não perde dados por corrida.",
+              "O executor é encerrado em sucesso e falha.",
+              "A estratégia de segurança e os limites do paralelismo são justificados."
+            ]
+          }
+        },
+        {
+          "title": "APIs, logging e configuração",
+          "goal": "Construir componentes observáveis e configuráveis sem espalhar detalhes de infraestrutura pelo domínio.",
+          "skills": [
+            {
+              "id": "m10-api-design",
+              "name": "Projetar uma API pública coerente",
+              "bloom": "evaluate"
+            },
+            {
+              "id": "m10-logging",
+              "name": "Registrar eventos úteis sem vazar dados",
+              "bloom": "apply"
+            },
+            {
+              "id": "m10-configuration",
+              "name": "Separar configuração de código",
+              "bloom": "apply"
+            },
+            {
+              "id": "m10-documentation",
+              "name": "Documentar contratos e decisões",
+              "bloom": "create"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Uma API é uma promessa",
+              "goal": "Reconhecer o custo de expor tipos, detalhes e comportamentos.",
+              "skills": [
+                "m10-api-design"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Interfaces públicas e compatibilidade",
+              "goal": "Desenhar operações pequenas, nomes claros e fronteiras estáveis.",
+              "skills": [
+                "m10-api-design",
+                "m10-documentation"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: revisar uma API",
+              "goal": "Detectar acoplamento, nomes ambíguos e contratos incompletos.",
+              "skills": [
+                "m10-api-design",
+                "m10-documentation"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Diagnóstico sem adivinhação",
+              "goal": "Usar logs e configuração para tornar um programa operável.",
+              "skills": [
+                "m10-logging",
+                "m10-configuration"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Logging, propriedades e configuração segura",
+              "goal": "Configurar comportamento e registrar eventos úteis sem misturar camadas.",
+              "skills": [
+                "m10-logging",
+                "m10-configuration"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: tornar o serviço observável",
+              "goal": "Adicionar configuração e logs a uma aplicação existente.",
+              "skills": [
+                "m10-logging",
+                "m10-configuration",
+                "m10-documentation"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Serviço configurável de importação",
+            "prompt": "Evolua o importador para aceitar configuração de caminho, tamanho de lote e nível de log. Exponha uma API pública pequena, documente os contratos e produza logs que permitam investigar uma falha sem registrar dados sensíveis.",
+            "rubric": [
+              "A configuração é validada e não está espalhada pelo código.",
+              "A API pública contém apenas operações necessárias ao consumidor.",
+              "Os logs distinguem início, sucesso e falha sem expor conteúdo sensível.",
+              "Os contratos e decisões ficam documentados."
+            ]
+          }
+        },
+        {
+          "title": "Pacotes, módulos e arquitetura",
+          "goal": "Organizar uma aplicação em limites que expressem dependências e permitam evolução controlada.",
+          "skills": [
+            {
+              "id": "m11-packages",
+              "name": "Organizar tipos em pacotes coesos",
+              "bloom": "apply"
+            },
+            {
+              "id": "m11-modules",
+              "name": "Declarar módulos e dependências explícitas",
+              "bloom": "apply"
+            },
+            {
+              "id": "m11-boundaries",
+              "name": "Avaliar acoplamento entre camadas",
+              "bloom": "evaluate"
+            },
+            {
+              "id": "m11-build-tools",
+              "name": "Reproduzir compilação e testes com ferramenta de build",
+              "bloom": "apply"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "A arquitetura aparece nas dependências",
+              "goal": "Ler o grafo de dependências como uma decisão de design.",
+              "skills": [
+                "m11-boundaries",
+                "m11-packages"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Pacotes, visibilidade e módulos",
+              "goal": "Definir limites e dependências que o compilador possa verificar.",
+              "skills": [
+                "m11-packages",
+                "m11-modules"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: cortar dependências indevidas",
+              "goal": "Reorganizar um projeto para separar domínio, aplicação e infraestrutura.",
+              "skills": [
+                "m11-boundaries",
+                "m11-packages"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Build reproduzível",
+              "goal": "Entender o papel de uma ferramenta de build na equipe.",
+              "skills": [
+                "m11-build-tools"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Módulos, testes e empacotamento",
+              "goal": "Configurar compilação, testes e artefatos de uma aplicação pequena.",
+              "skills": [
+                "m11-modules",
+                "m11-build-tools"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: projeto modular",
+              "goal": "Transformar um programa monolítico em módulos verificáveis.",
+              "skills": [
+                "m11-modules",
+                "m11-boundaries",
+                "m11-build-tools"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Aplicação em módulos",
+            "prompt": "Separe uma aplicação de tarefas em módulos de domínio, aplicação e infraestrutura. Declare as dependências, restrinja acesso a detalhes internos e automatize compilação e testes com uma ferramenta de build.",
+            "rubric": [
+              "Os módulos têm responsabilidades e dependências justificadas.",
+              "Detalhes internos não são expostos sem necessidade.",
+              "O build reproduz compilação e testes a partir de uma configuração versionada.",
+              "A aplicação continua executando depois da separação."
+            ]
+          }
+        },
+        {
+          "title": "Projeto integrado: aplicação Java robusta",
+          "goal": "Integrar domínio, persistência, tratamento de erros, testes, concorrência, observabilidade e módulos em uma entrega coerente.",
+          "skills": [
+            {
+              "id": "m12-domain-design",
+              "name": "Criar um modelo de domínio com invariantes",
+              "bloom": "create"
+            },
+            {
+              "id": "m12-integration",
+              "name": "Integrar componentes por contratos estáveis",
+              "bloom": "create"
+            },
+            {
+              "id": "m12-reliability",
+              "name": "Avaliar falhas, concorrência e recuperação",
+              "bloom": "evaluate"
+            },
+            {
+              "id": "m12-delivery",
+              "name": "Entregar, documentar e demonstrar uma aplicação",
+              "bloom": "create"
+            }
+          ],
+          "lessons": [
+            {
+              "type": "video",
+              "title": "Do requisito ao desenho verificável",
+              "goal": "Transformar requisitos em limites, contratos e incrementos de entrega.",
+              "skills": [
+                "m12-domain-design",
+                "m12-integration"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Planejar o projeto por riscos",
+              "goal": "Escolher uma fatia vertical e identificar decisões difíceis antes do código.",
+              "skills": [
+                "m12-domain-design",
+                "m12-reliability"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: revisão de arquitetura",
+              "goal": "Avaliar propostas de design e apontar riscos testáveis.",
+              "skills": [
+                "m12-integration",
+                "m12-reliability"
+              ]
+            },
+            {
+              "type": "video",
+              "title": "Confiabilidade é comportamento observado",
+              "goal": "Relacionar testes, logs, falhas e encerramento a uma entrega real.",
+              "skills": [
+                "m12-reliability",
+                "m12-delivery"
+              ]
+            },
+            {
+              "type": "text",
+              "title": "Integração, documentação e demonstração",
+              "goal": "Preparar uma aplicação que outra pessoa consiga executar, testar e entender.",
+              "skills": [
+                "m12-integration",
+                "m12-delivery"
+              ]
+            },
+            {
+              "type": "exercises",
+              "title": "Prática: checklist de entrega",
+              "goal": "Verificar requisitos, qualidade, documentação e cenários de falha.",
+              "skills": [
+                "m12-domain-design",
+                "m12-integration",
+                "m12-reliability",
+                "m12-delivery"
+              ]
+            }
+          ],
+          "project": {
+            "title": "Aplicação integrada de gestão de tarefas",
+            "prompt": "Entregue uma aplicação Java modular para gestão de tarefas. Ela deve ter domínio encapsulado, persistência em arquivo, validação, busca e relatórios, testes automatizados, logs, configuração e ao menos uma operação concorrente segura. Inclua README com comandos de build, execução, testes, decisões arquiteturais e limitações conhecidas.",
+            "rubric": [
+              "O domínio protege invariantes e não depende diretamente de detalhes de I/O.",
+              "A aplicação lê e grava dados, trata registros inválidos e informa falhas úteis.",
+              "Há testes para regras do domínio, fronteiras e pelo menos um cenário de erro.",
+              "A operação concorrente tem uma garantia explícita e encerramento correto.",
+              "O projeto é modular, observável, configurável e reproduzível.",
+              "O README permite que outra pessoa compile, teste e execute a aplicação."
+            ]
+          }
+        }
+      ],
+      "bibliography": [
+        {
+          "title": "Getting to Know the Language",
+          "author": "Oracle",
+          "institution": "Oracle / dev.java",
+          "type": "documentation",
+          "url": "https://dev.java/learn/language/",
+          "license": "unknown",
+          "reason": "Organiza a linguagem atual em fundamentos, orientação a objetos, generics, lambdas, pattern matching, anotações e exceções."
+        },
+        {
+          "title": "Java Language Basics",
+          "author": "Oracle",
+          "institution": "Oracle / dev.java",
+          "type": "documentation",
+          "url": "https://dev.java/learn/language/constructs/basics/",
+          "license": "unknown",
+          "reason": "Apresenta variáveis, tipos primitivos, arrays, operadores, expressões, blocos e controle de fluxo em páginas curtas."
+        },
+        {
+          "title": "Collections and Streams",
+          "author": "Oracle",
+          "institution": "Oracle / dev.java",
+          "type": "documentation",
+          "url": "https://dev.java/learn/api/collections-and-streams/",
+          "license": "unknown",
+          "reason": "É a referência oficial atual para Collections Framework, mapas, Stream API e collectors."
+        },
+        {
+          "title": "The Java I/O API",
+          "author": "Oracle",
+          "institution": "Oracle / dev.java",
+          "type": "documentation",
+          "url": "https://dev.java/learn/api/io/java-io/",
+          "license": "unknown",
+          "reason": "Cobre conceitos de I/O, caminhos, sistema de arquivos, leitura e escrita de dados."
+        },
+        {
+          "title": "Java Programming",
+          "author": "Arto Hellas, Matti Luukkainen e colaboradores",
+          "institution": "University of Helsinki / Agile Education Research",
+          "type": "course",
+          "url": "https://java-programming.mooc.fi/",
+          "license": "cc-by-nc-sa",
+          "reason": "Fornece uma sequência extensa de exercícios práticos, testes automáticos e uso de ferramentas reais, do introdutório ao avançado."
+        },
+        {
+          "title": "The Java Language Specification, Java SE 27 Edition",
+          "author": "James Gosling, Bill Joy, Guy Steele, Gilad Bracha, Alex Buckley, Daniel Smith e Gavin Bierman",
+          "institution": "OpenJDK",
+          "type": "documentation",
+          "url": "https://cr.openjdk.org/~dlsmith/jep401/jep401-20260715/specs/jls/",
+          "license": "unknown",
+          "reason": "É a fonte de precisão para tipos, conversões, classes, interfaces, expressões, exceções e modelo de memória; será consultada quando a regra importar."
+        }
+      ]
+    }
+  }
+}
