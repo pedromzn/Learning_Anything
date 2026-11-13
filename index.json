@@ -1,0 +1,37 @@
+{
+  "format": "learning-anything-community",
+  "version": 1,
+  "generatedAt": "2026-11-13T18:57:16.072Z",
+  "courses": [
+    {
+      "slug": "fisica-quantica",
+      "title": "Física quântica do zero",
+      "summary": "Um passeio guiado pelas ideias que mudaram a física no século 20, na ordem em que os experimentos as forçaram: a luz que chega em pacotes, a matéria que se comporta como onda, os átomos com níveis de energia, a probabilidade, a incerteza, a superposição, o spin e o emaranhamento. Tudo com a matemática do ensino médio e simulações gratuitas no lugar do laboratório. Oito módulos, um por semana, com cerca de quatro horas de estudo cada.",
+      "topic": "Física quântica",
+      "language": "pt-BR",
+      "level": "basic",
+      "modules": 8,
+      "writtenModules": 1,
+      "lessons": 5,
+      "author": "pedromzn",
+      "file": "fisica-quantica.course.json",
+      "bytes": 116533,
+      "exportedAt": "2026-11-12T20:35:57.934Z"
+    },
+    {
+      "slug": "java",
+      "title": "Java do fundamento à engenharia de aplicações",
+      "summary": "Trilha prática de 24 semanas para um desenvolvedor júnior que já conhece outras linguagens. A sequência começa pelo modelo de execução e pelos tipos, constrói orientação a objetos com contratos claros e avança para coleções, exceções, streams, I/O, testes, concorrência, módulos e uma aplicação integrada. Cada módulo combina conceito, precisão, exercícios e um projeto executável.",
+      "topic": "Java",
+      "language": "pt-BR",
+      "level": "mastery",
+      "modules": 12,
+      "writtenModules": 1,
+      "lessons": 6,
+      "author": "LucasGC1708",
+      "file": "java.course.json",
+      "bytes": 121808,
+      "exportedAt": "2026-11-13T15:50:08.359Z"
+    }
+  ]
+}
